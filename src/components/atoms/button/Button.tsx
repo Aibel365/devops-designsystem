@@ -1,9 +1,14 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { Button as ButtonPrimitive } from "@digdir/designsystemet-react";
+import type { ButtonProps as ButtonPropsPrimitive } from "@digdir/designsystemet-react";
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  children?: ReactNode;
-};
+type ButtonProps = ButtonPropsPrimitive;
 
-export const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
-  return <button {...props}>{props.children}</button>;
+/**
+ * Button allows users to perform actions.
+ *
+ * Based on Designsystemet's Button component.
+ * @see https://designsystemet.no/en/components/docs/alert/overview
+ */
+export const Button = (props: ButtonProps) => {
+  return <ButtonPrimitive {...props} />;
 };
