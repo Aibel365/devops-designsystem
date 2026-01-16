@@ -14,12 +14,14 @@
     "dist"
   ],
   "scripts": {
+    "start": "npm run storybook",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json"
   },
   "peerDependencies": {
     "react": "^19.2.0",
@@ -27,9 +29,10 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
+    "@digdir/designsystemet-types": "^1.9.0",
     "@eslint/js": "^9.39.1",
     "@storybook/addon-a11y": "^10.1.6",
-    "@storybook/addon-docs": "^10.1.6",
+    "@storybook/addon-docs": "^10.1.11",
     "@storybook/addon-vitest": "^10.1.6",
     "@storybook/react-vite": "^10.1.6",
     "@types/node": "^24.10.1",
@@ -50,5 +53,9 @@
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "@digdir/designsystemet-css": "^1.9.0",
+    "@digdir/designsystemet-react": "^1.9.0"
   }
 }
