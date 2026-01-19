@@ -1,5 +1,8 @@
 import { Badge as BadgePrimitive } from "@digdir/designsystemet-react";
-import type { BadgeProps as BadgePropsPrimitive } from "@digdir/designsystemet-react";
+import type {
+  BadgeProps as BadgePropsPrimitive,
+  BadgePositionProps as BadgePositionPropsPrimitive,
+} from "@digdir/designsystemet-react";
 
 type BadgeProps = BadgePropsPrimitive;
 
@@ -12,4 +15,9 @@ type BadgeProps = BadgePropsPrimitive;
  */
 export const Badge = (props: BadgeProps) => {
   return <BadgePrimitive {...props} />;
+};
+
+type BadgePositionProps = BadgePositionPropsPrimitive;
+Badge.Position = (props: BadgePositionProps) => {
+  return <BadgePrimitive.Position {...props} />;
 };
