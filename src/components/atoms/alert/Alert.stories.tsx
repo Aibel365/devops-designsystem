@@ -1,13 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Alert } from "./Alert";
-import { Heading } from "@digdir/designsystemet-react";
 
 const meta: Meta<typeof Alert> = {
   title: "Atoms/Alert",
   component: Alert,
+  argTypes: {
+    heading: { control: "text" },
+  },
   args: {
-    children: "Message inside alert",
+    children: "This is the message inside the Alert",
   },
 };
 
@@ -39,9 +41,8 @@ export const Danger: Story = {
 
 export const WithHeading: Story = {
   render: () => (
-    <Alert>
-      <Heading>Heading</Heading>
-      Message inside alert
+    <Alert heading={"This is the heading"} headingLevel={3} headingSize="md">
+      This is the message inside the Alert
     </Alert>
   ),
 };
