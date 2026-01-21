@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Badge } from "./Badge";
 import { Button } from "../button/Button";
+import { Avatar } from "../avatar/Avatar";
 
 const meta: Meta<typeof Badge> = {
   title: "Atoms/Badge",
@@ -22,13 +23,21 @@ export const CountAboveMax: Story = {
   },
 };
 
-export const AttachedToCorner: Story = {
-  render: () => (
-    <Badge.Position placement="top-right">
-      <Badge data-color="danger" count={2}></Badge>
-      <Button>Component or Icon</Button>
-    </Badge.Position>
-  ),
+export const AttachedToRectangle: Story = {
+  args: {
+    "data-color": "danger",
+    placementChildren: "top-right",
+    children: <Button>Button text</Button>,
+  },
+};
+
+export const AttachedToCircle: Story = {
+  args: {
+    "data-color": "danger",
+    placementChildren: "bottom-left",
+    overlapChildren: "circle",
+    children: <Avatar aria-hidden="true">W</Avatar>,
+  },
 };
 
 export default meta;
