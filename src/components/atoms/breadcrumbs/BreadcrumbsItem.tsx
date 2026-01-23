@@ -1,8 +1,8 @@
 import { Breadcrumbs as BreadcrumbsPrimitive } from "@digdir/designsystemet-react";
-import type { Link } from "./Breadcrumbs";
+import type { BreadcrumbLink } from "./Breadcrumbs";
 
 interface BreadcrumbItemProps {
-  link: string | Link;
+  link: string | BreadcrumbLink;
   callBackFunction?: (link: string) => void;
   isCurrentPage: boolean;
 }

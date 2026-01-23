@@ -1,7 +1,7 @@
 import { Button as ButtonPrimitive } from "@digdir/designsystemet-react";
 import type { ButtonProps as ButtonPropsPrimitive } from "@digdir/designsystemet-react";
 
-type ButtonProps = ButtonPropsPrimitive;
+export type ButtonProps = ButtonPropsPrimitive;
 
 /**
  * Button allows users to perform actions.

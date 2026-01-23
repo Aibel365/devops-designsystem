@@ -5,7 +5,7 @@ import type {
 } from "@digdir/designsystemet-react";
 import type { ReactNode } from "react";
 
-type AlertProps = AlertPropsPrimitive & {
+export type AlertProps = AlertPropsPrimitive & {
   heading?: ReactNode;
   headingLevel?: HeadingProps["level"];
   headingSize?: HeadingProps["data-size"];

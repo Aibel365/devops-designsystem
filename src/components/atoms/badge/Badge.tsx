@@ -5,7 +5,7 @@ import type {
 } from "@digdir/designsystemet-react";
 import type { ReactNode } from "react";
 
-type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
+export type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
   placementChildren?: BadgePositionProps["placement"];
   overlapChildren?: BadgePositionProps["overlap"];
   children?: ReactNode;
@@ -16,7 +16,6 @@ type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
  * Use Tag if you want text instead of a number.
  *
  * Based on Designsystemet's Badge component.
- * 
  * 
  * @param placementChildren Controls where the badge is placed relative to the wrapped child element.
  * @param overlapChildren Controls how the badge is positioned when floating, based on the

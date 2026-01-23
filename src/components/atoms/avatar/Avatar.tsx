@@ -1,7 +1,7 @@
 import { Avatar as AvatarPrimitive } from "@digdir/designsystemet-react";
 import type { AvatarProps as AvatarPropsPrimitive } from "@digdir/designsystemet-react";
 
-type AvatarProps = AvatarPropsPrimitive;
+export type AvatarProps = AvatarPropsPrimitive;
 
 /**
  * Avatar displays an image, initials, or icon for a person, entity, or profile.

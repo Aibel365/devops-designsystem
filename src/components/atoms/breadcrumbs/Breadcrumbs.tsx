@@ -2,13 +2,13 @@ import { Breadcrumbs as BreadcrumbsPrimitive } from "@digdir/designsystemet-reac
 import type { BreadcrumbsProps as BreadcrumbsPropsPrimitive } from "@digdir/designsystemet-react";
 import { BreadcrumbsItem } from "./BreadcrumbsItem";
 
-export interface Link {
+export interface BreadcrumbLink {
   displayText: string;
   link: string;
 }
 
-type BreadcrumbsProps = BreadcrumbsPropsPrimitive & {
-  links: string[] | Link[];
+export type BreadcrumbsProps = BreadcrumbsPropsPrimitive & {
+  links: string[] | BreadcrumbLink[];
   callBackFunction?: (link: string) => void;
   enableResponsiveFallback?: boolean;
 };
