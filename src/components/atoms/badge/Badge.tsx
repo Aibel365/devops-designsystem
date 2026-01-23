@@ -16,6 +16,15 @@ type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
  * Use Tag if you want text instead of a number.
  *
  * Based on Designsystemet's Badge component.
+ * 
+ * 
+ * @param placementChildren Controls where the badge is placed relative to the wrapped child element.
+ * @param overlapChildren Controls how the badge is positioned when floating, based on the
+ * shape of the wrapped element. Default is `rectangle` but can also be set to `circle` 
+ * which will look better with round children like round icons or avatars).
+ * @param children Optional element to wrap with the badge. When provided, the badge is positioned
+ * relative to this content using `Badge.Position`.
+
  * @see https://designsystemet.no/en/components/docs/badge/overview
  */
 export const Badge = ({
