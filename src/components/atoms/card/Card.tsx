@@ -7,7 +7,7 @@ import type {
 export type CardProps = CardPropsPrimitive;
 export type CardBlockProps = CardBlockPropsPrimitive;
 
-export const CardBlock = (props: CardBlockProps) => {
+const CardBlock = (props: CardBlockProps) => {
   return <CardPrimitive.Block {...props} />;
 };
 
@@ -15,7 +15,7 @@ export const CardBlock = (props: CardBlockProps) => {
  * Card highlight information or tasks that are related.
  * The component comes in two variants and can contain text, images, text fields, buttons, and links.
  *
- * Use `CardBlock` to compose multiple sections within a single card
+ * Use `<Card.Block>` to compose multiple sections within a single card
  * (e.g., header, media, content, actions) with consistent spacing and layout.
  *
  * Based on Designsystemet's Card component.
@@ -25,3 +25,5 @@ export const CardBlock = (props: CardBlockProps) => {
 export const Card = (props: CardProps) => {
   return <CardPrimitive {...props} />;
 };
+
+Card.Block = CardBlock;

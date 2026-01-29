@@ -16,7 +16,7 @@ export type {
 export { Button } from "./button/Button";
 export type { ButtonProps } from "./button/Button";
 
-export { Card, CardBlock } from "./card/Card";
+export { Card } from "./card/Card";
 export type { CardProps, CardBlockProps } from "./card/Card";
 
 export { Checkbox } from "./checkbox/Checkbox";
