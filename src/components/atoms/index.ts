@@ -20,5 +20,12 @@ export { Card } from "./card/Card";
 export type { CardProps, CardBlockProps } from "./card/Card";
 
 export { Checkbox } from "./checkbox/Checkbox";
+export type { CheckboxProps } from "./checkbox/Checkbox";
 
 export { Chip } from "./chip/Chip";
+export type {
+  ChipRadioProps,
+  ChipCheckboxProps,
+  ChipRemovableProps,
+  ChipButtonProps,
+} from "./chip/Chip";
