@@ -28,4 +28,4 @@ export type {
   ChipCheckboxProps,
   ChipRemovableProps,
   ChipButtonProps,
-} from "./chip/Chip";
+} from "./chip/ChipVariants";
