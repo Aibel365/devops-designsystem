@@ -1,17 +1,33 @@
 {
-  "name": "devops-designsystem",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@aibel365/devops-designsystem",
+  "version": "1.0.0",
+  "author": "Aibel AS",
+  "license": "MIT",
+  "description": "React designsystem for Aibel",
   "type": "module",
-  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/Aibel365/devops-designsystem",
+  "keywords": [
+    "React",
+    "Aibel",
+    "Component library",
+    "Styleguide",
+    "Designsystem"
+  ],
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.es.js"
+      },
       "require": "./dist/index.umd.js"
     }
   },
   "files": [
-    "dist"
+    "dist/**"
   ],
   "scripts": {
     "start": "npm run storybook",
