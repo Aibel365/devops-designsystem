@@ -1,14 +1,32 @@
 {
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
   "outDir": "./design-tokens",
-  "clean": true,
   "themes": {
-    "theme": {
+    "aibel-theme": {
       "colors": {
-        "main": { "primary": "#0062BA", "accent": "#1E98F5" },
-        "neutral": "#1E2B3C",
-        "support": { "extra1": "#F45F63", "extra2": "#E5AA20" }
+        "main": {
+          "bright-blue": "#0030B0",
+          "light-blue": "#C4F0FF",
+          "aibel-blue": "#002857"
+        },
+        "support": {
+          "light-green": "#80FFCF",
+          "green": "#2E6B3D",
+          "light-pink": "#FF9D96",
+          "dark-pink": "#BB0059",
+          "dark-red": "#5B002E"
+        },
+        "neutral": "#24272B"
       },
-      "borderRadius": 4
+      "overrides": {
+        "severity": {
+          "info": "#5E8CFF",
+          "success": "#2E6B3D",
+          "warning": "#EE9000",
+          "danger": "#B32A00"
+        }
+      },
+      "borderRadius": 9999
     }
   }
 }
