@@ -28,7 +28,6 @@ jobs:
         with:
           commit_message: "CI: Update package.json version to match release tag"
           branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
           # Ensure the commit is made using the GITHUB_TOKEN
           # This action handles the commit and push logic      
 
