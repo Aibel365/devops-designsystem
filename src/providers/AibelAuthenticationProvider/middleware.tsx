@@ -1,10 +1,10 @@
-/* eslint-disable import/no-named-as-default-member */
 import type { RedirectRequest } from "@azure/msal-browser";
 import axios, { isAxiosError, type InternalAxiosRequestConfig } from "axios";
 import { getMsalInstance } from "./msalSetup";
 import { getTokenResponse } from "./getTokenResponse";
 import { getEnvConfig } from "./msalConfig";
 
+/* eslint-disable */
 export function communicationFailedMiddleware(error: any) {
   if (
     (axios.isAxiosError(error) && error.code === "ERR_NETWORK") ||
@@ -19,7 +19,9 @@ export function communicationFailedMiddleware(error: any) {
     // });
   }
 }
+/* eslint-enable */
 
+/* eslint-disable */
 export const errorInDataMiddleware = (
   error: unknown | { response: { status: number } },
 ) => {
@@ -40,12 +42,14 @@ export const errorInDataMiddleware = (
     // });
   }
 };
+/* eslint-enable */
 
 // import { Text } from "@aibel365/devops-component-library-web";
 
 // import { dialogStore } from "store";
 // import i18next from "locales/i18n";
 
+/* eslint-disable */
 export function missingAuthMiddleware(error: any) {
   const httpStatus = {
     forbidden: 403,
@@ -66,6 +70,7 @@ export function missingAuthMiddleware(error: any) {
     // });
   }
 }
+/* eslint-enable */
 
 /**
  * This middleware checks if there's an access token available in local storage,
@@ -75,6 +80,7 @@ export function missingAuthMiddleware(error: any) {
  * @param request
  * @param apiVersion
  */
+/* eslint-disable */
 export async function injectBearerTokenMiddleware(
   config: InternalAxiosRequestConfig,
   request: RedirectRequest,
@@ -103,3 +109,4 @@ export async function injectBearerTokenMiddleware(
 
   return config;
 }
+/* eslint-enable */

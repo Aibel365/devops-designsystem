@@ -3,6 +3,8 @@ name: Update package.json version on release
 on:
   release:
     types: [created]
+    branches:
+      - main
 
 jobs:
   update-version:
@@ -25,5 +27,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "CI: Update package.json version to match release tag"
+          branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
           # Ensure the commit is made using the GITHUB_TOKEN
           # This action handles the commit and push logic

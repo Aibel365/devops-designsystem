@@ -43,10 +43,7 @@ export const AibelAuthenticationProvider = ({
     });
   }, []);
 
-  const router =
-    routes && routes?.length > 0
-      ? useAuthenticatedRouter(routes ?? [])
-      : undefined;
+  const router = useAuthenticatedRouter(routes ?? []);
 
   return (
     <>
@@ -54,7 +51,7 @@ export const AibelAuthenticationProvider = ({
         <MsalProvider instance={pca}>
           <QueryClientProvider client={queryClient}>
             {children && children}
-            {router && <RouterProvider router={router} />}
+            {routes && routes.length > 0 && router && <RouterProvider router={router} />}
           </QueryClientProvider>
         </MsalProvider>
       )}
