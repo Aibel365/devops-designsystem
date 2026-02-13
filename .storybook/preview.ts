@@ -1,5 +1,5 @@
-import "@digdir/designsystemet-css";
-import "@digdir/designsystemet-css/theme";
+import "../src/assets/index.css";
+
 
 import type { Preview } from "@storybook/react-vite";
 

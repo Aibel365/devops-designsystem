@@ -1,0 +1,13 @@
+@import "tailwindcss" prefix(ads);
+@import "@digdir/designsystemet-css";
+@import "@digdir/designsystemet-css/theme";
+
+/* Register design tokens or custom properties with Tailwind */
+@theme {
+  /* Your theme variables go here */
+  
+}
+
+.dark {
+  /* Dark mode overrides */
+}

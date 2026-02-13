@@ -1,7 +1,7 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
+import svgr from "vite-plugin-svgr";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
 
@@ -10,6 +10,8 @@ import path, { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import { playwright } from "@vitest/browser-playwright";
+import tailwindcss from "@tailwindcss/vite";
+
 const dirname =
   typeof __dirname !== "undefined"
     ? __dirname
@@ -17,11 +19,19 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), dts({ exclude: ["**/*.stories.ts", "**/*.test.ts"] })],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      insertTypesEntry: true,
+      exclude: ["**/*.stories.ts", "**/*.test.ts"],
+    }),
+    svgr(),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "devops-designsystem",
+      name: "ads",
       formats: ["es", "cjs", "umd"],
       fileName: (format) => `index.${format}.js`,
     },
