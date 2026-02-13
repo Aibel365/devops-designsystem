@@ -1,5 +1,5 @@
-import "@digdir/designsystemet-css";
-import "../design-tokens-build/aibel-theme.css";
+import "../src/assets/index.css";
+
 
 import type { Preview } from "@storybook/react-vite";
 

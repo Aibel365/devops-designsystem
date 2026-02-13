@@ -29,3 +29,15 @@ export type {
   ChipRemovableProps,
   ChipButtonProps,
 } from "./chip/ChipVariants";
+
+export { ConditionRender } from "./conditionRender/ConditionRender";
+export type { IConditionRender } from "./conditionRender/ConditionRender";
+
+export { Divider } from "./divider/Divider";
+export type { DividerProps } from "./divider/Divider";
+
+export { Popover } from "./popover/Popover";
+export type { PopoverProps } from "./popover/Popover";
+
+export type { IconSvgProps } from "./logo/AibelLogo";
+export { AibelLogo } from "./logo/AibelLogo";
