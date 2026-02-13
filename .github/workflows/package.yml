@@ -13,14 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
         with:
-          # This is important for the action to be able to push changes back to the repo
           token: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Update package.json version
-        # Use a community action to handle the version update
         uses: BellCubeDev/update-package-version-by-release-tag@v2
         with:
-          # The action will automatically use the release tag if no version is provided
           version: ${{ github.event.release.tag_name }}
           keep-v: "false"
           
@@ -28,14 +25,13 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "CI: Update package.json version to match release tag"
-          branch: main
-          # Ensure the commit is made using the GITHUB_TOKEN
-          # This action handles the commit and push logic      
+          branch: main     
 
-  # Create npm package
-  package:
+  # Create npm package on full release
+  package_on_full-release:
     needs: update-version
     runs-on: ubuntu-latest
+    if: github.event.release.prerelease == false
     defaults:
       run:
         working-directory: ./
@@ -43,21 +39,6 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Determine npm publish tag
-        id: get_tag
-        run: |
-          TAG_NAME="${{ github.event.release.tag_name }}"
-          # Remove 'v' prefix if present for npm version check
-          NPM_VERSION=$(echo "$TAG_NAME" | sed 's/^v//')
-          
-          # Check if the version is a prerelease (contains a hyphen)
-          if [[ "$NPM_VERSION" == *-* ]]; then
-            echo "npm_tag=next" >> $GITHUB_STATE            
-          else
-            echo "npm_tag=latest" >> $GITHUB_STATE
-          fi
-        # This step uses a bash script to set an output variable based on the release tag format.
-        # Note: '::set-output' is a legacy command in GitHub Actions, but functional in current use cases.
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
@@ -65,7 +46,31 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
-      - run: echo "Tag ${{ steps.get_tag.outputs.npm_tag }}"
-      - run: npm publish --access=public --tag ${{ steps.get_tag.outputs.npm_tag }} --ignore-scripts
+      - run: echo "IsPre ${{ github.event.release.prerelease }}"
+      - run: npm publish --access=public --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  # Create npm package on prerelease
+  package_on_prerelease:
+    needs: update-version
+    runs-on: ubuntu-latest
+    if: github.event.release.prerelease == true
+    defaults:
+      run:
+        working-directory: ./
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm run build
+      - run: echo "IsPre ${{ github.event.release.prerelease }}"
+      - run: npm publish --access=public --tag next --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
