@@ -52,9 +52,9 @@ jobs:
           
           # Check if the version is a prerelease (contains a hyphen)
           if [[ "$NPM_VERSION" == *-* ]]; then
-            echo "::set-output name=npm_tag::next"
+            echo "npm_tag=next" >> $GITHUB_STATE            
           else
-            echo "::set-output name=npm_tag::latest"
+            echo "npm_tag=latest" >> $GITHUB_STATE
           fi
         # This step uses a bash script to set an output variable based on the release tag format.
         # Note: '::set-output' is a legacy command in GitHub Actions, but functional in current use cases.
