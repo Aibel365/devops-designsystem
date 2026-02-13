@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Checkbox } from "./Checkbox";
 
 const meta: Meta<typeof Checkbox> = {
-  title: "Atoms/Checkbox",
-  component: Checkbox,
-  args: {
-    description: "Description",
-  },
+    title: "Atoms/Checkbox",
+    component: Checkbox,
+    args: {
+        description: "Description"
+    }
 };
 
 type Story = StoryObj<typeof Checkbox>;

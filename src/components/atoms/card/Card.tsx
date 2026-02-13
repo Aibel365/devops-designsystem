@@ -5,7 +5,7 @@ export type CardProps = CardPropsPrimitive;
 export type CardBlockProps = CardBlockPropsPrimitive;
 
 const CardBlock = (props: CardBlockProps) => {
-  return <CardPrimitive.Block {...props} />;
+    return <CardPrimitive.Block {...props} />;
 };
 
 /**
@@ -20,7 +20,7 @@ const CardBlock = (props: CardBlockProps) => {
  * @see https://designsystemet.no/en/components/docs/card/overview
  */
 export const Card = (props: CardProps) => {
-  return <CardPrimitive {...props} />;
+    return <CardPrimitive {...props} />;
 };
 
 Card.Block = CardBlock;

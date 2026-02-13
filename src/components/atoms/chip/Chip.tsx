@@ -8,8 +8,8 @@ import { ChipButton, ChipCheckbox, ChipRadio, ChipRemovable } from "./ChipVarian
  * @see https://designsystemet.no/en/components/docs/chip/overview
  */
 export const Chip = {
-  Radio: ChipRadio,
-  Checkbox: ChipCheckbox,
-  Removable: ChipRemovable,
-  Button: ChipButton,
+    Radio: ChipRadio,
+    Checkbox: ChipCheckbox,
+    Removable: ChipRemovable,
+    Button: ChipButton
 };

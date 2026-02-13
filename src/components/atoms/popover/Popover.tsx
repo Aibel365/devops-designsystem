@@ -4,11 +4,11 @@ import { Placement } from "@floating-ui/utils";
 import { ReactNode } from "react";
 
 export type PopoverProps = PopoverPropsPrimitive & {
-  placement?: Placement;
-  triggerContextProps?: PopoverTriggerContextProps;
-  triggerProps?: PopoverTriggerProps;
-  heading?: ReactNode;
-  content?: ReactNode;
+    placement?: Placement;
+    triggerContextProps?: PopoverTriggerContextProps;
+    triggerProps?: PopoverTriggerProps;
+    heading?: ReactNode;
+    content?: ReactNode;
 };
 
 /**
@@ -20,12 +20,15 @@ export type PopoverProps = PopoverPropsPrimitive & {
  * @see https://designsystemet.no/no/components/docs/popover/overview
  */
 export const Popover = ({ placement, triggerContextProps, triggerProps, heading, content, ...rest }: PopoverProps) => {
-  return (
-    <PopoverPrimitive.TriggerContext {...triggerContextProps}>
-      <PopoverPrimitive.Trigger {...triggerProps}>{heading}</PopoverPrimitive.Trigger>
-      <PopoverPrimitive placement={placement} {...rest}>
-        {content}
-      </PopoverPrimitive>
-    </PopoverPrimitive.TriggerContext>
-  );
+    return (
+        <PopoverPrimitive.TriggerContext {...triggerContextProps}>
+            <PopoverPrimitive.Trigger {...triggerProps}>{heading}</PopoverPrimitive.Trigger>
+            <PopoverPrimitive
+                placement={placement}
+                {...rest}
+            >
+                {content}
+            </PopoverPrimitive>
+        </PopoverPrimitive.TriggerContext>
+    );
 };

@@ -11,5 +11,5 @@ export type CheckboxProps = CheckboxPropsPrimitive;
  * @see https://designsystemet.no/en/components/docs/checkbox/overview
  */
 export const Checkbox = (props: CheckboxProps) => {
-  return <CheckboxPrimitive {...props} />;
+    return <CheckboxPrimitive {...props} />;
 };

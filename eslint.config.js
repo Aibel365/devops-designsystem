@@ -9,16 +9,16 @@ import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores(["dist", "storybook-static", "node_modules"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [js.configs.recommended, tseslint.configs.recommended, reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-    rules: {
-      "react-refresh/only-export-components": "warn",
-    },
-  },
+    globalIgnores(["dist", "storybook-static", "node_modules"]),
+    {
+        files: ["**/*.{ts,tsx}"],
+        extends: [js.configs.recommended, tseslint.configs.recommended, reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
+        languageOptions: {
+            ecmaVersion: 2020,
+            globals: globals.browser
+        },
+        rules: {
+            "react-refresh/only-export-components": "warn"
+        }
+    }
 ]);

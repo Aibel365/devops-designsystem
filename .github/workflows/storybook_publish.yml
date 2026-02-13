@@ -1,43 +1,43 @@
 name: Deploy Storybook to GitHub Pages
 
 on:
-  release:
-    types: [published]
-    branches:
-      - main
+    release:
+        types: [published]
+        branches:
+            - main
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.build-publish.outputs.page_url }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pages: write
+            id-token: write
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          ref: "main"
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v6
+              with:
+                  ref: "main"
+                  fetch-depth: 0
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies and build Storybook
-        run: |
-          npm ci
-          npm run build-storybook
+            - name: Install dependencies and build Storybook
+              run: |
+                  npm ci
+                  npm run build-storybook
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./storybook-static
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v4
+              with:
+                  path: ./storybook-static
 
-      - name: Deploy to GitHub Pages
-        id: build-publish
-        uses: actions/deploy-pages@v4
+            - name: Deploy to GitHub Pages
+              id: build-publish
+              uses: actions/deploy-pages@v4

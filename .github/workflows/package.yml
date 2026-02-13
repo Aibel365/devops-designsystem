@@ -1,84 +1,84 @@
 name: Create and publish package
 
 on:
-  release:
-    types: [published]
-    branches:
-      - main
+    release:
+        types: [published]
+        branches:
+            - main
 
 jobs:
-  update-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          ref: "main"
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+    update-version:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v6
+              with:
+                  ref: "main"
+                  fetch-depth: 0
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update package.json version
-        uses: BellCubeDev/update-package-version-by-release-tag@v2
-        with:
-          version: ${{ github.event.release.tag_name }}
-          keep-v: "false"
+            - name: Update package.json version
+              uses: BellCubeDev/update-package-version-by-release-tag@v2
+              with:
+                  version: ${{ github.event.release.tag_name }}
+                  keep-v: "false"
 
-      - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "CI: Update package.json version to match release tag"
-          branch: main
+            - name: Commit and Push changes
+              uses: stefanzweifel/git-auto-commit-action@v7
+              with:
+                  commit_message: "CI: Update package.json version to match release tag"
+                  branch: main
 
-  # Create npm package on full release
-  package_on_full-release:
-    needs: update-version
-    runs-on: ubuntu-latest
-    if: github.event.release.prerelease == false
-    defaults:
-      run:
-        working-directory: ./
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: "main"
-          fetch-depth: 0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24.x
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm run build
-      - run: echo "IsPre ${{ github.event.release.prerelease }}"
-      - run: npm publish --access=public --ignore-scripts
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    # Create npm package on full release
+    package_on_full-release:
+        needs: update-version
+        runs-on: ubuntu-latest
+        if: github.event.release.prerelease == false
+        defaults:
+            run:
+                working-directory: ./
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  ref: "main"
+                  fetch-depth: 0
+            - uses: actions/setup-node@v6
+              with:
+                  node-version: 24.x
+                  registry-url: https://npm.pkg.github.com/
+            - run: npm ci
+            - run: npm run build
+            - run: echo "IsPre ${{ github.event.release.prerelease }}"
+            - run: npm publish --access=public --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-  # Create npm package on prerelease
-  package_on_prerelease:
-    needs: update-version
-    runs-on: ubuntu-latest
-    if: github.event.release.prerelease == true
-    defaults:
-      run:
-        working-directory: ./
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: "main"
-          fetch-depth: 0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24.x
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm run build
-      - run: echo "IsPre ${{ github.event.release.prerelease }}"
-      - run: npm publish --access=public --tag next --ignore-scripts
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    # Create npm package on prerelease
+    package_on_prerelease:
+        needs: update-version
+        runs-on: ubuntu-latest
+        if: github.event.release.prerelease == true
+        defaults:
+            run:
+                working-directory: ./
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  ref: "main"
+                  fetch-depth: 0
+            - uses: actions/setup-node@v6
+              with:
+                  node-version: 24.x
+                  registry-url: https://npm.pkg.github.com/
+            - run: npm ci
+            - run: npm run build
+            - run: echo "IsPre ${{ github.event.release.prerelease }}"
+            - run: npm publish --access=public --tag next --ignore-scripts
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

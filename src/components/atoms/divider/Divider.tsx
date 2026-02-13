@@ -10,5 +10,5 @@ export type DividerProps = DividerPropsPrimitive;
  * @see https://designsystemet.no/no/components/docs/divider/overview
  */
 export const Divider = (props: DividerProps) => {
-  return <DividerPrimitive {...props} />;
+    return <DividerPrimitive {...props} />;
 };

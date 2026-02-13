@@ -8,7 +8,7 @@ import { CONFIG_LS_VALUE, MsalConfiguration } from "../types";
  * @returns Persisted MSAL-related config values.
  */
 export const getEnvConfig = (): MsalConfiguration => {
-  return readLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE);
+    return readLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE);
 };
 
 /**
@@ -20,17 +20,17 @@ export const getEnvConfig = (): MsalConfiguration => {
  * - Redirect URIs are rooted at `/` for login and logout callbacks.
  */
 export const msalConfig: Configuration = {
-  auth: {
-    clientId: getEnvConfig().CLIENT_ID ?? "",
-    authority: `https://login.microsoftonline.com/${getEnvConfig().TENANT_ID}`,
-    redirectUri: "/",
-    postLogoutRedirectUri: "/",
-  },
-  cache: {
-    // depends if you need to share between tabs,
-    // if you have iframe and need to open new window, then you want local storage
-    //cacheLocation: BrowserCacheLocation.LocalStorage // BrowserCacheLocation.SessionStorage // "sessionStorage"
-  },
+    auth: {
+        clientId: getEnvConfig().CLIENT_ID ?? "",
+        authority: `https://login.microsoftonline.com/${getEnvConfig().TENANT_ID}`,
+        redirectUri: "/",
+        postLogoutRedirectUri: "/"
+    },
+    cache: {
+        // depends if you need to share between tabs,
+        // if you have iframe and need to open new window, then you want local storage
+        //cacheLocation: BrowserCacheLocation.LocalStorage // BrowserCacheLocation.SessionStorage // "sessionStorage"
+    }
 };
 
 /**
@@ -39,5 +39,5 @@ export const msalConfig: Configuration = {
  * Scope format: `api://<API_CLIENT_ID>/access_as_user`.
  */
 export const ApiRequest: RedirectRequest = {
-  scopes: [`api://${getEnvConfig().API_CLIENT_ID}/access_as_user`],
+    scopes: [`api://${getEnvConfig().API_CLIENT_ID}/access_as_user`]
 };

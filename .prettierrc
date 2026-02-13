@@ -1,3 +1,10 @@
 {
-  "printWidth": 256
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "printWidth": 256,
+    "proseWrap": "always",
+    "endOfLine": "lf",
+    "singleAttributePerLine": true
 }

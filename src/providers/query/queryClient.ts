@@ -17,42 +17,42 @@ import { communicationFailedMiddleware, errorInDataMiddleware, missingAuthMiddle
  * @see https://tanstack.com/query/latest/docs/react/reference/QueryClient
  */
 export const queryClient = new QueryClient({
-  /**
-   * Global query error hook.
-   *
-   * Every query error is funneled through middleware that handles:
-   * - missing/expired auth,
-   * - transport/connectivity failures,
-   * - API payload-level error states.
-   */
-  queryCache: new QueryCache({
-    onError: (error, _query) => {
-      missingAuthMiddleware(error);
-      communicationFailedMiddleware(error);
-      errorInDataMiddleware(error);
-    },
-  }),
-  /**
-   * Global mutation error hook.
-   *
-   * If a mutation defines its own `onError`, that local handler has priority
-   * and shared middleware is skipped for that mutation.
-   */
-  mutationCache: new MutationCache({
-    onError: (error, _variables, _context, mutation) => {
-      if (mutation.options.onError) return;
-
-      missingAuthMiddleware(error);
-      communicationFailedMiddleware(error);
-      errorInDataMiddleware(error);
-    },
-  }),
-  defaultOptions: {
     /**
-     * Default query options for the authentication provider context.
+     * Global query error hook.
+     *
+     * Every query error is funneled through middleware that handles:
+     * - missing/expired auth,
+     * - transport/connectivity failures,
+     * - API payload-level error states.
      */
-    queries: {
-      retry: false,
-    },
-  },
+    queryCache: new QueryCache({
+        onError: (error, _query) => {
+            missingAuthMiddleware(error);
+            communicationFailedMiddleware(error);
+            errorInDataMiddleware(error);
+        }
+    }),
+    /**
+     * Global mutation error hook.
+     *
+     * If a mutation defines its own `onError`, that local handler has priority
+     * and shared middleware is skipped for that mutation.
+     */
+    mutationCache: new MutationCache({
+        onError: (error, _variables, _context, mutation) => {
+            if (mutation.options.onError) return;
+
+            missingAuthMiddleware(error);
+            communicationFailedMiddleware(error);
+            errorInDataMiddleware(error);
+        }
+    }),
+    defaultOptions: {
+        /**
+         * Default query options for the authentication provider context.
+         */
+        queries: {
+            retry: false
+        }
+    }
 });

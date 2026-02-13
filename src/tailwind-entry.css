@@ -5,12 +5,12 @@
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme {
-  /* Your theme variables go here */
+    /* Your theme variables go here */
 }
 /* eslint-enable */
 
 /* eslint-disable */
 .dark {
-  /* Dark mode overrides */
+    /* Dark mode overrides */
 }
 /* eslint-enable */

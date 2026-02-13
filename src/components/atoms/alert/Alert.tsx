@@ -3,9 +3,9 @@ import type { AlertProps as AlertPropsPrimitive, HeadingProps } from "@digdir/de
 import type { ReactNode } from "react";
 
 export type AlertProps = AlertPropsPrimitive & {
-  heading?: ReactNode;
-  headingLevel?: HeadingProps["level"];
-  headingSize?: HeadingProps["data-size"];
+    heading?: ReactNode;
+    headingLevel?: HeadingProps["level"];
+    headingSize?: HeadingProps["data-size"];
 };
 
 /**
@@ -20,14 +20,17 @@ export type AlertProps = AlertPropsPrimitive & {
  * @see https://designsystemet.no/en/components/docs/alert/overview
  */
 export const Alert = ({ heading, headingLevel, headingSize, children, ...rest }: AlertProps) => {
-  return (
-    <AlertPrimitive {...rest}>
-      {heading && (
-        <Heading level={headingLevel} data-size={headingSize}>
-          {heading}
-        </Heading>
-      )}
-      {children}
-    </AlertPrimitive>
-  );
+    return (
+        <AlertPrimitive {...rest}>
+            {heading && (
+                <Heading
+                    level={headingLevel}
+                    data-size={headingSize}
+                >
+                    {heading}
+                </Heading>
+            )}
+            {children}
+        </AlertPrimitive>
+    );
 };

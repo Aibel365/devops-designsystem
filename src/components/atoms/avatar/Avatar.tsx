@@ -10,5 +10,5 @@ export type AvatarProps = AvatarPropsPrimitive;
  * @see https://designsystemet.no/en/components/docs/avatar/overview
  */
 export const Avatar = (props: AvatarProps) => {
-  return <AvatarPrimitive {...props} />;
+    return <AvatarPrimitive {...props} />;
 };

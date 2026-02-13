@@ -3,9 +3,9 @@ import type { BadgeProps as BadgePropsPrimitive, BadgePositionProps } from "@dig
 import type { ReactNode } from "react";
 
 export type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
-  placementChildren?: BadgePositionProps["placement"];
-  overlapChildren?: BadgePositionProps["overlap"];
-  children?: ReactNode;
+    placementChildren?: BadgePositionProps["placement"];
+    overlapChildren?: BadgePositionProps["overlap"];
+    children?: ReactNode;
 };
 
 /**
@@ -24,12 +24,15 @@ export type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
  * @see https://designsystemet.no/en/components/docs/badge/overview
  */
 export const Badge = ({ placementChildren, overlapChildren, children, ...rest }: BadgeProps) => {
-  return children ? (
-    <BadgePrimitive.Position placement={placementChildren} overlap={overlapChildren}>
-      <BadgePrimitive {...rest} />
-      {children}
-    </BadgePrimitive.Position>
-  ) : (
-    <BadgePrimitive {...rest} />
-  );
+    return children ? (
+        <BadgePrimitive.Position
+            placement={placementChildren}
+            overlap={overlapChildren}
+        >
+            <BadgePrimitive {...rest} />
+            {children}
+        </BadgePrimitive.Position>
+    ) : (
+        <BadgePrimitive {...rest} />
+    );
 };

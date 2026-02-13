@@ -10,5 +10,5 @@ export type ButtonProps = ButtonPropsPrimitive;
  * @see https://designsystemet.no/en/components/docs/alert/overview
  */
 export const Button = (props: ButtonProps) => {
-  return <ButtonPrimitive {...props} />;
+    return <ButtonPrimitive {...props} />;
 };

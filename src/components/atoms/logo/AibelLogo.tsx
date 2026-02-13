@@ -5,6 +5,6 @@ import Logo from "./aibel-logo.svg?react";
 export type IconSvgProps = SVGProps<SVGSVGElement>;
 
 export const AibelLogo = (props: IconSvgProps) => {
-  // You can now apply Tailwind classes directly to the SVG component
-  return <Logo {...props} />;
+    // You can now apply Tailwind classes directly to the SVG component
+    return <Logo {...props} />;
 };

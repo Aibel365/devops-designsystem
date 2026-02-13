@@ -32,29 +32,29 @@ export const useAuthenticatedRouter = (routes: RouteObject[]) => createBrowserRo
  * - Route rendering is optional and only enabled when `routes` has entries.
  */
 export const AibelApplicationProvider = ({ routes, children, env }: AibelApplicationProviderProps) => {
-  const [pca, setPca] = useState<IPublicClientApplication | undefined>(undefined);
-  saveLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE, env);
+    const [pca, setPca] = useState<IPublicClientApplication | undefined>(undefined);
+    saveLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE, env);
 
-  useEffect(() => {
-    getMsalInstance().then((msalInstance) => {
-      initApplicationInsight(msalInstance).then(() => {
-        setPca(msalInstance);
-      });
-    });
-  }, []);
+    useEffect(() => {
+        getMsalInstance().then((msalInstance) => {
+            initApplicationInsight(msalInstance).then(() => {
+                setPca(msalInstance);
+            });
+        });
+    }, []);
 
-  const router = useAuthenticatedRouter(routes ?? []);
+    const router = useAuthenticatedRouter(routes ?? []);
 
-  return (
-    <>
-      {pca && (
-        <MsalProvider instance={pca}>
-          <QueryClientProvider client={queryClient}>
-            {children && children}
-            {routes && routes.length > 0 && router && <RouterProvider router={router} />}
-          </QueryClientProvider>
-        </MsalProvider>
-      )}
-    </>
-  );
+    return (
+        <>
+            {pca && (
+                <MsalProvider instance={pca}>
+                    <QueryClientProvider client={queryClient}>
+                        {children && children}
+                        {routes && routes.length > 0 && router && <RouterProvider router={router} />}
+                    </QueryClientProvider>
+                </MsalProvider>
+            )}
+        </>
+    );
 };

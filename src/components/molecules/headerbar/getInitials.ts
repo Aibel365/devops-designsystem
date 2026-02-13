@@ -7,13 +7,13 @@
  * @param name to parse initials from
  */
 export const getInitials = (name?: string) => {
-  if (!name) return "";
+    if (!name) return "";
 
-  const allNames = name.trim().split(" ");
+    const allNames = name.trim().split(" ");
 
-  if (allNames.length == 1) {
-    return allNames[0].charAt(0).toUpperCase();
-  }
+    if (allNames.length == 1) {
+        return allNames[0].charAt(0).toUpperCase();
+    }
 
-  return `${allNames[0].charAt(0)}${allNames[allNames.length - 1].charAt(0)}`.toUpperCase();
+    return `${allNames[0].charAt(0)}${allNames[allNames.length - 1].charAt(0)}`.toUpperCase();
 };
