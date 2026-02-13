@@ -1,11 +1,11 @@
 @import "tailwindcss" prefix(ads);
 @import "@digdir/designsystemet-css";
-@import "@digdir/designsystemet-css/theme";
+@import "../design-tokens-build/aibel-theme.css";
 
 /* Register design tokens or custom properties with Tailwind */
 @theme {
   /* Your theme variables go here */
-  
+
 }
 
 .dark {
