@@ -8,6 +8,7 @@ on:
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.build-publish.outputs.page_url }}
