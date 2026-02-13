@@ -1,8 +1,8 @@
-name: Update package.json version on release
+name: Create and publish package
 
 on:
   release:
-    types: [created]
+    types: [published]
     branches:
       - main
 
@@ -33,3 +33,25 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           # Ensure the commit is made using the GITHUB_TOKEN
           # This action handles the commit and push logic
+
+  # Create npm package
+  package:
+    needs: update-version
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish --access=public --allow-same-version --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
