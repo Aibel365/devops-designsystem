@@ -6,8 +6,6 @@ on:
     branches:
       - main
 
-  workflow_dispatch:
-
 jobs:
   update-version:
     runs-on: ubuntu-latest
@@ -32,7 +30,7 @@ jobs:
           branch: main
           token: ${{ secrets.GITHUB_TOKEN }}
           # Ensure the commit is made using the GITHUB_TOKEN
-          # This action handles the commit and push logic
+          # This action handles the commit and push logic      
 
   # Create npm package
   package:
@@ -45,6 +43,21 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Determine npm publish tag
+        id: get_tag
+        run: |
+          TAG_NAME="${{ github.event.release.tag_name }}"
+          # Remove 'v' prefix if present for npm version check
+          NPM_VERSION=$(echo "$TAG_NAME" | sed 's/^v//')
+          
+          # Check if the version is a prerelease (contains a hyphen)
+          if [[ "$NPM_VERSION" == *-* ]]; then
+            echo "::set-output name=npm_tag::next"
+          else
+            echo "::set-output name=npm_tag::latest"
+          fi
+        # This step uses a bash script to set an output variable based on the release tag format.
+        # Note: '::set-output' is a legacy command in GitHub Actions, but functional in current use cases.
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -52,6 +65,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm run build
-      - run: npm publish --access=public --allow-same-version --ignore-scripts
+      - run: npm publish --access=public --tag ${{ steps.get_tag.outputs.npm_tag }} --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
