@@ -1,8 +1,5 @@
 import { Card as CardPrimitive } from "@digdir/designsystemet-react";
-import type {
-  CardProps as CardPropsPrimitive,
-  CardBlockProps as CardBlockPropsPrimitive,
-} from "@digdir/designsystemet-react";
+import type { CardProps as CardPropsPrimitive, CardBlockProps as CardBlockPropsPrimitive } from "@digdir/designsystemet-react";
 
 export type CardProps = CardPropsPrimitive;
 export type CardBlockProps = CardBlockPropsPrimitive;

@@ -1,9 +1,4 @@
-import {
-  ChipButton,
-  ChipCheckbox,
-  ChipRadio,
-  ChipRemovable,
-} from "./ChipVariants";
+import { ChipButton, ChipCheckbox, ChipRadio, ChipRemovable } from "./ChipVariants";
 
 /**
  * Chip are small, interactive components that allow users to control how they want to see content.

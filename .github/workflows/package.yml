@@ -13,21 +13,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
         with:
-          ref: 'main'
+          ref: "main"
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update package.json version
         uses: BellCubeDev/update-package-version-by-release-tag@v2
         with:
           version: ${{ github.event.release.tag_name }}
           keep-v: "false"
-          
+
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "CI: Update package.json version to match release tag"
-          branch: main     
+          branch: main
 
   # Create npm package on full release
   package_on_full-release:
@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 'main'
+          ref: "main"
           fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
@@ -70,7 +70,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: 'main'
+          ref: "main"
           fetch-depth: 0
       - uses: actions/setup-node@v6
         with:

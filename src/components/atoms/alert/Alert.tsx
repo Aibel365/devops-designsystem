@@ -1,8 +1,5 @@
 import { Alert as AlertPrimitive, Heading } from "@digdir/designsystemet-react";
-import type {
-  AlertProps as AlertPropsPrimitive,
-  HeadingProps,
-} from "@digdir/designsystemet-react";
+import type { AlertProps as AlertPropsPrimitive, HeadingProps } from "@digdir/designsystemet-react";
 import type { ReactNode } from "react";
 
 export type AlertProps = AlertPropsPrimitive & {
@@ -22,13 +19,7 @@ export type AlertProps = AlertPropsPrimitive & {
  * @param headingSize Controls the visual size of the heading via the Heading component's `data-size` attribute.
  * @see https://designsystemet.no/en/components/docs/alert/overview
  */
-export const Alert = ({
-  heading,
-  headingLevel,
-  headingSize,
-  children,
-  ...rest
-}: AlertProps) => {
+export const Alert = ({ heading, headingLevel, headingSize, children, ...rest }: AlertProps) => {
   return (
     <AlertPrimitive {...rest}>
       {heading && (

@@ -1,20 +1,24 @@
 import type { Configuration, RedirectRequest } from "@azure/msal-browser";
-import { readLocalStorageValue } from "./useLocalStorage";
-import { CONFIG_LS_VALUE } from "./msalSetup";
+import { readLocalStorageValue } from "../../hooks/useLocalStorage";
+import { CONFIG_LS_VALUE, MsalConfiguration } from "../types";
 
-export interface MsalConfiguration {
-  CLIENT_ID?: string;
-  TENANT_ID?: string;
-  API_CLIENT_ID?: string;
-  APP_INSIGHT?: string;
-  OCP_APIM_SUBSCRIPTION_KEY?: string;
-}
-
+/**
+ * Reads authentication/environment configuration from local storage.
+ *
+ * @returns Persisted MSAL-related config values.
+ */
 export const getEnvConfig = (): MsalConfiguration => {
   return readLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE);
 };
 
-// Config object to be passed to Msal on creation
+/**
+ * Base MSAL client configuration used when constructing
+ * `PublicClientApplication`.
+ *
+ * Notes:
+ * - `clientId` and `authority` are derived from persisted env config.
+ * - Redirect URIs are rooted at `/` for login and logout callbacks.
+ */
 export const msalConfig: Configuration = {
   auth: {
     clientId: getEnvConfig().CLIENT_ID ?? "",
@@ -29,7 +33,11 @@ export const msalConfig: Configuration = {
   },
 };
 
-// Add here scopes for id token to be used at MS Identity Platform endpoints.
+/**
+ * Default redirect token request used for API access.
+ *
+ * Scope format: `api://<API_CLIENT_ID>/access_as_user`.
+ */
 export const ApiRequest: RedirectRequest = {
   scopes: [`api://${getEnvConfig().API_CLIENT_ID}/access_as_user`],
 };

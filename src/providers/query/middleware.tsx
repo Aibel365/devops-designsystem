@@ -1,15 +1,12 @@
 import type { RedirectRequest } from "@azure/msal-browser";
 import axios, { isAxiosError, type InternalAxiosRequestConfig } from "axios";
-import { getMsalInstance } from "./msalSetup";
-import { getTokenResponse } from "./getTokenResponse";
-import { getEnvConfig } from "./msalConfig";
+import { getMsalInstance } from "../msal/msalSetup";
+import { getTokenResponse } from "../msal/getTokenResponse";
+import { getEnvConfig } from "../msal/msalConfig";
 
 /* eslint-disable */
 export function communicationFailedMiddleware(error: any) {
-  if (
-    (axios.isAxiosError(error) && error.code === "ERR_NETWORK") ||
-    error.code === "ERR_CANCELED"
-  ) {
+  if ((axios.isAxiosError(error) && error.code === "ERR_NETWORK") || error.code === "ERR_CANCELED") {
     console.log("communicationFailedMiddleware", error);
     // const openDialog = dialogStore.getState().openDialog;
     // openDialog({
@@ -22,16 +19,10 @@ export function communicationFailedMiddleware(error: any) {
 /* eslint-enable */
 
 /* eslint-disable */
-export const errorInDataMiddleware = (
-  error: unknown | { response: { status: number } },
-) => {
+export const errorInDataMiddleware = (error: unknown | { response: { status: number } }) => {
   const notValidHttpStatus = [404, 422];
 
-  if (
-    isAxiosError(error) &&
-    error.response?.status &&
-    notValidHttpStatus.includes(error.response?.status || 999)
-  ) {
+  if (isAxiosError(error) && error.response?.status && notValidHttpStatus.includes(error.response?.status || 999)) {
     console.log("errorInDataMiddleware", error);
     // const openDialog = dialogStore.getState().openDialog;
     // const texts = textForStatus[error.response.status];
@@ -51,16 +42,9 @@ export const errorInDataMiddleware = (
 
 /* eslint-disable */
 export function missingAuthMiddleware(error: any) {
-  const httpStatus = {
-    forbidden: 403,
-    unauthorized: 401,
-  };
+  const httpStatus = { forbidden: 403, unauthorized: 401 };
 
-  if (
-    isAxiosError(error) &&
-    (error.response?.status === httpStatus.forbidden ||
-      error.response?.status === httpStatus.unauthorized)
-  ) {
+  if (isAxiosError(error) && (error.response?.status === httpStatus.forbidden || error.response?.status === httpStatus.unauthorized)) {
     console.log("missingAuthMiddleware", error);
     // const openDialog = dialogStore.getState().openDialog;
     // openDialog({
@@ -81,11 +65,7 @@ export function missingAuthMiddleware(error: any) {
  * @param apiVersion
  */
 /* eslint-disable */
-export async function injectBearerTokenMiddleware(
-  config: InternalAxiosRequestConfig,
-  request: RedirectRequest,
-  apiVersion: string,
-) {
+export async function injectBearerTokenMiddleware(config: InternalAxiosRequestConfig, request: RedirectRequest, apiVersion: string) {
   const msalInstance = await getMsalInstance();
 
   if (!msalInstance) return config;
@@ -93,18 +73,14 @@ export async function injectBearerTokenMiddleware(
   const account = msalInstance.getActiveAccount();
   if (!account) return config;
 
-  const response = await getTokenResponse(msalInstance, {
-    ...request,
-    account,
-  });
+  const response = await getTokenResponse(msalInstance, { ...request, account });
 
   if (response == null) return config;
 
   if (response?.accessToken && config.headers) {
     config.headers["Authorization"] = `Bearer ${response.accessToken}`;
     config.headers["Api-version"] = apiVersion;
-    config.headers["Ocp-Apim-Subscription-Key"] =
-      getEnvConfig().OCP_APIM_SUBSCRIPTION_KEY;
+    config.headers["Ocp-Apim-Subscription-Key"] = getEnvConfig().OCP_APIM_SUBSCRIPTION_KEY;
   }
 
   return config;

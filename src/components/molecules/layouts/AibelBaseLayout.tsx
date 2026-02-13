@@ -19,7 +19,7 @@ const Footer = () => {
   );
 };
 
-const AibelDefaultLayout = () => {
+const AibelBaseLayout = () => {
   return (
     <div className="ads:flex ads:flex-col ads:min-h-screen">
       <Header />
@@ -29,4 +29,4 @@ const AibelDefaultLayout = () => {
   );
 };
 
-export default AibelDefaultLayout;
+export default AibelBaseLayout;

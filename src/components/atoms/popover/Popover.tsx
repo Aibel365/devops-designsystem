@@ -1,9 +1,5 @@
 import { Popover as PopoverPrimitive } from "@digdir/designsystemet-react";
-import type {
-  PopoverProps as PopoverPropsPrimitive,
-  PopoverTriggerContextProps,
-  PopoverTriggerProps,
-} from "@digdir/designsystemet-react";
+import type { PopoverProps as PopoverPropsPrimitive, PopoverTriggerContextProps, PopoverTriggerProps } from "@digdir/designsystemet-react";
 import { Placement } from "@floating-ui/utils";
 import { ReactNode } from "react";
 
@@ -23,19 +19,10 @@ export type PopoverProps = PopoverPropsPrimitive & {
  * Based on Designsystemet's Popover component.
  * @see https://designsystemet.no/no/components/docs/popover/overview
  */
-export const Popover = ({
-  placement,
-  triggerContextProps,
-  triggerProps,
-  heading,
-  content,
-  ...rest
-}: PopoverProps) => {
+export const Popover = ({ placement, triggerContextProps, triggerProps, heading, content, ...rest }: PopoverProps) => {
   return (
     <PopoverPrimitive.TriggerContext {...triggerContextProps}>
-      <PopoverPrimitive.Trigger {...triggerProps}>
-        {heading}
-      </PopoverPrimitive.Trigger>
+      <PopoverPrimitive.Trigger {...triggerProps}>{heading}</PopoverPrimitive.Trigger>
       <PopoverPrimitive placement={placement} {...rest}>
         {content}
       </PopoverPrimitive>

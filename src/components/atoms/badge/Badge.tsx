@@ -1,8 +1,5 @@
 import { Badge as BadgePrimitive } from "@digdir/designsystemet-react";
-import type {
-  BadgeProps as BadgePropsPrimitive,
-  BadgePositionProps,
-} from "@digdir/designsystemet-react";
+import type { BadgeProps as BadgePropsPrimitive, BadgePositionProps } from "@digdir/designsystemet-react";
 import type { ReactNode } from "react";
 
 export type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
@@ -26,17 +23,9 @@ export type BadgeProps = Omit<BadgePropsPrimitive, "children"> & {
 
  * @see https://designsystemet.no/en/components/docs/badge/overview
  */
-export const Badge = ({
-  placementChildren,
-  overlapChildren,
-  children,
-  ...rest
-}: BadgeProps) => {
+export const Badge = ({ placementChildren, overlapChildren, children, ...rest }: BadgeProps) => {
   return children ? (
-    <BadgePrimitive.Position
-      placement={placementChildren}
-      overlap={overlapChildren}
-    >
+    <BadgePrimitive.Position placement={placementChildren} overlap={overlapChildren}>
       <BadgePrimitive {...rest} />
       {children}
     </BadgePrimitive.Position>

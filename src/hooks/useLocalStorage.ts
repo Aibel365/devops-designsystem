@@ -54,10 +54,7 @@ export function saveLocalStorageValue<T>(key: string, value: T): void {
  *          - setValue: function to update the value (accepts value or updater function)
  *          - removeItem: function to remove the item from local storage and reset to initial value
  */
-export function useLocalStorage<T>(
-  key: string,
-  initialValue: T,
-): [T, (value: T | ((val: T) => T)) => void, () => void] {
+export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((val: T) => T)) => void, () => void] {
   // Use a function to initialize the state from localStorage
   const [value, setValue] = useState<T>(() => {
     try {

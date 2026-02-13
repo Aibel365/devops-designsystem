@@ -10,8 +10,7 @@ const meta: Meta<typeof Popover> = {
   },
   args: {
     heading: "Åpne popover",
-    content:
-      "Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.",
+    content: "Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten.",
   },
 };
 

@@ -5,8 +5,4 @@ export interface IConditionRender {
   children: ReactNode;
   fallback?: ReactNode;
 }
-export const ConditionRender: React.FC<IConditionRender> = ({
-  condition,
-  children,
-  fallback = null,
-}) => (condition ? children : fallback);
+export const ConditionRender: React.FC<IConditionRender> = ({ condition, children, fallback = null }) => (condition ? children : fallback);

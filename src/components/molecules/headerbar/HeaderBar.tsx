@@ -30,25 +30,12 @@ export type UserMenuContentProps = UserMenuContentHeaderBarProps & {
   customMenuContent?: CustomMenuContentConfig[];
 };
 
-export const HeaderBar = ({
-  title,
-  logoLink = "/",
-  titleLink = "/",
-  linkCallback,
-  children,
-  subHeaderProps,
-  className,
-  ...delegated
-}: HeaderBarProps) => {
+export const HeaderBar = ({ title, logoLink = "/", titleLink = "/", linkCallback, children, subHeaderProps, className, ...delegated }: HeaderBarProps) => {
   return (
     <div className="ads:sticky ads:top-0 ads:z-100 ads:flex ads:flex-col">
       <div className="ads:flex ads:content-between ads:w-full ads:h-19 ads:py-0 ads:px-8 ads:bg-blue-900 ads:text-neutral-100 ads:shadow-2xl ads:shadow-black/15 ads:z-1">
         <div className="ads:flex ads:items-center ads:justify-between ads:gap-2">
-          <a
-            className="ads:p-0 ads:h-7 ads:md:h-5 ads:bg-transparent ads:border-0 ads:hover:cursor-pointer"
-            href={linkCallback ? undefined : logoLink}
-            onClick={linkCallback ? () => linkCallback(logoLink) : undefined}
-          >
+          <a className="ads:p-0 ads:h-7 ads:md:h-5 ads:bg-transparent ads:border-0 ads:hover:cursor-pointer" href={linkCallback ? undefined : logoLink} onClick={linkCallback ? () => linkCallback(logoLink) : undefined}>
             <AibelLogo className="ads:h-7 ads:md:h-5 ads:p-0" />
           </a>
           <ConditionRender condition={!!title}>
@@ -58,11 +45,7 @@ export const HeaderBar = ({
             </a>
           </ConditionRender>
         </div>
-        {children && (
-          <div className="ads:flex ads:items-center ads:justify-center ads:h-19 ads:absolute ads:left-1/2 ads:translate-x-1/2">
-            {children}
-          </div>
-        )}
+        {children && <div className="ads:flex ads:items-center ads:justify-center ads:h-19 ads:absolute ads:left-1/2 ads:translate-x-1/2">{children}</div>}
         {delegated.userName && (
           <div className="ads:flex ads:ml-auto ads:items-center">
             <UserMenu {...delegated} />

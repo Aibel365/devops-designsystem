@@ -7,11 +7,7 @@ interface BreadcrumbItemProps {
   isCurrentPage: boolean;
 }
 
-export const BreadcrumbsItem = ({
-  callBackFunction,
-  link,
-  isCurrentPage,
-}: BreadcrumbItemProps) => {
+export const BreadcrumbsItem = ({ callBackFunction, link, isCurrentPage }: BreadcrumbItemProps) => {
   const isString = typeof link === "string";
   const linkValue = isString ? link : link.link;
   const linkLabel = isString ? link : link.displayText;
@@ -19,20 +15,11 @@ export const BreadcrumbsItem = ({
   return (
     <BreadcrumbsPrimitive.Item>
       {callBackFunction ? (
-        <BreadcrumbsPrimitive.Link
-          role="button"
-          tabIndex={0}
-          onClick={() => callBackFunction(linkValue)}
-          onKeyDown={(e) =>
-            e.key === "Enter" && !isCurrentPage && callBackFunction(linkValue)
-          }
-        >
+        <BreadcrumbsPrimitive.Link role="button" tabIndex={0} onClick={() => callBackFunction(linkValue)} onKeyDown={(e) => e.key === "Enter" && !isCurrentPage && callBackFunction(linkValue)}>
           {linkLabel}
         </BreadcrumbsPrimitive.Link>
       ) : (
-        <BreadcrumbsPrimitive.Link href={linkValue}>
-          {linkLabel}
-        </BreadcrumbsPrimitive.Link>
+        <BreadcrumbsPrimitive.Link href={linkValue}>{linkLabel}</BreadcrumbsPrimitive.Link>
       )}
     </BreadcrumbsPrimitive.Item>
   );

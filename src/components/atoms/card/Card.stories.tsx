@@ -23,11 +23,7 @@ export const CardAsButtonWithBlocks: Story = {
           <Heading>Innstillinger og personvern</Heading>
         </Card.Block>
         <Card.Block>
-          <Paragraph>
-            Dette åpner en dialog der du kan oppdatere personvernvalg, justere
-            innstillinger og tilpasse hvordan tjenesten behandler informasjonen
-            din. Du kan se gjennom endringene før du lagrer.
-          </Paragraph>
+          <Paragraph>Dette åpner en dialog der du kan oppdatere personvernvalg, justere innstillinger og tilpasse hvordan tjenesten behandler informasjonen din. Du kan se gjennom endringene før du lagrer.</Paragraph>
         </Card.Block>
       </button>
     </Card>

@@ -1,10 +1,5 @@
 import { Chip as ChipPrimitive } from "@digdir/designsystemet-react";
-import type {
-  ChipRadioProps as ChipRadioPropsPrimitive,
-  ChipCheckboxProps as ChipCheckboxPropsPrimitive,
-  ChipRemovableProps as ChipRemovablePropsPrimitive,
-  ChipButtonProps as ChipButtonPropsPrimitive,
-} from "@digdir/designsystemet-react";
+import type { ChipRadioProps as ChipRadioPropsPrimitive, ChipCheckboxProps as ChipCheckboxPropsPrimitive, ChipRemovableProps as ChipRemovablePropsPrimitive, ChipButtonProps as ChipButtonPropsPrimitive } from "@digdir/designsystemet-react";
 
 export type ChipRadioProps = ChipRadioPropsPrimitive;
 export const ChipRadio = (props: ChipRadioProps) => {

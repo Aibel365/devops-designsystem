@@ -26,11 +26,7 @@ export type UserMenuContentProps = UserMenuContentHeaderBarProps & {
   customMenuContent?: CustomMenuContentConfig[];
 };
 
-const UserMenuContentHeaderBar = ({
-  userName,
-  userEmail,
-  userImage,
-}: UserMenuContentHeaderBarProps) => {
+const UserMenuContentHeaderBar = ({ userName, userEmail, userImage }: UserMenuContentHeaderBarProps) => {
   return (
     <div className="ads:flex ads:gap-4 ads:p-4">
       <Avatar aria-hidden initials={getInitials(userName)}></Avatar>
@@ -65,40 +61,16 @@ export const UserMenu = forwardRef((props: UserMenuContentProps, _) => {
   // const { ...delegated } = props;
 
   return (
-    <Popover
-      triggerProps={{ inline: true, "data-color": "none" }}
-      placement={"bottom-end"}
-      heading={
-        <Avatar
-          data-size="sm"
-          variant="circle"
-          aria-hidden
-          initials={getInitials(props.userName)}
-        ></Avatar>
-      }
-    >
+    <Popover triggerProps={{ inline: true, "data-color": "none" }} placement={"bottom-end"} heading={<Avatar data-size="sm" variant="circle" aria-hidden initials={getInitials(props.userName)}></Avatar>}>
       <UserMenuContent {...props} />
     </Popover>
   );
 });
 
-const UserMenuContent = ({
-  userName,
-  userEmail,
-  userImage,
-  handleSwitchAccount,
-  switchAccountLabel,
-  handleLogout,
-  logoutLabel,
-  customMenuContent,
-}: UserMenuContentProps) => {
+const UserMenuContent = ({ userName, userEmail, userImage, handleSwitchAccount, switchAccountLabel, handleLogout, logoutLabel, customMenuContent }: UserMenuContentProps) => {
   return (
     <div className="ads:flex ads:flex-col ads:gap-2 ads:w-62.5">
-      <UserMenuContentHeaderBar
-        userImage={userImage}
-        userName={userName}
-        userEmail={userEmail}
-      />
+      <UserMenuContentHeaderBar userImage={userImage} userName={userName} userEmail={userEmail} />
       <Divider />
       {/* <div>
         {handleSwitchAccount && (

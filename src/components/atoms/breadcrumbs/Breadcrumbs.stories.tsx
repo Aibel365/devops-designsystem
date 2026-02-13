@@ -21,11 +21,7 @@ export const Default: Story = {};
 
 export const ListOfStrings: Story = {
   args: {
-    links: [
-      "https://aibel365.sharepoint.com",
-      "https://aibel365.sharepoint.com/sites",
-      "https://aibel365.sharepoint.com/sites/it",
-    ],
+    links: ["https://aibel365.sharepoint.com", "https://aibel365.sharepoint.com/sites", "https://aibel365.sharepoint.com/sites/it"],
   },
 };
 

@@ -1,18 +1,17 @@
-import {
-  PublicClientApplication,
-  type EventMessage,
-  EventType,
-  type AuthenticationResult,
-} from "@azure/msal-browser";
+import { PublicClientApplication, type EventMessage, EventType, type AuthenticationResult } from "@azure/msal-browser";
 import { msalConfig, ApiRequest, getEnvConfig } from "./msalConfig";
 import { getTokenResponse } from "./getTokenResponse";
-import { saveLocalStorageValue } from "./useLocalStorage";
-
-export const USER_LS_VALUE: string = "USER_LS_VALUE";
-export const CONFIG_LS_VALUE: string = "CONFIG_LS_VALUE";
+import { saveLocalStorageValue } from "../../hooks/useLocalStorage";
+import { USER_LS_VALUE } from "../types";
 
 let msalInstance: PublicClientApplication;
 
+/**
+ * Decodes a JWT payload into JSON.
+ *
+ * @param token Raw JWT access token.
+ * @returns Parsed payload object, or `null` when token is missing/invalid.
+ */
 const parseJwt = (token?: string) => {
   if (!token) return null;
   try {
@@ -35,6 +34,15 @@ const parseJwt = (token?: string) => {
   }
 };
 
+/**
+ * Extracts user identity from token payload and stores it in local storage.
+ *
+ * The stored value is reset before extraction so stale user data is not kept
+ * when token parsing fails or when no token is available.
+ *
+ * @param token Access token that may include an `employeeId` claim.
+ * @returns `null` when token is missing or parsing fails.
+ */
 const findAndSetUserIdFromToken = (token?: string) => {
   saveLocalStorageValue(USER_LS_VALUE, undefined);
   if (!token) {
@@ -53,12 +61,25 @@ const findAndSetUserIdFromToken = (token?: string) => {
   }
 };
 
+/**
+ * Returns a singleton MSAL `PublicClientApplication` instance.
+ *
+ * Setup flow:
+ * - Validate required environment variables.
+ * - Create and initialize the MSAL client once.
+ * - Register login/token success callbacks to keep active account in sync.
+ * - Resolve redirect responses and acquire a fresh token for active users.
+ * - Persist decoded user identity from acquired access tokens.
+ *
+ * If required environment values are missing, the function logs errors and
+ * returns `undefined` to prevent partially configured auth startup.
+ *
+ * @returns Initialized MSAL instance, or `undefined` when required config is missing.
+ */
 export async function getMsalInstance() {
   if (msalInstance) {
     return msalInstance;
   }
-
-  // check if we are missing expected env, so dev see it faster...
 
   let missing_expected_env = false;
   const config = getEnvConfig();

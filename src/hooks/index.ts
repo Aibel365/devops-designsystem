@@ -1,5 +1,1 @@
-export {
-  useLocalStorage,
-  saveLocalStorageValue,
-  readLocalStorageValue,
-} from "./useLocalStorage";
+export { useLocalStorage, saveLocalStorageValue, readLocalStorageValue } from "./useLocalStorage";

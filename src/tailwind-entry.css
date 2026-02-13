@@ -4,9 +4,8 @@
 
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
-@theme { 
+@theme {
   /* Your theme variables go here */
-
 }
 /* eslint-enable */
 

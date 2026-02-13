@@ -8,10 +8,7 @@ export { Badge } from "./badge/Badge";
 export type { BadgeProps } from "./badge/Badge";
 
 export { Breadcrumbs } from "./breadcrumbs/Breadcrumbs";
-export type {
-  BreadcrumbsProps,
-  BreadcrumbLink,
-} from "./breadcrumbs/Breadcrumbs";
+export type { BreadcrumbsProps, BreadcrumbLink } from "./breadcrumbs/Breadcrumbs";
 
 export { Button } from "./button/Button";
 export type { ButtonProps } from "./button/Button";
@@ -23,12 +20,7 @@ export { Checkbox } from "./checkbox/Checkbox";
 export type { CheckboxProps } from "./checkbox/Checkbox";
 
 export { Chip } from "./chip/Chip";
-export type {
-  ChipRadioProps,
-  ChipCheckboxProps,
-  ChipRemovableProps,
-  ChipButtonProps,
-} from "./chip/ChipVariants";
+export type { ChipRadioProps, ChipCheckboxProps, ChipRemovableProps, ChipButtonProps } from "./chip/ChipVariants";
 
 export { ConditionRender } from "./conditionRender/ConditionRender";
 export type { IConditionRender } from "./conditionRender/ConditionRender";
