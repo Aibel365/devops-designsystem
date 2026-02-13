@@ -1,0 +1,29 @@
+name: Update package.json version on release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # This is important for the action to be able to push changes back to the repo
+          token: ${{ secrets.GITHUB_TOKEN }} 
+
+      - name: Update package.json version
+        # Use a community action to handle the version update
+        uses: BellCubeDev/update-package-version-by-release-tag@v2
+        with:
+          # The action will automatically use the release tag if no version is provided
+          version: ${{ github.event.release.tag_name }} 
+          
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "CI: Update package.json version to match release tag"
+          # Ensure the commit is made using the GITHUB_TOKEN
+          # This action handles the commit and push logic
