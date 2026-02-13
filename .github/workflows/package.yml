@@ -21,10 +21,11 @@ jobs:
         uses: BellCubeDev/update-package-version-by-release-tag@v2
         with:
           # The action will automatically use the release tag if no version is provided
-          version: ${{ github.event.release.tag_name }} 
+          version: ${{ github.event.release.tag_name }}
+          keep-v: "false"
           
       - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "CI: Update package.json version to match release tag"
           branch: main
