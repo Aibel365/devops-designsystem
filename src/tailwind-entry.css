@@ -3,11 +3,15 @@
 @import "../design-tokens-build/aibel-theme.css";
 
 /* Register design tokens or custom properties with Tailwind */
-@theme {
+/* eslint-disable */
+@theme { 
   /* Your theme variables go here */
 
 }
+/* eslint-enable */
 
+/* eslint-disable */
 .dark {
   /* Dark mode overrides */
 }
+/* eslint-enable */
