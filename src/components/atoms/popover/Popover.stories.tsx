@@ -5,12 +5,11 @@ const meta: Meta<typeof Popover> = {
     title: "Atoms/Popover",
     component: Popover,
     argTypes: {
-        heading: { control: "text" },
-        content: { control: "text" }
+        heading: { control: "text" }
     },
     args: {
-        heading: "Åpne popover",
-        content: "Popoveret gir en rask beskjed. Her kan du vise brukeren informasjon som er relevant for konteksten."
+        heading: "Open popover",
+        children: "Popovers are used to display more detailed or interactive additional information without taking the user away from the context. They can be used as an extended solution when Tooltips are not sufficient."
     }
 };
 

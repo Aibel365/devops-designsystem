@@ -8,7 +8,7 @@ export type PopoverProps = PopoverPropsPrimitive & {
     triggerContextProps?: PopoverTriggerContextProps;
     triggerProps?: PopoverTriggerProps;
     heading?: ReactNode;
-    content?: ReactNode;
+    children?: ReactNode;
 };
 
 /**
@@ -19,7 +19,7 @@ export type PopoverProps = PopoverPropsPrimitive & {
  * Based on Designsystemet's Popover component.
  * @see https://designsystemet.no/no/components/docs/popover/overview
  */
-export const Popover = ({ placement, triggerContextProps, triggerProps, heading, content, ...rest }: PopoverProps) => {
+export const Popover = ({ placement, triggerContextProps, triggerProps, heading, children, ...rest }: PopoverProps) => {
     return (
         <PopoverPrimitive.TriggerContext {...triggerContextProps}>
             <PopoverPrimitive.Trigger {...triggerProps}>{heading}</PopoverPrimitive.Trigger>
@@ -27,7 +27,7 @@ export const Popover = ({ placement, triggerContextProps, triggerProps, heading,
                 placement={placement}
                 {...rest}
             >
-                {content}
+                {children}
             </PopoverPrimitive>
         </PopoverPrimitive.TriggerContext>
     );

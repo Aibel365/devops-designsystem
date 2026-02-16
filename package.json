@@ -47,7 +47,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ./src/components",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist storybook-static"
   },
   "peerDependencies": {
     "react": "^19.2.0",

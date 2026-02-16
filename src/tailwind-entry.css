@@ -5,6 +5,7 @@
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme {
+    --color-aibel-bright-blue: #0030b0;
     /* Your theme variables go here */
 }
 /* eslint-enable */

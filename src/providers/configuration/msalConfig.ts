@@ -1,4 +1,4 @@
-import type { Configuration, RedirectRequest } from "@azure/msal-browser";
+import { type Configuration, type RedirectRequest } from "@azure/msal-browser";
 import { readLocalStorageValue } from "../../hooks/useLocalStorage";
 import { CONFIG_LS_VALUE, MsalConfiguration } from "../types";
 
@@ -21,12 +21,15 @@ export const getEnvConfig = (): MsalConfiguration => {
  */
 export const msalConfig: Configuration = {
     auth: {
-        clientId: getEnvConfig().CLIENT_ID ?? "",
-        authority: `https://login.microsoftonline.com/${getEnvConfig().TENANT_ID}`,
+        clientId: getEnvConfig()?.CLIENT_ID ?? "",
+        authority: `https://login.microsoftonline.com/${getEnvConfig()?.TENANT_ID}`,
         redirectUri: "/",
-        postLogoutRedirectUri: "/"
+        postLogoutRedirectUri: "/",
+        navigateToLoginRequestUrl: false
     },
     cache: {
+        cacheLocation: "sessionStorage",
+        storeAuthStateInCookie: false
         // depends if you need to share between tabs,
         // if you have iframe and need to open new window, then you want local storage
         //cacheLocation: BrowserCacheLocation.LocalStorage // BrowserCacheLocation.SessionStorage // "sessionStorage"
@@ -39,5 +42,5 @@ export const msalConfig: Configuration = {
  * Scope format: `api://<API_CLIENT_ID>/access_as_user`.
  */
 export const ApiRequest: RedirectRequest = {
-    scopes: [`api://${getEnvConfig().API_CLIENT_ID}/access_as_user`]
+    scopes: [`api://${getEnvConfig()?.API_CLIENT_ID}/access_as_user`]
 };

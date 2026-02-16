@@ -1,8 +1,8 @@
 import type { RedirectRequest } from "@azure/msal-browser";
 import axios, { isAxiosError, type InternalAxiosRequestConfig } from "axios";
-import { getMsalInstance } from "../msal/msalSetup";
-import { getTokenResponse } from "../msal/getTokenResponse";
-import { getEnvConfig } from "../msal/msalConfig";
+import { getMsalInstance } from "../setup/msalSetup";
+import { getTokenResponse } from "./getTokenResponse";
+import { getEnvConfig } from "../configuration/msalConfig";
 
 /* eslint-disable */
 export function communicationFailedMiddleware(error: any) {
@@ -80,7 +80,7 @@ export async function injectBearerTokenMiddleware(config: InternalAxiosRequestCo
     if (response?.accessToken && config.headers) {
         config.headers["Authorization"] = `Bearer ${response.accessToken}`;
         config.headers["Api-version"] = apiVersion;
-        config.headers["Ocp-Apim-Subscription-Key"] = getEnvConfig().OCP_APIM_SUBSCRIPTION_KEY;
+        config.headers["Ocp-Apim-Subscription-Key"] = getEnvConfig()?.OCP_APIM_SUBSCRIPTION_KEY;
     }
 
     return config;

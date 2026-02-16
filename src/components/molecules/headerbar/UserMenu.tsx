@@ -1,7 +1,7 @@
 import { forwardRef, ReactElement } from "react";
-import { Divider, Popover } from "../../atoms";
+import { AibelLogo, Button, Divider, Popover } from "../../atoms";
 import { getInitials } from "./getInitials";
-import { Avatar } from "@digdir/designsystemet-react";
+import { Avatar, Paragraph } from "@digdir/designsystemet-react";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
@@ -28,14 +28,29 @@ export type UserMenuContentProps = UserMenuContentHeaderBarProps & {
 
 const UserMenuContentHeaderBar = ({ userName, userEmail, userImage }: UserMenuContentHeaderBarProps) => {
     return (
-        <div className="ads:flex ads:gap-4 ads:p-4">
+        <div className="ads:flex ads:flex-row ads:gap-4 ads:px-4">
             <Avatar
                 aria-hidden
                 initials={getInitials(userName)}
             ></Avatar>
-            <div className="ads:flex ads:flex-col ads:py-2">
-                {userName}
-                {userEmail}
+            <div className="ads:flex ads:flex-col ads:py-1 ads:text-black">
+                <Paragraph data-size="sm">{userName}</Paragraph>
+                <Paragraph data-size="xs">{userEmail}</Paragraph>
+                <Button
+                    data-size="sm"
+                    variant="tertiary"
+                >
+                    {/* <PencilWritingIcon aria-hidden /> */}
+                    Switch account
+                </Button>
+                <Button
+                    data-size="sm"
+                    variant="tertiary"
+                    className="ads:text-left"
+                >
+                    {/* <PencilWritingIcon aria-hidden /> */}
+                    Log out
+                </Button>
             </div>
         </div>
     );
@@ -65,15 +80,19 @@ export const UserMenu = forwardRef((props: UserMenuContentProps, _) => {
 
     return (
         <Popover
-            triggerProps={{ inline: true, "data-color": "none" }}
+            triggerProps={{ inline: true }}
             placement={"bottom-end"}
             heading={
                 <Avatar
+                    data-color="info"
                     data-size="sm"
                     variant="circle"
+                    aria-label={props.userName}
                     aria-hidden
                     initials={getInitials(props.userName)}
-                ></Avatar>
+                >
+                    <AibelLogo />
+                </Avatar>
             }
         >
             <UserMenuContent {...props} />
@@ -83,7 +102,7 @@ export const UserMenu = forwardRef((props: UserMenuContentProps, _) => {
 
 const UserMenuContent = ({ userName, userEmail, userImage, handleSwitchAccount, switchAccountLabel, handleLogout, logoutLabel, customMenuContent }: UserMenuContentProps) => {
     return (
-        <div className="ads:flex ads:flex-col ads:gap-2 ads:w-62.5">
+        <div className="ads:flex ads:flex-col ads:gap-2 ads:w-full">
             <UserMenuContentHeaderBar
                 userImage={userImage}
                 userName={userName}

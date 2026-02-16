@@ -2,11 +2,11 @@ import type { IPublicClientApplication } from "@azure/msal-browser";
 import { MsalProvider } from "@azure/msal-react";
 import { useEffect, useState } from "react";
 import { type RouteObject, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { getMsalInstance } from "./msal/msalSetup";
-import { initApplicationInsight } from "./msal/appInsight";
+import { getMsalInstance } from "./setup/msalSetup";
+import { initApplicationInsight } from "./setup/appInsight";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./query/queryClient";
-import { saveLocalStorageValue } from "../hooks";
+import { useLocalStorage } from "../hooks";
 import { AibelApplicationProviderProps, CONFIG_LS_VALUE, type MsalConfiguration } from "./types";
 
 /**
@@ -33,21 +33,23 @@ export const useAuthenticatedRouter = (routes: RouteObject[]) => createBrowserRo
  */
 export const AibelApplicationProvider = ({ routes, children, env }: AibelApplicationProviderProps) => {
     const [pca, setPca] = useState<IPublicClientApplication | undefined>(undefined);
-    saveLocalStorageValue<MsalConfiguration>(CONFIG_LS_VALUE, env);
+    const [config] = useLocalStorage<MsalConfiguration>(CONFIG_LS_VALUE, env);    
 
     useEffect(() => {
+      if(config){
         getMsalInstance().then((msalInstance) => {
             initApplicationInsight(msalInstance).then(() => {
                 setPca(msalInstance);
             });
         });
-    }, []);
+      }
+    }, [config]);
 
     const router = useAuthenticatedRouter(routes ?? []);
 
     return (
         <>
-            {pca && (
+            {pca && config &&(
                 <MsalProvider instance={pca}>
                     <QueryClientProvider client={queryClient}>
                         {children && children}

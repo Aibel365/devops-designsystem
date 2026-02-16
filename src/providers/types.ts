@@ -1,30 +1,17 @@
 import { ReactNode } from "react";
 import { RouteObject } from "react-router";
 
-/**
- * Local storage key used to persist decoded user information from JWT payload.
- */
+/** Local storage key used to persist decoded user information from JWT payload. */
 export const USER_LS_VALUE: string = "USER_LS_VALUE";
-/**
- * Local storage key reserved for persisted auth/environment config values.
- */
+/** Local storage key reserved for persisted auth/environment config values. */
 export const CONFIG_LS_VALUE: string = "CONFIG_LS_VALUE";
+/** Local storage key used to persist user profile photo from Microsoft Graph. */
+export const USER_IMAGE_LS_VALUE = "USER_IMAGE_LS_VALUE";
 
-/**
- * Props accepted by the root application provider.
- */
+/** Props accepted by the root application provider. */
 export interface AibelApplicationProviderProps {
-    /**
-     * Runtime authentication/environment configuration persisted for MSAL setup.
-     */
     env: MsalConfiguration;
-    /**
-     * Optional route definitions rendered through `RouterProvider` when present.
-     */
     routes: RouteObject[] | undefined;
-    /**
-     * Optional application content rendered inside auth/query providers.
-     */
     children?: ReactNode;
 }
 
@@ -32,14 +19,19 @@ export interface AibelApplicationProviderProps {
  * Configuration values used by MSAL and related provider integrations.
  */
 export interface MsalConfiguration {
-    /** Azure AD application (client) ID for the SPA. */
     CLIENT_ID?: string;
-    /** Azure AD tenant ID used to build the authority URL. */
     TENANT_ID?: string;
-    /** API application ID used to construct API access scopes. */
     API_CLIENT_ID?: string;
-    /** Application Insights connection string. */
     APP_INSIGHT?: string;
-    /** Subscription key forwarded to APIM-protected endpoints when required. */
     OCP_APIM_SUBSCRIPTION_KEY?: string;
+    API_GRAPH_VERSION: string;
+}
+
+/** User information decoded from JWT payload and persisted to local storage. */
+export interface UserData {
+    id: string;
+    name: string;
+    employeeId: string | undefined;
+    email: string;
+    ofsName: string | undefined;
 }

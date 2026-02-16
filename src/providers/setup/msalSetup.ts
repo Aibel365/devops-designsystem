@@ -1,8 +1,9 @@
 import { PublicClientApplication, type EventMessage, EventType, type AuthenticationResult } from "@azure/msal-browser";
-import { msalConfig, ApiRequest, getEnvConfig } from "./msalConfig";
-import { getTokenResponse } from "./getTokenResponse";
+import { msalConfig, ApiRequest, getEnvConfig } from "../configuration/msalConfig";
+import { getTokenResponse } from "../query/getTokenResponse";
 import { saveLocalStorageValue } from "../../hooks/useLocalStorage";
-import { USER_LS_VALUE } from "../types";
+import { USER_IMAGE_LS_VALUE, USER_LS_VALUE, UserData } from "../types";
+import { graphApi } from "../query/graphClient";
 
 let msalInstance: PublicClientApplication;
 
@@ -50,9 +51,16 @@ const findAndSetUserIdFromToken = (token?: string) => {
         return null;
     }
     try {
-        const jwtDecoded: null | { employeeId: string } = parseJwt(token);
+        const jwtDecoded: null | { employeeId: string; oid: string; displayName: string; preferred_username: string; samaccountname: string } = parseJwt(token);
         if (jwtDecoded?.employeeId) {
-            saveLocalStorageValue(USER_LS_VALUE, jwtDecoded ?? undefined);
+            const userValue: UserData = {
+                id: jwtDecoded.oid,
+                name: jwtDecoded.displayName,
+                employeeId: jwtDecoded.employeeId,
+                email: jwtDecoded.preferred_username,
+                ofsName: jwtDecoded.samaccountname
+            };
+            saveLocalStorageValue(USER_LS_VALUE, userValue);
         }
     } catch (_e) {
         console.warn(_e);
@@ -98,6 +106,7 @@ export async function getMsalInstance() {
     }
 
     if (missing_expected_env) {
+        saveLocalStorageValue(USER_IMAGE_LS_VALUE, undefined);
         return;
     }
 
@@ -110,6 +119,9 @@ export async function getMsalInstance() {
             const account = payload.account;
 
             msalInstance.setActiveAccount(account);
+            graphApi.getPhoto().then((photo) => {
+                saveLocalStorageValue(USER_IMAGE_LS_VALUE, photo);
+            });
         }
 
         // so we set correct account when switching..
@@ -118,6 +130,9 @@ export async function getMsalInstance() {
             const account = payload.account;
 
             msalInstance.setActiveAccount(account);
+            graphApi.getPhoto().then((photo) => {
+                saveLocalStorageValue(USER_IMAGE_LS_VALUE, photo);
+            });
         }
     });
 
@@ -139,6 +154,7 @@ export async function getMsalInstance() {
                     return response;
                 } catch (e) {
                     console.log("handleRedirectPromise() :: error", e);
+                    saveLocalStorageValue(USER_IMAGE_LS_VALUE, undefined);
                     const instance = await getMsalInstance();
                     instance?.logoutRedirect({ account });
                 }
