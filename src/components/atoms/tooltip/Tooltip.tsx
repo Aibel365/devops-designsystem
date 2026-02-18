@@ -12,5 +12,5 @@ export type TooltipProps = TooltipPropsPrimitive;
  */
 
 export const Tooltip = (props: TooltipProps) => {
-    return <TooltipPrimitive {...props} />;
+    return <TooltipPrimitive {...props}>{props.children}</TooltipPrimitive>;
 };
