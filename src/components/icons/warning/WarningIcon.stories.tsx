@@ -2,12 +2,12 @@ import { Meta, StoryObj } from "@storybook/react-vite";
 import { WarningIcon } from "./WarningIcon";
 
 const meta: Meta<typeof WarningIcon> = {
-  title: "Icons/Icons/WarningIcon",
-  component: WarningIcon,
-  args: {
-    size: 20,
-    color: "#8e9199",
-  },
+    title: "Icons/Icons/WarningIcon",
+    component: WarningIcon,
+    args: {
+        size: 20,
+        color: "#8e9199"
+    }
 };
 
 type Story = StoryObj<typeof WarningIcon>;

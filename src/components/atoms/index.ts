@@ -36,3 +36,12 @@ export type { PopoverProps } from "./popover/Popover";
 
 export { AibelLogo } from "./logo/AibelLogo";
 export type { IconSvgProps } from "./logo/AibelLogo";
+
+export { Tooltip } from "./tooltip/Tooltip";
+export type { TooltipProps } from "./tooltip/Tooltip";
+
+export { Tag } from "./tag/Tag";
+export type { TagProps } from "./tag/Tag";
+
+export { Switch } from "./switch/Switch";
+export type { SwitchProps } from "./switch/Switch";

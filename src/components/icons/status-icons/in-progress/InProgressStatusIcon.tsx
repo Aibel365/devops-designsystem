@@ -4,9 +4,14 @@ import InProgressStatus from "./inProgressStatus.jsx.svg?react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
     size?: number;
-}
+};
 
-export const InProgressStatusIcon = ({size, ...rest}: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : 'ads:size-4';
-    return <InProgressStatus className={`${sizeCss} ads:leading-0 ads:inline-block`} {...rest} />;    
+export const InProgressStatusIcon = ({ size, ...rest }: IconSvgProps) => {
+    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+    return (
+        <InProgressStatus
+            className={`${sizeCss} ads:leading-0 ads:inline-block`}
+            {...rest}
+        />
+    );
 };

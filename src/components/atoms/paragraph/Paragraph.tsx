@@ -10,7 +10,7 @@ export type ParagraphProps = ParagraphPropsPrimitive;
 /**
  * Paragraph atom wrapper around Designsystemet's Paragraph primitive. *
  * Based on Designsystemet's Paragraph component.
- * 
+ *
  * @param props Paragraph props forwarded to the underlying primitive.
  * @returns Rendered paragraph content.
  * @see https://designsystemet.no/no/components/docs/paragraph/overview

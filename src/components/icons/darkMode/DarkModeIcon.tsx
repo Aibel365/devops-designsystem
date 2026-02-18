@@ -4,9 +4,14 @@ import DarkMode from "./darkMode.jsx.svg?react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
     size?: number;
-}
+};
 
-export const DarkModeIcon = ({size, ...rest}: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : 'ads:size-4';
-    return <DarkMode className={`${sizeCss} ads:leading-0 ads:inline-block`} {...rest} />;    
+export const DarkModeIcon = ({ size, ...rest }: IconSvgProps) => {
+    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+    return (
+        <DarkMode
+            className={`${sizeCss} ads:leading-0 ads:inline-block`}
+            {...rest}
+        />
+    );
 };

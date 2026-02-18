@@ -76,43 +76,43 @@ import { ErrorIconFilled } from "./error-filled/ErrorIconFilled";
 import { ImageIcon } from "./image/ImageIcon";
 
 const meta: Meta = {
-  title: "Demo",
-  tags: ['!autodocs'],
-  parameters: { docs: { disable: true } }
+    title: "Demo",
+    tags: ["!autodocs"],
+    parameters: { docs: { disable: true } }
 };
 
 export const Common: StoryObj = {
-  render: () => (
-    <>
-      <ViewWeekIcon /> <FilterListIcon /> <EditIcon /> <ChevronLeftIcon /> <ChevronRightIcon />
-      <ExpandMoreIcon /> <ExpandLessIcon /> <UnfoldLessIcon /> <CloseIcon /> <LanguageIcon />
-      <CalendarMonthIcon /> <DownloadIcon /> <InfoIcon /> <InfoIconFilled /> <AnchorIcon />
-      <ArrowForwardIcon /> <ArrowBackIcon /> <ArrowDownwardIcon /> <ArrowUpwardIcon /> <CheckIcon />
-      <SettingsIcon /> <RemoveIcon /> <AddIcon /> <MoveItemIcon /> <ListAltIcon />
-      <DeleteIcon /> <DensitySmallIcon /> <DensityMediumIcon /> <DensityLargeIcon /> <MoreVertIcon />
-      <SwitchAccountIcon /> <WarningIcon /> <WarningIconFilled /> <SaveIcon /> <CameraAddPhotoIcon />
-      <AttachFileIcon /> <AttachmentIcon /> <FileIcon /> <SearchIcon /> <ArrowDropDownIcon />
-      <VisibilityOffIcon /> <CheckboxOutlineIcon /> <CheckboxIcon /> <CheckboxIndeterminateIcon /> <RadioOutlineIcon />
-      <RadioFilledIcon /> <CheckCircleIcon /> <CheckCircleIconFilled /> <FilterIcon /> <FilterOutlineIcon />
-      <MenuIcon /> <PushPinIcon /> <PushPinFilledIcon /> <BarcodeScannerIcon /> <DarkModeIcon />
-      <LightModeIcon /> <ContrastIcon /> <VideoIcon /> <VerifiedUserIcon /> <UploadFileIcon />
-      <ShieldPersonIcon /> <CableIcon /> <HandymanIcon /> <HomeStorageIcon /> <PersonIcon />
-      <DescriptionIcon /> <ErrorIconFilled /> <ImageIcon /> <PdfIcon />
-    </>
-  ),
+    render: () => (
+        <>
+            <ViewWeekIcon /> <FilterListIcon /> <EditIcon /> <ChevronLeftIcon /> <ChevronRightIcon />
+            <ExpandMoreIcon /> <ExpandLessIcon /> <UnfoldLessIcon /> <CloseIcon /> <LanguageIcon />
+            <CalendarMonthIcon /> <DownloadIcon /> <InfoIcon /> <InfoIconFilled /> <AnchorIcon />
+            <ArrowForwardIcon /> <ArrowBackIcon /> <ArrowDownwardIcon /> <ArrowUpwardIcon /> <CheckIcon />
+            <SettingsIcon /> <RemoveIcon /> <AddIcon /> <MoveItemIcon /> <ListAltIcon />
+            <DeleteIcon /> <DensitySmallIcon /> <DensityMediumIcon /> <DensityLargeIcon /> <MoreVertIcon />
+            <SwitchAccountIcon /> <WarningIcon /> <WarningIconFilled /> <SaveIcon /> <CameraAddPhotoIcon />
+            <AttachFileIcon /> <AttachmentIcon /> <FileIcon /> <SearchIcon /> <ArrowDropDownIcon />
+            <VisibilityOffIcon /> <CheckboxOutlineIcon /> <CheckboxIcon /> <CheckboxIndeterminateIcon /> <RadioOutlineIcon />
+            <RadioFilledIcon /> <CheckCircleIcon /> <CheckCircleIconFilled /> <FilterIcon /> <FilterOutlineIcon />
+            <MenuIcon /> <PushPinIcon /> <PushPinFilledIcon /> <BarcodeScannerIcon /> <DarkModeIcon />
+            <LightModeIcon /> <ContrastIcon /> <VideoIcon /> <VerifiedUserIcon /> <UploadFileIcon />
+            <ShieldPersonIcon /> <CableIcon /> <HandymanIcon /> <HomeStorageIcon /> <PersonIcon />
+            <DescriptionIcon /> <ErrorIconFilled /> <ImageIcon /> <PdfIcon />
+        </>
+    )
 };
 
 export const Status: StoryObj = {
-  render: () => (
-    <>
-      <CompletedStatusIcon />
-      <NotStartedStatusIcon />
-      <InProgressStatusIcon />
-      <WarningStatusIcon />
-      <InfoStatusIcon />
-      <DangerStatusIcon />
-    </>
-  ),
+    render: () => (
+        <>
+            <CompletedStatusIcon />
+            <NotStartedStatusIcon />
+            <InProgressStatusIcon />
+            <WarningStatusIcon />
+            <InfoStatusIcon />
+            <DangerStatusIcon />
+        </>
+    )
 };
 
 export default meta;

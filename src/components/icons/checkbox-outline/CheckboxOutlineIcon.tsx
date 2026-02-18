@@ -4,9 +4,14 @@ import CheckboxOutline from "./checkboxOutline.jsx.svg?react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
     size?: number;
-}
+};
 
-export const CheckboxOutlineIcon = ({size, ...rest}: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : 'ads:size-4';
-    return <CheckboxOutline className={`${sizeCss} ads:leading-0 ads:inline-block`} {...rest} />;    
+export const CheckboxOutlineIcon = ({ size, ...rest }: IconSvgProps) => {
+    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+    return (
+        <CheckboxOutline
+            className={`${sizeCss} ads:leading-0 ads:inline-block`}
+            {...rest}
+        />
+    );
 };

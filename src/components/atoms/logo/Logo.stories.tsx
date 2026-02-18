@@ -4,9 +4,7 @@ import { AibelLogo } from "./AibelLogo";
 const meta: Meta<typeof AibelLogo> = {
     title: "Atoms/Logo",
     component: AibelLogo,
-    argTypes: {
-        
-    },
+    argTypes: {},
     args: {}
 };
 

@@ -33,23 +33,23 @@ export const useAuthenticatedRouter = (routes: RouteObject[]) => createBrowserRo
  */
 export const AibelApplicationProvider = ({ routes, children, env }: AibelApplicationProviderProps) => {
     const [pca, setPca] = useState<IPublicClientApplication | undefined>(undefined);
-    const [config] = useLocalStorage<MsalConfiguration>(CONFIG_LS_VALUE, env);    
+    const [config] = useLocalStorage<MsalConfiguration>(CONFIG_LS_VALUE, env);
 
     useEffect(() => {
-      if(config){
-        getMsalInstance().then((msalInstance) => {
-            initApplicationInsight(msalInstance).then(() => {
-                setPca(msalInstance);
+        if (config) {
+            getMsalInstance().then((msalInstance) => {
+                initApplicationInsight(msalInstance).then(() => {
+                    setPca(msalInstance);
+                });
             });
-        });
-      }
+        }
     }, [config]);
 
     const router = useAuthenticatedRouter(routes ?? []);
 
     return (
         <>
-            {pca && config &&(
+            {pca && config && (
                 <MsalProvider instance={pca}>
                     <QueryClientProvider client={queryClient}>
                         {children && children}
