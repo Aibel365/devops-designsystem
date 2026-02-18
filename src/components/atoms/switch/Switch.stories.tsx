@@ -3,24 +3,23 @@ import { Switch } from "./Switch";
 
 const meta: Meta<typeof Switch> = {
     title: "Atoms/Switch",
-    component: Switch,
+    component: Switch
 };
 
 type Story = StoryObj<typeof Switch>;
 
 export const Default: Story = {};
 
-export const Disabled: StoryObj<typeof Switch> = {  
+export const Disabled: StoryObj<typeof Switch> = {
     args: {
-        disabled: true,
-    },
+        disabled: true
+    }
 };
-
 
 export const WithLabel: StoryObj<typeof Switch> = {
     args: {
-        label: "Switch Label",
-    },
+        label: "Switch Label"
+    }
 };
 
 export default meta;

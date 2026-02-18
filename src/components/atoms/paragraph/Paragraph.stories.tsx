@@ -6,13 +6,14 @@ const meta: Meta<typeof Paragraph> = {
     component: Paragraph,
     argTypes: {
         children: { control: "text", description: "Visible text in the paragraph" },
-        'data-size': { control: "inline-radio", options: ["xs", "sm", "md", "lg", "xl"], description: "Paragraph text size" },
+        "data-size": { control: "inline-radio", options: ["xs", "sm", "md", "lg", "xl"], description: "Paragraph text size" },
         variant: { control: "inline-radio", options: ["long", "default", "short"], description: "Paragraph line spacing" },
         asChild: { control: "boolean" }
     },
     args: {
-        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id libero vitae lacus sollicitudin consectetur eu quis odio. Duis ultrices scelerisque dictum. Nullam mauris nibh, lobortis in imperdiet in, iaculis ut ante. Sed ac lectus quis nisi convallis dictum a et mi. Quisque dignissim mi vel tincidunt dictum.",
-        'data-size': "md",
+        children:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id libero vitae lacus sollicitudin consectetur eu quis odio. Duis ultrices scelerisque dictum. Nullam mauris nibh, lobortis in imperdiet in, iaculis ut ante. Sed ac lectus quis nisi convallis dictum a et mi. Quisque dignissim mi vel tincidunt dictum.",
+        "data-size": "md",
         variant: "default",
         asChild: false
     }

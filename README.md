@@ -31,13 +31,13 @@ import { Button, Card, AibelApplicationProvider } from "@aibel365/devops-designs
 import "@aibel365/devops-designsystem/styles.css";
 
 export function Example() {
-	return (
-		<AibelApplicationProvider>
-			<Card title="Hello">
-				<Button variant="primary">Click me</Button>
-			</Card>
-		</AibelApplicationProvider>
-	);
+    return (
+        <AibelApplicationProvider>
+            <Card title="Hello">
+                <Button variant="primary">Click me</Button>
+            </Card>
+        </AibelApplicationProvider>
+    );
 }
 ```
 

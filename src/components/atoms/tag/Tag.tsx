@@ -1,7 +1,6 @@
 import { Tag as TagPrimitive } from "@digdir/designsystemet-react";
 import type { TagProps as TagPropsPrimitive } from "@digdir/designsystemet-react";
 
-
 export type TagProps = TagPropsPrimitive;
 
 /**
@@ -12,12 +11,6 @@ export type TagProps = TagPropsPrimitive;
  * @see https://designsystemet.no/en/components/docs/tag/overview
  */
 
-
-
 export const Tag = (props: TagProps) => {
-  return <TagPrimitive {...props} />;
+    return <TagPrimitive {...props} />;
 };
-
-
-
-

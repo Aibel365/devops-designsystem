@@ -1,0 +1,29 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+
+import * as Icons from "./Icons.stories.tsx";
+
+<Meta
+    title="Icons/About"
+    of={Icons}
+/>
+
+# Icons
+
+## Overview
+
+Here you will find an overview of all the icons that are available.
+
+<Canvas of={Icons.Common} />
+
+## Status Icons
+
+<Canvas of={Icons.Status} />
+
+## Custom Icons
+
+<Canvas of={Icons.Custom} />
+
+## Technical
+
+Every icon support the common svg attributes including our own custom props through the "svgMixin".\
+Our svgMixin lets you control the palette, sizing and also offers a shorthand "size" prop.

@@ -1,7 +1,6 @@
 import { Switch as SwitchPrimitive } from "@digdir/designsystemet-react";
 import type { SwitchProps as SwitchPropsPrimitive } from "@digdir/designsystemet-react";
 
-
 export type SwitchProps = SwitchPropsPrimitive;
 
 /**
@@ -9,12 +8,6 @@ export type SwitchProps = SwitchPropsPrimitive;
  * @see https://designsystemet.no/en/components/docs/switch/overview
  */
 
-
-
 export const Switch = (props: SwitchProps) => {
-  return <SwitchPrimitive {...props} />;
+    return <SwitchPrimitive {...props} />;
 };
-
-
-
-
