@@ -1,3 +1,6 @@
+export { Base64ImageDisplay } from "./image/Base64ImageDisplay";
+export type { Base64ImageDisplayProps } from "./image/Base64ImageDisplay";
+
 export { Alert } from "./alert/Alert";
 export type { AlertProps } from "./alert/Alert";
 
@@ -31,5 +34,5 @@ export type { DividerProps } from "./divider/Divider";
 export { Popover } from "./popover/Popover";
 export type { PopoverProps } from "./popover/Popover";
 
-export type { IconSvgProps } from "./logo/AibelLogo";
 export { AibelLogo } from "./logo/AibelLogo";
+export type { IconSvgProps } from "./logo/AibelLogo";

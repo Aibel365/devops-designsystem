@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --ads-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --ads-color-amber-300: oklch(87.9% 0.169 91.605);
+    --ads-color-amber-600: oklch(66.6% 0.179 58.318);
     --ads-color-blue-600: oklch(54.6% 0.245 262.881);
     --ads-color-indigo-400: oklch(67.3% 0.182 276.935);
     --ads-color-gray-800: oklch(27.8% 0.033 256.848);
@@ -219,6 +221,13 @@
   .ads\:flex {
     display: flex;
   }
+  .ads\:inline-block {
+    display: inline-block;
+  }
+  .ads\:size-4 {
+    width: calc(var(--ads-spacing) * 4);
+    height: calc(var(--ads-spacing) * 4);
+  }
   .ads\:h-7 {
     height: calc(var(--ads-spacing) * 7);
   }
@@ -246,12 +255,21 @@
   .ads\:flex-1 {
     flex: 1;
   }
+  .ads\:flex-1\/12 {
+    flex: calc(1/12 * 100%);
+  }
+  .ads\:flex-11\/12 {
+    flex: calc(11/12 * 100%);
+  }
   .ads\:shrink-0 {
     flex-shrink: 0;
   }
   .ads\:translate-x-1\/2 {
     --tw-translate-x: calc(1/2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .ads\:cursor-pointer {
+    cursor: pointer;
   }
   .ads\:flex-col {
     flex-direction: column;
@@ -274,6 +292,9 @@
   .ads\:justify-end {
     justify-content: flex-end;
   }
+  .ads\:gap-1 {
+    gap: calc(var(--ads-spacing) * 1);
+  }
   .ads\:gap-2 {
     gap: calc(var(--ads-spacing) * 2);
   }
@@ -290,6 +311,9 @@
   }
   .ads\:bg-aibel-bright-blue {
     background-color: var(--ads-color-aibel-bright-blue);
+  }
+  .ads\:bg-amber-300 {
+    background-color: var(--ads-color-amber-300);
   }
   .ads\:bg-blue-600 {
     background-color: var(--ads-color-blue-600);
@@ -340,9 +364,16 @@
     font-size: var(--ads-text-xl);
     line-height: var(--tw-leading, var(--ads-text-xl--line-height));
   }
+  .ads\:leading-0 {
+    --tw-leading: calc(var(--ads-spacing) * 0);
+    line-height: calc(var(--ads-spacing) * 0);
+  }
   .ads\:font-bold {
     --tw-font-weight: var(--ads-font-weight-bold);
     font-weight: var(--ads-font-weight-bold);
+  }
+  .ads\:text-amber-600 {
+    color: var(--ads-color-amber-600);
   }
   .ads\:text-black {
     color: var(--ads-color-black);
@@ -355,6 +386,10 @@
   }
   .ads\:no-underline {
     text-decoration-line: none;
+  }
+  .ads\:shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .ads\:shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
@@ -5272,6 +5307,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -5348,6 +5387,7 @@
       --tw-translate-y: 0;
       --tw-translate-z: 0;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
