@@ -9,6 +9,6 @@ const meta: Meta<typeof Radio> = {
 
 type Story = StoryObj<typeof Radio>;
 
-export const Default: Story = {};
+export const Default: Story = { render: () => <Radio label="This is a radio" /> };
 
 export default meta;

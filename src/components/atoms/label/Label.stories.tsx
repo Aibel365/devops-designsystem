@@ -9,6 +9,6 @@ const meta: Meta<typeof Label> = {
 
 type Story = StoryObj<typeof Label>;
 
-export const Default: Story = {};
+export const Default: Story = { render: () => <Label>This is a label</Label> };
 
 export default meta;

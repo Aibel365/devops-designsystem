@@ -9,6 +9,13 @@ const meta: Meta<typeof Dialog> = {
 
 type Story = StoryObj<typeof Dialog>;
 
-export const Default: Story = {};
+export const Default: Story = {
+    render: () => (
+        <Dialog.TriggerContext>
+            <Dialog.Trigger>Open Dialog</Dialog.Trigger>
+            <Dialog>Dialog content</Dialog>
+        </Dialog.TriggerContext>
+    )
+};
 
 export default meta;

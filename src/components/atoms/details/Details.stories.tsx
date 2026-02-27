@@ -9,6 +9,13 @@ const meta: Meta<typeof Details> = {
 
 type Story = StoryObj<typeof Details>;
 
-export const Default: Story = {};
+export const Default: Story = {
+    render: () => (
+        <Details>
+            <Details.Summary>Details heading text</Details.Summary>
+            <Details.Content>Details content</Details.Content>
+        </Details>
+    )
+};
 
 export default meta;

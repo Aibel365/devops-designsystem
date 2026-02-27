@@ -9,6 +9,13 @@ const meta: Meta<typeof Skeleton> = {
 
 type Story = StoryObj<typeof Skeleton>;
 
-export const Default: Story = {};
+export const Default: Story = {
+    render: () => (
+        <Skeleton
+            width="100%"
+            height="20px"
+        />
+    )
+};
 
 export default meta;
