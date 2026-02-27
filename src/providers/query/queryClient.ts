@@ -26,7 +26,7 @@ export const queryClient = new QueryClient({
      * - API payload-level error states.
      */
     queryCache: new QueryCache({
-        onError: (error, _query) => {
+        onError: (error) => {
             missingAuthMiddleware(error);
             communicationFailedMiddleware(error);
             errorInDataMiddleware(error);

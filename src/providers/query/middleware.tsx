@@ -17,8 +17,6 @@ export function communicationFailedMiddleware(error: any) {
     }
 }
 /* eslint-enable */
-
-/* eslint-disable */
 export const errorInDataMiddleware = (error: unknown | { response: { status: number } }) => {
     const notValidHttpStatus = [404, 422];
 
@@ -33,7 +31,6 @@ export const errorInDataMiddleware = (error: unknown | { response: { status: num
         // });
     }
 };
-/* eslint-enable */
 
 // import { Text } from "@aibel365/devops-component-library-web";
 
@@ -64,7 +61,6 @@ export function missingAuthMiddleware(error: any) {
  * @param request
  * @param apiVersion
  */
-/* eslint-disable */
 export async function injectBearerTokenMiddleware(config: InternalAxiosRequestConfig, request: RedirectRequest, apiVersion: string) {
     const msalInstance = await getMsalInstance();
 
@@ -85,4 +81,3 @@ export async function injectBearerTokenMiddleware(config: InternalAxiosRequestCo
 
     return config;
 }
-/* eslint-enable */
