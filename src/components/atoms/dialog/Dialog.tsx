@@ -1,0 +1,1 @@
+export { Dialog, DialogBlock, DialogTrigger, DialogTriggerContext, type DialogBlockProps, type DialogProps, type DialogTriggerContextProps, type DialogTriggerProps } from "@digdir/designsystemet-react";
