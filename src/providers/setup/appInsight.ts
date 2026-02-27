@@ -78,7 +78,9 @@ export const appInsights = {
      */
     trackException: (props: { exception: Error; customProperties?: ICustomProperties }) => {
         try {
-            ai ? ai.appInsights.trackException(props) : console.info("ApplicationInsight not initialized - trackException error:", props);
+            if (ai) {
+                ai.appInsights.trackException(props);
+            } else console.info("ApplicationInsight not initialized - trackException error:", props);
         } catch (e) {
             console.error("ApplicationInsight", e);
         }
@@ -90,7 +92,9 @@ export const appInsights = {
      */
     trackEvent: (props: { name: string; properties: { [key: string]: string } }) => {
         try {
-            ai ? ai.appInsights.trackEvent(props) : console.info("ApplicationInsight not initialized - trackEvent");
+            if (ai) {
+                ai.appInsights.trackEvent(props);
+            } else console.info("ApplicationInsight not initialized - trackEvent");
         } catch (e) {
             console.error("ApplicationInsight", e);
         }

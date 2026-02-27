@@ -15,6 +15,7 @@ import { AibelApplicationProviderProps, CONFIG_LS_VALUE, type MsalConfiguration 
  * @param routes Route definitions used by React Router.
  * @returns Configured browser router instance.
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuthenticatedRouter = (routes: RouteObject[]) => createBrowserRouter(routes);
 
 /**

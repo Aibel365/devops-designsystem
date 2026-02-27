@@ -44,7 +44,7 @@ const MenuItem = () => {
     );
 };
 
-const UserMenuContentHeaderBar = ({ userName, userEmail, userImage }: UserMenuContentHeaderBarProps) => {
+const UserMenuContentHeaderBar = ({ userName, userEmail }: UserMenuContentHeaderBarProps) => {
     return (
         <>
             <div className="ads:flex ads:flex-row ads:gap-4 ads:px-4">
@@ -107,7 +107,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage }: UserMenuCo
  * @param props
  * @constructor
  */
-export const UserMenu = forwardRef((props: UserMenuContentProps, _) => {
+export const UserMenu = forwardRef((props: UserMenuContentProps) => {
     // const { ...delegated } = props;
 
     return (
@@ -137,7 +137,7 @@ export const UserMenu = forwardRef((props: UserMenuContentProps, _) => {
     );
 });
 
-const UserMenuContent = ({ userName, userEmail, userImage, handleSwitchAccount, switchAccountLabel, handleLogout, logoutLabel, customMenuContent }: UserMenuContentProps) => {
+const UserMenuContent = ({ userName, userEmail, userImage }: UserMenuContentProps) => {
     return (
         <div className="ads:flex ads:flex-col ads:gap-2 ads:w-full">
             <UserMenuContentHeaderBar

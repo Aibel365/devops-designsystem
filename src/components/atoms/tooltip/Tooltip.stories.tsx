@@ -1,17 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Tooltip } from "./Tooltip";
+import { Button } from "../button/Button";
 
 const meta: Meta<typeof Tooltip> = {
     title: "Atoms/Tooltip",
-    component: Tooltip
+    component: Tooltip,
+    args: {}
 };
 
 type Story = StoryObj<typeof Tooltip>;
 
 export const Default: Story = {
-    args: {
-        children: "Focusable element"
-    }
+    render: () => (
+        <Tooltip
+            content="This is the tooltip"
+            placement="top"
+        >
+            <Button>Hover or focus on me</Button>
+        </Tooltip>
+    )
 };
 export default meta;
 

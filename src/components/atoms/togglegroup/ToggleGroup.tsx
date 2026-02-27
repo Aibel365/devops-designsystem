@@ -1,0 +1,1 @@
+export { ToggleGroup, ToggleGroupItem, type ToggleGroupItemProps, type ToggleGroupProps } from "@digdir/designsystemet-react";
