@@ -1,0 +1,1 @@
+export { Pagination, PaginationButton, PaginationItem, PaginationList, type PaginationButtonProps, type PaginationItemProps, type PaginationListProps, type PaginationProps } from "@digdir/designsystemet-react";
