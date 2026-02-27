@@ -7,7 +7,7 @@ export type ButtonProps = ButtonPropsPrimitive;
  * Button allows users to perform actions.
  *
  * Based on Designsystemet's Button component.
- * @see https://designsystemet.no/en/components/docs/alert/overview
+ * @see https://designsystemet.no/en/components/docs/button/overview
  */
 export const Button = (props: ButtonProps) => {
     return <ButtonPrimitive {...props} />;
