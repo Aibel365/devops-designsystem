@@ -1,2 +1,1 @@
-import { useSynchronizedAnimation } from "@digdir/designsystemet-react";
-export { useSynchronizedAnimation };
+export { useSynchronizedAnimation } from "@digdir/designsystemet-react";

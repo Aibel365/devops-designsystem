@@ -1,2 +1,1 @@
-import { RovingFocusRoot, RovingFocusItem } from "@digdir/designsystemet-react";
-export { RovingFocusRoot, RovingFocusItem };
+export { RovingFocusRoot, RovingFocusItem } from "@digdir/designsystemet-react";
