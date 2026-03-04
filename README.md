@@ -57,6 +57,7 @@ export function Example() {
 - `npm run lint` – run ESLint
 - `npm run format` – format all files with Prettier
 - `npm run clean` – remove build artifacts
+- `npm run knip` - check for dependency and code issues
 
 ## Design tokens
 
@@ -91,6 +92,7 @@ Before opening a pull request:
 - Run `npm run build`
 - Verify the component in Storybook (`npm run start`)
 - Ensure public exports are available from `src/index.ts`
+- Run `npm run knip`
 
 ## Publishing
 

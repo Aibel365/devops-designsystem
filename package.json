@@ -47,7 +47,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ./src/components",
-    "clean": "rimraf dist storybook-static"
+    "clean": "rimraf dist storybook-static",
+    "knip": "knip"
   },
   "peerDependencies": {
     "react": "^19.2.0",
@@ -62,7 +63,7 @@
     "@storybook/addon-vitest": "^10.2.13",
     "@storybook/react-vite": "^10.2.13",
     "@tailwindcss/vite": "^4.2.1",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.11.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.4",
@@ -74,6 +75,7 @@
     "eslint-plugin-react-refresh": "^0.4.26",
     "eslint-plugin-storybook": "^10.2.13",
     "globals": "^16.5.0",
+    "knip": "^5.85.0",
     "playwright": "^1.58.2",
     "prettier": "^3.8.1",
     "rimraf": "^6.1.3",
