@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ConditionRender } from "./ConditionRender";
-import { Button } from "..";
+import { Button } from "../../designsystemet/button/Button";
 
 const meta: Meta<typeof ConditionRender> = {
-    title: "Atoms/ConditionRender",
+    title: "Aibel/ConditionRender",
     component: ConditionRender,
     args: {
         condition: true,

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { HeaderBar } from "./HeaderBar";
 
 const meta: Meta<typeof HeaderBar> = {
-    title: "Molecules/HeaderBar",
+    title: "Aibel/HeaderBar",
     component: HeaderBar,
     argTypes: {
         title: { control: "text" },
