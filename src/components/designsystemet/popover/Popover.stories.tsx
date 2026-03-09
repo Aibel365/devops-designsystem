@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Popover } from "./Popover";
 
 const meta: Meta<typeof Popover> = {
-    title: "Atoms/Popover",
+    title: "Designsystemet/Popover",
     component: Popover,
     argTypes: {
         heading: { control: "text" }

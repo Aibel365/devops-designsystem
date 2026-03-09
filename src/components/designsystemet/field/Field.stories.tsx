@@ -6,7 +6,7 @@ import { Input } from "../input/Input";
 import { ValidationMessage } from "../validationmessage/ValidationMessage";
 
 const meta: Meta<typeof Field> = {
-    title: "Atoms/Field",
+    title: "Designsystemet/Field",
     component: Field
 };
 

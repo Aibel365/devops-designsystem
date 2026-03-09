@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Radio } from "./Radio";
 
 const meta: Meta<typeof Radio> = {
-    title: "Atoms/Radio",
+    title: "Designsystemet/Radio",
     component: Radio
 };
 

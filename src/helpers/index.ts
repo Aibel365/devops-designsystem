@@ -1,1 +1,1 @@
-export * from "./RovingFocus";
+export * from "./designsystemet/RovingFocus";

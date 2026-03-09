@@ -4,7 +4,7 @@ import { Card } from "./Card";
 import { Heading, Paragraph } from "@digdir/designsystemet-react";
 
 const meta: Meta<typeof Card> = {
-    title: "Atoms/Card",
+    title: "Designsystemet/Card",
     component: Card,
     args: {
         children: "Card text"

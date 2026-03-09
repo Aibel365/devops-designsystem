@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Textfield } from "./Textfield";
 
 const meta: Meta<typeof Textfield> = {
-    title: "Atoms/Textfield",
+    title: "Designsystemet/Textfield",
     component: Textfield
 };
 

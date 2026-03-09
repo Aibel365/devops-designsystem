@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { List, ListItem } from "./List";
 
 const meta: Meta<typeof ListItem> = {
-    title: "Atoms/List",
+    title: "Designsystemet/List",
     component: ListItem
 };
 

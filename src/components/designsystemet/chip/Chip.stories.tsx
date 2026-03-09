@@ -3,7 +3,7 @@ import type { StoryObj } from "@storybook/react-vite";
 import { Chip } from "./Chip";
 
 const meta = {
-    title: "Atoms/Chip",
+    title: "Designsystemet/Chip",
     component: Chip.Radio,
     subcomponents: {
         Checkbox: Chip.Checkbox,

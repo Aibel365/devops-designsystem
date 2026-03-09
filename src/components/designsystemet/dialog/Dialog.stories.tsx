@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Dialog } from "./Dialog";
 
 const meta: Meta<typeof Dialog> = {
-    title: "Atoms/Dialog",
+    title: "Designsystemet/Dialog",
     component: Dialog
 };
 

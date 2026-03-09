@@ -4,7 +4,7 @@ import { Fieldset } from "./Fieldset";
 import { Radio } from "../radio/Radio";
 
 const meta: Meta<typeof Fieldset> = {
-    title: "Atoms/Fieldset",
+    title: "Designsystemet/Fieldset",
     component: Fieldset
 };
 

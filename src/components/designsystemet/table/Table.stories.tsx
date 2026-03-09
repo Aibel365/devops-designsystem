@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Table } from "./Table";
 
 const meta: Meta<typeof Table> = {
-    title: "Atoms/Table",
+    title: "Designsystemet/Table",
     component: Table
 };
 

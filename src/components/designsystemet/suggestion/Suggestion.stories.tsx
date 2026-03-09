@@ -5,7 +5,7 @@ import { Field } from "../field/Field";
 import { Label } from "../label/Label";
 
 const meta: Meta<typeof EXPERIMENTAL_Suggestion> = {
-    title: "Atoms/Suggestion",
+    title: "Designsystemet/Suggestion",
     component: EXPERIMENTAL_Suggestion
 };
 

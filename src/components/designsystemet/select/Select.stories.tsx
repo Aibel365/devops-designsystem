@@ -5,7 +5,7 @@ import { Field } from "../field/Field";
 import { Label } from "../label/Label";
 
 const meta: Meta<typeof Select> = {
-    title: "Atoms/Select",
+    title: "Designsystemet/Select",
     component: Select
 };
 

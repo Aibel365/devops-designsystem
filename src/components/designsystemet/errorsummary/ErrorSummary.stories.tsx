@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ErrorSummary } from "./ErrorSummary";
 
 const meta: Meta<typeof ErrorSummary> = {
-    title: "Atoms/ErrorSummary",
+    title: "Designsystemet/ErrorSummary",
     component: ErrorSummary
 };
 

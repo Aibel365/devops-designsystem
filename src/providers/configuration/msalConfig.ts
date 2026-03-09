@@ -1,5 +1,5 @@
 import { type Configuration, type RedirectRequest } from "@azure/msal-browser";
-import { readLocalStorageValue } from "../../hooks/useLocalStorage";
+import { readLocalStorageValue } from "../../hooks/aibel/useLocalStorage";
 import { CONFIG_LS_VALUE, MsalConfiguration } from "../types";
 
 /**

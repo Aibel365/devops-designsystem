@@ -4,7 +4,7 @@ import { Search } from "./Search";
 import { Button } from "../button/Button";
 
 const meta: Meta<typeof Search> = {
-    title: "Atoms/Search",
+    title: "Designsystemet/Search",
     component: Search
 };
 

@@ -5,7 +5,7 @@ import { Button } from "../button/Button";
 import { Avatar } from "../avatar/Avatar";
 
 const meta: Meta<typeof Badge> = {
-    title: "Atoms/Badge",
+    title: "Designsystemet/Badge",
     component: Badge,
     args: {
         count: 2,

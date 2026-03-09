@@ -4,7 +4,7 @@ import { SkipLink } from "./SkipLink";
 import { Paragraph } from "../paragraph/Paragraph";
 
 const meta: Meta<typeof SkipLink> = {
-    title: "Atoms/SkipLink",
+    title: "Designsystemet/SkipLink",
     component: SkipLink
 };
 

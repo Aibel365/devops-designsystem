@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Details } from "./Details";
 
 const meta: Meta<typeof Details> = {
-    title: "Atoms/Details",
+    title: "Designsystemet/Details",
     component: Details
 };
 

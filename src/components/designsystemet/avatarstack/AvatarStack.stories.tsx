@@ -4,7 +4,7 @@ import { EXPERIMENTAL_AvatarStack } from "./AvatarStack";
 import { Avatar } from "../avatar/Avatar";
 
 const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
-    title: "Atoms/AvatarStack",
+    title: "Designsystemet/AvatarStack",
     component: EXPERIMENTAL_AvatarStack
 };
 
