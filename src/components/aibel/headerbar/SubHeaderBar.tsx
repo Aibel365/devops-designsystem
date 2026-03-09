@@ -1,4 +1,4 @@
-import { ConditionRender } from "../../atoms";
+import { ConditionRender } from "../../designsystemet";
 
 export type SubHeaderBarProps = {
     centerContent?: React.ReactNode | string;

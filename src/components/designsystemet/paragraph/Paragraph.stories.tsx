@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Paragraph } from "././Paragraph";
+import { Paragraph } from "./Paragraph";
 
 const meta: Meta<typeof Paragraph> = {
     title: "Atoms/Paragraph",

@@ -1,5 +1,5 @@
 import { forwardRef, ReactElement } from "react";
-import { AibelLogo, Base64ImageDisplay, Button, Divider, Popover } from "../../atoms";
+import { AibelLogo, Base64ImageDisplay, Button, Divider, Popover } from "../../designsystemet";
 import { getInitials } from "./getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
 
