@@ -1,7 +1,9 @@
 import { forwardRef, ReactElement } from "react";
-import { AibelLogo, Base64ImageDisplay, Button, Divider, Popover } from "../../designsystemet";
+import { Button, Divider, Popover } from "../../designsystemet";
 import { getInitials } from "./getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
+import { AibelLogo } from "../logo/AibelLogo";
+import { Base64ImageDisplay } from "../image/Base64ImageDisplay";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
@@ -111,10 +113,8 @@ export const UserMenu = forwardRef((props: UserMenuContentProps) => {
     // const { ...delegated } = props;
 
     return (
-        <Popover
-            triggerProps={{ inline: true }}
-            placement={"bottom-end"}
-            heading={
+        <Popover.TriggerContext>
+            <Popover.Trigger inline>
                 <Avatar
                     data-color="info"
                     data-size="sm"
@@ -130,10 +130,11 @@ export const UserMenu = forwardRef((props: UserMenuContentProps) => {
                         }
                     />
                 </Avatar>
-            }
-        >
-            <UserMenuContent {...props} />
-        </Popover>
+            </Popover.Trigger>
+            <Popover placement="bottom-end">
+                <UserMenuContent {...props} />
+            </Popover>
+        </Popover.TriggerContext>
     );
 });
 
