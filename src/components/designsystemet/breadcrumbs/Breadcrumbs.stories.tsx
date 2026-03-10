@@ -4,44 +4,36 @@ import { Breadcrumbs } from "./Breadcrumbs";
 
 const meta: Meta<typeof Breadcrumbs> = {
     title: "Designsystemet/Breadcrumbs",
-    component: Breadcrumbs,
-    args: {
-        links: [
-            { displayText: "Level 1", link: "#" },
-            { displayText: "Level 2", link: "#" },
-            { displayText: "Level 3", link: "#" },
-            { displayText: "Level 4", link: "#" }
-        ]
-    }
+    component: Breadcrumbs
 };
 
 type Story = StoryObj<typeof Breadcrumbs>;
 
-export const Default: Story = {};
-
-export const ListOfStrings: Story = {
-    args: {
-        links: ["https://aibel365.sharepoint.com", "https://aibel365.sharepoint.com/sites", "https://aibel365.sharepoint.com/sites/it"]
-    }
-};
-
-export const OneElement: Story = {
-    args: {
-        links: ["https://aibel.com"]
-    }
-};
-
-export const WithResponsiveFallback: Story = {
-    args: {
-        links: [
-            { displayText: "Will", link: "#" },
-            { displayText: "change", link: "#" },
-            { displayText: "for", link: "#" },
-            { displayText: "small", link: "#" },
-            { displayText: "screens", link: "#" }
-        ],
-        enableResponsiveFallback: true
-    }
+export const Default: Story = {
+    render: () => (
+        <Breadcrumbs aria-label="Du er her:">
+            <Breadcrumbs.Link
+                href="#"
+                aria-label="Tilbake til Nivå 3"
+            >
+                Nivå 3
+            </Breadcrumbs.Link>
+            <Breadcrumbs.List>
+                <Breadcrumbs.Item>
+                    <Breadcrumbs.Link href="#">Nivå 1</Breadcrumbs.Link>
+                </Breadcrumbs.Item>
+                <Breadcrumbs.Item>
+                    <Breadcrumbs.Link href="#">Nivå 2</Breadcrumbs.Link>
+                </Breadcrumbs.Item>
+                <Breadcrumbs.Item>
+                    <Breadcrumbs.Link href="#">Nivå 3</Breadcrumbs.Link>
+                </Breadcrumbs.Item>
+                <Breadcrumbs.Item>
+                    <Breadcrumbs.Link href="#">Nivå 4</Breadcrumbs.Link>
+                </Breadcrumbs.Item>
+            </Breadcrumbs.List>
+        </Breadcrumbs>
+    )
 };
 
 export default meta;

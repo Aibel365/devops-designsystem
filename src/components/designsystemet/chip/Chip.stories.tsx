@@ -1,8 +1,8 @@
-import type { StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Chip } from "./Chip";
 
-const meta = {
+const meta: Meta<typeof Chip.Radio> = {
     title: "Designsystemet/Chip",
     component: Chip.Radio,
     subcomponents: {
