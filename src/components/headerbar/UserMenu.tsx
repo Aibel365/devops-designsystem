@@ -1,5 +1,5 @@
 import { forwardRef, ReactElement } from "react";
-import { Button, Divider, Popover } from "../../designsystemet";
+import { Button, Divider, Popover } from "../../designsystemet/components";
 import { getInitials } from "./getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
 import { AibelLogo } from "../logo/AibelLogo";

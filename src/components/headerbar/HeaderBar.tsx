@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 import { SubHeaderBar, SubHeaderBarProps } from "./SubHeaderBar";
 import { UserMenu, UserMenuContentHeaderBarProps } from "./UserMenu";
-import { AibelLogo, ConditionRender } from "../../aibel";
+import { AibelLogo } from "../logo/AibelLogo";
+import { ConditionRender } from "../conditionRender/ConditionRender";
 
 export type HeaderBarProps = UserMenuContentProps & {
     title?: string;

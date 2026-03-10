@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { AibelLogo } from "./AibelLogo";
 
 const meta: Meta<typeof AibelLogo> = {
-    title: "Aibel/Logo",
+    title: "Components/Logo",
     component: AibelLogo,
     argTypes: {},
     args: {}

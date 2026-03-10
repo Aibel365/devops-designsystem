@@ -1,7 +1,7 @@
 import { PublicClientApplication, type EventMessage, EventType, type AuthenticationResult } from "@azure/msal-browser";
 import { msalConfig, ApiRequest, getEnvConfig } from "../configuration/msalConfig";
 import { getTokenResponse } from "../query/getTokenResponse";
-import { saveLocalStorageValue } from "../../hooks/aibel/useLocalStorage";
+import { saveLocalStorageValue } from "../../hooks/useLocalStorage";
 import { USER_IMAGE_LS_VALUE, USER_LS_VALUE, UserData } from "../types";
 import { graphApi } from "../query/graphClient";
 

@@ -1,5 +1,4 @@
-export * from "./components/designsystemet";
-export * from "./components/aibel";
-export * from "./helpers";
+export * from "./components";
+export * from "./designsystemet";
 export * from "./hooks";
 export * from "./providers";
