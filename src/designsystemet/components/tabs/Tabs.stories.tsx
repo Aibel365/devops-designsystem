@@ -1,0 +1,27 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
+
+import { Tabs } from "./Tabs";
+
+const meta: Meta<typeof Tabs> = {
+    title: "Designsystemet/Tabs",
+    component: Tabs
+};
+
+type Story = StoryObj<typeof Tabs>;
+
+export const Default: Story = {
+    render: () => (
+        <Tabs defaultValue="value1">
+            <Tabs.List>
+                <Tabs.Tab value="value1">Tab 1</Tabs.Tab>
+                <Tabs.Tab value="value2">Tab 2</Tabs.Tab>
+                <Tabs.Tab value="value3">Tab 3</Tabs.Tab>
+            </Tabs.List>
+            <Tabs.Panel value="value1">content 1</Tabs.Panel>
+            <Tabs.Panel value="value2">content 2</Tabs.Panel>
+            <Tabs.Panel value="value3">content 3</Tabs.Panel>
+        </Tabs>
+    )
+};
+
+export default meta;

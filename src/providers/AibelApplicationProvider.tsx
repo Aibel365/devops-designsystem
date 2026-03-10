@@ -6,7 +6,7 @@ import { getMsalInstance } from "./setup/msalSetup";
 import { initApplicationInsight } from "./setup/appInsight";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./query/queryClient";
-import { useLocalStorage } from "../hooks";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import { AibelApplicationProviderProps, CONFIG_LS_VALUE, type MsalConfiguration } from "./types";
 
 /**

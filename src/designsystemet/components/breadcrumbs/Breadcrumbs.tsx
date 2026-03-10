@@ -1,0 +1,1 @@
+export { Breadcrumbs, BreadcrumbsItem, BreadcrumbsLink, BreadcrumbsList, type BreadcrumbsItemProps, type BreadcrumbsLinkProps, type BreadcrumbsListProps, type BreadcrumbsProps } from "@digdir/designsystemet-react";

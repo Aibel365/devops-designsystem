@@ -1,5 +1,4 @@
-export * from "./components/atoms";
-export * from "./components/molecules";
-export * from "./helpers";
+export * from "./components";
+export * from "./designsystemet";
 export * from "./hooks";
 export * from "./providers";
