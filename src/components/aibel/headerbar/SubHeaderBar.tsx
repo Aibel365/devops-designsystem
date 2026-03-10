@@ -1,4 +1,4 @@
-import { ConditionRender } from "../../designsystemet";
+import { ConditionRender } from "../../aibel";
 
 export type SubHeaderBarProps = {
     centerContent?: React.ReactNode | string;
