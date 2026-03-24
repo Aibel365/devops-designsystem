@@ -9,7 +9,6 @@ const meta: Meta<typeof ListItem> = {
 
 type Story = StoryObj<typeof ListItem>;
 
-//TODO Same issue as errorsummary, listItems does not get a dot in front of them.
 export const Default: Story = {
     render: () => (
         <List.Unordered>
@@ -17,6 +16,38 @@ export const Default: Story = {
             <List.Item>Briksdalsbreen</List.Item>
             <List.Item>Nigardsbreen</List.Item>
         </List.Unordered>
+    )
+};
+
+export const Unordered: Story = {
+    render: () => (
+        <List.Unordered>
+            <List.Item>Bøyabreen</List.Item>
+            <List.Item>Briksdalsbreen</List.Item>
+            <List.Item>Nigardsbreen</List.Item>
+        </List.Unordered>
+    )
+};
+
+export const Ordered: Story = {
+    render: () => (
+        <List.Ordered>
+            <List.Item>Bøyabreen</List.Item>
+            <List.Item>Briksdalsbreen</List.Item>
+            <List.Item>Nigardsbreen</List.Item>
+        </List.Ordered>
+    )
+};
+
+export const Nested: Story = {
+    render: () => (
+        <List.Ordered>
+            <List.Item>Bøyabreen</List.Item>
+            <List.Unordered>
+                <List.Item>Briksdalsbreen</List.Item>
+                <List.Item>Nigardsbreen</List.Item>
+            </List.Unordered>
+        </List.Ordered>
     )
 };
 
