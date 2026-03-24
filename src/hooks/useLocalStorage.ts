@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * Read value from local storage
@@ -7,17 +7,17 @@ import { useState, useEffect } from "react";
  *
  * @param key  the storage key
  */
-export function readLocalStorageValue<T>(key: string): T {
-    if (typeof window === "undefined") return null as T;
+export function readLocalStorageValue<T>(key: string): T | null {
+    if (typeof window === "undefined") return null;
 
     try {
         const item = window.localStorage.getItem(key);
-        if (item == null) return null as T;
-        return JSON.parse(item) as T;
+        if (item == null) return null;
+        return JSON.parse(item) satisfies T;
     } catch (error) {
         console.warn(error);
     }
-    return null as T;
+    return null;
 }
 
 /**
