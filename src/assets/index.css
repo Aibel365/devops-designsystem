@@ -2831,14 +2831,14 @@
     --_ds-floating-arrow-size: var(--dsc-tooltip-arrow-size);
     --dsc-tooltip-background: var(--ds-color-neutral-text-default);
     --dsc-tooltip-color: var(--ds-color-neutral-background-default);
-    --dsc-tooltip-border-radius: var(--ds-border-radius-default);
+    --dsc-tooltip-border-radius: var(--ds-border-radius-sm);
     --dsc-tooltip-padding: var(--ds-size-1) var(--ds-size-2);
     --dsc-tooltip-arrow-size: var(--ds-size-2);
     --dsc-tooltip-transition-duration: 0.2s;
     --dsc-tooltip-transition-delay: 150ms;
     --dsc-tooltip-placement: top;
     background: var(--dsc-tooltip-background);
-    border: 0;
+    border: 1px solid var(--ds-color-text-default);
     border-radius: var(--dsc-tooltip-border-radius);
     box-sizing: border-box;
     color: var(--dsc-tooltip-color);
