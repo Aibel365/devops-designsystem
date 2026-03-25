@@ -1719,6 +1719,7 @@
   .ds-search input {
     grid-area: 1/1;
     padding-inline: var(--dsc-search-padding-inline);
+    border-radius: var(--ds-border-radius-default);
   }
   :is(.ds-search input)::-webkit-search-cancel-button,:is(.ds-search input)::-webkit-search-decoration {
     -webkit-appearance: none;
