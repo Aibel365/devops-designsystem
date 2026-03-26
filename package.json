@@ -33,6 +33,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "start": "npm run storybook",
     "build": "npm run clean && tsc -b && vite build && npm run build:css",
