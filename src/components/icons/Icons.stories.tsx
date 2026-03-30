@@ -77,8 +77,7 @@ import { ImageIcon } from "./image/ImageIcon";
 
 const meta: Meta = {
     title: "Demo",
-    tags: ["!autodocs"],
-    parameters: { docs: { disable: true } }
+    tags: ["!autodocs"]
 };
 
 export const Common: StoryObj = {
