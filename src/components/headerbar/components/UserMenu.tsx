@@ -4,7 +4,7 @@ import { getInitials } from "../getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
 import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 import { MoveItemIcon, SwitchAccountIcon } from "../../../components/icons";
-import { PopoverWrapper } from "../../conditionalWrapper/ConditionalPopover";
+import { PopoverWrapper } from "../../conditionalPopover/ConditionalPopover";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
