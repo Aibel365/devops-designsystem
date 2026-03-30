@@ -35,7 +35,7 @@ export const HeaderBar = ({ title, logoLink = "/", linkCallback, children, subHe
     return (
         <div className={className}>
             <div className="ads:sticky ads:top-0 ads:z-100 ads:flex ads:flex-col">
-                <div className="ads:flex ads:content-between ads:w-full ads:h-19 ads:py-0 ads:px-8 ads:bg-aibel-bright-blue ads:text-white ads:shadow-2xl ads:shadow-black/15 ads:z-1">
+                <div className="ads:flex ads:content-between ads:w-full ads:h-19 ads:py-0 ads:px-8 ads:bg-aibel-blue-base-default ads:text-white ads:shadow-2xl ads:shadow-black/15 ads:z-1">
                     <div className="ads:flex ads:items-center ads:justify-between ads:gap-2">
                         <a
                             className="ads:p-0 ads:h-7 ads:md:h-5 ads:bg-transparent ads:border-0 ads:hover:cursor-pointer"
