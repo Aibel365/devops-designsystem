@@ -1,9 +1,9 @@
-import { forwardRef, ReactElement } from "react";
-import { Button, Divider, Popover } from "../../designsystemet/components";
-import { getInitials } from "./getInitials";
+import { ReactElement } from "react";
+import { Button, Divider, Popover } from "../../../designsystemet/components";
+import { getInitials } from "../getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
-import { AibelLogo } from "../logo/AibelLogo";
-import { Base64ImageDisplay } from "../image/Base64ImageDisplay";
+import { AibelLogo } from "../../logo/AibelLogo";
+import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
@@ -90,7 +90,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail }: UserMenuContentHeader
     );
 };
 
-// const UserMenuButton = forwardRef((props: UserMenuButtonsProps, ref: ForwardedRef<HTMLButtonElement>) => {
+// const UserMenuButton = ((props: UserMenuButtonsProps, ref: ForwardedRef<HTMLButtonElement>) => {
 
 //   const { children, userImage, ...delegated } = props;
 
@@ -109,7 +109,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail }: UserMenuContentHeader
  * @param props
  * @constructor
  */
-export const UserMenu = forwardRef((props: UserMenuContentProps) => {
+export const UserMenu = (props: UserMenuContentProps) => {
     // const { ...delegated } = props;
 
     return (
@@ -136,7 +136,7 @@ export const UserMenu = forwardRef((props: UserMenuContentProps) => {
             </Popover>
         </Popover.TriggerContext>
     );
-});
+};
 
 const UserMenuContent = ({ userName, userEmail, userImage }: UserMenuContentProps) => {
     return (

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { SubHeaderBar, SubHeaderBarProps } from "./SubHeaderBar";
-import { UserMenu, UserMenuContentHeaderBarProps } from "./UserMenu";
+import { UserMenu, UserMenuContentHeaderBarProps } from "./components/UserMenu";
 import { AibelLogo } from "../logo/AibelLogo";
 import { ConditionRender } from "../conditionRender/ConditionRender";
 
