@@ -4,7 +4,7 @@ import { getInitials } from "../getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
 import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 import { MoveItemIcon, SwitchAccountIcon } from "../../../components/icons";
-import { PopoverWrapper } from "../../conditionalPopover/ConditionalPopover";
+import { ConditionalPopover } from "../../conditionalPopover/ConditionalPopover";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
@@ -69,7 +69,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                 )}
 
                 {customMenuContent?.map(({ label, icon, handleClick, popoverContent, disabled }) => (
-                    <PopoverWrapper
+                    <ConditionalPopover
                         key={label}
                         condition={!!popoverContent}
                         popoverContent={popoverContent}
@@ -84,7 +84,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                             {icon}
                             {label}
                         </Button>
-                    </PopoverWrapper>
+                    </ConditionalPopover>
                 ))}
                 <Button
                     data-size="sm"

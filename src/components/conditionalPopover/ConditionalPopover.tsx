@@ -1,12 +1,12 @@
 import { Popover } from "../../designsystemet/components";
 
-export interface PopoverWrapperProps {
+export interface ConditionalPopoverProps {
     condition: boolean;
     popoverContent: React.ReactNode;
     children: React.ReactElement;
 }
 
-export const PopoverWrapper = ({ condition, popoverContent, children }: PopoverWrapperProps) => {
+export const ConditionalPopover = ({ condition, popoverContent, children }: ConditionalPopoverProps) => {
     if (!condition) return children;
 
     return (

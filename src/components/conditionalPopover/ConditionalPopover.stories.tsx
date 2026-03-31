@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "../../designsystemet/components/button/Button";
-import { PopoverWrapper } from "./ConditionalPopover";
+import { ConditionalPopover } from "./ConditionalPopover";
 
-const meta: Meta<typeof PopoverWrapper> = {
-    title: "Components/PopoverWrapper",
-    component: PopoverWrapper,
+const meta: Meta<typeof ConditionalPopover> = {
+    title: "Components/ConditionalPopover",
+    component: ConditionalPopover,
     args: {
         condition: true,
         popoverContent: (
@@ -27,7 +27,7 @@ const meta: Meta<typeof PopoverWrapper> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof PopoverWrapper>;
+type Story = StoryObj<typeof ConditionalPopover>;
 
 export const WithPopover: Story = {};
 
