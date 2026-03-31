@@ -37,13 +37,11 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                     aria-hidden
                     initials={getInitials(userName)}
                 >
-                    {userImage ? (
+                    {userImage && (
                         <Base64ImageDisplay
                             alt="User image"
-                            base64String={userImage ?? ""}
+                            base64String={userImage}
                         />
-                    ) : (
-                        getInitials(userName)
                     )}
                 </Avatar>
                 <div className="ads:flex ads:flex-col ads:py-1 ads:text-black">
@@ -118,13 +116,11 @@ export const UserMenu = (props: UserMenuContentProps) => {
                     aria-label={props.userName}
                     aria-hidden
                 >
-                    {props.userImage ? (
+                    {props.userImage && (
                         <Base64ImageDisplay
                             alt="User image"
                             base64String={props.userImage ?? ""}
                         />
-                    ) : (
-                        getInitials(props.userName)
                     )}
                 </Avatar>
             </Popover.Trigger>
