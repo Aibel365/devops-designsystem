@@ -92,5 +92,8 @@
   },
   "dependencies": {
     "@digdir/designsystemet-react": "^1.13.1"
+  },
+  "overrides": {
+    "@joshwooding/vite-plugin-react-docgen-typescript": "0.7.0"
   }
 }
