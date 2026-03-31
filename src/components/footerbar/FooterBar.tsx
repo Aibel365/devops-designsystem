@@ -1,13 +1,13 @@
 import { Button } from "../../designsystemet/components";
 
-export type IFooterBar = {
+export type FooterBarProps = {
     centeredContent?: React.ReactNode;
     rightContent?: React.ReactNode;
     onBackClick?: () => void;
     className?: string;
 };
 
-export const FooterBar = (props: IFooterBar) => {
+export const FooterBar = (props: FooterBarProps) => {
     return (
         <div className={props.className}>
             <div className={`ads:fixed ads:bottom-0 ads:left-0 ads:right-0 ads:z-100 ads:flex ads:items-center ads:justify-between ads:w-full ads:min-h-12 ads:px-8 ads:bg-aibel-blue-base-default ads:text-neutral-100 ${props.className}`}>
