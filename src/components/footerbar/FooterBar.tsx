@@ -14,7 +14,6 @@ export const FooterBar = (props: IFooterBar) => {
                 {props.onBackClick && (
                     <Button
                         variant="secondary"
-                        className="ads:text-neutral-100 ads:hover:text-aibel-bright-blue"
                         onClick={props.onBackClick}
                         data-size="sm"
                         data-color="white"
