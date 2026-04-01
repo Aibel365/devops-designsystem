@@ -9,7 +9,6 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 
 export const MoveItemIcon = ({ size, className, ...rest }: IconSvgProps) => {
     const sizeCss = size ? `ads:size-${size}` : "ads:size-4";
-    console.log(size);
     return (
         <MoveItem
             {...rest}
