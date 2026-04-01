@@ -240,6 +240,9 @@
   .ads\:min-h-screen {
     min-height: 100vh;
   }
+  .ads\:min-h-12 {
+    min-height: calc(var(--ads-spacing)*12);
+  }
   .ads\:w-fit {
     width: fit-content;
   }
@@ -305,6 +308,12 @@
   .ads\:border-100 {
     border-style: var(--tw-border-style);
     border-width: 100px;
+  }
+  .ads\:bg-aibel-base-default {
+    background-color: var(--ds-color-base-default);
+  }
+  .ads\:bg-aibel-blue-base-default {
+    background-color: var(--ds-color-aibel-blue-base-default);
   }
   .ads\:bg-aibel-bright-blue {
     background-color: var(--ads-color-aibel-bright-blue);
@@ -876,6 +885,11 @@
   .ds-button[data-fullwidth] {
     text-align: center;
     width: 100%;
+  }
+  .ds-button[data-color=white] {
+    --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
+    --dsc-button-color: var(--ds-color-base-contrast-default);
+    --dsc-button-border-color:var(--ds-color-base-contrast-default);
   }
   .ds-button .ds-spinner {
     font-size: 1.4em;
