@@ -95,7 +95,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                     {
                         <MoveItemIcon
                             aria-hidden
-                            size={24}
+                            size={6}
                         />
                     }
                     {logoutLabel?.length ? logoutLabel : "Logout"}

@@ -225,6 +225,10 @@
     width: calc(var(--ads-spacing) * 4);
     height: calc(var(--ads-spacing) * 4);
   }
+  .ads\:size-6 {
+    width: calc(var(--ads-spacing) * 6);
+    height: calc(var(--ads-spacing) * 6);
+  }
   .ads\:h-7 {
     height: calc(var(--ads-spacing) * 7);
   }
