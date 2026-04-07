@@ -59,6 +59,38 @@ export function Example() {
 - `npm run clean` – remove build artifacts
 - `npm run knip` - check for dependency and code issues
 
+## Running the project locally
+
+To start the project, run commands in a terminal **with administrative permissions**. This prevents `npx` script failures and ensures Tailwind starts correctly.
+
+When running `npm run start`:
+
+- Storybook is served on `localhost`
+- Tailwind begins watching for class usage
+- `Tailwind-entry.css` is used as the input file
+- Tailwind generates or updates `assets/index.css` with:
+    - Digdir styles
+    - Tailwind utility classes used in the project (`ads:` prefix)
+    - Aibel custom theming tokens
+
+While Tailwind is running, new utility classes are automatically added to `assets/index.css`. Unused classes are removed on the next startup.
+
+## Building the package
+
+A full build runs the same Tailwind pipeline as development mode and outputs the final CSS to:
+
+```
+dist/styles.css
+```
+
+## Customization
+
+If custom theming or Digdir overrides are needed, add them to `Tailwind-entry.css`.
+
+This ensures Tailwind includes them during processing when generating `assets/index.css` or `dist/styles.css`.
+
+> **Do not edit auto-generated files.** They will be overwritten.
+
 ## Design tokens
 
 Token source files are under `design-tokens/`.
