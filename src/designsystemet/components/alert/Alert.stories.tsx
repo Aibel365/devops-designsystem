@@ -8,7 +8,18 @@ const meta: Meta<typeof Alert> = {
     title: "Designsystemet/Alert",
     component: Alert,
     args: {
-        children: "This is the message inside the Alert"
+        children: "This is the message inside the Alert",
+        "data-size": "md"
+    },
+    argTypes: {
+        "data-color": {
+            control: { type: "radio" },
+            options: ["info", "success", "warning", "danger"]
+        },
+        "data-size": {
+            control: { type: "radio" },
+            options: ["sm", "md", "lg"]
+        }
     }
 };
 
