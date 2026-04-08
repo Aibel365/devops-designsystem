@@ -5,21 +5,50 @@ import { Badge } from "./Badge";
 const meta: Meta<typeof Badge> = {
     title: "Designsystemet/Badge",
     component: Badge,
-    args: {
-        count: 2,
-        maxCount: 99
+    argTypes: {
+        count: { control: "number" },
+        maxCount: { control: "number" },
+        "data-color": { control: { type: "radio" }, options: ["accent1", "neutral"] },
+        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        variant: { control: { type: "radio" }, options: ["base", "tinted"] }
     }
 };
 
 type Story = StoryObj<typeof Badge>;
 
 export const Default: Story = {
-    render: () => (
-        <Badge
-            count={15}
-            maxCount={9}
-        />
-    )
+    args: {
+        count: 15,
+        maxCount: 9
+    }
+};
+
+export const VariantTinted: Story = {
+    args: {
+        count: 15,
+        maxCount: 9,
+        variant: "tinted"
+    }
+};
+
+export const SizeLarge: Story = {
+    args: {
+        count: 15,
+        maxCount: 9,
+        "data-size": "lg"
+    }
+};
+
+export const Color: Story = {
+    args: {
+        count: 9,
+        maxCount: 15,
+        "data-color": "neutral"
+    }
+};
+
+export const Dot: Story = {
+    args: {}
 };
 
 export default meta;
