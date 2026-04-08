@@ -1,21 +1,62 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-
+import { Card } from "../card/Card";
 import { Details } from "./Details";
 
 const meta: Meta<typeof Details> = {
     title: "Designsystemet/Details",
-    component: Details
+    component: Details,
+    argTypes: {
+        "data-color": { control: { type: "radio" }, options: ["accent", "neutral"] },
+        variant: { control: { type: "radio" }, options: ["default", "tinted"] },
+        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        open: { control: { type: "boolean" }, options: [true, false] },
+        defaultOpen: { control: { type: "boolean" }, options: [true, false] },
+        children: {
+            control: false,
+            table: { disable: true }
+        }
+    }
 };
 
 type Story = StoryObj<typeof Details>;
 
 export const Default: Story = {
+    args: {
+        children: (
+            <>
+                <Details.Summary>Details heading text</Details.Summary>
+                <Details.Content>Details content</Details.Content>
+            </>
+        ),
+        variant: "default",
+        open: false,
+        defaultOpen: false,
+        "data-size": "md",
+        "data-color": "accent"
+    }
+};
+
+export const TintedAndInCard: Story = {
     render: () => (
-        <Details>
-            <Details.Summary>Details heading text</Details.Summary>
-            <Details.Content>Details content</Details.Content>
-        </Details>
+        <Card>
+            <Details variant="tinted">
+                <Details.Summary>Details heading text</Details.Summary>
+                <Details.Content>Details content</Details.Content>
+            </Details>
+        </Card>
     )
+};
+
+export const DefaultOpen: Story = {
+    args: {
+        children: (
+            <>
+                <Details.Summary>Details heading text</Details.Summary>
+                <Details.Content>Details content</Details.Content>
+            </>
+        ),
+        defaultOpen: true
+    }
 };
 
 export default meta;
