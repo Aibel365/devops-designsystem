@@ -16,6 +16,10 @@ menu {
     list-style: revert;
 }
 
+.ds-breadcrumbs ol {
+    list-style: none;
+}
+
 .ds-button[data-color=white] {
     --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
     --dsc-button-color: var(--ds-color-base-contrast-default);
