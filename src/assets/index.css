@@ -256,6 +256,9 @@
   .ads\:flex-row {
     flex-direction: row;
   }
+  .ads\:flex-wrap {
+    flex-wrap: wrap;
+  }
   .ads\:content-between {
     align-content: space-between;
   }
@@ -279,6 +282,9 @@
   }
   .ads\:gap-4 {
     gap: calc(var(--ads-spacing) * 4);
+  }
+  .ads\:gap-6 {
+    gap: calc(var(--ads-spacing) * 6);
   }
   .ads\:border-0 {
     border-style: var(--tw-border-style);
