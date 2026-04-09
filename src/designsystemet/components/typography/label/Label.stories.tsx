@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Label } from "./Label";
 
 const meta: Meta<typeof Label> = {
-    title: "Designsystemet/Label",
+    title: "Designsystemet/Typography/Label",
     component: Label
 };
 

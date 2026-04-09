@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Card } from "./Card";
-import { Heading } from "../heading/Heading";
-import { Paragraph } from "../paragraph/Paragraph";
+import { Heading } from "../typography/heading/Heading";
+import { Paragraph } from "../typography/paragraph/Paragraph";
 import { Base64ImageDisplay } from "../../../components/image/Base64ImageDisplay";
 
 const meta: Meta<typeof Card> = {

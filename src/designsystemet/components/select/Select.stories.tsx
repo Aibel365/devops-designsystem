@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Select } from "./Select";
 import { Field } from "../field/Field";
-import { Label } from "../label/Label";
+import { Label } from "../typography/label/Label";
 
 const meta: Meta<typeof Select> = {
     title: "Designsystemet/Select",

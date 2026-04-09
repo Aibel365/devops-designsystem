@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Field } from "./Field";
-import { Label } from "../label/Label";
+import { Label } from "../typography/label/Label";
 import { Input } from "../input/Input";
-import { ValidationMessage } from "../validationmessage/ValidationMessage";
+import { ValidationMessage } from "../typography/validationmessage/ValidationMessage";
 
 const meta: Meta<typeof Field> = {
     title: "Designsystemet/Field",

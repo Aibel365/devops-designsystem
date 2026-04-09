@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Heading } from "./Heading";
 
 const meta: Meta<typeof Heading> = {
-    title: "Designsystemet/Heading",
+    title: "Designsystemet/Typography/Heading",
     component: Heading
 };
 

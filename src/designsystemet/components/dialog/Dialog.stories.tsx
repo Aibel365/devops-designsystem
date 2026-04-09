@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Dialog } from "./Dialog";
-import { Heading } from "../heading/Heading";
-import { Paragraph } from "../paragraph/Paragraph";
+import { Heading } from "../typography/heading/Heading";
+import { Paragraph } from "../typography/paragraph/Paragraph";
 
 const meta: Meta<typeof Dialog> = {
     title: "Designsystemet/Dialog",
