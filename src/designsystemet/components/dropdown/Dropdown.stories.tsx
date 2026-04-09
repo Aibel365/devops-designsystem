@@ -6,13 +6,13 @@ const meta: Meta<typeof Dropdown> = {
     title: "Designsystemet/Dropdown",
     component: Dropdown,
     args: {
-        "data-color": "accent",
+        "data-color": "bright-blue",
         placement: "bottom-end",
         autoPlacement: false,
         "data-size": "md"
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["accent", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
         placement: { control: { type: "select" }, options: ["none", "top", "right", "bottom", "left", "top-start", "top-end", "right-start", "right-end", "bottom-start", "bottom-end", "left-start", "left-end"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         open: { control: { type: "boolean" }, options: [true, false] },

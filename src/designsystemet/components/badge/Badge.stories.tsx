@@ -8,7 +8,7 @@ const meta: Meta<typeof Badge> = {
     argTypes: {
         count: { control: "number" },
         maxCount: { control: "number" },
-        "data-color": { control: { type: "radio" }, options: ["accent1", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         variant: { control: { type: "radio" }, options: ["base", "tinted"] }
     }

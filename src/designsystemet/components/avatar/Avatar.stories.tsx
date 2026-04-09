@@ -12,12 +12,12 @@ const meta: Meta<typeof Avatar> = {
         variant: "circle",
         "data-tooltip": "tooltip",
         "data-size": "md",
-        "data-color": "accent1"
+        "data-color": "bright-blue"
     },
     argTypes: {
         variant: { control: { type: "radio" }, options: ["circle", "square"] },
         "data-size": { control: { type: "radio" }, options: ["xs", "sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["accent1", "neutral"] }
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] }
     }
 };
 

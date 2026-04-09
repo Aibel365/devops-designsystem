@@ -6,7 +6,7 @@ const meta: Meta<typeof Details> = {
     title: "Designsystemet/Details",
     component: Details,
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["accent", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
         variant: { control: { type: "radio" }, options: ["default", "tinted"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         open: { control: { type: "boolean" }, options: [true, false] },
@@ -32,7 +32,7 @@ export const Default: Story = {
         open: false,
         defaultOpen: false,
         "data-size": "md",
-        "data-color": "accent"
+        "data-color": "bright-blue"
     }
 };
 
