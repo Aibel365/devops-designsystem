@@ -315,9 +315,6 @@
   .ads\:px-8 {
     padding-inline: calc(var(--ads-spacing) * 8);
   }
-  .ads\:px-100 {
-    padding-inline: calc(var(--ads-spacing) * 100);
-  }
   .ads\:py-0 {
     padding-block: calc(var(--ads-spacing) * 0);
   }
