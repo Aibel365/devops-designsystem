@@ -24,7 +24,11 @@ menu {
     --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
     --dsc-button-color: var(--ds-color-base-contrast-default);
     --dsc-button-border-color:var(--ds-color-base-contrast-default);
-  } 
+}
+
+.ds-dropdown ul, ol {
+    list-style: none;
+}
   
 .ds-search input {
     border-top-left-radius: var(--ds-border-radius-default);
