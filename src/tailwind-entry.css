@@ -29,6 +29,10 @@ menu {
 .ds-dropdown ul, ol {
     list-style: none;
 }
+
+.ds-pagination ul, ol {
+    list-style: none;
+}
   
 .ds-search input {
     border-top-left-radius: var(--ds-border-radius-default);
