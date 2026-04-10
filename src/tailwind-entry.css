@@ -38,6 +38,13 @@ menu {
     border-top-left-radius: var(--ds-border-radius-default);
     border-bottom-left-radius: var(--ds-border-radius-default);
 }
+ 
+/* A selector for the search input when there is no search button */
+.ds-search:not(:has(.ds-button:not([type="reset"]))) .ds-input {
+    border-top-right-radius: var(--ds-border-radius-default);
+    border-bottom-right-radius: var(--ds-border-radius-default);
+
+}
 
 .ds-tooltip {
     --dsc-tooltip-border-radius: var(--ds-border-radius-sm);
