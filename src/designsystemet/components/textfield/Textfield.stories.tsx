@@ -30,7 +30,7 @@ const meta: Meta<typeof Textfield> = {
         className: { control: { type: "text" } },
         prefix: { control: { type: "text" } },
         suffix: { control: { type: "text" } },
-        type: { control: { type: "select" }, options: [] },
+        type: { control: { type: "select" }, options: ["number", "hidden", "color", "date", "datetime-local", "email", "file", "month", "password", "search", "tel", "text", "time", "url", "week"] },
         size: { control: { type: "number" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         "data-indeterminate": { control: { type: "boolean" } }
