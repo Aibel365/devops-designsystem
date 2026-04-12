@@ -4,6 +4,8 @@ import { Alert } from "./Alert";
 import { Heading } from "../typography/heading/Heading";
 import { Paragraph } from "../typography/paragraph/Paragraph";
 
+Alert.displayName = "Alert";
+
 const meta: Meta<typeof Alert> = {
     title: "Designsystemet/Alert",
     component: Alert,

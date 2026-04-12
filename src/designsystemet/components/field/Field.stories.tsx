@@ -5,6 +5,11 @@ import { Label } from "../typography/label/Label";
 import { Input } from "../input/Input";
 import { ValidationMessage } from "../typography/validationmessage/ValidationMessage";
 
+Field.displayName = "Field";
+Label.displayName = "Label";
+Input.displayName = "Input";
+ValidationMessage.displayName = "ValidationMessage";
+
 const meta: Meta<typeof Field> = {
     title: "Designsystemet/Field",
     component: Field,

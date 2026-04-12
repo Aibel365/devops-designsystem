@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "./Button";
 import { AddIcon } from "../../../components/icons";
 
+Button.displayName = "Button";
+
 const meta: Meta<typeof Button> = {
     title: "Designsystemet/Button",
     component: Button,

@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { ErrorSummary } from "./ErrorSummary";
 
+ErrorSummary.displayName = "ErrorSummary";
+
 const meta: Meta<typeof ErrorSummary> = {
     title: "Designsystemet/ErrorSummary",
     component: ErrorSummary,

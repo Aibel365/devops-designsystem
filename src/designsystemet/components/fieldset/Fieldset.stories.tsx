@@ -3,6 +3,9 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Fieldset } from "./Fieldset";
 import { Radio } from "../radio/Radio";
 
+Fieldset.displayName = "Fieldset";
+Radio.displayName = "Radio";
+
 const meta: Meta<typeof Fieldset> = {
     title: "Designsystemet/Fieldset",
     component: Fieldset,

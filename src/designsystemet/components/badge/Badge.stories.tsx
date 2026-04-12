@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Badge } from "./Badge";
 
+Badge.displayName = "Badge";
+
 const meta: Meta<typeof Badge> = {
     title: "Designsystemet/Badge",
     component: Badge,

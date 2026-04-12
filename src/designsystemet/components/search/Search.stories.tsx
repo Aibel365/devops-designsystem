@@ -4,6 +4,10 @@ import { Search } from "./Search";
 import { Field } from "../field/Field";
 import { Label } from "../typography/label/Label";
 
+Search.displayName = "Search";
+Field.displayName = "Field";
+Label.displayName = "Label";
+
 const meta: Meta<typeof Search> = {
     title: "Designsystemet/Search",
     component: Search,

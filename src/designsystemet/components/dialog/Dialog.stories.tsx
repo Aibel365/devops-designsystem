@@ -4,6 +4,10 @@ import { Dialog } from "./Dialog";
 import { Heading } from "../typography/heading/Heading";
 import { Paragraph } from "../typography/paragraph/Paragraph";
 
+Dialog.displayName = "Dialog";
+Heading.displayName = "Heading";
+Paragraph.displayName = "Paragraph";
+
 const meta: Meta<typeof Dialog> = {
     title: "Designsystemet/Dialog",
     component: Dialog,

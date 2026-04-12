@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Card } from "../card/Card";
 import { Details } from "./Details";
 
+Details.displayName = "Details";
+
 const meta: Meta<typeof Details> = {
     title: "Designsystemet/Details",
     component: Details,

@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Avatar } from "./Avatar";
 import { Base64ImageDisplay } from "../../../components/image/Base64ImageDisplay";
 
+Avatar.displayName = "Avatar";
+
 const meta: Meta<typeof Avatar> = {
     title: "Designsystemet/Avatar",
     component: Avatar,

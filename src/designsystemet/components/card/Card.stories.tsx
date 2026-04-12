@@ -5,6 +5,10 @@ import { Heading } from "../typography/heading/Heading";
 import { Paragraph } from "../typography/paragraph/Paragraph";
 import { Base64ImageDisplay } from "../../../components/image/Base64ImageDisplay";
 
+Card.displayName = "Card";
+Heading.displayName = "Heading";
+Paragraph.displayName = "Paragraph";
+
 const meta: Meta<typeof Card> = {
     title: "Designsystemet/Card",
     component: Card,
