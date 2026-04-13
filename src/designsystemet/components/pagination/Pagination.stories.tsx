@@ -2,16 +2,24 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Pagination } from "./Pagination";
 
+Pagination.displayName = "Pagination";
+
 const meta: Meta<typeof Pagination> = {
     title: "Designsystemet/Pagination",
-    component: Pagination
+    component: Pagination,
+    argTypes: {
+        "data-current": { control: { type: "text" } },
+        "data-total": { control: { type: "text" } },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] }
+    }
 };
 
 type Story = StoryObj<typeof Pagination>;
 
 export const Default: Story = {
-    render: () => (
-        <Pagination>
+    render: (args) => (
+        <Pagination {...args}>
             <Pagination.List>
                 <Pagination.Item>
                     <Pagination.Button

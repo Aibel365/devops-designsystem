@@ -196,6 +196,9 @@
   .ads\:z-100 {
     z-index: 100;
   }
+  .ads\:mx-auto {
+    margin-inline: auto;
+  }
   .ads\:ml-auto {
     margin-left: auto;
   }
@@ -220,6 +223,9 @@
   }
   .ads\:h-19 {
     height: calc(var(--ads-spacing) * 19);
+  }
+  .ads\:max-h-5 {
+    max-height: calc(var(--ads-spacing) * 5);
   }
   .ads\:min-h-12 {
     min-height: calc(var(--ads-spacing) * 12);
@@ -253,6 +259,9 @@
   .ads\:flex-row {
     flex-direction: row;
   }
+  .ads\:flex-wrap {
+    flex-wrap: wrap;
+  }
   .ads\:content-between {
     align-content: space-between;
   }
@@ -276,6 +285,12 @@
   }
   .ads\:gap-4 {
     gap: calc(var(--ads-spacing) * 4);
+  }
+  .ads\:gap-6 {
+    gap: calc(var(--ads-spacing) * 6);
+  }
+  .ads\:overflow-y-scroll {
+    overflow-y: scroll;
   }
   .ads\:border-0 {
     border-style: var(--tw-border-style);
@@ -5608,14 +5623,27 @@
 ol, ul, menu {
   list-style: revert;
 }
+.ds-breadcrumbs ol {
+  list-style: none;
+}
 .ds-button[data-color=white] {
   --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
   --dsc-button-color: var(--ds-color-base-contrast-default);
   --dsc-button-border-color: var(--ds-color-base-contrast-default);
 }
+.ds-dropdown ul, ol {
+  list-style: none;
+}
+.ds-pagination ul, ol {
+  list-style: none;
+}
 .ds-search input {
   border-top-left-radius: var(--ds-border-radius-default);
   border-bottom-left-radius: var(--ds-border-radius-default);
+}
+.ds-search:not(:has(.ds-button:not([type="reset"]))) .ds-input {
+  border-top-right-radius: var(--ds-border-radius-default);
+  border-bottom-right-radius: var(--ds-border-radius-default);
 }
 .ds-tooltip {
   --dsc-tooltip-border-radius: var(--ds-border-radius-sm);
