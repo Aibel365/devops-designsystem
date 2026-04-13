@@ -18,21 +18,19 @@ const preview: Preview = {
             test: "todo"
         },
 
-        
-options: {
-      storySort: {
-        order: [
-          "Introduction",
-          "Demo",
-          "Designsystemet",
-          "Icons",
-          "Components",
-          "*", // everything else
-        ],
-      },
-    },
-
-    },
+        options: {
+            storySort: {
+                order: [
+                    "Introduction",
+                    "Demo",
+                    "Designsystemet",
+                    "Icons",
+                    "Components",
+                    "*" // everything else
+                ]
+            }
+        }
+    }
 };
 
 export default preview;
