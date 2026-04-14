@@ -1,0 +1,56 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+## Overview
+
+Below you will find an overview of all the spacing primitives available, each step increasing in relation to the one that came before it. The spacing is calculated from the base font size (1rem), which means that altering the base font size will scale the
+spacing accordingly.
+
+## Spacing and sizes
+
+Spacing tokens are defined as CSS custom properties (`--ds-size-*`) and scale automatically with typography.
+
+export const spacingTokens = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 22, 26, 30];
+
+<div
+  className="
+    ads:grid
+    ads:grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+    ads:gap-8
+    ads:p-8
+    ads:border
+    ads:border-[var(--ds-color-border-subtle)]
+    ads:rounded-[var(--ds-border-radius-md)]
+  "
+>
+  {spacingTokens.map((step) => (
+    <div
+      key={step}
+      className="
+        ads:flex
+        ads:flex-col
+        ads:gap-2
+      "
+    >
+      <div
+        className="
+          ads:h-8
+          ads:rounded-xs
+          ads:bg-[var(--ds-color-base-default)]
+        "
+        style={{
+          width: `var(--ds-size-${step})`,
+        }}
+      />
+
+      <code>
+        --ds-size-{step}
+      </code>
+    </div>
+
+))}
+
+</div>
