@@ -224,9 +224,6 @@
   .ads\:h-19 {
     height: calc(var(--ads-spacing) * 19);
   }
-  .ads\:max-h-5 {
-    max-height: calc(var(--ads-spacing) * 5);
-  }
   .ads\:min-h-12 {
     min-height: calc(var(--ads-spacing) * 12);
   }
@@ -288,9 +285,6 @@
   }
   .ads\:gap-6 {
     gap: calc(var(--ads-spacing) * 6);
-  }
-  .ads\:overflow-y-scroll {
-    overflow-y: scroll;
   }
   .ads\:border-0 {
     border-style: var(--tw-border-style);
