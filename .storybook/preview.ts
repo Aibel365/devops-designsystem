@@ -23,6 +23,7 @@ const preview: Preview = {
                 order: [
                     "Introduction",
                     "Demo",
+                    "Foundations",
                     "Designsystemet",
                     "Icons",
                     "Components",
