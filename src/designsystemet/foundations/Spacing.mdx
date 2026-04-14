@@ -21,9 +21,6 @@ export const spacingTokens = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 
     ads:grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
     ads:gap-8
     ads:p-8
-    ads:border
-    ads:border-[var(--ds-color-border-subtle)]
-    ads:rounded-[var(--ds-border-radius-md)]
   "
 >
   {spacingTokens.map((step) => (
@@ -47,7 +44,7 @@ export const spacingTokens = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 
       />
 
       <code>
-        --ds-size-{step}
+        {step}
       </code>
     </div>
 

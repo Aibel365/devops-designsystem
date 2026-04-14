@@ -278,9 +278,6 @@
   .ads\:items-center {
     align-items: center;
   }
-  .ads\:items-start {
-    align-items: flex-start;
-  }
   .ads\:justify-between {
     justify-content: space-between;
   }
@@ -314,10 +311,6 @@
   .ads\:rounded-xs {
     border-radius: var(--ads-radius-xs);
   }
-  .ads\:border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .ads\:border-0 {
     border-style: var(--tw-border-style);
     border-width: 0px;
@@ -329,9 +322,6 @@
   .ads\:border-100 {
     border-style: var(--tw-border-style);
     border-width: 100px;
-  }
-  .ads\:border-\[var\(--ds-color-border-subtle\)\] {
-    border-color: var(--ds-color-border-subtle);
   }
   .ads\:border-\[var\(--ds-color-neutral-border-strong\)\] {
     border-color: var(--ds-color-neutral-border-strong);
@@ -380,6 +370,9 @@
   }
   .ads\:py-1 {
     padding-block: calc(var(--ads-spacing) * 1);
+  }
+  .ads\:text-center {
+    text-align: center;
   }
   .ads\:leading-0 {
     --tw-leading: calc(var(--ads-spacing) * 0);

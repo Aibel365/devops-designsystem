@@ -8,6 +8,8 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 Here you will find an overview of the different shadows available. Shadow tokens define elevation and depth across the design system. All values are defined as CSS custom properties.
 
+Use the theme token to access the shadow styling by using: (`--ds-shadow-*`)
+
 export const shadowTokens = ["xs", "sm", "md", "lg", "xl"];
 
 <div
@@ -34,12 +36,8 @@ export const shadowTokens = ["xs", "sm", "md", "lg", "xl"];
       }}
     >
       <div>
-        shadow.{token}
+        {token}
       </div>
-
-      <code>
-        box-shadow: var(--ds-shadow-{token})
-      </code>
     </div>
 
 ))}

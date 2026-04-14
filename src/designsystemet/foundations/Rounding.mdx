@@ -10,6 +10,8 @@ Here you will find an overview of the different units available for rounding of 
 
 ## Rounding levels
 
+Use the theme token to access the border radius styling by using: (`--ds-border-radius-*`)
+
 export const radiusTokens = ["sm", "md", "lg", "xl", "default", "full"];
 
 <div
@@ -26,7 +28,7 @@ export const radiusTokens = ["sm", "md", "lg", "xl", "default", "full"];
       className="
         ads:flex
         ads:flex-col
-        ads:items-start
+        ads:items-center
         ads:gap-4
       "
     >
@@ -41,10 +43,7 @@ export const radiusTokens = ["sm", "md", "lg", "xl", "default", "full"];
           borderRadius: `var(--ds-border-radius-${token})`,
         }}
       />
-
-      <code>
-        --ds-border-radius-{token}
-      </code>
+    <span className=" ads:w-full ads:text-center">{token}</span>
     </div>
 
 ))}

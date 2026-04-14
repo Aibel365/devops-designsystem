@@ -68,7 +68,6 @@ Semantic color tokens defined using CSS custom properties.
         <ColorItem
           key={`${group.title}-${token.prefix}`}
           title={token.name}
-          subtitle={`--ds-color-${token.prefix}-${group.title.toLowerCase()}-*`}
           colors={Object.fromEntries(
             group.keys.map((key) => [
               key,
@@ -143,7 +142,6 @@ Semantic color tokens defined using CSS custom properties.
         <ColorItem
           key={`${group.title}-${token.prefix}`}
           title={token.name}
-          subtitle={`--ds-color-${token.prefix}-${group.title.toLowerCase()}-*`}
           colors={Object.fromEntries(
             group.keys.map((key) => [
               key,
