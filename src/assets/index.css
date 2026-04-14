@@ -305,6 +305,9 @@
   .ads\:gap-8 {
     gap: calc(var(--ads-spacing) * 8);
   }
+  .ads\:gap-10 {
+    gap: calc(var(--ads-spacing) * 10);
+  }
   .ads\:rounded-\[var\(--ds-border-radius-md\)\] {
     border-radius: var(--ds-border-radius-md);
   }
@@ -336,6 +339,9 @@
   .ads\:bg-\[var\(--ds-color-base-default\)\] {
     background-color: var(--ds-color-base-default);
   }
+  .ads\:bg-\[var\(--ds-color-surface-default\)\] {
+    background-color: var(--ds-color-surface-default);
+  }
   .ads\:bg-aibel-blue-base-default {
     background-color: var(--ads-color-aibel-blue-base-default);
   }
@@ -353,6 +359,9 @@
   }
   .ads\:p-0 {
     padding: calc(var(--ads-spacing) * 0);
+  }
+  .ads\:p-6 {
+    padding: calc(var(--ads-spacing) * 6);
   }
   .ads\:p-8 {
     padding: calc(var(--ads-spacing) * 8);

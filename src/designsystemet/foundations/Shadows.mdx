@@ -1,0 +1,47 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Shadows" />
+
+# Shadows
+
+## Overview
+
+Here you will find an overview of the different shadows available. Shadow tokens define elevation and depth across the design system. All values are defined as CSS custom properties.
+
+export const shadowTokens = ["xs", "sm", "md", "lg", "xl"];
+
+<div
+  className="
+    ads:flex
+    ads:flex-col
+    ads:gap-10
+    ads:p-8
+  "
+>
+  {shadowTokens.map((token) => (
+    <div
+      key={token}
+      className="
+        ads:flex
+        ads:flex-col
+        ads:gap-4
+        ads:p-6
+        ads:rounded-[var(--ds-border-radius-md)]
+        ads:bg-[var(--ds-color-surface-default)]
+      "
+      style={{
+        boxShadow: `var(--ds-shadow-${token})`,
+      }}
+    >
+      <div>
+        shadow.{token}
+      </div>
+
+      <code>
+        box-shadow: var(--ds-shadow-{token})
+      </code>
+    </div>
+
+))}
+
+</div>
