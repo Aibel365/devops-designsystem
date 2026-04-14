@@ -228,8 +228,14 @@
   .ads\:h-19 {
     height: calc(var(--ads-spacing) * 19);
   }
+  .ads\:h-24 {
+    height: calc(var(--ads-spacing) * 24);
+  }
   .ads\:min-h-12 {
     min-height: calc(var(--ads-spacing) * 12);
+  }
+  .ads\:w-24 {
+    width: calc(var(--ads-spacing) * 24);
   }
   .ads\:w-fit {
     width: fit-content;
@@ -272,6 +278,9 @@
   .ads\:items-center {
     align-items: center;
   }
+  .ads\:items-start {
+    align-items: flex-start;
+  }
   .ads\:justify-between {
     justify-content: space-between;
   }
@@ -310,12 +319,19 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .ads\:border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .ads\:border-100 {
     border-style: var(--tw-border-style);
     border-width: 100px;
   }
   .ads\:border-\[var\(--ds-color-border-subtle\)\] {
     border-color: var(--ds-color-border-subtle);
+  }
+  .ads\:border-\[var\(--ds-color-neutral-border-strong\)\] {
+    border-color: var(--ds-color-neutral-border-strong);
   }
   .ads\:bg-\[var\(--ds-color-base-default\)\] {
     background-color: var(--ds-color-base-default);
