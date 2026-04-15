@@ -1,16 +1,16 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import svgr from "vite-plugin-svgr";
+import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import svgr from "vite-plugin-svgr";
 import { peerDependencies } from "./package.json";
 
 // https://vite.dev/config/
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+import tailwindcss from "@tailwindcss/vite";
+import { playwright } from "@vitest/browser-playwright";
 import path, { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-import { playwright } from "@vitest/browser-playwright";
-import tailwindcss from "@tailwindcss/vite";
 
 const dirname = typeof __dirname !== "undefined" ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
@@ -29,8 +29,7 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, "src/index.ts"),
             name: "ads",
-            formats: ["es", "cjs", "umd"],
-            fileName: (format) => `index.${format}.js`
+            fileName: "index"
         },
         rollupOptions: {
             external: Object.keys(peerDependencies),

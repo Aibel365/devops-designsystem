@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Rounding" />
+
+# Rounding
+
+## Overview
+
+Here you will find an overview of the different units available for rounding of element corners. All values are defined as CSS custom properties and scale automatically.
+
+## Rounding levels
+
+Use the theme token to access the border radius styling by using: (`--ds-border-radius-*`)
+
+export const radiusTokens = ["sm", "md", "lg", "xl", "default", "full"];
+
+<div
+  className="
+    ads:grid
+    ads:grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+    ads:gap-8
+    ads:p-8
+  "
+>
+  {radiusTokens.map((token) => (
+    <div
+      key={token}
+      className="
+        ads:flex
+        ads:flex-col
+        ads:items-center
+        ads:gap-4
+      "
+    >
+      <div
+        className="
+          ads:w-24
+          ads:h-24
+          ads:border-2
+          ads:border-[var(--ds-color-neutral-border-strong)]
+        "
+        style={{
+          borderRadius: `var(--ds-border-radius-${token})`,
+        }}
+      />
+    <span className=" ads:w-full ads:text-center">{token}</span>
+    </div>
+
+))}
+
+</div>

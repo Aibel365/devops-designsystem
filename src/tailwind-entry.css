@@ -5,13 +5,55 @@
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme {
-    --color-aibel-bright-blue: #0030b0;
     /* Your theme variables go here */
+    --color-aibel-blue-base-default: #032B59;
 }
+
 /* eslint-enable */
+ol,
+ul,
+menu {
+    list-style: revert;
+}
+
+.ds-breadcrumbs ol {
+    list-style: none;
+}
+
+.ds-button[data-color=white] {
+    --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
+    --dsc-button-color: var(--ds-color-base-contrast-default);
+    --dsc-button-border-color:var(--ds-color-base-contrast-default);
+}
+
+.ds-dropdown ul, ol {
+    list-style: none;
+}
+
+.ds-pagination ul, ol {
+    list-style: none;
+}
+  
+.ds-search input {
+    border-top-left-radius: var(--ds-border-radius-default);
+    border-bottom-left-radius: var(--ds-border-radius-default);
+}
+ 
+/* A selector for the search input when there is no search button */
+.ds-search:not(:has(.ds-button:not([type="reset"]))) .ds-input {
+    border-top-right-radius: var(--ds-border-radius-default);
+    border-bottom-right-radius: var(--ds-border-radius-default);
+
+}
+
+.ds-tooltip {
+    --dsc-tooltip-border-radius: var(--ds-border-radius-sm);
+    border: 1px solid var(--ds-color-text-default);
+}
 
 /* eslint-disable */
 .dark {
     /* Dark mode overrides */
 }
+
 /* eslint-enable */

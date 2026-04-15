@@ -1,13 +1,12 @@
 {
   "name": "@aibel365/devops-designsystem",
-  "version": "1.2.2",
+  "version": "1.2.7",
   "author": "Aibel AS",
   "license": "MIT",
   "description": "React designsystem for Aibel",
   "type": "module",
   "source": "src/index.ts",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "homepage": "https://github.com/Aibel365/devops-designsystem",
   "keywords": [
@@ -21,9 +20,8 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.es.js"
-      },
-      "require": "./dist/index.umd.js"
+        "default": "./dist/index.js"
+      }
     },
     "./styles.css": {
       "require": "./dist/styles.css",
@@ -52,8 +50,8 @@
     "knip": "knip"
   },
   "peerDependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.1.1",
@@ -84,8 +82,8 @@
     "storybook": "^10.3.3",
     "tailwindcss": "^4.2.2",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.58.0",
-    "vite": "^8.0.3",
+    "typescript-eslint": "^8.58.1",
+    "vite": "^8.0.8",
     "vite-plugin-dts": "^4.5.4",
     "vite-plugin-svgr": "^5.0.0",
     "vitest": "^4.0.18"
