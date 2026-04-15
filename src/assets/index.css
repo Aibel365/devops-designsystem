@@ -12,6 +12,7 @@
     --ads-color-black: #000;
     --ads-color-white: #fff;
     --ads-spacing: 0.25rem;
+    --ads-radius-xs: 0.125rem;
     --ads-default-font-family: var(--ads-font-sans);
     --ads-default-mono-font-family: var(--ads-font-mono);
     --ads-color-aibel-blue-base-default: #032B59;
@@ -205,6 +206,9 @@
   .ads\:flex {
     display: flex;
   }
+  .ads\:grid {
+    display: grid;
+  }
   .ads\:inline-block {
     display: inline-block;
   }
@@ -224,11 +228,14 @@
   .ads\:h-19 {
     height: calc(var(--ads-spacing) * 19);
   }
-  .ads\:max-h-5 {
-    max-height: calc(var(--ads-spacing) * 5);
+  .ads\:h-24 {
+    height: calc(var(--ads-spacing) * 24);
   }
   .ads\:min-h-12 {
     min-height: calc(var(--ads-spacing) * 12);
+  }
+  .ads\:w-24 {
+    width: calc(var(--ads-spacing) * 24);
   }
   .ads\:w-fit {
     width: fit-content;
@@ -252,6 +259,9 @@
   .ads\:translate-x-1\/2 {
     --tw-translate-x: calc(1 / 2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .ads\:grid-cols-\[repeat\(auto-fill\,minmax\(180px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
   }
   .ads\:flex-col {
     flex-direction: column;
@@ -289,16 +299,38 @@
   .ads\:gap-6 {
     gap: calc(var(--ads-spacing) * 6);
   }
-  .ads\:overflow-y-scroll {
-    overflow-y: scroll;
+  .ads\:gap-8 {
+    gap: calc(var(--ads-spacing) * 8);
+  }
+  .ads\:gap-10 {
+    gap: calc(var(--ads-spacing) * 10);
+  }
+  .ads\:rounded-\[var\(--ds-border-radius-md\)\] {
+    border-radius: var(--ds-border-radius-md);
+  }
+  .ads\:rounded-xs {
+    border-radius: var(--ads-radius-xs);
   }
   .ads\:border-0 {
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .ads\:border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .ads\:border-100 {
     border-style: var(--tw-border-style);
     border-width: 100px;
+  }
+  .ads\:border-\[var\(--ds-color-neutral-border-strong\)\] {
+    border-color: var(--ds-color-neutral-border-strong);
+  }
+  .ads\:bg-\[var\(--ds-color-base-default\)\] {
+    background-color: var(--ds-color-base-default);
+  }
+  .ads\:bg-\[var\(--ds-color-surface-default\)\] {
+    background-color: var(--ds-color-surface-default);
   }
   .ads\:bg-aibel-blue-base-default {
     background-color: var(--ads-color-aibel-blue-base-default);
@@ -318,6 +350,12 @@
   .ads\:p-0 {
     padding: calc(var(--ads-spacing) * 0);
   }
+  .ads\:p-6 {
+    padding: calc(var(--ads-spacing) * 6);
+  }
+  .ads\:p-8 {
+    padding: calc(var(--ads-spacing) * 8);
+  }
   .ads\:px-4 {
     padding-inline: calc(var(--ads-spacing) * 4);
   }
@@ -332,6 +370,9 @@
   }
   .ads\:py-1 {
     padding-block: calc(var(--ads-spacing) * 1);
+  }
+  .ads\:text-center {
+    text-align: center;
   }
   .ads\:leading-0 {
     --tw-leading: calc(var(--ads-spacing) * 0);

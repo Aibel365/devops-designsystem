@@ -1,0 +1,156 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+import { Fragment } from "react";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+This page documents the semantic color tokens defined in the design system. All colors reference **CSS custom properties** and automatically adapt to light and dark modes.
+
+## Aibel Theme Colors
+
+export const aibelTokens = [
+    {
+        name: "Aibel Blue",
+        prefix: "aibel-blue"
+    },
+    {
+        name: "Bright Blue",
+        prefix: "bright-blue"
+    },
+    {
+        name: "Green",
+        prefix: "green"
+    },
+    {
+        name: "Neutral",
+        prefix: "neutral"
+    }
+];
+
+export const aibelColorGroups = [
+    {
+        title: "Background",
+        tokens: aibelTokens,
+        keys: ["default", "tinted"]
+    },
+    {
+        title: "Surface",
+        tokens: aibelTokens,
+        keys: ["default", "tinted", "hover", "active"]
+    },
+    {
+        title: "Border",
+        tokens: aibelTokens,
+        keys: ["subtle", "default", "strong"]
+    },
+    {
+        title: "Text",
+        tokens: aibelTokens,
+        keys: ["subtle", "default"]
+    },
+    {
+        title: "Base",
+        tokens: aibelTokens,
+        keys: ["default", "hover", "active"]
+    }
+];
+
+Semantic color tokens defined using CSS custom properties.
+
+{aibelColorGroups.map((group) => (
+
+  <Fragment key={group.title}>
+    <h3>{group.title}</h3>
+
+    <ColorPalette>
+      {group.tokens.map((token) => (
+        <ColorItem
+          key={`${group.title}-${token.prefix}`}
+          title={token.name}
+          colors={Object.fromEntries(
+            group.keys.map((key) => [
+              key,
+              `var(--ds-color-${token.prefix}-${group.title.toLowerCase()}-${key})`,
+            ])
+          )}
+        />
+      ))}
+    </ColorPalette>
+
+  </Fragment>
+))}
+
+## Global Status Theme
+
+export const globalTokens = [
+    {
+        name: "Info",
+        prefix: "info"
+    },
+    {
+        name: "Success",
+        prefix: "success"
+    },
+    {
+        name: "Warning",
+        prefix: "warning"
+    },
+    {
+        name: "Danger",
+        prefix: "danger"
+    }
+];
+
+export const globalColorGroups = [
+    {
+        title: "Background",
+        tokens: globalTokens,
+        keys: ["default", "tinted"]
+    },
+    {
+        title: "Surface",
+        tokens: globalTokens,
+        keys: ["default", "tinted", "hover", "active"]
+    },
+    {
+        title: "Border",
+        tokens: globalTokens,
+        keys: ["subtle", "default", "strong"]
+    },
+    {
+        title: "Text",
+        tokens: globalTokens,
+        keys: ["subtle", "default"]
+    },
+    {
+        title: "Base",
+        tokens: globalTokens,
+        keys: ["default", "hover", "active"]
+    }
+];
+
+Semantic color tokens defined using CSS custom properties.
+
+{globalColorGroups.map((group) => (
+
+  <Fragment key={group.title}>
+    <h3>{group.title}</h3>
+
+    <ColorPalette>
+      {group.tokens.map((token) => (
+        <ColorItem
+          key={`${group.title}-${token.prefix}`}
+          title={token.name}
+          colors={Object.fromEntries(
+            group.keys.map((key) => [
+              key,
+              `var(--ds-color-${token.prefix}-${group.title.toLowerCase()}-${key})`,
+            ])
+          )}
+        />
+      ))}
+    </ColorPalette>
+
+  </Fragment>
+))}
