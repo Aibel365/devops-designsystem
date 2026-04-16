@@ -7,6 +7,17 @@ Details.displayName = "Details";
 const meta: Meta<typeof Details> = {
     title: "Designsystemet/Details",
     component: Details,
+    args: {
+        children: (
+            <>
+                <Details.Summary>Details heading text</Details.Summary>
+                <Details.Content>Details content</Details.Content>
+            </>
+        ),
+        variant: "default",
+        "data-size": "md",
+        "data-color": "bright-blue"
+    },
     argTypes: {
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
         variant: { control: { type: "radio" }, options: ["default", "tinted"] },
@@ -22,21 +33,7 @@ const meta: Meta<typeof Details> = {
 
 type Story = StoryObj<typeof Details>;
 
-export const Default: Story = {
-    args: {
-        children: (
-            <>
-                <Details.Summary>Details heading text</Details.Summary>
-                <Details.Content>Details content</Details.Content>
-            </>
-        ),
-        variant: "default",
-        open: false,
-        defaultOpen: false,
-        "data-size": "md",
-        "data-color": "bright-blue"
-    }
-};
+export const Default: Story = {};
 
 export const TintedAndInCard: Story = {
     render: () => (
