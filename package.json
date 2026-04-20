@@ -26,6 +26,10 @@
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
+          },
+    "./aibel-theme.tailwind.css": {
+      "style": "./dist/aibel-theme.tailwind.css",
+      "default": "./dist/aibel-theme.tailwind.css"
     }
   },
   "files": [
@@ -34,7 +38,7 @@
   "sideEffects": false,
   "scripts": {
     "start": "npm run storybook",
-    "build": "npm run clean && tsc -b && vite build && npm run build:css",
+    "build": "npm run clean && tsc -b && vite build && npm run build:css && npm run export-design-tokens",
     "build:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
     "storybook": "concurrently \"npm run storybook:css\" \"storybook dev -p 6006\"",
     "storybook:css": "npx @tailwindcss/cli -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
@@ -42,7 +46,8 @@
     "build-storybook:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
     "prepublishOnly": "npm run build",
     "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
-    "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json",
+    "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
+    "export-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind --out-dir dist",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ./src/components",
