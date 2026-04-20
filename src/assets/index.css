@@ -572,12 +572,11 @@
     }
   }
   body {
-    font-size: var(--ds-body-md-font-size);
     font-weight: var(--ds-body-md-font-weight);
     letter-spacing: var(--ds-body-md-letter-spacing);
     line-height: var(--ds-body-md-line-height);
   }
-  [data-size] {
+  [data-size],body {
     font-size: var(--ds-body-md-font-size);
   }
   @property --_ds-captured-length {
@@ -585,8 +584,6 @@
     inherits: true;
     initial-value: 0;
   }
-}
-@layer ds.base {
   .ds-heading {
     font-size: 1.3em;
     font-size: round(down,1.3em,1px);
@@ -634,8 +631,6 @@
     letter-spacing: var(--ds-heading-2xl-letter-spacing);
     line-height: var(--ds-heading-2xl-line-height);
   }
-}
-@layer ds.base {
   .ds-label {
     font-weight: var(--ds-font-weight-medium);
     line-height: var(--ds-body-md-line-height);
@@ -647,6 +642,8 @@
     font-weight: var(--ds-font-weight-regular);
   }
 }
+@layer ds.base;
+@layer ds.base;
 @layer ds.base {
   :where(.ds-paragraph) {
     margin-block: 0;
@@ -718,11 +715,11 @@
   .ds-link>:is(img,svg) {
     vertical-align: middle;
   }
-  .ds-link:has(>span):has(>:is(img,svg)):first-child {
-    margin-inline-start: var(--ds-size-1);
-  }
-  .ds-link:has(>span):has(>:is(img,svg)):last-child {
+  :is(.ds-link:has(>span)>:is(img,svg)):first-child {
     margin-inline-end: var(--ds-size-1);
+  }
+  :is(.ds-link:has(>span)>:is(img,svg)):last-child {
+    margin-inline-start: var(--ds-size-1);
   }
   .ds-link[data-color=neutral] {
     --dsc-link-color--active: var(--ds-color-neutral-text-subtle);
@@ -1154,7 +1151,7 @@
   }
   @media (forced-colors:active) {
     .ds-input[role=switch]:is([type=radio],[type=checkbox]):checked {
-      color: CanvasText;
+      color: initial;
     }
   }
   @media (forced-colors:active) {
@@ -1383,8 +1380,6 @@
   .ds-fieldset:disabled>[data-field=description],.ds-fieldset:disabled>legend,.ds-fieldset:disabled>legend+p {
     opacity: var(--ds-opacity-disabled);
   }
-}
-@layer ds.components {
   .ds-alert {
     --dsc-alert-background: var(--ds-color-info-surface-tinted);
     --dsc-alert-border-width: var(--ds-border-width-default);
@@ -1410,6 +1405,8 @@
     padding-inline-start: calc(var(--dsc-alert-padding-inline-end) + var(--dsc-alert-icon-size) + var(--dsc-alert-spacing));
     position: relative;
   }
+}
+@layer ds.components {
   .ds-alert:not(:has(>:is(h1,h2,h3,h4,h5,h6):first-child)):before,.ds-alert>:is(h1,h2,h3,h4,h5,h6):first-child:before {
     background: var(--dsc-alert-icon-color);
     content: "";
@@ -1445,8 +1442,6 @@
   .ds-alert[data-color=danger] {
     --dsc-alert-icon-url: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M7.74 2.47a.75.75 0 0 1 .53-.22h7.46a.75.75 0 0 1 .53.22l5.27 5.27c.14.14.22.33.22.53v7.46a.75.75 0 0 1-.22.53l-5.27 5.27a.75.75 0 0 1-.53.22H8.27a.75.75 0 0 1-.53-.22l-5.27-5.27a.75.75 0 0 1-.22-.53V8.27a.75.75 0 0 1 .22-.53zm1.29 5.5a.75.75 0 0 0-1.06 1.06L10.94 12l-2.97 2.97a.75.75 0 1 0 1.06 1.06L12 13.06l2.97 2.97a.75.75 0 1 0 1.06-1.06L13.06 12l2.97-2.97a.75.75 0 0 0-1.06-1.06L12 10.94z'/%3E%3C/svg%3E");
   }
-}
-@layer ds.components {
   .ds-popover {
     --_ds-floating: top;
     --_ds-floating-arrow-size: 0;
@@ -1478,6 +1473,8 @@
     overflow: auto;
     overscroll-behavior: contain;
   }
+}
+@layer ds.components {
   .ds-popover {
     --_ds-floating: var(--dsc-popover-placement);
     --_ds-floating-arrow-size: var(--dsc-popover-arrow-size);
@@ -1529,7 +1526,6 @@
     all: unset;
     cursor: pointer;
     font-size: inherit;
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     text-underline-offset: .27em;
   }
@@ -1618,7 +1614,7 @@
     --dsc-details-summary-background--open: var(--ds-color-surface-tinted);
     --dsc-details-summary-background: var(--ds-color-surface-default);
   }
-  .ds-card[data-variant=tinted] .ds-details,.ds-details[data-variant=tinted] {
+  .ds-card[data-variant=tinted]>.ds-details,.ds-details[data-variant=tinted] {
     --dsc-details-background: var(--ds-color-surface-tinted);
     --dsc-details-summary-background--hover: var(--ds-color-surface-hover);
     --dsc-details-summary-background--open: var(--ds-color-surface-hover);
@@ -1916,15 +1912,7 @@
       background: ButtonText;
     }
   }
-  .ds-dialog>button[command=close]:first-child,.ds-dialog>button[data-command=close]:first-child {
-    color: inherit;
-    float: inline-end;
-    margin-block-end: var(--dsc-dialog-icon-spacing);
-    margin-block-start: var(--_dsc-dialog-icon-top-right-margin);
-    margin-inline-end: var(--_dsc-dialog-icon-top-right-margin);
-    margin-inline-start: var(--dsc-dialog-icon-spacing);
-  }
-  .ds-dialog>form[method=dialog]:first-child>button:only-child {
+  .ds-dialog>button[command=close]:first-child,.ds-dialog>button[data-command=close]:first-child,.ds-dialog>form[method=dialog]:first-child>button:only-child {
     color: inherit;
     float: inline-end;
     margin-block-end: var(--dsc-dialog-icon-spacing);
@@ -2002,8 +1990,6 @@
     content: "\200B";
     position: absolute;
   }
-}
-@layer ds.components {
   .ds-card {
     --dsc-card-background--active: var(--ds-color-surface-active);
     --dsc-card-background--hover: var(--ds-color-surface-hover);
@@ -2040,6 +2026,8 @@
   .ds-card:not([hidden]) {
     display: block;
   }
+}
+@layer ds.components {
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor]) {
     cursor: pointer;
     text-decoration: none;
@@ -2047,7 +2035,7 @@
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor])>.ds-card__block>:is(h1,h2,h3,h4,h5,h6),.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>:is(h1,h2,h3,h4,h5,h6) {
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-thickness: .0625em;
+    text-decoration-thickness: max(1px,.0625rem,.1025em);
     text-underline-offset: .27em;
   }
   :is(.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>:is(h1,h2,h3,h4,h5,h6),.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>.ds-card__block>:is(h1,h2,h3,h4,h5,h6))>a {
@@ -2446,7 +2434,7 @@
   @media (forced-colors:active) {
     [aria-selected=true]:is(:is(.ds-tabs :is([role=tablist],.ds-tabs ds-tablist,.ds-tabs u-tablist))>:is([role=tab],ds-tab,u-tab)) {
       border-bottom: 2px solid CanvasText;
-      color: CanvasText;
+      color: initial;
     }
   }
   :is(:is(.ds-tabs :is([role=tablist],.ds-tabs ds-tablist,.ds-tabs u-tablist))>:is([role=tab],ds-tab,u-tab)):focus-visible {
@@ -2719,8 +2707,10 @@
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
     height: var(--dsc-togglegroup-button-size);
+    margin-inline: 0;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    min-width: 0;
     overflow-x: auto;
     padding: var(--dsc-togglegroup-spacing);
     width: auto;
@@ -2747,10 +2737,10 @@
   @media (forced-colors:active) {
     :is(:is(.ds-togglegroup,.ds-toggle-group) label,:is(.ds-togglegroup,.ds-toggle-group) button):has(input:checked) {
       background: ButtonText;
-      color: CanvasText;
+      color: initial;
     }
     :is(:is(.ds-togglegroup,.ds-toggle-group) label,:is(.ds-togglegroup,.ds-toggle-group) button):has(input:checked) svg {
-      color: CanvasText;
+      color: initial;
     }
   }
   :is(.ds-togglegroup,.ds-toggle-group) label input {
@@ -3005,7 +2995,7 @@
     --dsc-table-padding: var(--ds-size-2) var(--ds-size-3);
     --dsc-table-sort-size: var(--ds-size-6);
     --_dsc-table-border-radius--inner: calc(var(--dsc-table-border-radius) - var(--dsc-table-border-width));
-    border-collapse: separate;
+    border-collapse: initial;
     border-spacing: 0;
     box-sizing: border-box;
     color: var(--dsc-table-color);
@@ -3194,6 +3184,9 @@
     --dsc-breadcrumbs-color: var(--ds-color-text-subtle);
     --_ds-aria-label: var(--dsc-breadcrumbs-label);
   }
+  .ds-breadcrumbs:not([hidden]) {
+    display: block;
+  }
   .ds-breadcrumbs:is([lang=nb],[lang=nn],[lang=no]),:is([lang=nb],[lang=nn],[lang=no]) .ds-breadcrumbs {
     --dsc-breadcrumbs-label: "Du er her:";
   }
@@ -3363,8 +3356,6 @@
     left: var(--dsc-badge-left,14%);
     translate: -50% 50%;
   }
-}
-@layer ds.components {
   .ds-avatar {
     --dsc-avatar-icon-url: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M8.25 7.5a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0M12 2.25a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5M8.288 17.288A5.25 5.25 0 0 1 17.25 21a.75.75 0 0 0 1.5 0 6.75 6.75 0 0 0-13.5 0 .75.75 0 0 0 1.5 0 5.25 5.25 0 0 1 1.538-3.712' clip-rule='evenodd'/%3E%3C/svg%3E");
     --dsc-avatar-background: var(--ds-color-base-default);
@@ -3373,6 +3364,8 @@
     --dsc-avatar-padding: 0.45em;
     --dsc-avatar-font-size: 1.3em;
   }
+}
+@layer ds.components {
   @supports (width:round(down,0.1em,1px)) {
     .ds-avatar {
       --dsc-avatar-size: round(up,2.625em,1px);
@@ -3453,8 +3446,6 @@
   .ds-avatar[data-size=lg] {
     font-size: var(--ds-body-lg-font-size);
   }
-}
-@layer ds.components {
   .ds-avatar-stack {
     --dsc-avatar-stack-size: var(--ds-size-12);
     --dsc-avatar-stack-gap: 2px;
@@ -3472,6 +3463,8 @@
     width: -moz-max-content;
     width: max-content;
   }
+}
+@layer ds.components {
   .ds-avatar-stack:focus-visible {
     box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
@@ -3965,7 +3958,7 @@
     display: none;
   }
   .ds-combobox {
-    background-color: transparent;
+    background-color: initial;
     display: grid;
     gap: var(--ds-size-2);
   }
@@ -4002,7 +3995,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: transparent;
+    background-color: initial;
     border: none;
     box-sizing: border-box;
     color: var(--ds-color-neutral-text-default);
@@ -4036,7 +4029,7 @@
   }
   .ds-combobox__chip-and-input {
     align-items: center;
-    background-color: transparent;
+    background-color: initial;
     display: flex;
     flex-wrap: wrap;
     gap: var(--ds-size-2);
@@ -4067,7 +4060,7 @@
   }
   .ds-combobox__clear-button {
     aspect-ratio: 1;
-    background-color: transparent;
+    background-color: initial;
     border: none;
     border-radius: var(--ds-border-radius-sm);
     color: var(--ds-color-neutral-text-default);
@@ -4239,15 +4232,17 @@
     --ds-size--sm: var(--ds-size,);
     --ds-size--md: var(--ds-size,);
     --ds-size--lg: var(--ds-size,);
-    --ds-size-mode-font-size: var(--ds-size--sm, var(--ds-size-mode-font-size--sm)) var(--ds-size--md, var(--ds-size-mode-font-size--md)) var(--ds-size--lg, var(--ds-size-mode-font-size--lg));
+    --ds-size-mode-font-size: var(--ds-size--sm, var(--ds-size-mode-font-size--sm))
+    var(--ds-size--md, var(--ds-size-mode-font-size--md))
+    var(--ds-size--lg, var(--ds-size-mode-font-size--lg));
   }
-  [data-size="sm"] {
+  [data-size='sm'] {
     --ds-size: var(--ds-size--sm);
   }
-  [data-size="md"] {
+  [data-size='md'] {
     --ds-size: var(--ds-size--md);
   }
-  [data-size="lg"] {
+  [data-size='lg'] {
     --ds-size: var(--ds-size--lg);
   }
 }
@@ -4286,7 +4281,7 @@
     --ds-body-long-md-font-size: var(--ds-font-size-4);
     --ds-body-long-sm-font-size: var(--ds-font-size-3);
     --ds-body-long-xs-font-size: var(--ds-font-size-2);
-    @supports (width: round(down, 0.1em, 1px)) {
+    @supports (width: round(down, .1em, 1px)) {
       --ds-font-size-1: round(calc(0.75rem * var(--_ds-font-size-factor)), 1px);
       --ds-font-size-2: round(calc(0.875rem * var(--_ds-font-size-factor)), 1px);
       --ds-font-size-3: round(calc(1rem * var(--_ds-font-size-factor)), 1px);
@@ -4313,7 +4308,7 @@
     --ds-color-bright-blue-border-strong: #2f56bf;
     --ds-color-bright-blue-text-subtle: #2f56bf;
     --ds-color-bright-blue-text-default: #002179;
-    --ds-color-bright-blue-base-default: #0030b0;
+    --ds-color-bright-blue-base-default: #0030B0;
     --ds-color-bright-blue-base-hover: #1f49ba;
     --ds-color-bright-blue-base-active: #3d61c3;
     --ds-color-bright-blue-base-contrast-subtle: #d3dbf1;
@@ -4329,7 +4324,7 @@
     --ds-color-light-blue-border-strong: #4f6066;
     --ds-color-light-blue-text-subtle: #4f6066;
     --ds-color-light-blue-text-default: #252d30;
-    --ds-color-light-blue-base-default: #c4f0ff;
+    --ds-color-light-blue-base-default: #C4F0FF;
     --ds-color-light-blue-base-hover: #b1d9e6;
     --ds-color-light-blue-base-active: #9ec2ce;
     --ds-color-light-blue-base-contrast-subtle: #404e53;
@@ -4361,7 +4356,7 @@
     --ds-color-neutral-border-strong: #5b5d60;
     --ds-color-neutral-text-subtle: #5b5d60;
     --ds-color-neutral-text-default: #292c30;
-    --ds-color-neutral-base-default: #24272b;
+    --ds-color-neutral-base-default: #24272B;
     --ds-color-neutral-base-hover: #36383c;
     --ds-color-neutral-base-active: #484a4e;
     --ds-color-neutral-base-contrast-subtle: #b9babb;
@@ -4377,7 +4372,7 @@
     --ds-color-light-green-border-strong: #346753;
     --ds-color-light-green-text-subtle: #346753;
     --ds-color-light-green-text-default: #183027;
-    --ds-color-light-green-base-default: #80ffcf;
+    --ds-color-light-green-base-default: #80FFCF;
     --ds-color-light-green-base-hover: #73e6bb;
     --ds-color-light-green-base-active: #67cea7;
     --ds-color-light-green-base-contrast-subtle: #2a5343;
@@ -4393,7 +4388,7 @@
     --ds-color-green-border-strong: #2d693c;
     --ds-color-green-text-subtle: #2d693c;
     --ds-color-green-text-default: #15311c;
-    --ds-color-green-base-default: #2e6b3d;
+    --ds-color-green-base-default: #2E6B3D;
     --ds-color-green-base-hover: #255631;
     --ds-color-green-base-active: #1c4225;
     --ds-color-green-base-contrast-subtle: #dbe6de;
@@ -4409,7 +4404,7 @@
     --ds-color-light-pink-border-strong: #82504c;
     --ds-color-light-pink-text-subtle: #82504c;
     --ds-color-light-pink-text-default: #3d2524;
-    --ds-color-light-pink-base-default: #ff9d96;
+    --ds-color-light-pink-base-default: #FF9D96;
     --ds-color-light-pink-base-hover: #e18b85;
     --ds-color-light-pink-base-active: #c47973;
     --ds-color-light-pink-base-contrast-subtle: #34201e;
@@ -4425,7 +4420,7 @@
     --ds-color-dark-pink-border-strong: #b90058;
     --ds-color-dark-pink-text-subtle: #b90058;
     --ds-color-dark-pink-text-default: #5c002c;
-    --ds-color-dark-pink-base-default: #bb0059;
+    --ds-color-dark-pink-base-default: #BB0059;
     --ds-color-dark-pink-base-hover: #970048;
     --ds-color-dark-pink-base-active: #750038;
     --ds-color-dark-pink-base-contrast-subtle: #f6dce8;
@@ -4441,7 +4436,7 @@
     --ds-color-dark-red-border-strong: #894869;
     --ds-color-dark-red-text-subtle: #894869;
     --ds-color-dark-red-text-default: #5b002e;
-    --ds-color-dark-red-base-default: #5b002e;
+    --ds-color-dark-red-base-default: #5B002E;
     --ds-color-dark-red-base-hover: #6e1e46;
     --ds-color-dark-red-base-active: #7e365a;
     --ds-color-dark-red-base-contrast-subtle: #d2b9c6;
@@ -4457,7 +4452,7 @@
     --ds-color-info-border-strong: #3d5aa4;
     --ds-color-info-text-subtle: #3d5aa4;
     --ds-color-info-text-default: #1c2a4d;
-    --ds-color-info-base-default: #5e8cff;
+    --ds-color-info-base-default: #5E8CFF;
     --ds-color-info-base-hover: #7fa4ff;
     --ds-color-info-base-active: #a0bbff;
     --ds-color-info-base-contrast-subtle: #010102;
@@ -4473,7 +4468,7 @@
     --ds-color-success-border-strong: #2d693c;
     --ds-color-success-text-subtle: #2d693c;
     --ds-color-success-text-default: #15311c;
-    --ds-color-success-base-default: #2e6b3d;
+    --ds-color-success-base-default: #2E6B3D;
     --ds-color-success-base-hover: #255631;
     --ds-color-success-base-active: #1c4225;
     --ds-color-success-base-contrast-subtle: #dbe6de;
@@ -4489,7 +4484,7 @@
     --ds-color-warning-border-strong: #865100;
     --ds-color-warning-text-subtle: #865100;
     --ds-color-warning-text-default: #3f2600;
-    --ds-color-warning-base-default: #ee9000;
+    --ds-color-warning-base-default: #EE9000;
     --ds-color-warning-base-hover: #d07e00;
     --ds-color-warning-base-active: #b26c00;
     --ds-color-warning-base-contrast-subtle: #231500;
@@ -4505,7 +4500,7 @@
     --ds-color-danger-border-strong: #b12a00;
     --ds-color-danger-text-subtle: #b12a00;
     --ds-color-danger-text-default: #551400;
-    --ds-color-danger-base-default: #b32a00;
+    --ds-color-danger-base-default: #B32A00;
     --ds-color-danger-base-hover: #902200;
     --ds-color-danger-base-active: #6f1a00;
     --ds-color-danger-base-contrast-subtle: #ffffff;
@@ -4528,7 +4523,7 @@
       --ds-color-bright-blue-border-strong: #2f56bf;
       --ds-color-bright-blue-text-subtle: #2f56bf;
       --ds-color-bright-blue-text-default: #002179;
-      --ds-color-bright-blue-base-default: #0030b0;
+      --ds-color-bright-blue-base-default: #0030B0;
       --ds-color-bright-blue-base-hover: #1f49ba;
       --ds-color-bright-blue-base-active: #3d61c3;
       --ds-color-bright-blue-base-contrast-subtle: #d3dbf1;
@@ -4544,7 +4539,7 @@
       --ds-color-light-blue-border-strong: #4f6066;
       --ds-color-light-blue-text-subtle: #4f6066;
       --ds-color-light-blue-text-default: #252d30;
-      --ds-color-light-blue-base-default: #c4f0ff;
+      --ds-color-light-blue-base-default: #C4F0FF;
       --ds-color-light-blue-base-hover: #b1d9e6;
       --ds-color-light-blue-base-active: #9ec2ce;
       --ds-color-light-blue-base-contrast-subtle: #404e53;
@@ -4576,7 +4571,7 @@
       --ds-color-neutral-border-strong: #5b5d60;
       --ds-color-neutral-text-subtle: #5b5d60;
       --ds-color-neutral-text-default: #292c30;
-      --ds-color-neutral-base-default: #24272b;
+      --ds-color-neutral-base-default: #24272B;
       --ds-color-neutral-base-hover: #36383c;
       --ds-color-neutral-base-active: #484a4e;
       --ds-color-neutral-base-contrast-subtle: #b9babb;
@@ -4592,7 +4587,7 @@
       --ds-color-light-green-border-strong: #346753;
       --ds-color-light-green-text-subtle: #346753;
       --ds-color-light-green-text-default: #183027;
-      --ds-color-light-green-base-default: #80ffcf;
+      --ds-color-light-green-base-default: #80FFCF;
       --ds-color-light-green-base-hover: #73e6bb;
       --ds-color-light-green-base-active: #67cea7;
       --ds-color-light-green-base-contrast-subtle: #2a5343;
@@ -4608,7 +4603,7 @@
       --ds-color-green-border-strong: #2d693c;
       --ds-color-green-text-subtle: #2d693c;
       --ds-color-green-text-default: #15311c;
-      --ds-color-green-base-default: #2e6b3d;
+      --ds-color-green-base-default: #2E6B3D;
       --ds-color-green-base-hover: #255631;
       --ds-color-green-base-active: #1c4225;
       --ds-color-green-base-contrast-subtle: #dbe6de;
@@ -4624,7 +4619,7 @@
       --ds-color-light-pink-border-strong: #82504c;
       --ds-color-light-pink-text-subtle: #82504c;
       --ds-color-light-pink-text-default: #3d2524;
-      --ds-color-light-pink-base-default: #ff9d96;
+      --ds-color-light-pink-base-default: #FF9D96;
       --ds-color-light-pink-base-hover: #e18b85;
       --ds-color-light-pink-base-active: #c47973;
       --ds-color-light-pink-base-contrast-subtle: #34201e;
@@ -4640,7 +4635,7 @@
       --ds-color-dark-pink-border-strong: #b90058;
       --ds-color-dark-pink-text-subtle: #b90058;
       --ds-color-dark-pink-text-default: #5c002c;
-      --ds-color-dark-pink-base-default: #bb0059;
+      --ds-color-dark-pink-base-default: #BB0059;
       --ds-color-dark-pink-base-hover: #970048;
       --ds-color-dark-pink-base-active: #750038;
       --ds-color-dark-pink-base-contrast-subtle: #f6dce8;
@@ -4656,7 +4651,7 @@
       --ds-color-dark-red-border-strong: #894869;
       --ds-color-dark-red-text-subtle: #894869;
       --ds-color-dark-red-text-default: #5b002e;
-      --ds-color-dark-red-base-default: #5b002e;
+      --ds-color-dark-red-base-default: #5B002E;
       --ds-color-dark-red-base-hover: #6e1e46;
       --ds-color-dark-red-base-active: #7e365a;
       --ds-color-dark-red-base-contrast-subtle: #d2b9c6;
@@ -4672,7 +4667,7 @@
       --ds-color-info-border-strong: #3d5aa4;
       --ds-color-info-text-subtle: #3d5aa4;
       --ds-color-info-text-default: #1c2a4d;
-      --ds-color-info-base-default: #5e8cff;
+      --ds-color-info-base-default: #5E8CFF;
       --ds-color-info-base-hover: #7fa4ff;
       --ds-color-info-base-active: #a0bbff;
       --ds-color-info-base-contrast-subtle: #010102;
@@ -4688,7 +4683,7 @@
       --ds-color-success-border-strong: #2d693c;
       --ds-color-success-text-subtle: #2d693c;
       --ds-color-success-text-default: #15311c;
-      --ds-color-success-base-default: #2e6b3d;
+      --ds-color-success-base-default: #2E6B3D;
       --ds-color-success-base-hover: #255631;
       --ds-color-success-base-active: #1c4225;
       --ds-color-success-base-contrast-subtle: #dbe6de;
@@ -4704,7 +4699,7 @@
       --ds-color-warning-border-strong: #865100;
       --ds-color-warning-text-subtle: #865100;
       --ds-color-warning-text-default: #3f2600;
-      --ds-color-warning-base-default: #ee9000;
+      --ds-color-warning-base-default: #EE9000;
       --ds-color-warning-base-hover: #d07e00;
       --ds-color-warning-base-active: #b26c00;
       --ds-color-warning-base-contrast-subtle: #231500;
@@ -4720,7 +4715,7 @@
       --ds-color-danger-border-strong: #b12a00;
       --ds-color-danger-text-subtle: #b12a00;
       --ds-color-danger-text-default: #551400;
-      --ds-color-danger-base-default: #b32a00;
+      --ds-color-danger-base-default: #B32A00;
       --ds-color-danger-base-hover: #902200;
       --ds-color-danger-base-active: #6f1a00;
       --ds-color-danger-base-contrast-subtle: #ffffff;
@@ -4843,7 +4838,7 @@
     --ds-size-26: calc(var(--ds-size-unit) * 26);
     --ds-size-30: calc(var(--ds-size-unit) * 30);
     --ds-size-unit: calc(1rem * var(--ds-size-step) / var(--ds-size-base) * var(--ds-size-mode-font-size));
-    @supports (width: round(down, 0.1em, 1px)) {
+    @supports (width: round(down, .1em, 1px)) {
       --ds-size-0: round(down, calc(var(--ds-size-unit) * 0), 1px);
       --ds-size-1: round(down, calc(var(--ds-size-unit) * 1), 1px);
       --ds-size-2: round(down, calc(var(--ds-size-unit) * 2), 1px);
@@ -4871,19 +4866,19 @@
   :root {
     --ds-border-radius-base: 624.9375rem;
     --ds-border-radius-scale: 0.25rem;
-    --ds-border-radius-sm: min(var(--ds-border-radius-base) * 0.5, var(--ds-border-radius-scale));
-    --ds-border-radius-md: min(var(--ds-border-radius-base), var(--ds-border-radius-scale) * 2);
-    --ds-border-radius-lg: min(var(--ds-border-radius-base) * 2, var(--ds-border-radius-scale) * 5);
-    --ds-border-radius-xl: min(var(--ds-border-radius-base) * 3, var(--ds-border-radius-scale) * 7);
+    --ds-border-radius-sm: min(var(--ds-border-radius-base)*0.5,var(--ds-border-radius-scale));
+    --ds-border-radius-md: min(var(--ds-border-radius-base),var(--ds-border-radius-scale)*2);
+    --ds-border-radius-lg: min(var(--ds-border-radius-base)*2,var(--ds-border-radius-scale)*5);
+    --ds-border-radius-xl: min(var(--ds-border-radius-base)*3,var(--ds-border-radius-scale)*7);
     --ds-border-radius-default: var(--ds-border-radius-base);
     --ds-border-radius-full: 624.9375rem;
     --ds-border-width-default: 1px;
     --ds-border-width-focus: 3px;
-    --ds-shadow-xs: 0 0 1px 0 rgba(0, 0, 0, 0.16), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-    --ds-shadow-sm: 0 0 1px 0 rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    --ds-shadow-md: 0 0 1px 0 rgba(0, 0, 0, 0.14), 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 4px 8px 0 rgba(0, 0, 0, 0.12);
-    --ds-shadow-lg: 0 0 1px 0 rgba(0, 0, 0, 0.13), 0 3px 5px 0 rgba(0, 0, 0, 0.13), 0 6px 12px 0 rgba(0, 0, 0, 0.14);
-    --ds-shadow-xl: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 12px 24px 0 rgba(0, 0, 0, 0.16);
+    --ds-shadow-xs: 0 0 1px 0 rgba(0,0,0,0.16), 0 1px 2px 0 rgba(0,0,0,0.12);
+    --ds-shadow-sm: 0 0 1px 0 rgba(0,0,0,0.15), 0 1px 2px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.1);
+    --ds-shadow-md: 0 0 1px 0 rgba(0,0,0,0.14), 0 2px 4px 0 rgba(0,0,0,0.12), 0 4px 8px 0 rgba(0,0,0,0.12);
+    --ds-shadow-lg: 0 0 1px 0 rgba(0,0,0,0.13), 0 3px 5px 0 rgba(0,0,0,0.13), 0 6px 12px 0 rgba(0,0,0,0.14);
+    --ds-shadow-xl: 0 0 1px 0 rgba(0,0,0,0.12), 0 4px 8px 0 rgba(0,0,0,0.16), 0 12px 24px 0 rgba(0,0,0,0.16);
     --ds-opacity-disabled: 30%;
   }
 }

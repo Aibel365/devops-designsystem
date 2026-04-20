@@ -83,6 +83,13 @@ A full build runs the same Tailwind pipeline as development mode and outputs the
 dist/styles.css
 ```
 
+It also generates `dist/aibel-theme.tailwind.css` file which can be used to import theme layer in the project where this library is used. Just add these imports in your project's `index.css` file:
+
+```
+@import "@aibel365/devops-designsystem/styles.css";
+@import '@aibel365/devops-designsystem/aibel-theme.tailwind.css' layer(theme);
+```
+
 ## Customization
 
 If custom theming or Digdir overrides are needed, add them to `Tailwind-entry.css`.
