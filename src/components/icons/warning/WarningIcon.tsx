@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import Warning from "./warning.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const WarningIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const WarningIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <Warning
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

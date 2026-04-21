@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import CompletedStatus from "./completedStatus.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const CompletedStatusIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const CompletedStatusIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <CompletedStatus
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

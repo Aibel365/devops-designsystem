@@ -3,11 +3,7 @@ import { VisibilityOffIcon } from "./VisibilityOffIcon";
 
 const meta: Meta<typeof VisibilityOffIcon> = {
     title: "Icons/Icons/VisibilityOffIcon",
-    component: VisibilityOffIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: VisibilityOffIcon
 };
 
 type Story = StoryObj<typeof VisibilityOffIcon>;

@@ -3,11 +3,7 @@ import { ChevronLeftIcon } from "./ChevronLeftIcon";
 
 const meta: Meta<typeof ChevronLeftIcon> = {
     title: "Icons/Icons/ChevronLeftIcon",
-    component: ChevronLeftIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: ChevronLeftIcon
 };
 
 type Story = StoryObj<typeof ChevronLeftIcon>;

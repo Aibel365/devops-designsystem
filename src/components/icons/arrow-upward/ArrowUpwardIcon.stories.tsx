@@ -3,11 +3,7 @@ import { ArrowUpwardIcon } from "./ArrowUpwardIcon";
 
 const meta: Meta<typeof ArrowUpwardIcon> = {
     title: "Icons/Icons/ArrowUpwardIcon",
-    component: ArrowUpwardIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: ArrowUpwardIcon
 };
 
 type Story = StoryObj<typeof ArrowUpwardIcon>;

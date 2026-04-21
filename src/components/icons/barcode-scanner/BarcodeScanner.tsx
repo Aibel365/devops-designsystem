@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import AttachFile from "./barcodeScanner.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const BarcodeScannerIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const BarcodeScannerIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <AttachFile
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

@@ -3,11 +3,7 @@ import { LightModeIcon } from "./LightModeIcon";
 
 const meta: Meta<typeof LightModeIcon> = {
     title: "Icons/Icons/LightModeIcon",
-    component: LightModeIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: LightModeIcon
 };
 
 type Story = StoryObj<typeof LightModeIcon>;

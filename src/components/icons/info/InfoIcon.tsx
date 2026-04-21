@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import Info from "./info.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const InfoIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const InfoIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <Info
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

@@ -3,11 +3,7 @@ import { AnchorIcon } from "./AnchorIcon";
 
 const meta: Meta<typeof AnchorIcon> = {
     title: "Icons/Icons/AnchorIcon",
-    component: AnchorIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: AnchorIcon
 };
 
 type Story = StoryObj<typeof AnchorIcon>;

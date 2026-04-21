@@ -3,11 +3,7 @@ import { VerifiedUserIcon } from "./VerifiedUserIcon";
 
 const meta: Meta<typeof VerifiedUserIcon> = {
     title: "Icons/Icons/VerifiedUserIcon",
-    component: VerifiedUserIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: VerifiedUserIcon
 };
 
 type Story = StoryObj<typeof VerifiedUserIcon>;

@@ -3,11 +3,7 @@ import { CompletedStatusIcon } from "./CompletedStatusIcon";
 
 const meta: Meta<typeof CompletedStatusIcon> = {
     title: "Icons/Icons/CompletedStatusIcon",
-    component: CompletedStatusIcon,
-    args: {
-        size: 20,
-        style: { color: "#8e9199" }
-    }
+    component: CompletedStatusIcon
 };
 
 type Story = StoryObj<typeof CompletedStatusIcon>;

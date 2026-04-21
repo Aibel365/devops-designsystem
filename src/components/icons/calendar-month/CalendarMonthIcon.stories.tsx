@@ -3,11 +3,7 @@ import { CalendarMonthIcon } from "./CalendarMonthIcon";
 
 const meta: Meta<typeof CalendarMonthIcon> = {
     title: "Icons/Icons/CalendarMonthIcon",
-    component: CalendarMonthIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: CalendarMonthIcon
 };
 
 type Story = StoryObj<typeof CalendarMonthIcon>;

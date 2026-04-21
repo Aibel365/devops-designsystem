@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import RadioFilled from "./radioFilled.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const RadioFilledIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const RadioFilledIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <RadioFilled
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };
