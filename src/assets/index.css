@@ -226,10 +226,6 @@
   .ads\:inline-block {
     display: inline-block;
   }
-  .ads\:size-4 {
-    width: var(--ads-spacing-4);
-    height: var(--ads-spacing-4);
-  }
   .ads\:size-6 {
     width: var(--ads-spacing-6);
     height: var(--ads-spacing-6);
