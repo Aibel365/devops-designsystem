@@ -3,11 +3,7 @@ import { DownloadIcon } from "./DownloadIcon";
 
 const meta: Meta<typeof DownloadIcon> = {
     title: "Icons/Icons/DownloadIcon",
-    component: DownloadIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: DownloadIcon
 };
 
 type Story = StoryObj<typeof DownloadIcon>;

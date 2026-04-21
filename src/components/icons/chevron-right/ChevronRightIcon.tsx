@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import ChevronRight from "./chevronRight.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const ChevronRightIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const ChevronRightIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <ChevronRight
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

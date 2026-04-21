@@ -3,11 +3,7 @@ import { EditIcon } from "./EditIcon";
 
 const meta: Meta<typeof EditIcon> = {
     title: "Icons/Icons/EditIcon",
-    component: EditIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: EditIcon
 };
 
 type Story = StoryObj<typeof EditIcon>;

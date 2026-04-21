@@ -3,11 +3,7 @@ import { DeleteIcon } from "./DeleteIcon";
 
 const meta: Meta<typeof DeleteIcon> = {
     title: "Icons/Icons/DeleteIcon",
-    component: DeleteIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: DeleteIcon
 };
 
 type Story = StoryObj<typeof DeleteIcon>;

@@ -3,11 +3,7 @@ import { DensitySmallIcon } from "./DensitySmallIcon";
 
 const meta: Meta<typeof DensitySmallIcon> = {
     title: "Icons/Icons/DensitySmallIcon",
-    component: DensitySmallIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: DensitySmallIcon
 };
 
 type Story = StoryObj<typeof DensitySmallIcon>;

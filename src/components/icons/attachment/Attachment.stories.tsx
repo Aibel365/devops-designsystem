@@ -3,11 +3,7 @@ import { AttachmentIcon } from "./AttachmentIcon";
 
 const meta: Meta<typeof AttachmentIcon> = {
     title: "Icons/Icons/AttachmentIcon",
-    component: AttachmentIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: AttachmentIcon
 };
 
 type Story = StoryObj<typeof AttachmentIcon>;

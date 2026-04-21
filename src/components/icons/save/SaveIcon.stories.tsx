@@ -3,11 +3,7 @@ import { SaveIcon } from "./SaveIcon";
 
 const meta: Meta<typeof SaveIcon> = {
     title: "Icons/Icons/SaveIcon",
-    component: SaveIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: SaveIcon
 };
 
 type Story = StoryObj<typeof SaveIcon>;

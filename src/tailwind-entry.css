@@ -1,12 +1,12 @@
 @import "tailwindcss" prefix(ads);
 @import "@digdir/designsystemet-css";
 @import "../design-tokens-build/aibel-theme.css";
+@import "../design-tokens-build/aibel-theme.tailwind.css" layer(theme);
 
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme {
     /* Your theme variables go here */
-    --color-aibel-blue-base-default: #032B59;
 }
 
 /* eslint-enable */
@@ -20,30 +20,31 @@ menu {
     list-style: none;
 }
 
-.ds-button[data-color=white] {
+.ds-button[data-color="white"] {
     --dsc-button-color--hover: var(--ds-color-neutral-text-subtle);
     --dsc-button-color: var(--ds-color-base-contrast-default);
-    --dsc-button-border-color:var(--ds-color-base-contrast-default);
+    --dsc-button-border-color: var(--ds-color-base-contrast-default);
 }
 
-.ds-dropdown ul, ol {
+.ds-dropdown ul,
+ol {
     list-style: none;
 }
 
-.ds-pagination ul, ol {
+.ds-pagination ul,
+ol {
     list-style: none;
 }
-  
+
 .ds-search input {
     border-top-left-radius: var(--ds-border-radius-default);
     border-bottom-left-radius: var(--ds-border-radius-default);
 }
- 
+
 /* A selector for the search input when there is no search button */
 .ds-search:not(:has(.ds-button:not([type="reset"]))) .ds-input {
     border-top-right-radius: var(--ds-border-radius-default);
     border-bottom-right-radius: var(--ds-border-radius-default);
-
 }
 
 .ds-tooltip {

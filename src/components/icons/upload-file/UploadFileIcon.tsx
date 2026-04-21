@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import UploadFile from "./uploadFile.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const UploadFileIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const UploadFileIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <UploadFile
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

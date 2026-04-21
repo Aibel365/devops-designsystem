@@ -3,11 +3,7 @@ import { RadioFilledIcon } from "./RadioFilledIcon";
 
 const meta: Meta<typeof RadioFilledIcon> = {
     title: "Icons/Icons/RadioFilledIcon",
-    component: RadioFilledIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: RadioFilledIcon
 };
 
 type Story = StoryObj<typeof RadioFilledIcon>;

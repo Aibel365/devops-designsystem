@@ -3,11 +3,7 @@ import { CableIcon } from "./CableIcon";
 
 const meta: Meta<typeof CableIcon> = {
     title: "Icons/Icons/CableIcon",
-    component: CableIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: CableIcon
 };
 
 type Story = StoryObj<typeof CableIcon>;

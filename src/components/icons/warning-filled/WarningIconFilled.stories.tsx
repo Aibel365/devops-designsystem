@@ -3,11 +3,7 @@ import { WarningIconFilled } from "./WarningIconFilled";
 
 const meta: Meta<typeof WarningIconFilled> = {
     title: "Icons/Icons/WarningIconFilled",
-    component: WarningIconFilled,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: WarningIconFilled
 };
 
 type Story = StoryObj<typeof WarningIconFilled>;

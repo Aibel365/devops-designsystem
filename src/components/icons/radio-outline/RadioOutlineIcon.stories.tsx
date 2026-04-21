@@ -3,11 +3,7 @@ import { RadioOutlineIcon } from "./RadioOutlineIcon";
 
 const meta: Meta<typeof RadioOutlineIcon> = {
     title: "Icons/Icons/RadioOutlineIcon",
-    component: RadioOutlineIcon,
-    args: {
-        size: 20,
-        color: "#003366"
-    }
+    component: RadioOutlineIcon
 };
 
 type Story = StoryObj<typeof RadioOutlineIcon>;
