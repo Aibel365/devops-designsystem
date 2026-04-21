@@ -61,7 +61,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                         {
                             <SwitchAccountIcon
                                 aria-hidden
-                                size={24}
+                                className="ads:size-6"
                             />
                         }
                         {switchAccountLabel?.length ? switchAccountLabel : "Switch account"}
@@ -95,7 +95,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                     {
                         <MoveItemIcon
                             aria-hidden
-                            size={6}
+                            className="ads:size-6"
                         />
                     }
                     {logoutLabel?.length ? logoutLabel : "Logout"}
