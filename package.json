@@ -26,7 +26,7 @@
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
-          },
+    },
     "./aibel-theme.tailwind.css": {
       "style": "./dist/aibel-theme.tailwind.css",
       "default": "./dist/aibel-theme.tailwind.css"
@@ -85,7 +85,7 @@
     "prettier": "^3.8.1",
     "rimraf": "^6.1.3",
     "storybook": "^10.3.3",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^4.2.3",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.58.1",
     "vite": "^8.0.8",
