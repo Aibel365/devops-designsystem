@@ -3,11 +3,7 @@ import { DangerStatusIcon } from "./DangerStatusIcon";
 
 const meta: Meta<typeof DangerStatusIcon> = {
     title: "Icons/Icons/DangerStatusIcon",
-    component: DangerStatusIcon,
-    args: {
-        size: 20,
-        style: { color: "#8e9199" }
-    }
+    component: DangerStatusIcon
 };
 
 type Story = StoryObj<typeof DangerStatusIcon>;
