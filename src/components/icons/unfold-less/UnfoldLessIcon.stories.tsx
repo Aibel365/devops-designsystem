@@ -3,11 +3,7 @@ import { UnfoldLessIcon } from "./UnfoldLessIcon";
 
 const meta: Meta<typeof UnfoldLessIcon> = {
     title: "Icons/Icons/UnfoldLessIcon",
-    component: UnfoldLessIcon,
-    args: {
-        size: 20,
-        color: "#003366"
-    }
+    component: UnfoldLessIcon
 };
 
 type Story = StoryObj<typeof UnfoldLessIcon>;

@@ -60,7 +60,7 @@ export const WithCustomMenuContent: Story = {
                 label: "Custom clickable",
                 icon: (
                     <LanguageIcon
-                        size={24}
+                        className="ads:size-6"
                         aria-hidden
                     />
                 ),
@@ -70,7 +70,7 @@ export const WithCustomMenuContent: Story = {
                 label: "Custom popable",
                 icon: (
                     <SearchIcon
-                        size={24}
+                        className="ads:size-6"
                         aria-hidden
                     />
                 ),

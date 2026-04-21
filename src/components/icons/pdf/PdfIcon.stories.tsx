@@ -3,11 +3,7 @@ import { PdfIcon } from "./PdfIcon";
 
 const meta: Meta<typeof PdfIcon> = {
     title: "Icons/Icons/PdfIcon",
-    component: PdfIcon,
-    args: {
-        size: 20,
-        color: "#003366"
-    }
+    component: PdfIcon
 };
 
 type Story = StoryObj<typeof PdfIcon>;
