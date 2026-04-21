@@ -81,36 +81,39 @@ const meta: Meta = {
 };
 
 export const Common: StoryObj = {
-    render: () => (
-        <>
-            <ViewWeekIcon /> <FilterListIcon /> <EditIcon /> <ChevronLeftIcon /> <ChevronRightIcon />
-            <ExpandMoreIcon /> <ExpandLessIcon /> <UnfoldLessIcon /> <CloseIcon /> <LanguageIcon />
-            <CalendarMonthIcon /> <DownloadIcon /> <InfoIcon /> <InfoIconFilled /> <AnchorIcon />
-            <ArrowForwardIcon /> <ArrowBackIcon /> <ArrowDownwardIcon /> <ArrowUpwardIcon /> <CheckIcon />
-            <SettingsIcon /> <RemoveIcon /> <AddIcon /> <MoveItemIcon /> <ListAltIcon />
-            <DeleteIcon /> <DensitySmallIcon /> <DensityMediumIcon /> <DensityLargeIcon /> <MoreVertIcon />
-            <SwitchAccountIcon /> <WarningIcon /> <WarningIconFilled /> <SaveIcon /> <CameraAddPhotoIcon />
-            <AttachFileIcon /> <AttachmentIcon /> <FileIcon /> <SearchIcon /> <ArrowDropDownIcon />
-            <VisibilityOffIcon /> <CheckboxOutlineIcon /> <CheckboxIcon /> <CheckboxIndeterminateIcon /> <RadioOutlineIcon />
-            <RadioFilledIcon /> <CheckCircleIcon /> <CheckCircleIconFilled /> <FilterIcon /> <FilterOutlineIcon />
-            <MenuIcon /> <PushPinIcon /> <PushPinFilledIcon /> <BarcodeScannerIcon /> <DarkModeIcon />
-            <LightModeIcon /> <ContrastIcon /> <VideoIcon /> <VerifiedUserIcon /> <UploadFileIcon />
-            <ShieldPersonIcon /> <CableIcon /> <HandymanIcon /> <HomeStorageIcon /> <PersonIcon />
-            <DescriptionIcon /> <ErrorIconFilled /> <ImageIcon /> <PdfIcon />
-        </>
+    args: {
+        className: "ads:size-6"
+    },
+    render: (args) => (
+        <div className="ads:flex ads:flex-wrap ads:gap-2">
+            <ViewWeekIcon {...args} /> <FilterListIcon {...args} /> <EditIcon {...args} /> <ChevronLeftIcon {...args} /> <ChevronRightIcon {...args} />
+            <ExpandMoreIcon {...args} /> <ExpandLessIcon {...args} /> <UnfoldLessIcon {...args} /> <CloseIcon {...args} /> <LanguageIcon {...args} />
+            <CalendarMonthIcon {...args} /> <DownloadIcon {...args} /> <InfoIcon {...args} /> <InfoIconFilled {...args} /> <AnchorIcon {...args} />
+            <ArrowForwardIcon {...args} /> <ArrowBackIcon {...args} /> <ArrowDownwardIcon {...args} /> <ArrowUpwardIcon {...args} /> <CheckIcon {...args} />
+            <SettingsIcon {...args} /> <RemoveIcon {...args} /> <AddIcon {...args} /> <MoveItemIcon {...args} /> <ListAltIcon {...args} />
+            <DeleteIcon {...args} /> <DensitySmallIcon {...args} /> <DensityMediumIcon {...args} /> <DensityLargeIcon {...args} /> <MoreVertIcon {...args} />
+            <SwitchAccountIcon {...args} /> <WarningIcon {...args} /> <WarningIconFilled {...args} /> <SaveIcon {...args} /> <CameraAddPhotoIcon {...args} />
+            <AttachFileIcon {...args} /> <AttachmentIcon {...args} /> <FileIcon {...args} /> <SearchIcon {...args} /> <ArrowDropDownIcon {...args} />
+            <VisibilityOffIcon {...args} /> <CheckboxOutlineIcon {...args} /> <CheckboxIcon {...args} /> <CheckboxIndeterminateIcon {...args} /> <RadioOutlineIcon {...args} />
+            <RadioFilledIcon {...args} /> <CheckCircleIcon {...args} /> <CheckCircleIconFilled {...args} /> <FilterIcon {...args} /> <FilterOutlineIcon {...args} />
+            <MenuIcon {...args} /> <PushPinIcon {...args} /> <PushPinFilledIcon {...args} /> <BarcodeScannerIcon {...args} /> <DarkModeIcon {...args} />
+            <LightModeIcon {...args} /> <ContrastIcon {...args} /> <VideoIcon {...args} /> <VerifiedUserIcon {...args} /> <UploadFileIcon {...args} />
+            <ShieldPersonIcon {...args} /> <CableIcon {...args} /> <HandymanIcon {...args} /> <HomeStorageIcon {...args} /> <PersonIcon {...args} />
+            <DescriptionIcon {...args} /> <ErrorIconFilled {...args} /> <ImageIcon {...args} /> <PdfIcon {...args} />
+        </div>
     )
 };
 
 export const Status: StoryObj = {
     render: () => (
-        <>
-            <CompletedStatusIcon />
-            <NotStartedStatusIcon />
-            <InProgressStatusIcon />
-            <WarningStatusIcon />
-            <InfoStatusIcon />
-            <DangerStatusIcon />
-        </>
+        <div className="ads:flex ads:flex-wrap ads:gap-2">
+            <CompletedStatusIcon className="ads:size-6 ads:text-success-base-default" />
+            <NotStartedStatusIcon className="ads:size-6" />
+            <InProgressStatusIcon className="ads:size-6" />
+            <WarningStatusIcon className="ads:size-6 ads:text-warning-base-default" />
+            <InfoStatusIcon className="ads:size-6 ads:text-info-base-default" />
+            <DangerStatusIcon className="ads:size-6 ads:text-danger-base-default" />
+        </div>
     )
 };
 
