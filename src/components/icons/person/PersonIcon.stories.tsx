@@ -3,11 +3,7 @@ import { PersonIcon } from "./PersonIcon";
 
 const meta: Meta<typeof PersonIcon> = {
     title: "Icons/Icons/PersonIcon",
-    component: PersonIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: PersonIcon
 };
 
 type Story = StoryObj<typeof PersonIcon>;

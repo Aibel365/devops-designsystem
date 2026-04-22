@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import ExpandLess from "./expandLess.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const ExpandLessIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const ExpandLessIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <ExpandLess
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };

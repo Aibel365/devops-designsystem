@@ -33,7 +33,7 @@ export const WithIcon: Story = {
     args: {
         children: (
             <>
-                <AddIcon /> <span>It's a link</span>
+                <AddIcon className="ads:size-4" /> <span>It's a link</span>
             </>
         )
     }
@@ -43,7 +43,7 @@ export const MultipleIcons: Story = {
     args: {
         children: (
             <>
-                <AddIcon /> <span>It's a link</span> <AddIcon /> <span>with several icons</span> <AddIcon />
+                <AddIcon className="ads:size-4" /> <span>It's a link</span> <AddIcon className="ads:size-4" /> <span>with several icons</span> <AddIcon className="ads:size-4" />
             </>
         )
     }

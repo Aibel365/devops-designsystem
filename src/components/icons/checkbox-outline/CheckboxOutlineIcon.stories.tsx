@@ -3,11 +3,7 @@ import { CheckboxOutlineIcon } from "./CheckboxOutlineIcon";
 
 const meta: Meta<typeof CheckboxOutlineIcon> = {
     title: "Icons/Icons/CheckboxOutlineIcon",
-    component: CheckboxOutlineIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: CheckboxOutlineIcon
 };
 
 type Story = StoryObj<typeof CheckboxOutlineIcon>;

@@ -3,11 +3,7 @@ import { InfoIcon } from "./InfoIcon";
 
 const meta: Meta<typeof InfoIcon> = {
     title: "Icons/Icons/InfoIcon",
-    component: InfoIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: InfoIcon
 };
 
 type Story = StoryObj<typeof InfoIcon>;

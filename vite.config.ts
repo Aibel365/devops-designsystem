@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import svgr from "vite-plugin-svgr";
-import { peerDependencies } from "./package.json";
 
 // https://vite.dev/config/
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
@@ -28,18 +27,11 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, "src/index.ts"),
-            name: "ads",
+            formats: ["es"],
             fileName: "index"
         },
         rollupOptions: {
-            external: Object.keys(peerDependencies),
-            output: {
-                globals: {
-                    react: "React",
-                    "react-dom": "ReactDOM",
-                    "react/jsx-runtime": "react/jsx-runtime"
-                }
-            }
+            external: ["react", "react-dom", "react/jsx-runtime"],
         }
     },
 

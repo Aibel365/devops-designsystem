@@ -3,11 +3,7 @@ import { CheckboxIndeterminateIcon } from "./CheckboxIndeterminateIcon";
 
 const meta: Meta<typeof CheckboxIndeterminateIcon> = {
     title: "Icons/Icons/CheckboxIndeterminateIcon",
-    component: CheckboxIndeterminateIcon,
-    args: {
-        size: 20,
-        color: "#003366"
-    }
+    component: CheckboxIndeterminateIcon
 };
 
 type Story = StoryObj<typeof CheckboxIndeterminateIcon>;

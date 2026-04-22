@@ -3,11 +3,7 @@ import { CloseIcon } from "./CloseIcon";
 
 const meta: Meta<typeof CloseIcon> = {
     title: "Icons/Icons/CloseIcon",
-    component: CloseIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: CloseIcon
 };
 
 type Story = StoryObj<typeof CloseIcon>;

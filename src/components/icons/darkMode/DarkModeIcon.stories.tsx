@@ -3,11 +3,7 @@ import { DarkModeIcon } from "./DarkModeIcon";
 
 const meta: Meta<typeof DarkModeIcon> = {
     title: "Icons/Icons/DarkModeIcon",
-    component: DarkModeIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: DarkModeIcon
 };
 
 type Story = StoryObj<typeof DarkModeIcon>;

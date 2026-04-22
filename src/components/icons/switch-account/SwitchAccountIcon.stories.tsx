@@ -3,11 +3,7 @@ import { SwitchAccountIcon } from "./SwitchAccountIcon";
 
 const meta: Meta<typeof SwitchAccountIcon> = {
     title: "Icons/Icons/SwitchAccountIcon",
-    component: SwitchAccountIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: SwitchAccountIcon
 };
 
 type Story = StoryObj<typeof SwitchAccountIcon>;

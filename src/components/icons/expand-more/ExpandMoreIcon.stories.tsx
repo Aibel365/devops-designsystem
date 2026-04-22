@@ -3,11 +3,7 @@ import { ExpandMoreIcon } from "./ExpandMoreIcon";
 
 const meta: Meta<typeof ExpandMoreIcon> = {
     title: "Icons/Icons/ExpandMoreIcon",
-    component: ExpandMoreIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: ExpandMoreIcon
 };
 
 type Story = StoryObj<typeof ExpandMoreIcon>;

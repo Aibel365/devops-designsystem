@@ -4,11 +4,7 @@ import { UploadFileIcon } from "./UploadFileIcon";
 
 const meta: Meta<typeof UploadFileIcon> = {
     title: "Icons/Icons/UploadFileIcon",
-    component: UploadFileIcon,
-    args: {
-        size: 20,
-        color: "#003366"
-    }
+    component: UploadFileIcon
 };
 
 type Story = StoryObj<typeof UploadFileIcon>;

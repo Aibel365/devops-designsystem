@@ -3,11 +3,7 @@ import { LanguageIcon } from "./LanguageIcon";
 
 const meta: Meta<typeof LanguageIcon> = {
     title: "Icons/Icons/LanguageIcon",
-    component: LanguageIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: LanguageIcon
 };
 
 type Story = StoryObj<typeof LanguageIcon>;

@@ -3,11 +3,7 @@ import { HomeStorageIcon } from "./HomeStorageIcon";
 
 const meta: Meta<typeof HomeStorageIcon> = {
     title: "Icons/Icons/HomeStorageIcon",
-    component: HomeStorageIcon,
-    args: {
-        size: 20,
-        color: "#8e9199"
-    }
+    component: HomeStorageIcon
 };
 
 type Story = StoryObj<typeof HomeStorageIcon>;

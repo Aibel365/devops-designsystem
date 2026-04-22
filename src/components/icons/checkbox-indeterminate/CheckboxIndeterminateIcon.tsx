@@ -2,16 +2,11 @@
 import { SVGProps } from "react";
 import CheckboxIndeterminate from "./checkboxIndeterminate.jsx.svg?react";
 
-export type IconSvgProps = SVGProps<SVGSVGElement> & {
-    size?: number;
-};
-
-export const CheckboxIndeterminateIcon = ({ size, ...rest }: IconSvgProps) => {
-    const sizeCss = size ? `ads:size-[${size}px]` : "ads:size-4";
+export const CheckboxIndeterminateIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <CheckboxIndeterminate
-            className={`${sizeCss} ads:leading-0 ads:inline-block`}
-            {...rest}
+            {...props}
+            className={`ads:leading-0 ads:inline-block ${props.className ?? ""}`}
         />
     );
 };
