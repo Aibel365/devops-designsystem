@@ -88,7 +88,7 @@ export const WithCustomMenuContent: Story = {
 export const WithSubheader: Story = {
     args: {
         ...Default.args,
-        subHeaderProps: { centerContent: "Subheader" }
+        subHeaderProps: { centerContent: "Subheader", projectNumber: "1234" }
     }
 };
 export default meta;
