@@ -568,12 +568,11 @@
     }
   }
   body {
-    font-size: var(--ds-body-md-font-size);
     font-weight: var(--ds-body-md-font-weight);
     letter-spacing: var(--ds-body-md-letter-spacing);
     line-height: var(--ds-body-md-line-height);
   }
-  [data-size] {
+  [data-size],body {
     font-size: var(--ds-body-md-font-size);
   }
   @property --_ds-captured-length {
@@ -581,8 +580,6 @@
     inherits: true;
     initial-value: 0;
   }
-}
-@layer ds.base {
   .ds-heading {
     font-size: 1.3em;
     font-size: round(down,1.3em,1px);
@@ -630,8 +627,6 @@
     letter-spacing: var(--ds-heading-2xl-letter-spacing);
     line-height: var(--ds-heading-2xl-line-height);
   }
-}
-@layer ds.base {
   .ds-label {
     font-weight: var(--ds-font-weight-medium);
     line-height: var(--ds-body-md-line-height);
@@ -643,6 +638,8 @@
     font-weight: var(--ds-font-weight-regular);
   }
 }
+@layer ds.base;
+@layer ds.base;
 @layer ds.base {
   :where(.ds-paragraph) {
     margin-block: 0;
@@ -714,11 +711,11 @@
   .ds-link>:is(img,svg) {
     vertical-align: middle;
   }
-  .ds-link:has(>span):has(>:is(img,svg)):first-child {
-    margin-inline-start: var(--ds-size-1);
-  }
-  .ds-link:has(>span):has(>:is(img,svg)):last-child {
+  :is(.ds-link:has(>span)>:is(img,svg)):first-child {
     margin-inline-end: var(--ds-size-1);
+  }
+  :is(.ds-link:has(>span)>:is(img,svg)):last-child {
+    margin-inline-start: var(--ds-size-1);
   }
   .ds-link[data-color=neutral] {
     --dsc-link-color--active: var(--ds-color-neutral-text-subtle);
@@ -1150,7 +1147,7 @@
   }
   @media (forced-colors:active) {
     .ds-input[role=switch]:is([type=radio],[type=checkbox]):checked {
-      color: CanvasText;
+      color: initial;
     }
   }
   @media (forced-colors:active) {
@@ -1379,8 +1376,6 @@
   .ds-fieldset:disabled>[data-field=description],.ds-fieldset:disabled>legend,.ds-fieldset:disabled>legend+p {
     opacity: var(--ds-opacity-disabled);
   }
-}
-@layer ds.components {
   .ds-alert {
     --dsc-alert-background: var(--ds-color-info-surface-tinted);
     --dsc-alert-border-width: var(--ds-border-width-default);
@@ -1406,6 +1401,8 @@
     padding-inline-start: calc(var(--dsc-alert-padding-inline-end) + var(--dsc-alert-icon-size) + var(--dsc-alert-spacing));
     position: relative;
   }
+}
+@layer ds.components {
   .ds-alert:not(:has(>:is(h1,h2,h3,h4,h5,h6):first-child)):before,.ds-alert>:is(h1,h2,h3,h4,h5,h6):first-child:before {
     background: var(--dsc-alert-icon-color);
     content: "";
@@ -1441,8 +1438,6 @@
   .ds-alert[data-color=danger] {
     --dsc-alert-icon-url: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M7.74 2.47a.75.75 0 0 1 .53-.22h7.46a.75.75 0 0 1 .53.22l5.27 5.27c.14.14.22.33.22.53v7.46a.75.75 0 0 1-.22.53l-5.27 5.27a.75.75 0 0 1-.53.22H8.27a.75.75 0 0 1-.53-.22l-5.27-5.27a.75.75 0 0 1-.22-.53V8.27a.75.75 0 0 1 .22-.53zm1.29 5.5a.75.75 0 0 0-1.06 1.06L10.94 12l-2.97 2.97a.75.75 0 1 0 1.06 1.06L12 13.06l2.97 2.97a.75.75 0 1 0 1.06-1.06L13.06 12l2.97-2.97a.75.75 0 0 0-1.06-1.06L12 10.94z'/%3E%3C/svg%3E");
   }
-}
-@layer ds.components {
   .ds-popover {
     --_ds-floating: top;
     --_ds-floating-arrow-size: 0;
@@ -1474,6 +1469,8 @@
     overflow: auto;
     overscroll-behavior: contain;
   }
+}
+@layer ds.components {
   .ds-popover {
     --_ds-floating: var(--dsc-popover-placement);
     --_ds-floating-arrow-size: var(--dsc-popover-arrow-size);
@@ -1525,7 +1522,6 @@
     all: unset;
     cursor: pointer;
     font-size: inherit;
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     text-underline-offset: .27em;
   }
@@ -1614,7 +1610,7 @@
     --dsc-details-summary-background--open: var(--ds-color-surface-tinted);
     --dsc-details-summary-background: var(--ds-color-surface-default);
   }
-  .ds-card[data-variant=tinted] .ds-details,.ds-details[data-variant=tinted] {
+  .ds-card[data-variant=tinted]>.ds-details,.ds-details[data-variant=tinted] {
     --dsc-details-background: var(--ds-color-surface-tinted);
     --dsc-details-summary-background--hover: var(--ds-color-surface-hover);
     --dsc-details-summary-background--open: var(--ds-color-surface-hover);
@@ -1912,15 +1908,7 @@
       background: ButtonText;
     }
   }
-  .ds-dialog>button[command=close]:first-child,.ds-dialog>button[data-command=close]:first-child {
-    color: inherit;
-    float: inline-end;
-    margin-block-end: var(--dsc-dialog-icon-spacing);
-    margin-block-start: var(--_dsc-dialog-icon-top-right-margin);
-    margin-inline-end: var(--_dsc-dialog-icon-top-right-margin);
-    margin-inline-start: var(--dsc-dialog-icon-spacing);
-  }
-  .ds-dialog>form[method=dialog]:first-child>button:only-child {
+  .ds-dialog>button[command=close]:first-child,.ds-dialog>button[data-command=close]:first-child,.ds-dialog>form[method=dialog]:first-child>button:only-child {
     color: inherit;
     float: inline-end;
     margin-block-end: var(--dsc-dialog-icon-spacing);
@@ -1998,8 +1986,6 @@
     content: "\200B";
     position: absolute;
   }
-}
-@layer ds.components {
   .ds-card {
     --dsc-card-background--active: var(--ds-color-surface-active);
     --dsc-card-background--hover: var(--ds-color-surface-hover);
@@ -2036,6 +2022,8 @@
   .ds-card:not([hidden]) {
     display: block;
   }
+}
+@layer ds.components {
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor]) {
     cursor: pointer;
     text-decoration: none;
@@ -2043,7 +2031,7 @@
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor])>.ds-card__block>:is(h1,h2,h3,h4,h5,h6),.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>:is(h1,h2,h3,h4,h5,h6) {
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-thickness: .0625em;
+    text-decoration-thickness: max(1px,.0625rem,.1025em);
     text-underline-offset: .27em;
   }
   :is(.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>:is(h1,h2,h3,h4,h5,h6),.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>.ds-card__block>:is(h1,h2,h3,h4,h5,h6))>a {
@@ -2442,7 +2430,7 @@
   @media (forced-colors:active) {
     [aria-selected=true]:is(:is(.ds-tabs :is([role=tablist],.ds-tabs ds-tablist,.ds-tabs u-tablist))>:is([role=tab],ds-tab,u-tab)) {
       border-bottom: 2px solid CanvasText;
-      color: CanvasText;
+      color: initial;
     }
   }
   :is(:is(.ds-tabs :is([role=tablist],.ds-tabs ds-tablist,.ds-tabs u-tablist))>:is([role=tab],ds-tab,u-tab)):focus-visible {
@@ -2715,8 +2703,10 @@
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
     height: var(--dsc-togglegroup-button-size);
+    margin-inline: 0;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    min-width: 0;
     overflow-x: auto;
     padding: var(--dsc-togglegroup-spacing);
     width: auto;
@@ -2743,10 +2733,10 @@
   @media (forced-colors:active) {
     :is(:is(.ds-togglegroup,.ds-toggle-group) label,:is(.ds-togglegroup,.ds-toggle-group) button):has(input:checked) {
       background: ButtonText;
-      color: CanvasText;
+      color: initial;
     }
     :is(:is(.ds-togglegroup,.ds-toggle-group) label,:is(.ds-togglegroup,.ds-toggle-group) button):has(input:checked) svg {
-      color: CanvasText;
+      color: initial;
     }
   }
   :is(.ds-togglegroup,.ds-toggle-group) label input {
@@ -3001,7 +2991,7 @@
     --dsc-table-padding: var(--ds-size-2) var(--ds-size-3);
     --dsc-table-sort-size: var(--ds-size-6);
     --_dsc-table-border-radius--inner: calc(var(--dsc-table-border-radius) - var(--dsc-table-border-width));
-    border-collapse: separate;
+    border-collapse: initial;
     border-spacing: 0;
     box-sizing: border-box;
     color: var(--dsc-table-color);
@@ -3190,6 +3180,9 @@
     --dsc-breadcrumbs-color: var(--ds-color-text-subtle);
     --_ds-aria-label: var(--dsc-breadcrumbs-label);
   }
+  .ds-breadcrumbs:not([hidden]) {
+    display: block;
+  }
   .ds-breadcrumbs:is([lang=nb],[lang=nn],[lang=no]),:is([lang=nb],[lang=nn],[lang=no]) .ds-breadcrumbs {
     --dsc-breadcrumbs-label: "Du er her:";
   }
@@ -3359,8 +3352,6 @@
     left: var(--dsc-badge-left,14%);
     translate: -50% 50%;
   }
-}
-@layer ds.components {
   .ds-avatar {
     --dsc-avatar-icon-url: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M8.25 7.5a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0M12 2.25a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5M8.288 17.288A5.25 5.25 0 0 1 17.25 21a.75.75 0 0 0 1.5 0 6.75 6.75 0 0 0-13.5 0 .75.75 0 0 0 1.5 0 5.25 5.25 0 0 1 1.538-3.712' clip-rule='evenodd'/%3E%3C/svg%3E");
     --dsc-avatar-background: var(--ds-color-base-default);
@@ -3369,6 +3360,8 @@
     --dsc-avatar-padding: 0.45em;
     --dsc-avatar-font-size: 1.3em;
   }
+}
+@layer ds.components {
   @supports (width:round(down,0.1em,1px)) {
     .ds-avatar {
       --dsc-avatar-size: round(up,2.625em,1px);
@@ -3449,8 +3442,6 @@
   .ds-avatar[data-size=lg] {
     font-size: var(--ds-body-lg-font-size);
   }
-}
-@layer ds.components {
   .ds-avatar-stack {
     --dsc-avatar-stack-size: var(--ds-size-12);
     --dsc-avatar-stack-gap: 2px;
@@ -3468,6 +3459,8 @@
     width: -moz-max-content;
     width: max-content;
   }
+}
+@layer ds.components {
   .ds-avatar-stack:focus-visible {
     box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
@@ -3961,7 +3954,7 @@
     display: none;
   }
   .ds-combobox {
-    background-color: transparent;
+    background-color: initial;
     display: grid;
     gap: var(--ds-size-2);
   }
@@ -3998,7 +3991,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: transparent;
+    background-color: initial;
     border: none;
     box-sizing: border-box;
     color: var(--ds-color-neutral-text-default);
@@ -4032,7 +4025,7 @@
   }
   .ds-combobox__chip-and-input {
     align-items: center;
-    background-color: transparent;
+    background-color: initial;
     display: flex;
     flex-wrap: wrap;
     gap: var(--ds-size-2);
@@ -4063,7 +4056,7 @@
   }
   .ds-combobox__clear-button {
     aspect-ratio: 1;
-    background-color: transparent;
+    background-color: initial;
     border: none;
     border-radius: var(--ds-border-radius-sm);
     color: var(--ds-color-neutral-text-default);
