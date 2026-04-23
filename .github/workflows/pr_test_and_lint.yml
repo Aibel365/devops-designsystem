@@ -1,45 +1,45 @@
 name: PR test & lint
 run-name: ${{ github.actor }} is running Test & Lint on PR 🚀
 on:
-  pull_request:
-    types: [opened, synchronize, edited]
-    branches:
-      - "main"
+    pull_request:
+        types: [opened, synchronize, edited]
+        branches:
+            - "main"
 jobs:
-  validate:
-    name: "Run lint & testing on PR"
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-      - name: Init - Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+    validate:
+        name: "Run lint & testing on PR"
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [20.x]
+        steps:
+            - name: Init - Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
 
-      - name: Source - checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
+            - name: Source - checkout
+              uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
 
-      - name: Source - npm install
-        run: npm ci
+            - name: Source - npm install
+              run: npm ci
 
-      - name: Source - test --if-present
-        run: npm run test --if-present
+            - name: Source - test --if-present
+              run: npm run test --if-present
 
-      - name: Source - lint --if-present
-        run: npm run lint --if-present
+            - name: Source - lint --if-present
+              run: npm run lint --if-present
 
-      - name: Source - format:check --if-present
-        run: npm run format:check --if-present
+            - name: Source - format:check --if-present
+              run: npm run format:check --if-present
 
-      - name: Source - build check --if-present
-        run: npm run build --if-present
+            - name: Source - build check --if-present
+              run: npm run build --if-present
 
-      - name: Source - build storybook check --if-present
-        run: npm run build-storybook --if-present
+            - name: Source - build storybook check --if-present
+              run: npm run build-storybook --if-present
 
-      - name: Source - build storybook check --if-present
-        run: npm run clean --if-present
+            - name: Source - build storybook check --if-present
+              run: npm run clean --if-present
