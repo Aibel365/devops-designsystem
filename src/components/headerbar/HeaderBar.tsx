@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 import { SubHeaderBar, SubHeaderBarProps } from "./SubHeaderBar";
 import { UserMenu, UserMenuContentHeaderBarProps } from "./components/UserMenu";
 import { AibelLogo } from "../logo/AibelLogo";
-import { ConditionRender } from "../conditionRender/ConditionRender";
 
 export type HeaderBarProps = UserMenuContentProps & {
     title?: string;
@@ -44,12 +43,14 @@ export const HeaderBar = ({ title, logoLink = "/", linkCallback, children, subHe
                         >
                             <AibelLogo className="ads:h-7 ads:md:h-5 ads:p-0" />
                         </a>
-                        <ConditionRender condition={!!title}>
-                            <div className="ads:shrink-0 ads:w-px ads:h-8 ads:bg-white/40 ads:xl:hidden"></div>
-                            <a className="ads:shrink-0 ads:no-underline ads:text-neutral-100">
-                                <span>{title}</span>
-                            </a>
-                        </ConditionRender>
+                        {!!title && (
+                            <>
+                                <div className="ads:shrink-0 ads:w-px ads:h-8 ads:bg-white/40 ads:xl:hidden"></div>
+                                <a className="ads:shrink-0 ads:no-underline ads:text-neutral-100">
+                                    <span>{title}</span>
+                                </a>
+                            </>
+                        )}
                     </div>
                     {children && <div className="ads:flex ads:items-center ads:justify-center ads:h-19 ads:absolute ads:left-1/2 ads:translate-x-1/2">{children}</div>}
                     {delegated.userName && (

@@ -26,4 +26,4 @@ dist-ssr
 *storybook.log
 storybook-static
 tsconfig.tsbuildinfo
-assets/index.css
+src/assets/index.css
