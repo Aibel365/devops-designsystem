@@ -39,9 +39,9 @@
     "scripts": {
         "start": "npm run storybook",
         "storybook": "concurrently \"npm run tailwind:watch\" \"storybook dev -p 6006\"",
-        "tailwind:watch": "npx @tailwindcss/cli -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
-        "tailwind:build": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
-        "tailwind:storybook": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+        "tailwind:watch": "npx -y @tailwindcss/cli@latest -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+        "tailwind:build": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
+        "tailwind:storybook": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
         "clean": "rimraf dist storybook-static",
         "build": "npm run clean && tsc -b && vite build && npm run tailwind:build && npm run export-design-tokens",
         "build-storybook": "concurrently \"npm run tailwind:storybook\" \"storybook build\"",
