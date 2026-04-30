@@ -1,15 +1,15 @@
 # @aibel365/devops-designsystem
 
-React-based design system for Aibel applications.
+React-based design system for internal Aibel applications.
 
 ## Overview
 
 This package provides reusable UI building blocks and app helpers for internal Aibel solutions, including:
 
-- Atoms (e.g. `Button`, `Card`, `Badge`, `Checkbox`, `Popover`)
-- Molecules (e.g. `HeaderBar`, `SubHeaderBar`, `AibelBaseLayout`)
-- Hooks (e.g. `useLocalStorage`)
-- Providers and configuration utilities (e.g. `AibelApplicationProvider`, `queryClient`)
+- Foundations (theme tokens such as `Colors`, `Spacing`)
+- Designsystemet (core components from Designsystemet, e.g. `Button`, `Card`, `Badge`, `Checkbox`, `Popover`)
+- Icons (Aibel‑styled icon set)
+- Components (Aibel‑specific shared components, e.g. `HeaderBar`, `SubHeaderBar`, `FooterBar`)
 
 The library is built with React, TypeScript, Vite, Storybook, Tailwind CSS, and Designsystemet tokens.
 
@@ -54,6 +54,8 @@ export function Example() {
 - `npm run start` – start Storybook in development mode
 - `npm run build` – build library output and CSS
 - `npm run build-storybook` – build Storybook static site
+- `npm run create-design-tokens` – create JSON design tokens for with Aibel-theme
+- `npm run build-design-tokens` – build CSS tokens with Aibel-theme based on JSON tokens
 - `npm run lint` – run ESLint
 - `npm run format` – format all files with Prettier
 - `npm run clean` – remove build artifacts
@@ -74,6 +76,15 @@ When running `npm run start`:
     - Aibel custom theming tokens
 
 While Tailwind is running, new utility classes are automatically added to `assets/index.css`. Unused classes are removed on the next startup.
+
+## Upgrade @digdir packages
+
+When the @digdir dependency is updated, there may be styling changes that need to be applied. Therefore, the design tokens and theme files must be regenerated. Run the following commands:
+
+- `npm run build-design-tokens`
+- `npm run start`
+
+If there are significant styling changes, verify that components render correctly in Storybook.
 
 ## Building the package
 

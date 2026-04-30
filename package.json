@@ -38,12 +38,13 @@
     "sideEffects": false,
     "scripts": {
         "start": "npm run storybook",
-        "build": "npm run clean && tsc -b && vite build && npm run build:css && npm run export-design-tokens",
-        "build:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
-        "storybook": "concurrently \"npm run storybook:css\" \"storybook dev -p 6006\"",
-        "storybook:css": "npx @tailwindcss/cli -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
-        "build-storybook": "concurrently \"npm run build-storybook:css\" \"storybook build\"",
-        "build-storybook:css": "npx @tailwindcss/cli -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+        "storybook": "concurrently \"npm run tailwind:watch\" \"storybook dev -p 6006\"",
+        "tailwind:watch": "npx -y @tailwindcss/cli@latest -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+        "tailwind:build": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
+        "tailwind:storybook": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+        "clean": "rimraf dist storybook-static",
+        "build": "npm run clean && tsc -b && vite build && npm run tailwind:build && npm run export-design-tokens",
+        "build-storybook": "concurrently \"npm run tailwind:storybook\" \"storybook build\"",
         "prepublishOnly": "npm run build",
         "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
         "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
@@ -51,7 +52,6 @@
         "lint": "eslint .",
         "format": "prettier --write .",
         "format:check": "prettier --check ./src/components",
-        "clean": "rimraf dist storybook-static",
         "knip": "knip"
     },
     "peerDependencies": {
