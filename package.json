@@ -62,7 +62,7 @@
         "@chromatic-com/storybook": "^5.1.2",
         "@digdir/designsystemet-css": "^1.13.3",
         "@digdir/designsystemet-types": "^1.13.2",
-        "@eslint/js": "^9.39.4",
+        "@eslint/js": "^10.0.1",
         "@storybook/addon-a11y": "^10.3.6",
         "@storybook/addon-docs": "^10.3.6",
         "@storybook/addon-vitest": "^10.3.6",
