@@ -1,15 +1,44 @@
 version: 2
 updates:
-  # Enable version updates for npm
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
-    schedule:
-      interval: "daily"
+    # Enable version updates for npm
+    - package-ecosystem: "npm"
+      # Look for `package.json` and `lock` files in the `root` directory
+      directory: "/"
+      # Check the npm registry for updates every day (weekdays)
+      schedule:
+          interval: "daily"
 
-    
-    # Below is the example to ignore updates to packages that start with for instance 'aws'
-    # Wildcards match zero or more arbitrary characters
-    #ignore:
-    #- dependency-name: "aws*"
+      groups:
+          designsystemet:
+              patterns:
+                  - "@digdir/designsystemet*"
+          storybook:
+              patterns:
+                  - "storybook"
+                  - "@storybook*"
+                  - "@chromatic-com/storybook"
+                  - "eslint-plugin-storybook"
+          tailwind:
+              patterns:
+                  - "tailwind*"
+                  - "@tailwindcss/*"
+          testing:
+              patterns:
+                  - "vitest"
+                  - "playwright"
+                  - "@vitest/*"
+          toolchain:
+              patterns:
+                  - "typescript*"
+                  - "eslint*"
+                  - "prettier*"
+                  - "husky*"
+                  - "lint-staged*"
+                  - "vite*"
+                  - "@vitejs/*"
+                  - "knip"
+
+      # Below is the example to ignore updates to packages that start with for instance 'aws'
+      # Wildcards match zero or more arbitrary characters
+      #ignore:
+      #- dependency-name: "aws*"
