@@ -31,12 +31,14 @@ updates:
               patterns:
                   - "typescript*"
                   - "eslint*"
+                  - "@eslint/*"
                   - "prettier*"
                   - "husky*"
                   - "lint-staged*"
                   - "vite*"
                   - "@vitejs/*"
                   - "knip"
+                  - "globals"
 
       # Below is the example to ignore updates to packages that start with for instance 'aws'
       # Wildcards match zero or more arbitrary characters
