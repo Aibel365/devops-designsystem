@@ -9,7 +9,10 @@ updates:
           interval: "daily"
       cooldown:
           default-days: 2
-
+      ignore:
+          - dependency-name: "*"
+            update-types:
+                - "version-update:semver-major"
       groups:
           designsystemet:
               patterns:
