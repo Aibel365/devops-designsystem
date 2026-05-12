@@ -22,7 +22,8 @@ const meta: Meta<typeof Switch> = {
         checked: { control: { type: "radio" }, options: [true, false] },
         position: { control: { type: "radio" }, options: ["start", "end"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] }
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        variant: { control: { type: "select" }, options: ["outline"] }
     }
 };
 
@@ -75,6 +76,12 @@ export const Grouped: StoryObj<typeof Switch> = {
                 </Switch>
             </div>
         );
+    }
+};
+
+export const Outline: StoryObj<typeof Switch> = {
+    args: {
+        variant: "outline"
     }
 };
 

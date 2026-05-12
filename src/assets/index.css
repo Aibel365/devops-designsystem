@@ -1,4 +1,4 @@
-/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.0 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -488,6 +488,7 @@
   :root,[data-color-scheme] {
     --dsc-focus-boxShadow: 0 0 0 var(--ds-border-width-focus) var(--ds-color-focus-inner);
     --dsc-focus-boxShadow-inset: inset 0 0 0 calc(var(--ds-border-width-focus)*2) var(--ds-color-focus-inner);
+    --dsc-focus-boxShadow-middle: inset 0 0 0 var(--ds-border-width-focus) var(--ds-color-focus-inner);
     --dsc-focus-outline: var(--ds-color-focus-outer) solid var(--ds-border-width-focus);
   }
   [data-color-scheme],body {
@@ -503,12 +504,10 @@
     margin-inline-end: .25ch;
     -webkit-mask: center/contain no-repeat var(--ds-readonly-icon-url);
     mask: center/contain no-repeat var(--ds-readonly-icon-url);
-    vertical-align: bottom;
-    width: var(--ds-readonly-icon-size);
-  }
-  :is(.ds-readonly-icon:before) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    vertical-align: bottom;
+    width: var(--ds-readonly-icon-size);
   }
   @media (forced-colors:active) {
     .ds-readonly-icon:before {
@@ -535,6 +534,14 @@
   .ds-focus--inset:focus-visible * {
     --_ds--focus: ;
   }
+  .ds-focus--middle:focus-visible {
+    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow-middle));
+    outline: var(--_ds--focus,var(--dsc-focus-outline));
+    outline-offset: calc(var(--_ds--focus, 0));
+  }
+  .ds-focus--middle:focus-visible * {
+    --_ds--focus: ;
+  }
   .ds-focus--visible {
     box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
@@ -550,6 +557,33 @@
   }
   .ds-focus--visible--inset * {
     --_ds--focus: ;
+  }
+  .ds-focus--visible--middle {
+    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow-middle));
+    outline: var(--_ds--focus,var(--dsc-focus-outline));
+    outline-offset: calc(var(--_ds--focus, 0));
+  }
+  .ds-focus--visible--middle * {
+    --_ds--focus: ;
+  }
+  .ds-checkbox--checked {
+    --_stroke-width-fallback: 0.05em;
+    --_diagonal-1: transparent calc(48% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-2: currentcolor calc(50% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-3: currentcolor calc(50% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-4: transparent calc(52% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    background-image: linear-gradient(45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4)),linear-gradient(-45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4));
+    background-origin: content-box;
+    background-position: 10% 73%,90% 50%;
+    background-repeat: no-repeat;
+    background-size: 35% 35%,65% 65%;
+  }
+  @media (forced-colors:active) {
+    .ds-checkbox--checked {
+      background-color: LinkText;
+      border-color: LinkText;
+      forced-color-adjust: none;
+    }
   }
   .ds-floating {
     --_ds-floating: top;
@@ -1006,15 +1040,15 @@
   .ds-input:focus-visible * {
     --_ds--focus: ;
   }
-  .ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover,:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover {
+  .ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):where(:hover,.\:click-delegate-hover),:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover {
     outline-color: var(--dsc-input-outline-color--hover);
     outline-style: var(--dsc-input-outline-style--hover);
     outline-width: var(--dsc-input-outline-width--hover);
   }
-  :is(:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover,.ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover):is(:checked,:indeterminate:where([type=checkbox])):not([aria-invalid=true]) {
+  :is(:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover,.ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):where(:hover,.\:click-delegate-hover)):is(:checked,:indeterminate:where([type=checkbox])):not([aria-invalid=true]) {
     outline-color: var(--dsc-input-outline-color--toggle--hover);
   }
-  :is(:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover,.ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover):is([aria-invalid=true]) {
+  :is(:has(label):not(:has(label:hover)) .ds-input:not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):hover,.ds-input:is([type=radio],[type=checkbox]):not(:focus-visible,:disabled,[readonly],[aria-readonly=true]):where(:hover,.\:click-delegate-hover)):is([aria-invalid=true]) {
     outline-color: var(--dsc-input-accent-color--invalid);
   }
   @media (forced-colors:active) {
@@ -1141,7 +1175,13 @@
     border-radius: var(--ds-border-radius-sm);
   }
   .ds-input[type=checkbox]:checked {
-    background-image: linear-gradient(45deg,var(--_dsc-input-diagonal-1),var(--_dsc-input-diagonal-2),var(--_dsc-input-diagonal-3),var(--_dsc-input-diagonal-4)),linear-gradient(-45deg,var(--_dsc-input-diagonal-1),var(--_dsc-input-diagonal-2),var(--_dsc-input-diagonal-3),var(--_dsc-input-diagonal-4));
+    --_stroke-width: var(--dsc-input-stroke-width);
+    --_stroke-width-fallback: 0.05em;
+    --_diagonal-1: transparent calc(48% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-2: currentcolor calc(50% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-3: currentcolor calc(50% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-4: transparent calc(52% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    background-image: linear-gradient(45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4)),linear-gradient(-45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4));
     background-origin: content-box;
     background-position: 10% 73%,90% 50%;
     background-repeat: no-repeat;
@@ -1250,12 +1290,10 @@
     margin-inline-end: .25ch;
     -webkit-mask: center/contain no-repeat var(--ds-readonly-icon-url);
     mask: center/contain no-repeat var(--ds-readonly-icon-url);
-    vertical-align: bottom;
-    width: var(--ds-readonly-icon-size);
-  }
-  :is(:is(.ds-field:has([aria-readonly=true],[readonly]) label):before) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    vertical-align: bottom;
+    width: var(--ds-readonly-icon-size);
   }
   @media (forced-colors:active) {
     :is(.ds-field:has([aria-readonly=true],[readonly]) label):before {
@@ -1266,7 +1304,6 @@
     cursor: pointer;
   }
   .ds-field:has(input:is([type=radio],[type=checkbox])) {
-    border-radius: var(--ds-border-radius-md);
     grid-template-areas: "input content";
     grid-template-columns: auto 1fr;
     width: -moz-fit-content;
@@ -1314,6 +1351,67 @@
   .ds-field[data-position=end]:has(input:is([type=radio],[type=checkbox]))>:not(input) {
     padding-inline-end: var(--dsc-field-content-spacing);
     padding-inline-start: 0;
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])) {
+    --dsc-field-border-color: var(--ds-color-neutral-border-default);
+    --dsc-field-border-color--checked: var(--ds-color-border-default);
+    --dsc-field-border-color--invalid: var(--ds-color-danger-border-default);
+    --dsc-field-border-color--readonly: var(--ds-color-neutral-border-subtle);
+    --dsc-field-border-radius: var(--ds-border-radius-lg);
+    --dsc-field-border-style: solid;
+    --dsc-field-border-width: var(--ds-border-width-default);
+    --dsc-field-border-width--active: max(2px,0.125rem);
+    --dsc-field-padding: var(--ds-size-4);
+    --_dsc-field-border-color: var(--dsc-field-border-color);
+    --_dsc-field-outline-width: 0;
+    border-color: var(--_dsc-field-border-color);
+    border-radius: var(--dsc-field-border-radius);
+    border-style: var(--dsc-field-border-style);
+    border-width: var(--dsc-field-border-width);
+    box-shadow: inset 0 0 0 calc(var(--_dsc-field-outline-width) - var(--dsc-field-border-width)) var(--_dsc-field-border-color);
+    padding: var(--dsc-field-padding);
+    width: auto;
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):hover {
+    --_dsc-field-outline-width: var(--dsc-field-border-width--active);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input:checked) {
+    --_dsc-field-border-color: var(--dsc-field-border-color--checked);
+    --_dsc-field-outline-width: var(--dsc-field-border-width--active);
+  }
+  @media (forced-colors:active) {
+    .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input:checked) {
+      border-color: LinkText;
+    }
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input[aria-invalid=true]) {
+    --_dsc-field-border-color: var(--dsc-field-border-color--invalid);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input:disabled,input[aria-disabled=true]) {
+    cursor: not-allowed;
+    opacity: var(--ds-opacity-disabled);
+    --_dsc-field-outline-width: var(--ds-border-width-default);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input:disabled,input[aria-disabled=true]):has(input:checked) {
+    --_dsc-field-outline-width: var(--dsc-field-border-width--active);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input:disabled,input[aria-disabled=true]) * {
+    opacity: 1;
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input[readonly],input[aria-readonly=true]) {
+    --_dsc-field-border-color: var(--dsc-field-border-color--readonly);
+    --_dsc-field-outline-width: var(--ds-border-width-default);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input[readonly],input[aria-readonly=true]):has(input:checked) {
+    --_dsc-field-outline-width: var(--dsc-field-border-width--active);
+  }
+  .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input[readonly],input[aria-readonly=true]) {
+    cursor: default;
+  }
+  @media (forced-colors:active) {
+    .ds-field[data-variant=outline]:has(input:is([type=radio],[type=checkbox])):has(input[readonly],input[aria-readonly=true]) {
+      border-color: GrayText;
+    }
   }
   .ds-field-affixes {
     --dsc-field-affix-border-width: var(--ds-border-width-default);
@@ -1390,12 +1488,10 @@
     margin-inline-end: .25ch;
     -webkit-mask: center/contain no-repeat var(--ds-readonly-icon-url);
     mask: center/contain no-repeat var(--ds-readonly-icon-url);
-    vertical-align: bottom;
-    width: var(--ds-readonly-icon-size);
-  }
-  :is(:is(.ds-fieldset:has(input[readonly]):not(:has(input:not([readonly])))>legend):before) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    vertical-align: bottom;
+    width: var(--ds-readonly-icon-size);
   }
   @media (forced-colors:active) {
     :is(.ds-fieldset:has(input[readonly]):not(:has(input:not([readonly])))>legend):before {
@@ -1449,12 +1545,10 @@
     -webkit-mask: var(--dsc-alert-icon-url) center /contain no-repeat;
     mask: var(--dsc-alert-icon-url) center /contain no-repeat;
     position: absolute;
-    translate: 0 calc((1lh - var(--dsc-alert-icon-size))/2);
-    width: var(--dsc-alert-icon-size);
-  }
-  :is(.ds-alert>:is(h1,h2,h3,h4,h5,h6):first-child:before,.ds-alert:not(:has(>:is(h1,h2,h3,h4,h5,h6):first-child)):before) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    translate: 0 calc((1lh - var(--dsc-alert-icon-size))/2);
+    width: var(--dsc-alert-icon-size);
   }
   @media (forced-colors:active) {
     .ds-alert:not(:has(>:is(h1,h2,h3,h4,h5,h6):first-child)):before,.ds-alert>:is(h1,h2,h3,h4,h5,h6):first-child:before {
@@ -1580,8 +1674,6 @@
     --dsc-skiplink-padding: var(--ds-size-4) var(--ds-size-4) var(--ds-size-5) var(--ds-size-4);
     --dsc-skiplink-background: var(--ds-color-surface-hover);
     --dsc-skiplink-color: var(--ds-color-text-default);
-  }
-  :is(.ds-skip-link,.ds-skiplink) {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -1682,7 +1774,7 @@
   :is(.ds-details>:is(summary,u-summary)):focus-visible * {
     --_ds--focus: ;
   }
-  :is(.ds-details>:is(summary,u-summary)) {
+  .ds-details>:is(summary,u-summary) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -2045,8 +2137,6 @@
     border-width: var(--dsc-card-border-width);
     box-sizing: border-box;
     color: var(--dsc-card-color);
-    font: inherit;
-    margin: 0;
     overflow: clip;
     padding: var(--dsc-card-padding);
     text-align: inherit;
@@ -2065,6 +2155,14 @@
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor]) {
     cursor: pointer;
     text-decoration: none;
+  }
+  .ds-card:where(a,button,[role=button],[data-clickdelegatefor]):focus-visible {
+    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
+    outline: var(--_ds--focus,var(--dsc-focus-outline));
+    outline-offset: var(--_ds--focus,var(--ds-border-width-focus));
+  }
+  .ds-card:where(a,button,[role=button],[data-clickdelegatefor]):focus-visible * {
+    --_ds--focus: ;
   }
   .ds-card:where(a,button,[role=button],[data-clickdelegatefor])>.ds-card__block>:is(h1,h2,h3,h4,h5,h6),.ds-card:where(a,button,[role=button],[data-clickdelegatefor])>:is(h1,h2,h3,h4,h5,h6) {
     text-decoration-line: underline;
@@ -2100,6 +2198,10 @@
   :is(.ds-card>.ds-details:last-child):not([open])>summary,:is(.ds-card>.ds-details:last-child):not([open])>u-summary {
     border-bottom-left-radius: var(--dsc-card-border-radius);
     border-bottom-right-radius: var(--dsc-card-border-radius);
+  }
+  :where(.ds-card) {
+    font: inherit;
+    margin: 0;
   }
   :where(.ds-card,.ds-card__block)>:first-child {
     margin-block: 0;
@@ -2790,7 +2892,7 @@
     --dsc-button-color--hover: var(--ds-color-base-contrast-default);
     --dsc-button-color: var(--ds-color-base-contrast-default);
   }
-  :is(:is(.ds-togglegroup,.ds-toggle-group) label:has(input:focus-visible)) {
+  :is(.ds-togglegroup,.ds-toggle-group) label:has(input:focus-visible) {
     box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow-inset));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
     outline-offset: calc(var(--_ds--focus, var(--ds-border-width-focus))*-1);
@@ -3062,7 +3164,7 @@
   .ds-table>tfoot>tr:last-child>:is(th,td) {
     border-bottom: none;
   }
-  :is(.ds-table>caption) {
+  .ds-table>caption {
     font-size: 1.3em;
     font-size: round(down,1.3em,1px);
     font-weight: var(--ds-heading-md-font-weight);
@@ -3243,12 +3345,10 @@
     margin-inline: var(--dsc-breadcrumbs-spacing);
     -webkit-mask: center/contain no-repeat var(--dsc-breadcrumbs-icon-url);
     mask: center/contain no-repeat var(--dsc-breadcrumbs-icon-url);
-    vertical-align: middle;
-    width: var(--dsc-breadcrumbs-icon-size);
-  }
-  :is(.ds-breadcrumbs li:where(:not(:last-child)):after,.ds-breadcrumbs>:not(ol,ul):before) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    vertical-align: middle;
+    width: var(--dsc-breadcrumbs-icon-size);
   }
   @media (forced-colors:active) {
     .ds-breadcrumbs li:where(:not(:last-child)):after,.ds-breadcrumbs>:not(ol,ul):before {
@@ -3549,11 +3649,9 @@
     --dsc-avatar-font-size: var(--_font-size);
   }
   :is(.ds-avatar-stack .ds-avatar):focus-visible,:is(.ds-avatar-stack .ds-avatar):has(:focus-visible) {
+    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     -webkit-mask: none;
     mask: none;
-  }
-  :is(:is(.ds-avatar-stack .ds-avatar):has(:focus-visible),:is(.ds-avatar-stack .ds-avatar):focus-visible) {
-    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
     outline-offset: var(--_ds--focus,var(--ds-border-width-focus));
   }
@@ -3566,12 +3664,13 @@
 }
 @layer ds.components {
   .ds-suggestion {
-    --dsc-suggestion-option-background--selected: var(--ds-color-surface-tinted);
-    --dsc-suggestion-option-border-color: var(--ds-color-base-default);
-    --dsc-suggestion-option-border-radius: var(--ds-color-base-default);
-    --dsc-suggestion-option-checkmark-size: var(--ds-size-7);
+    --dsc-suggestion-option-background--hover: var(--ds-color-surface-hover);
+    --dsc-suggestion-option-background--selected: var(--ds-color-surface-active);
+    --dsc-suggestion-option-border-radius: var(--ds-border-radius-md);
+    --dsc-suggestion-option-checkmark-size: var(--ds-size-6);
     --dsc-suggestion-option-checkmark-url: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M18.998 6.94a.75.75 0 0 1 .063 1.058l-8 9a.75.75 0 0 1-1.091.032l-5-5a.75.75 0 1 1 1.06-1.06l4.438 4.437 7.471-8.405A.75.75 0 0 1 19 6.939' clip-rule='evenodd'/%3E%3C/svg%3E");
-    --dsc-suggestion-option-padding: var(--ds-size-2) var(--ds-size-3);
+    --dsc-suggestion-option-padding: var(--ds-size-3);
+    --dsc-suggestion-option-gap: var(--ds-size-2);
     --dsc-suggestion-clear-gap: var(--ds-size-2);
     --dsc-suggestion-clear-padding: var(--ds-size-1);
     --dsc-suggestion-clear-size: var(--ds-size-9);
@@ -3579,15 +3678,17 @@
     --dsc-suggestion-clear-border-radius: var(--ds-border-radius-md);
     --dsc-suggestion-clear-background--hover: var(--ds-color-surface-hover);
     --dsc-suggestion-clear-background--active: var(--ds-color-surface-active);
-    --dsc-suggestion-list-background: var(--ds-color-surface-default);
+    --dsc-suggestion-list-background: var(--ds-color-neutral-surface-default);
     --dsc-suggestion-list-border-radius: var(--ds-border-radius-md);
     --dsc-suggestion-list-box-shadow: var(--ds-shadow-md);
     --dsc-suggestion-list-color: var(--ds-color-text-default);
-    --dsc-suggestion-list-gap: var(--ds-size-2);
+    --dsc-suggestion-list-offset: var(--ds-size-1);
+    --dsc-suggestion-list-gap: var(--ds-size-1);
     --dsc-suggestion-list-placement: bottom;
+    --dsc-suggestion-list-padding: var(--ds-size-3) var(--ds-size-2);
     --dsc-suggestion-border-width: var(--ds-border-width-default);
     --dsc-suggestion-border-style: solid;
-    --dsc-suggestion-border-color: var(--ds-color-border-default);
+    --dsc-suggestion-border-color: var(--ds-color-neutral-border-subtle);
     --dsc-suggestion-chip-gap: var(--ds-size-1);
     --dsc-suggestion-chip-background: var(--ds-color-base-default);
     --dsc-suggestion-chip-background--hover: var(--ds-color-base-hover);
@@ -3643,7 +3744,13 @@
     padding-inline: 0;
     width: var(--dsc-suggestion-chip-icon-size);
   }
-  :is(.ds-suggestion>data) {
+  @media (forced-colors:active) {
+    :is(.ds-suggestion>data):after {
+      background-color: CanvasText;
+      forced-color-adjust: none;
+    }
+  }
+  .ds-suggestion>data {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -3661,20 +3768,19 @@
   :is(.ds-suggestion>data):has(+data) {
     margin-inline-end: var(--dsc-suggestion-chip-gap);
   }
-  .ds-suggestion:is(u-datalist):not(:defined) {
-    display: none;
+  .ds-suggestion u-datalist[data-is-floating]:not([style*=translate]) {
+    opacity: 0;
   }
-  :is(.ds-suggestion :is(u-datalist,datalist)) {
+  .ds-suggestion u-datalist {
     --_ds-floating: top;
     --_ds-floating-arrow-size: 0;
     --_ds-floating-arrow-visibility: inherit;
     animation: ds-fade-in .15s ease-in-out forwards;
-    inset: 0 auto auto 0;
     margin: 0;
     overflow: visible;
     position: absolute;
   }
-  :is(.ds-suggestion :is(u-datalist,datalist)):before {
+  :is(.ds-suggestion u-datalist):before {
     background: inherit;
     border: inherit;
     border-left-color: transparent;
@@ -3690,12 +3796,29 @@
     visibility: var(--_ds-floating-arrow-visibility);
     width: var(--_ds-floating-arrow-size);
   }
-  [data-overscroll=contain]:is(.ds-suggestion :is(u-datalist,datalist)) {
+  [data-overscroll=contain]:is(.ds-suggestion u-datalist) {
     --_ds-floating-overscroll: contain;
     overflow: auto;
     overscroll-behavior: contain;
   }
-  :is(.ds-suggestion :is(u-datalist,datalist)) {
+  .ds-suggestion u-datalist {
+    --_ds-floating: var(--dsc-suggestion-list-placement);
+    --_ds-floating-overscroll: fit;
+    --_ds-floating-arrow-visibility: hidden;
+    --_ds-floating-arrow-size: var(--ds-size-2);
+    background: var(--dsc-suggestion-list-background);
+    border-color: var(--dsc-suggestion-border-color);
+    border-radius: var(--dsc-suggestion-list-border-radius);
+    border-style: var(--dsc-suggestion-border-style);
+    border-width: var(--dsc-suggestion-border-width);
+    box-shadow: var(--dsc-suggestion-list-box-shadow);
+    box-sizing: border-box;
+    color: var(--dsc-suggestion-list-color);
+    display: none;
+    inset: 0 auto auto 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: var(--dsc-suggestion-list-padding);
     &[data-floating|=top]:before {
       rotate: 45deg;
       top: 100%;
@@ -3713,64 +3836,99 @@
       rotate: -45deg;
     }
   }
-  .ds-suggestion :is(u-datalist,datalist) {
-    --_ds-floating: var(--dsc-suggestion-list-placement);
-    --_ds-floating-overscroll: fit;
-    --_ds-floating-arrow-visibility: hidden;
-    --_ds-floating-arrow-size: var(--ds-size-2);
-    background: var(--dsc-suggestion-list-background);
-    border-color: var(--dsc-suggestion-border-color);
-    border-radius: var(--dsc-suggestion-list-border-radius);
-    border-style: var(--dsc-suggestion-border-style);
-    border-width: var(--dsc-suggestion-border-width);
-    box-shadow: var(--dsc-suggestion-list-box-shadow);
-    box-sizing: border-box;
-    color: var(--dsc-suggestion-list-color);
-    inset: 0 auto auto 0;
-    overflow: auto;
-    overscroll-behavior: contain;
-    padding: 0;
-  }
-  :is(.ds-suggestion :is(u-datalist,datalist)):not([popover]) {
+  :is(.ds-suggestion u-datalist):not([popover]) {
     inset: 100% 0 auto 0;
-    margin-top: var(--dsc-suggestion-list-gap);
+    margin-top: var(--dsc-suggestion-list-offset);
     z-index: 1600;
   }
-  :is(.ds-suggestion :is(u-datalist,datalist)):empty {
-    display: none;
+  :is(.ds-suggestion u-datalist):not([hidden]):not(:empty) {
+    align-content: start;
+    display: grid;
+    gap: var(--dsc-suggestion-list-gap);
   }
-  :is(.ds-suggestion :is(u-datalist,datalist))>u-option {
+  :is(.ds-suggestion u-datalist)>u-option {
     border: none;
-    border-inline-start: 5px solid transparent;
     border-radius: var(--dsc-suggestion-option-border-radius);
     cursor: pointer;
+    line-height: var(--ds-line-height-sm);
     outline: none;
+    outline-offset: calc(var(--dsc-suggestion-option-activedecendant-outline-width)*-1);
     padding: var(--dsc-suggestion-option-padding);
-    padding-inline-start: var(--dsc-suggestion-option-checkmark-size);
     position: relative;
   }
-  [selected]:is(:is(.ds-suggestion :is(u-datalist,datalist))>u-option):before {
+  @media (hover:hover) and (pointer:fine) {
+    :is(:is(.ds-suggestion u-datalist)>u-option):not([data-empty]):where(:hover) {
+      background: var(--dsc-suggestion-option-background--hover);
+    }
+  }
+  [selected]:is(:is(.ds-suggestion u-datalist)>u-option) {
+    background-color: var(--dsc-suggestion-option-background--selected);
+    padding-inline-start: calc(var(--dsc-suggestion-option-padding) + var(--dsc-suggestion-option-checkmark-size) + var(--dsc-suggestion-option-gap));
+  }
+  [selected]:is(:is(.ds-suggestion u-datalist)>u-option):before {
     background: currentcolor;
     content: "";
     height: var(--dsc-suggestion-option-checkmark-size);
-    inset-inline-start: 0;
+    inset-inline-start: var(--dsc-suggestion-option-padding);
     -webkit-mask: var(--dsc-suggestion-option-checkmark-url) center /contain no-repeat;
     mask: var(--dsc-suggestion-option-checkmark-url) center /contain no-repeat;
     position: absolute;
     width: var(--dsc-suggestion-option-checkmark-size);
   }
-  :is(:is(.ds-suggestion :is(u-datalist,datalist))>u-option):focus-visible {
-    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow-inset));
-    outline: var(--_ds--focus,var(--dsc-focus-outline));
-    outline-offset: calc(var(--_ds--focus, var(--ds-border-width-focus))*-1);
+  @media (forced-colors:active) {
+    [selected]:is(:is(.ds-suggestion u-datalist)>u-option):before {
+      background-color: LinkText;
+      forced-color-adjust: none;
+    }
   }
-  :is(:is(.ds-suggestion :is(u-datalist,datalist))>u-option):focus-visible * {
+  [data-activedescendant]:is(:is(.ds-suggestion u-datalist)>u-option) {
+    box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow-middle));
+    outline: var(--_ds--focus,var(--dsc-focus-outline));
+    outline-offset: calc(var(--_ds--focus, 0));
+  }
+  [data-activedescendant]:is(:is(.ds-suggestion u-datalist)>u-option) * {
     --_ds--focus: ;
   }
-  @media (hover:hover) and (pointer:fine) {
-    :is(:is(.ds-suggestion :is(u-datalist,datalist))>u-option):not([data-empty]):hover {
-      background: var(--dsc-suggestion-option-background--selected);
-      border-inline-start-color: var(--dsc-suggestion-option-border-color);
+  :is([data-multiple] :is(.ds-suggestion u-datalist))>u-option:not([data-empty]) {
+    --dsc-suggestion-option-checkmark-border: max(2px,0.125rem);
+    padding-inline-start: calc(var(--dsc-suggestion-option-padding) + var(--dsc-suggestion-option-checkmark-size) + var(--dsc-suggestion-option-gap));
+  }
+  :is(:is([data-multiple] :is(.ds-suggestion u-datalist))>u-option:not([data-empty])):before {
+    border-radius: var(--ds-border-radius-sm);
+    box-sizing: border-box;
+    content: "";
+    height: var(--dsc-suggestion-option-checkmark-size);
+    inset-inline-start: var(--dsc-suggestion-option-padding);
+    -webkit-mask: none;
+    mask: none;
+    outline: var(--dsc-suggestion-option-checkmark-border) solid var(--ds-color-neutral-border-default);
+    outline-offset: calc(var(--dsc-suggestion-option-checkmark-border)*-1);
+    padding: .188rem;
+    position: absolute;
+    translate: 0 calc(.5lh - 50%);
+    width: var(--dsc-suggestion-option-checkmark-size);
+  }
+  [selected]:is(:is([data-multiple] :is(.ds-suggestion u-datalist))>u-option:not([data-empty])):before {
+    background-color: var(--ds-color-base-default);
+    color: var(--ds-color-base-contrast-default);
+    outline: none;
+    --_stroke-width: 0.05em;
+    --_stroke-width-fallback: 0.05em;
+    --_diagonal-1: transparent calc(48% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-2: currentcolor calc(50% - var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-3: currentcolor calc(50% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    --_diagonal-4: transparent calc(52% + var(--_stroke-width, var(--_stroke-width-fallback)));
+    background-image: linear-gradient(45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4)),linear-gradient(-45deg,var(--_diagonal-1),var(--_diagonal-2),var(--_diagonal-3),var(--_diagonal-4));
+    background-origin: content-box;
+    background-position: 10% 73%,90% 50%;
+    background-repeat: no-repeat;
+    background-size: 35% 35%,65% 65%;
+  }
+  @media (forced-colors:active) {
+    [selected]:is(:is([data-multiple] :is(.ds-suggestion u-datalist))>u-option:not([data-empty])):before {
+      background-color: LinkText;
+      border-color: LinkText;
+      forced-color-adjust: none;
     }
   }
   .ds-suggestion:has(input:-moz-placeholder) input {
@@ -3814,19 +3972,19 @@
     box-shadow: none;
     outline: none;
   }
-  .ds-suggestion:has(input:is(:-moz-read-only,:disabled,[aria-disabled=true])) del {
+  .ds-suggestion:has(input:is(:-moz-read-only,:disabled,[aria-disabled=true])) :is(del,button[type=reset]) {
     visibility: hidden;
   }
-  .ds-suggestion del[hidden],.ds-suggestion:has(input:is(:read-only,:disabled,[aria-disabled=true])) del {
+  .ds-suggestion :is(del[hidden],button[type=reset][hidden]),.ds-suggestion:has(input:is(:read-only,:disabled,[aria-disabled=true])) :is(del,button[type=reset]) {
     visibility: hidden;
   }
-  .ds-suggestion:has(del) input {
+  .ds-suggestion:has(:is(del,button[type=reset])) input {
     padding-inline-end: calc(var(--dsc-suggestion-clear-size) + var(--dsc-suggestion-clear-gap));
   }
-  .ds-suggestion:has(del) input[type=search]::-webkit-search-cancel-button {
+  .ds-suggestion input[type=search]::-webkit-search-cancel-button {
     display: none;
   }
-  .ds-suggestion del {
+  .ds-suggestion :is(del,button[type=reset]) {
     --dsc-button-size: var(--dsc-suggestion-clear-size);
     align-self: center;
     border-radius: var(--dsc-suggestion-clear-border-radius);
@@ -3836,31 +3994,38 @@
     height: var(--dsc-suggestion-clear-size);
     margin-inline-start: calc((var(--dsc-suggestion-clear-size) + var(--dsc-suggestion-clear-gap))*-1);
     order: 999;
+    outline: none;
     padding: var(--dsc-suggestion-clear-padding);
     position: relative;
     scale: .75;
     width: var(--dsc-suggestion-clear-size);
     z-index: 2;
   }
-  :is(.ds-suggestion del):focus-visible {
+  :is(.ds-suggestion :is(del,button[type=reset])):focus-visible {
     box-shadow: var(--_ds--focus,var(--dsc-focus-boxShadow));
     outline: var(--_ds--focus,var(--dsc-focus-outline));
     outline-offset: var(--_ds--focus,var(--ds-border-width-focus));
   }
-  :is(.ds-suggestion del):focus-visible * {
+  :is(.ds-suggestion :is(del,button[type=reset])):focus-visible * {
     --_ds--focus: ;
   }
-  :is(.ds-suggestion del):hover {
+  :is(.ds-suggestion :is(del,button[type=reset])):hover {
     background: var(--dsc-suggestion-clear-background--hover);
   }
-  :is(.ds-suggestion del):active {
+  :is(.ds-suggestion :is(del,button[type=reset])):active {
     background: var(--dsc-suggestion-clear-background--active);
   }
-  :is(.ds-suggestion del):before {
+  :is(.ds-suggestion :is(del,button[type=reset])):before {
     background: currentcolor;
     content: "";
     -webkit-mask: var(--dsc-suggestion-clear-icon-url) center /contain no-repeat;
     mask: var(--dsc-suggestion-clear-icon-url) center /contain no-repeat;
+  }
+  @media (forced-colors:active) {
+    :is(.ds-suggestion :is(del,button[type=reset])):before {
+      background-color: canvastext;
+      forced-color-adjust: none;
+    }
   }
 }
 @layer ds.components {

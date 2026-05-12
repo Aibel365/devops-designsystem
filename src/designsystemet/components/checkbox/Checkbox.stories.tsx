@@ -17,7 +17,11 @@ const meta: Meta<typeof Checkbox> = {
         checked: { control: { type: "boolean" }, options: [true, false] },
         "data-indeterminate": { control: { type: "boolean" }, options: [true, false] },
         error: { control: { type: "text" } },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] }
+        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        variant: {
+            control: { type: "select" },
+            options: ["outline"]
+        }
     }
 };
 
@@ -42,5 +46,7 @@ export const Disabled: Story = { args: { disabled: true } };
 export const Error: Story = { args: { error: "This field is required" } };
 
 export const Indeterminate: Story = { args: { checked: true, "data-indeterminate": true } };
+
+export const Outline: Story = { args: { variant: "outline" } };
 
 export default meta;
