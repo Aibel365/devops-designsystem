@@ -21,7 +21,8 @@ const meta: Meta<typeof Radio> = {
         "data-indeterminate": { control: { type: "boolean" }, description: "Indeterminate state for checkbox inputs Only works when used inside Field component", options: [true, false] },
         error: { control: { type: "text" } },
         description: { control: { type: "text" } },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] }
+        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        variant: { control: { type: "select" }, options: ["outline"] }
     }
 };
 
@@ -60,6 +61,12 @@ export const Inline: Story = {
             />
         </div>
     )
+};
+
+export const Outline: Story = {
+    args: {
+        variant: "outline"
+    }
 };
 
 export default meta;
