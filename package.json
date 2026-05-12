@@ -60,7 +60,7 @@
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^5.1.2",
-        "@digdir/designsystemet-css": "^1.13.3",
+        "@digdir/designsystemet-css": "^1.14.0",
         "@digdir/designsystemet-types": "^1.13.2",
         "@eslint/js": "^10.0.1",
         "@storybook/addon-a11y": "^10.3.6",
@@ -94,6 +94,6 @@
         "vitest": "^4.1.4"
     },
     "dependencies": {
-        "@digdir/designsystemet-react": "^1.13.3"
+        "@digdir/designsystemet-react": "^1.14.0"
     }
 }
