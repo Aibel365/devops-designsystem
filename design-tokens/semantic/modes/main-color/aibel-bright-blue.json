@@ -1,69 +1,69 @@
 {
     "color": {
-        "support": {
+        "main": {
             "background-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.background-default}"
+                "$value": "{color.aibel-bright-blue.background-default}"
             },
             "background-tinted": {
                 "$type": "color",
-                "$value": "{color.light-pink.background-tinted}"
+                "$value": "{color.aibel-bright-blue.background-tinted}"
             },
             "surface-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.surface-default}"
+                "$value": "{color.aibel-bright-blue.surface-default}"
             },
             "surface-tinted": {
                 "$type": "color",
-                "$value": "{color.light-pink.surface-tinted}"
+                "$value": "{color.aibel-bright-blue.surface-tinted}"
             },
             "surface-hover": {
                 "$type": "color",
-                "$value": "{color.light-pink.surface-hover}"
+                "$value": "{color.aibel-bright-blue.surface-hover}"
             },
             "surface-active": {
                 "$type": "color",
-                "$value": "{color.light-pink.surface-active}"
+                "$value": "{color.aibel-bright-blue.surface-active}"
             },
             "border-subtle": {
                 "$type": "color",
-                "$value": "{color.light-pink.border-subtle}"
+                "$value": "{color.aibel-bright-blue.border-subtle}"
             },
             "border-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.border-default}"
+                "$value": "{color.aibel-bright-blue.border-default}"
             },
             "border-strong": {
                 "$type": "color",
-                "$value": "{color.light-pink.border-strong}"
+                "$value": "{color.aibel-bright-blue.border-strong}"
             },
             "text-subtle": {
                 "$type": "color",
-                "$value": "{color.light-pink.text-subtle}"
+                "$value": "{color.aibel-bright-blue.text-subtle}"
             },
             "text-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.text-default}"
+                "$value": "{color.aibel-bright-blue.text-default}"
             },
             "base-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.base-default}"
+                "$value": "{color.aibel-bright-blue.base-default}"
             },
             "base-hover": {
                 "$type": "color",
-                "$value": "{color.light-pink.base-hover}"
+                "$value": "{color.aibel-bright-blue.base-hover}"
             },
             "base-active": {
                 "$type": "color",
-                "$value": "{color.light-pink.base-active}"
+                "$value": "{color.aibel-bright-blue.base-active}"
             },
             "base-contrast-subtle": {
                 "$type": "color",
-                "$value": "{color.light-pink.base-contrast-subtle}"
+                "$value": "{color.aibel-bright-blue.base-contrast-subtle}"
             },
             "base-contrast-default": {
                 "$type": "color",
-                "$value": "{color.light-pink.base-contrast-default}"
+                "$value": "{color.aibel-bright-blue.base-contrast-default}"
             }
         }
     }
