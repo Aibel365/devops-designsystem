@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 build: v1.14.0
-design-tokens: v1.11.1
+design-tokens: v1.14.0
 */
 
 @layer ds.theme.size-mode {
@@ -91,38 +91,22 @@ design-tokens: v1.11.1
 }
 @layer ds.theme.color-scheme.light {
 :root, [data-color-scheme="light"] {
-  --ds-color-bright-blue-background-default: #ffffff;
-  --ds-color-bright-blue-background-tinted: #f1f3fb;
-  --ds-color-bright-blue-surface-default: #ffffff;
-  --ds-color-bright-blue-surface-tinted: #e3e8f6;
-  --ds-color-bright-blue-surface-hover: #d1daf1;
-  --ds-color-bright-blue-surface-active: #bdcaeb;
-  --ds-color-bright-blue-border-subtle: #abbbe5;
-  --ds-color-bright-blue-border-default: #5575ca;
-  --ds-color-bright-blue-border-strong: #2f56bf;
-  --ds-color-bright-blue-text-subtle: #2f56bf;
-  --ds-color-bright-blue-text-default: #002179;
-  --ds-color-bright-blue-base-default: #0030B0;
-  --ds-color-bright-blue-base-hover: #1f49ba;
-  --ds-color-bright-blue-base-active: #3d61c3;
-  --ds-color-bright-blue-base-contrast-subtle: #d3dbf1;
-  --ds-color-bright-blue-base-contrast-default: #ffffff;
-  --ds-color-light-blue-background-default: #ffffff;
-  --ds-color-light-blue-background-tinted: #e1f7ff;
-  --ds-color-light-blue-surface-default: #ffffff;
-  --ds-color-light-blue-surface-tinted: #c4f0ff;
-  --ds-color-light-blue-surface-hover: #b7e1ef;
-  --ds-color-light-blue-surface-active: #aad0dd;
-  --ds-color-light-blue-border-subtle: #9ec1cd;
-  --ds-color-light-blue-border-default: #667c84;
-  --ds-color-light-blue-border-strong: #4f6066;
-  --ds-color-light-blue-text-subtle: #4f6066;
-  --ds-color-light-blue-text-default: #252d30;
-  --ds-color-light-blue-base-default: #C4F0FF;
-  --ds-color-light-blue-base-hover: #b1d9e6;
-  --ds-color-light-blue-base-active: #9ec2ce;
-  --ds-color-light-blue-base-contrast-subtle: #404e53;
-  --ds-color-light-blue-base-contrast-default: #000000;
+  --ds-color-aibel-bright-blue-background-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
+  --ds-color-aibel-bright-blue-surface-default: #ffffff;
+  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
+  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
+  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
+  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
+  --ds-color-aibel-bright-blue-border-default: #5575ca;
+  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
+  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
+  --ds-color-aibel-bright-blue-text-default: #002179;
+  --ds-color-aibel-bright-blue-base-default: #0030B0;
+  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
+  --ds-color-aibel-bright-blue-base-active: #3d61c3;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
+  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-blue-background-default: #ffffff;
   --ds-color-aibel-blue-background-tinted: #f2f4f6;
   --ds-color-aibel-blue-surface-default: #ffffff;
@@ -155,86 +139,38 @@ design-tokens: v1.11.1
   --ds-color-neutral-base-active: #484a4e;
   --ds-color-neutral-base-contrast-subtle: #b9babb;
   --ds-color-neutral-base-contrast-default: #ffffff;
-  --ds-color-light-green-background-default: #ffffff;
-  --ds-color-light-green-background-tinted: #caffeb;
-  --ds-color-light-green-surface-default: #ffffff;
-  --ds-color-light-green-surface-tinted: #84ffd0;
-  --ds-color-light-green-surface-hover: #78f0c2;
-  --ds-color-light-green-surface-active: #6fdeb4;
-  --ds-color-light-green-border-subtle: #68cea7;
-  --ds-color-light-green-border-default: #43856c;
-  --ds-color-light-green-border-strong: #346753;
-  --ds-color-light-green-text-subtle: #346753;
-  --ds-color-light-green-text-default: #183027;
-  --ds-color-light-green-base-default: #80FFCF;
-  --ds-color-light-green-base-hover: #73e6bb;
-  --ds-color-light-green-base-active: #67cea7;
-  --ds-color-light-green-base-contrast-subtle: #2a5343;
-  --ds-color-light-green-base-contrast-default: #000000;
-  --ds-color-green-background-default: #ffffff;
-  --ds-color-green-background-tinted: #f0f5f1;
-  --ds-color-green-surface-default: #ffffff;
-  --ds-color-green-surface-tinted: #e2ebe4;
-  --ds-color-green-surface-hover: #d0ddd3;
-  --ds-color-green-surface-active: #bbcfc0;
-  --ds-color-green-border-subtle: #a9c2af;
-  --ds-color-green-border-default: #51845e;
-  --ds-color-green-border-strong: #2d693c;
-  --ds-color-green-text-subtle: #2d693c;
-  --ds-color-green-text-default: #15311c;
-  --ds-color-green-base-default: #2E6B3D;
-  --ds-color-green-base-hover: #255631;
-  --ds-color-green-base-active: #1c4225;
-  --ds-color-green-base-contrast-subtle: #dbe6de;
-  --ds-color-green-base-contrast-default: #ffffff;
-  --ds-color-light-pink-background-default: #ffffff;
-  --ds-color-light-pink-background-tinted: #fff0ef;
-  --ds-color-light-pink-surface-default: #ffffff;
-  --ds-color-light-pink-surface-tinted: #ffe2e0;
-  --ds-color-light-pink-surface-hover: #ffcfcb;
-  --ds-color-light-pink-surface-active: #ffb8b3;
-  --ds-color-light-pink-border-subtle: #ffa39d;
-  --ds-color-light-pink-border-default: #a86763;
-  --ds-color-light-pink-border-strong: #82504c;
-  --ds-color-light-pink-text-subtle: #82504c;
-  --ds-color-light-pink-text-default: #3d2524;
-  --ds-color-light-pink-base-default: #FF9D96;
-  --ds-color-light-pink-base-hover: #e18b85;
-  --ds-color-light-pink-base-active: #c47973;
-  --ds-color-light-pink-base-contrast-subtle: #34201e;
-  --ds-color-light-pink-base-contrast-default: #000000;
-  --ds-color-dark-pink-background-default: #ffffff;
-  --ds-color-dark-pink-background-tinted: #fbf1f6;
-  --ds-color-dark-pink-surface-default: #ffffff;
-  --ds-color-dark-pink-surface-tinted: #f8e3ed;
-  --ds-color-dark-pink-surface-hover: #f3d1e1;
-  --ds-color-dark-pink-surface-active: #edbdd4;
-  --ds-color-dark-pink-border-subtle: #e8aac7;
-  --ds-color-dark-pink-border-default: #cd4586;
-  --ds-color-dark-pink-border-strong: #b90058;
-  --ds-color-dark-pink-text-subtle: #b90058;
-  --ds-color-dark-pink-text-default: #5c002c;
-  --ds-color-dark-pink-base-default: #BB0059;
-  --ds-color-dark-pink-base-hover: #970048;
-  --ds-color-dark-pink-base-active: #750038;
-  --ds-color-dark-pink-base-contrast-subtle: #f6dce8;
-  --ds-color-dark-pink-base-contrast-default: #ffffff;
-  --ds-color-dark-red-background-default: #ffffff;
-  --ds-color-dark-red-background-tinted: #f7f2f5;
-  --ds-color-dark-red-surface-default: #ffffff;
-  --ds-color-dark-red-surface-tinted: #efe6eb;
-  --ds-color-dark-red-surface-hover: #e5d6dd;
-  --ds-color-dark-red-surface-active: #d9c4cf;
-  --ds-color-dark-red-border-subtle: #cfb4c2;
-  --ds-color-dark-red-border-default: #9e6984;
-  --ds-color-dark-red-border-strong: #894869;
-  --ds-color-dark-red-text-subtle: #894869;
-  --ds-color-dark-red-text-default: #5b002e;
-  --ds-color-dark-red-base-default: #5B002E;
-  --ds-color-dark-red-base-hover: #6e1e46;
-  --ds-color-dark-red-base-active: #7e365a;
-  --ds-color-dark-red-base-contrast-subtle: #d2b9c6;
-  --ds-color-dark-red-base-contrast-default: #ffffff;
+  --ds-color-aibel-green-background-default: #ffffff;
+  --ds-color-aibel-green-background-tinted: #f0f5f1;
+  --ds-color-aibel-green-surface-default: #ffffff;
+  --ds-color-aibel-green-surface-tinted: #e2ebe4;
+  --ds-color-aibel-green-surface-hover: #d0ddd3;
+  --ds-color-aibel-green-surface-active: #bbcfc0;
+  --ds-color-aibel-green-border-subtle: #a9c2af;
+  --ds-color-aibel-green-border-default: #51845e;
+  --ds-color-aibel-green-border-strong: #2d693c;
+  --ds-color-aibel-green-text-subtle: #2d693c;
+  --ds-color-aibel-green-text-default: #15311c;
+  --ds-color-aibel-green-base-default: #2E6B3D;
+  --ds-color-aibel-green-base-hover: #255631;
+  --ds-color-aibel-green-base-active: #1c4225;
+  --ds-color-aibel-green-base-contrast-subtle: #dbe6de;
+  --ds-color-aibel-green-base-contrast-default: #ffffff;
+  --ds-color-aibel-neutral-background-default: #ffffff;
+  --ds-color-aibel-neutral-background-tinted: #f3f3f4;
+  --ds-color-aibel-neutral-surface-default: #ffffff;
+  --ds-color-aibel-neutral-surface-tinted: #e8e8e9;
+  --ds-color-aibel-neutral-surface-hover: #d9dadb;
+  --ds-color-aibel-neutral-surface-active: #c9cacb;
+  --ds-color-aibel-neutral-border-subtle: #bbbcbd;
+  --ds-color-aibel-neutral-border-default: #77797b;
+  --ds-color-aibel-neutral-border-strong: #5b5d60;
+  --ds-color-aibel-neutral-text-subtle: #5b5d60;
+  --ds-color-aibel-neutral-text-default: #292c30;
+  --ds-color-aibel-neutral-base-default: #24272B;
+  --ds-color-aibel-neutral-base-hover: #36383c;
+  --ds-color-aibel-neutral-base-active: #484a4e;
+  --ds-color-aibel-neutral-base-contrast-subtle: #b9babb;
+  --ds-color-aibel-neutral-base-contrast-default: #ffffff;
   --ds-color-info-background-default: #ffffff;
   --ds-color-info-background-tinted: #eff4ff;
   --ds-color-info-surface-default: #ffffff;
@@ -308,38 +244,22 @@ design-tokens: v1.11.1
  
 @media (prefers-color-scheme: light) {
   [data-color-scheme="auto"] {
-  --ds-color-bright-blue-background-default: #ffffff;
-  --ds-color-bright-blue-background-tinted: #f1f3fb;
-  --ds-color-bright-blue-surface-default: #ffffff;
-  --ds-color-bright-blue-surface-tinted: #e3e8f6;
-  --ds-color-bright-blue-surface-hover: #d1daf1;
-  --ds-color-bright-blue-surface-active: #bdcaeb;
-  --ds-color-bright-blue-border-subtle: #abbbe5;
-  --ds-color-bright-blue-border-default: #5575ca;
-  --ds-color-bright-blue-border-strong: #2f56bf;
-  --ds-color-bright-blue-text-subtle: #2f56bf;
-  --ds-color-bright-blue-text-default: #002179;
-  --ds-color-bright-blue-base-default: #0030B0;
-  --ds-color-bright-blue-base-hover: #1f49ba;
-  --ds-color-bright-blue-base-active: #3d61c3;
-  --ds-color-bright-blue-base-contrast-subtle: #d3dbf1;
-  --ds-color-bright-blue-base-contrast-default: #ffffff;
-  --ds-color-light-blue-background-default: #ffffff;
-  --ds-color-light-blue-background-tinted: #e1f7ff;
-  --ds-color-light-blue-surface-default: #ffffff;
-  --ds-color-light-blue-surface-tinted: #c4f0ff;
-  --ds-color-light-blue-surface-hover: #b7e1ef;
-  --ds-color-light-blue-surface-active: #aad0dd;
-  --ds-color-light-blue-border-subtle: #9ec1cd;
-  --ds-color-light-blue-border-default: #667c84;
-  --ds-color-light-blue-border-strong: #4f6066;
-  --ds-color-light-blue-text-subtle: #4f6066;
-  --ds-color-light-blue-text-default: #252d30;
-  --ds-color-light-blue-base-default: #C4F0FF;
-  --ds-color-light-blue-base-hover: #b1d9e6;
-  --ds-color-light-blue-base-active: #9ec2ce;
-  --ds-color-light-blue-base-contrast-subtle: #404e53;
-  --ds-color-light-blue-base-contrast-default: #000000;
+  --ds-color-aibel-bright-blue-background-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
+  --ds-color-aibel-bright-blue-surface-default: #ffffff;
+  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
+  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
+  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
+  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
+  --ds-color-aibel-bright-blue-border-default: #5575ca;
+  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
+  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
+  --ds-color-aibel-bright-blue-text-default: #002179;
+  --ds-color-aibel-bright-blue-base-default: #0030B0;
+  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
+  --ds-color-aibel-bright-blue-base-active: #3d61c3;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
+  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-blue-background-default: #ffffff;
   --ds-color-aibel-blue-background-tinted: #f2f4f6;
   --ds-color-aibel-blue-surface-default: #ffffff;
@@ -372,86 +292,38 @@ design-tokens: v1.11.1
   --ds-color-neutral-base-active: #484a4e;
   --ds-color-neutral-base-contrast-subtle: #b9babb;
   --ds-color-neutral-base-contrast-default: #ffffff;
-  --ds-color-light-green-background-default: #ffffff;
-  --ds-color-light-green-background-tinted: #caffeb;
-  --ds-color-light-green-surface-default: #ffffff;
-  --ds-color-light-green-surface-tinted: #84ffd0;
-  --ds-color-light-green-surface-hover: #78f0c2;
-  --ds-color-light-green-surface-active: #6fdeb4;
-  --ds-color-light-green-border-subtle: #68cea7;
-  --ds-color-light-green-border-default: #43856c;
-  --ds-color-light-green-border-strong: #346753;
-  --ds-color-light-green-text-subtle: #346753;
-  --ds-color-light-green-text-default: #183027;
-  --ds-color-light-green-base-default: #80FFCF;
-  --ds-color-light-green-base-hover: #73e6bb;
-  --ds-color-light-green-base-active: #67cea7;
-  --ds-color-light-green-base-contrast-subtle: #2a5343;
-  --ds-color-light-green-base-contrast-default: #000000;
-  --ds-color-green-background-default: #ffffff;
-  --ds-color-green-background-tinted: #f0f5f1;
-  --ds-color-green-surface-default: #ffffff;
-  --ds-color-green-surface-tinted: #e2ebe4;
-  --ds-color-green-surface-hover: #d0ddd3;
-  --ds-color-green-surface-active: #bbcfc0;
-  --ds-color-green-border-subtle: #a9c2af;
-  --ds-color-green-border-default: #51845e;
-  --ds-color-green-border-strong: #2d693c;
-  --ds-color-green-text-subtle: #2d693c;
-  --ds-color-green-text-default: #15311c;
-  --ds-color-green-base-default: #2E6B3D;
-  --ds-color-green-base-hover: #255631;
-  --ds-color-green-base-active: #1c4225;
-  --ds-color-green-base-contrast-subtle: #dbe6de;
-  --ds-color-green-base-contrast-default: #ffffff;
-  --ds-color-light-pink-background-default: #ffffff;
-  --ds-color-light-pink-background-tinted: #fff0ef;
-  --ds-color-light-pink-surface-default: #ffffff;
-  --ds-color-light-pink-surface-tinted: #ffe2e0;
-  --ds-color-light-pink-surface-hover: #ffcfcb;
-  --ds-color-light-pink-surface-active: #ffb8b3;
-  --ds-color-light-pink-border-subtle: #ffa39d;
-  --ds-color-light-pink-border-default: #a86763;
-  --ds-color-light-pink-border-strong: #82504c;
-  --ds-color-light-pink-text-subtle: #82504c;
-  --ds-color-light-pink-text-default: #3d2524;
-  --ds-color-light-pink-base-default: #FF9D96;
-  --ds-color-light-pink-base-hover: #e18b85;
-  --ds-color-light-pink-base-active: #c47973;
-  --ds-color-light-pink-base-contrast-subtle: #34201e;
-  --ds-color-light-pink-base-contrast-default: #000000;
-  --ds-color-dark-pink-background-default: #ffffff;
-  --ds-color-dark-pink-background-tinted: #fbf1f6;
-  --ds-color-dark-pink-surface-default: #ffffff;
-  --ds-color-dark-pink-surface-tinted: #f8e3ed;
-  --ds-color-dark-pink-surface-hover: #f3d1e1;
-  --ds-color-dark-pink-surface-active: #edbdd4;
-  --ds-color-dark-pink-border-subtle: #e8aac7;
-  --ds-color-dark-pink-border-default: #cd4586;
-  --ds-color-dark-pink-border-strong: #b90058;
-  --ds-color-dark-pink-text-subtle: #b90058;
-  --ds-color-dark-pink-text-default: #5c002c;
-  --ds-color-dark-pink-base-default: #BB0059;
-  --ds-color-dark-pink-base-hover: #970048;
-  --ds-color-dark-pink-base-active: #750038;
-  --ds-color-dark-pink-base-contrast-subtle: #f6dce8;
-  --ds-color-dark-pink-base-contrast-default: #ffffff;
-  --ds-color-dark-red-background-default: #ffffff;
-  --ds-color-dark-red-background-tinted: #f7f2f5;
-  --ds-color-dark-red-surface-default: #ffffff;
-  --ds-color-dark-red-surface-tinted: #efe6eb;
-  --ds-color-dark-red-surface-hover: #e5d6dd;
-  --ds-color-dark-red-surface-active: #d9c4cf;
-  --ds-color-dark-red-border-subtle: #cfb4c2;
-  --ds-color-dark-red-border-default: #9e6984;
-  --ds-color-dark-red-border-strong: #894869;
-  --ds-color-dark-red-text-subtle: #894869;
-  --ds-color-dark-red-text-default: #5b002e;
-  --ds-color-dark-red-base-default: #5B002E;
-  --ds-color-dark-red-base-hover: #6e1e46;
-  --ds-color-dark-red-base-active: #7e365a;
-  --ds-color-dark-red-base-contrast-subtle: #d2b9c6;
-  --ds-color-dark-red-base-contrast-default: #ffffff;
+  --ds-color-aibel-green-background-default: #ffffff;
+  --ds-color-aibel-green-background-tinted: #f0f5f1;
+  --ds-color-aibel-green-surface-default: #ffffff;
+  --ds-color-aibel-green-surface-tinted: #e2ebe4;
+  --ds-color-aibel-green-surface-hover: #d0ddd3;
+  --ds-color-aibel-green-surface-active: #bbcfc0;
+  --ds-color-aibel-green-border-subtle: #a9c2af;
+  --ds-color-aibel-green-border-default: #51845e;
+  --ds-color-aibel-green-border-strong: #2d693c;
+  --ds-color-aibel-green-text-subtle: #2d693c;
+  --ds-color-aibel-green-text-default: #15311c;
+  --ds-color-aibel-green-base-default: #2E6B3D;
+  --ds-color-aibel-green-base-hover: #255631;
+  --ds-color-aibel-green-base-active: #1c4225;
+  --ds-color-aibel-green-base-contrast-subtle: #dbe6de;
+  --ds-color-aibel-green-base-contrast-default: #ffffff;
+  --ds-color-aibel-neutral-background-default: #ffffff;
+  --ds-color-aibel-neutral-background-tinted: #f3f3f4;
+  --ds-color-aibel-neutral-surface-default: #ffffff;
+  --ds-color-aibel-neutral-surface-tinted: #e8e8e9;
+  --ds-color-aibel-neutral-surface-hover: #d9dadb;
+  --ds-color-aibel-neutral-surface-active: #c9cacb;
+  --ds-color-aibel-neutral-border-subtle: #bbbcbd;
+  --ds-color-aibel-neutral-border-default: #77797b;
+  --ds-color-aibel-neutral-border-strong: #5b5d60;
+  --ds-color-aibel-neutral-text-subtle: #5b5d60;
+  --ds-color-aibel-neutral-text-default: #292c30;
+  --ds-color-aibel-neutral-base-default: #24272B;
+  --ds-color-aibel-neutral-base-hover: #36383c;
+  --ds-color-aibel-neutral-base-active: #484a4e;
+  --ds-color-aibel-neutral-base-contrast-subtle: #b9babb;
+  --ds-color-aibel-neutral-base-contrast-default: #ffffff;
   --ds-color-info-background-default: #ffffff;
   --ds-color-info-background-tinted: #eff4ff;
   --ds-color-info-surface-default: #ffffff;
@@ -690,38 +562,22 @@ design-tokens: v1.11.1
 
 @layer ds.theme.color-scheme.dark {
 [data-color-scheme="dark"] {
-  --ds-color-bright-blue-background-default: #091635;
-  --ds-color-bright-blue-background-tinted: #0c1d45;
-  --ds-color-bright-blue-surface-default: #0f2557;
-  --ds-color-bright-blue-surface-tinted: #112a64;
-  --ds-color-bright-blue-surface-hover: #143174;
-  --ds-color-bright-blue-surface-active: #193d90;
-  --ds-color-bright-blue-border-subtle: #2b4c99;
-  --ds-color-bright-blue-border-default: #6981b7;
-  --ds-color-bright-blue-border-strong: #98a8cd;
-  --ds-color-bright-blue-text-subtle: #98a8cd;
-  --ds-color-bright-blue-text-default: #e9ecf4;
-  --ds-color-bright-blue-base-default: #97aadf;
-  --ds-color-bright-blue-base-hover: #7c95d6;
-  --ds-color-bright-blue-base-active: #607ece;
-  --ds-color-bright-blue-base-contrast-subtle: #181b23;
-  --ds-color-bright-blue-base-contrast-default: #000000;
-  --ds-color-light-blue-background-default: #151819;
-  --ds-color-light-blue-background-tinted: #1c2021;
-  --ds-color-light-blue-surface-default: #23292a;
-  --ds-color-light-blue-surface-tinted: #292f31;
-  --ds-color-light-blue-surface-hover: #2f3739;
-  --ds-color-light-blue-surface-active: #3c4447;
-  --ds-color-light-blue-border-subtle: #475255;
-  --ds-color-light-blue-border-default: #73848a;
-  --ds-color-light-blue-border-strong: #95acb3;
-  --ds-color-light-blue-text-subtle: #95acb3;
-  --ds-color-light-blue-text-default: #d7f1f9;
-  --ds-color-light-blue-base-default: #131819;
-  --ds-color-light-blue-base-hover: #21282b;
-  --ds-color-light-blue-base-active: #2f3a3d;
-  --ds-color-light-blue-base-contrast-subtle: #a3a5a6;
-  --ds-color-light-blue-base-contrast-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-default: #091635;
+  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
+  --ds-color-aibel-bright-blue-surface-default: #0f2557;
+  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
+  --ds-color-aibel-bright-blue-surface-hover: #143174;
+  --ds-color-aibel-bright-blue-surface-active: #193d90;
+  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
+  --ds-color-aibel-bright-blue-border-default: #6981b7;
+  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
+  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
+  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
+  --ds-color-aibel-bright-blue-base-default: #97aadf;
+  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
+  --ds-color-aibel-bright-blue-base-active: #607ece;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
+  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-blue-background-default: #0a182b;
   --ds-color-aibel-blue-background-tinted: #0d2038;
   --ds-color-aibel-blue-surface-default: #102847;
@@ -754,86 +610,38 @@ design-tokens: v1.11.1
   --ds-color-neutral-base-active: #7f8184;
   --ds-color-neutral-base-contrast-subtle: #1b1b1b;
   --ds-color-neutral-base-contrast-default: #000000;
-  --ds-color-light-green-background-default: #111a16;
-  --ds-color-light-green-background-tinted: #17221d;
-  --ds-color-light-green-surface-default: #1d2b25;
-  --ds-color-light-green-surface-tinted: #21312a;
-  --ds-color-light-green-surface-hover: #263931;
-  --ds-color-light-green-surface-active: #30483e;
-  --ds-color-light-green-border-subtle: #39564a;
-  --ds-color-light-green-border-default: #5d8b78;
-  --ds-color-light-green-border-strong: #78b49b;
-  --ds-color-light-green-text-subtle: #78b49b;
-  --ds-color-light-green-text-default: #bdf9e0;
-  --ds-color-light-green-base-default: #0d1b16;
-  --ds-color-light-green-base-hover: #162c24;
-  --ds-color-light-green-base-active: #203f33;
-  --ds-color-light-green-base-contrast-subtle: #a3a8a6;
-  --ds-color-light-green-base-contrast-default: #ffffff;
-  --ds-color-green-background-default: #101a12;
-  --ds-color-green-background-tinted: #152318;
-  --ds-color-green-surface-default: #1b2c1e;
-  --ds-color-green-surface-tinted: #1f3223;
-  --ds-color-green-surface-hover: #243a28;
-  --ds-color-green-surface-active: #2d4933;
-  --ds-color-green-border-subtle: #36583c;
-  --ds-color-green-border-default: #6a8970;
-  --ds-color-green-border-strong: #98ad9c;
-  --ds-color-green-text-subtle: #98ad9c;
-  --ds-color-green-text-default: #e9edea;
-  --ds-color-green-base-default: #709a7a;
-  --ds-color-green-base-hover: #8bad94;
-  --ds-color-green-base-active: #a8c1ae;
-  --ds-color-green-base-contrast-subtle: #151d17;
-  --ds-color-green-base-contrast-default: #000000;
-  --ds-color-light-pink-background-default: #1f1615;
-  --ds-color-light-pink-background-tinted: #291d1c;
-  --ds-color-light-pink-surface-default: #332423;
-  --ds-color-light-pink-surface-tinted: #3b2928;
-  --ds-color-light-pink-surface-hover: #45302f;
-  --ds-color-light-pink-surface-active: #563d3b;
-  --ds-color-light-pink-border-subtle: #674846;
-  --ds-color-light-pink-border-default: #a67571;
-  --ds-color-light-pink-border-strong: #d79893;
-  --ds-color-light-pink-text-subtle: #d79893;
-  --ds-color-light-pink-text-default: #fae8e7;
-  --ds-color-light-pink-base-default: #543431;
-  --ds-color-light-pink-base-hover: #6e4441;
-  --ds-color-light-pink-base-active: #895450;
-  --ds-color-light-pink-base-contrast-subtle: #dbd5d4;
-  --ds-color-light-pink-base-contrast-default: #ffffff;
-  --ds-color-dark-pink-background-default: #2a0f18;
-  --ds-color-dark-pink-background-tinted: #37131f;
-  --ds-color-dark-pink-surface-default: #451827;
-  --ds-color-dark-pink-surface-tinted: #501c2d;
-  --ds-color-dark-pink-surface-hover: #5c2034;
-  --ds-color-dark-pink-surface-active: #732941;
-  --ds-color-dark-pink-border-subtle: #89304d;
-  --ds-color-dark-pink-border-default: #ba6883;
-  --ds-color-dark-pink-border-strong: #d099ab;
-  --ds-color-dark-pink-text-subtle: #d099ab;
-  --ds-color-dark-pink-text-default: #f5e9ed;
-  --ds-color-dark-pink-base-default: #d86ca0;
-  --ds-color-dark-pink-base-hover: #e08cb4;
-  --ds-color-dark-pink-base-active: #e8a9c7;
-  --ds-color-dark-pink-base-contrast-subtle: #29151f;
-  --ds-color-dark-pink-base-contrast-default: #000000;
-  --ds-color-dark-red-background-default: #2c0d19;
-  --ds-color-dark-red-background-tinted: #391121;
-  --ds-color-dark-red-surface-default: #481629;
-  --ds-color-dark-red-surface-tinted: #511a30;
-  --ds-color-dark-red-surface-hover: #582338;
-  --ds-color-dark-red-surface-active: #653347;
-  --ds-color-dark-red-border-subtle: #704254;
-  --ds-color-dark-red-border-default: #997885;
-  --ds-color-dark-red-border-strong: #b8a2ab;
-  --ds-color-dark-red-text-subtle: #b8a2ab;
-  --ds-color-dark-red-text-default: #f0ebed;
-  --ds-color-dark-red-base-default: #c3a2b3;
-  --ds-color-dark-red-base-hover: #b48a9f;
-  --ds-color-dark-red-base-active: #a5728c;
-  --ds-color-dark-red-base-contrast-subtle: #1f1a1c;
-  --ds-color-dark-red-base-contrast-default: #000000;
+  --ds-color-aibel-green-background-default: #101a12;
+  --ds-color-aibel-green-background-tinted: #152318;
+  --ds-color-aibel-green-surface-default: #1b2c1e;
+  --ds-color-aibel-green-surface-tinted: #1f3223;
+  --ds-color-aibel-green-surface-hover: #243a28;
+  --ds-color-aibel-green-surface-active: #2d4933;
+  --ds-color-aibel-green-border-subtle: #36583c;
+  --ds-color-aibel-green-border-default: #6a8970;
+  --ds-color-aibel-green-border-strong: #98ad9c;
+  --ds-color-aibel-green-text-subtle: #98ad9c;
+  --ds-color-aibel-green-text-default: #e9edea;
+  --ds-color-aibel-green-base-default: #709a7a;
+  --ds-color-aibel-green-base-hover: #8bad94;
+  --ds-color-aibel-green-base-active: #a8c1ae;
+  --ds-color-aibel-green-base-contrast-subtle: #151d17;
+  --ds-color-aibel-green-base-contrast-default: #000000;
+  --ds-color-aibel-neutral-background-default: #17181a;
+  --ds-color-aibel-neutral-background-tinted: #1e2022;
+  --ds-color-aibel-neutral-surface-default: #26282b;
+  --ds-color-aibel-neutral-surface-tinted: #2c2e31;
+  --ds-color-aibel-neutral-surface-hover: #343538;
+  --ds-color-aibel-neutral-surface-active: #414346;
+  --ds-color-aibel-neutral-border-subtle: #4e5052;
+  --ds-color-aibel-neutral-border-default: #808183;
+  --ds-color-aibel-neutral-border-strong: #a7a8a9;
+  --ds-color-aibel-neutral-text-subtle: #a7a8a9;
+  --ds-color-aibel-neutral-text-default: #ececec;
+  --ds-color-aibel-neutral-base-default: #aaabad;
+  --ds-color-aibel-neutral-base-hover: #959698;
+  --ds-color-aibel-neutral-base-active: #7f8184;
+  --ds-color-aibel-neutral-base-contrast-subtle: #1b1b1b;
+  --ds-color-aibel-neutral-base-contrast-default: #000000;
   --ds-color-info-background-default: #121825;
   --ds-color-info-background-tinted: #181f30;
   --ds-color-info-surface-default: #1e283d;
@@ -907,38 +715,22 @@ design-tokens: v1.11.1
  
 @media (prefers-color-scheme: dark) {
   [data-color-scheme="auto"] {
-  --ds-color-bright-blue-background-default: #091635;
-  --ds-color-bright-blue-background-tinted: #0c1d45;
-  --ds-color-bright-blue-surface-default: #0f2557;
-  --ds-color-bright-blue-surface-tinted: #112a64;
-  --ds-color-bright-blue-surface-hover: #143174;
-  --ds-color-bright-blue-surface-active: #193d90;
-  --ds-color-bright-blue-border-subtle: #2b4c99;
-  --ds-color-bright-blue-border-default: #6981b7;
-  --ds-color-bright-blue-border-strong: #98a8cd;
-  --ds-color-bright-blue-text-subtle: #98a8cd;
-  --ds-color-bright-blue-text-default: #e9ecf4;
-  --ds-color-bright-blue-base-default: #97aadf;
-  --ds-color-bright-blue-base-hover: #7c95d6;
-  --ds-color-bright-blue-base-active: #607ece;
-  --ds-color-bright-blue-base-contrast-subtle: #181b23;
-  --ds-color-bright-blue-base-contrast-default: #000000;
-  --ds-color-light-blue-background-default: #151819;
-  --ds-color-light-blue-background-tinted: #1c2021;
-  --ds-color-light-blue-surface-default: #23292a;
-  --ds-color-light-blue-surface-tinted: #292f31;
-  --ds-color-light-blue-surface-hover: #2f3739;
-  --ds-color-light-blue-surface-active: #3c4447;
-  --ds-color-light-blue-border-subtle: #475255;
-  --ds-color-light-blue-border-default: #73848a;
-  --ds-color-light-blue-border-strong: #95acb3;
-  --ds-color-light-blue-text-subtle: #95acb3;
-  --ds-color-light-blue-text-default: #d7f1f9;
-  --ds-color-light-blue-base-default: #131819;
-  --ds-color-light-blue-base-hover: #21282b;
-  --ds-color-light-blue-base-active: #2f3a3d;
-  --ds-color-light-blue-base-contrast-subtle: #a3a5a6;
-  --ds-color-light-blue-base-contrast-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-default: #091635;
+  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
+  --ds-color-aibel-bright-blue-surface-default: #0f2557;
+  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
+  --ds-color-aibel-bright-blue-surface-hover: #143174;
+  --ds-color-aibel-bright-blue-surface-active: #193d90;
+  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
+  --ds-color-aibel-bright-blue-border-default: #6981b7;
+  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
+  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
+  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
+  --ds-color-aibel-bright-blue-base-default: #97aadf;
+  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
+  --ds-color-aibel-bright-blue-base-active: #607ece;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
+  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-blue-background-default: #0a182b;
   --ds-color-aibel-blue-background-tinted: #0d2038;
   --ds-color-aibel-blue-surface-default: #102847;
@@ -971,86 +763,38 @@ design-tokens: v1.11.1
   --ds-color-neutral-base-active: #7f8184;
   --ds-color-neutral-base-contrast-subtle: #1b1b1b;
   --ds-color-neutral-base-contrast-default: #000000;
-  --ds-color-light-green-background-default: #111a16;
-  --ds-color-light-green-background-tinted: #17221d;
-  --ds-color-light-green-surface-default: #1d2b25;
-  --ds-color-light-green-surface-tinted: #21312a;
-  --ds-color-light-green-surface-hover: #263931;
-  --ds-color-light-green-surface-active: #30483e;
-  --ds-color-light-green-border-subtle: #39564a;
-  --ds-color-light-green-border-default: #5d8b78;
-  --ds-color-light-green-border-strong: #78b49b;
-  --ds-color-light-green-text-subtle: #78b49b;
-  --ds-color-light-green-text-default: #bdf9e0;
-  --ds-color-light-green-base-default: #0d1b16;
-  --ds-color-light-green-base-hover: #162c24;
-  --ds-color-light-green-base-active: #203f33;
-  --ds-color-light-green-base-contrast-subtle: #a3a8a6;
-  --ds-color-light-green-base-contrast-default: #ffffff;
-  --ds-color-green-background-default: #101a12;
-  --ds-color-green-background-tinted: #152318;
-  --ds-color-green-surface-default: #1b2c1e;
-  --ds-color-green-surface-tinted: #1f3223;
-  --ds-color-green-surface-hover: #243a28;
-  --ds-color-green-surface-active: #2d4933;
-  --ds-color-green-border-subtle: #36583c;
-  --ds-color-green-border-default: #6a8970;
-  --ds-color-green-border-strong: #98ad9c;
-  --ds-color-green-text-subtle: #98ad9c;
-  --ds-color-green-text-default: #e9edea;
-  --ds-color-green-base-default: #709a7a;
-  --ds-color-green-base-hover: #8bad94;
-  --ds-color-green-base-active: #a8c1ae;
-  --ds-color-green-base-contrast-subtle: #151d17;
-  --ds-color-green-base-contrast-default: #000000;
-  --ds-color-light-pink-background-default: #1f1615;
-  --ds-color-light-pink-background-tinted: #291d1c;
-  --ds-color-light-pink-surface-default: #332423;
-  --ds-color-light-pink-surface-tinted: #3b2928;
-  --ds-color-light-pink-surface-hover: #45302f;
-  --ds-color-light-pink-surface-active: #563d3b;
-  --ds-color-light-pink-border-subtle: #674846;
-  --ds-color-light-pink-border-default: #a67571;
-  --ds-color-light-pink-border-strong: #d79893;
-  --ds-color-light-pink-text-subtle: #d79893;
-  --ds-color-light-pink-text-default: #fae8e7;
-  --ds-color-light-pink-base-default: #543431;
-  --ds-color-light-pink-base-hover: #6e4441;
-  --ds-color-light-pink-base-active: #895450;
-  --ds-color-light-pink-base-contrast-subtle: #dbd5d4;
-  --ds-color-light-pink-base-contrast-default: #ffffff;
-  --ds-color-dark-pink-background-default: #2a0f18;
-  --ds-color-dark-pink-background-tinted: #37131f;
-  --ds-color-dark-pink-surface-default: #451827;
-  --ds-color-dark-pink-surface-tinted: #501c2d;
-  --ds-color-dark-pink-surface-hover: #5c2034;
-  --ds-color-dark-pink-surface-active: #732941;
-  --ds-color-dark-pink-border-subtle: #89304d;
-  --ds-color-dark-pink-border-default: #ba6883;
-  --ds-color-dark-pink-border-strong: #d099ab;
-  --ds-color-dark-pink-text-subtle: #d099ab;
-  --ds-color-dark-pink-text-default: #f5e9ed;
-  --ds-color-dark-pink-base-default: #d86ca0;
-  --ds-color-dark-pink-base-hover: #e08cb4;
-  --ds-color-dark-pink-base-active: #e8a9c7;
-  --ds-color-dark-pink-base-contrast-subtle: #29151f;
-  --ds-color-dark-pink-base-contrast-default: #000000;
-  --ds-color-dark-red-background-default: #2c0d19;
-  --ds-color-dark-red-background-tinted: #391121;
-  --ds-color-dark-red-surface-default: #481629;
-  --ds-color-dark-red-surface-tinted: #511a30;
-  --ds-color-dark-red-surface-hover: #582338;
-  --ds-color-dark-red-surface-active: #653347;
-  --ds-color-dark-red-border-subtle: #704254;
-  --ds-color-dark-red-border-default: #997885;
-  --ds-color-dark-red-border-strong: #b8a2ab;
-  --ds-color-dark-red-text-subtle: #b8a2ab;
-  --ds-color-dark-red-text-default: #f0ebed;
-  --ds-color-dark-red-base-default: #c3a2b3;
-  --ds-color-dark-red-base-hover: #b48a9f;
-  --ds-color-dark-red-base-active: #a5728c;
-  --ds-color-dark-red-base-contrast-subtle: #1f1a1c;
-  --ds-color-dark-red-base-contrast-default: #000000;
+  --ds-color-aibel-green-background-default: #101a12;
+  --ds-color-aibel-green-background-tinted: #152318;
+  --ds-color-aibel-green-surface-default: #1b2c1e;
+  --ds-color-aibel-green-surface-tinted: #1f3223;
+  --ds-color-aibel-green-surface-hover: #243a28;
+  --ds-color-aibel-green-surface-active: #2d4933;
+  --ds-color-aibel-green-border-subtle: #36583c;
+  --ds-color-aibel-green-border-default: #6a8970;
+  --ds-color-aibel-green-border-strong: #98ad9c;
+  --ds-color-aibel-green-text-subtle: #98ad9c;
+  --ds-color-aibel-green-text-default: #e9edea;
+  --ds-color-aibel-green-base-default: #709a7a;
+  --ds-color-aibel-green-base-hover: #8bad94;
+  --ds-color-aibel-green-base-active: #a8c1ae;
+  --ds-color-aibel-green-base-contrast-subtle: #151d17;
+  --ds-color-aibel-green-base-contrast-default: #000000;
+  --ds-color-aibel-neutral-background-default: #17181a;
+  --ds-color-aibel-neutral-background-tinted: #1e2022;
+  --ds-color-aibel-neutral-surface-default: #26282b;
+  --ds-color-aibel-neutral-surface-tinted: #2c2e31;
+  --ds-color-aibel-neutral-surface-hover: #343538;
+  --ds-color-aibel-neutral-surface-active: #414346;
+  --ds-color-aibel-neutral-border-subtle: #4e5052;
+  --ds-color-aibel-neutral-border-default: #808183;
+  --ds-color-aibel-neutral-border-strong: #a7a8a9;
+  --ds-color-aibel-neutral-text-subtle: #a7a8a9;
+  --ds-color-aibel-neutral-text-default: #ececec;
+  --ds-color-aibel-neutral-base-default: #aaabad;
+  --ds-color-aibel-neutral-base-hover: #959698;
+  --ds-color-aibel-neutral-base-active: #7f8184;
+  --ds-color-aibel-neutral-base-contrast-subtle: #1b1b1b;
+  --ds-color-aibel-neutral-base-contrast-default: #000000;
   --ds-color-info-background-default: #121825;
   --ds-color-info-background-tinted: #181f30;
   --ds-color-info-surface-default: #1e283d;
@@ -1235,23 +979,67 @@ design-tokens: v1.11.1
 }
 
 @layer ds.theme.color {
-:root, [data-color-scheme], [data-color="bright-blue"] {
-  --ds-color-background-default: var(--ds-color-bright-blue-background-default);
-  --ds-color-background-tinted: var(--ds-color-bright-blue-background-tinted);
-  --ds-color-surface-default: var(--ds-color-bright-blue-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-bright-blue-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-bright-blue-surface-hover);
-  --ds-color-surface-active: var(--ds-color-bright-blue-surface-active);
-  --ds-color-border-subtle: var(--ds-color-bright-blue-border-subtle);
-  --ds-color-border-default: var(--ds-color-bright-blue-border-default);
-  --ds-color-border-strong: var(--ds-color-bright-blue-border-strong);
-  --ds-color-text-subtle: var(--ds-color-bright-blue-text-subtle);
-  --ds-color-text-default: var(--ds-color-bright-blue-text-default);
-  --ds-color-base-default: var(--ds-color-bright-blue-base-default);
-  --ds-color-base-hover: var(--ds-color-bright-blue-base-hover);
-  --ds-color-base-active: var(--ds-color-bright-blue-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-bright-blue-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-bright-blue-base-contrast-default);
+:root, [data-color-scheme], [data-color="aibel-bright-blue"] {
+  --ds-color-background-default: var(--ds-color-aibel-bright-blue-background-default);
+  --ds-color-background-tinted: var(--ds-color-aibel-bright-blue-background-tinted);
+  --ds-color-surface-default: var(--ds-color-aibel-bright-blue-surface-default);
+  --ds-color-surface-tinted: var(--ds-color-aibel-bright-blue-surface-tinted);
+  --ds-color-surface-hover: var(--ds-color-aibel-bright-blue-surface-hover);
+  --ds-color-surface-active: var(--ds-color-aibel-bright-blue-surface-active);
+  --ds-color-border-subtle: var(--ds-color-aibel-bright-blue-border-subtle);
+  --ds-color-border-default: var(--ds-color-aibel-bright-blue-border-default);
+  --ds-color-border-strong: var(--ds-color-aibel-bright-blue-border-strong);
+  --ds-color-text-subtle: var(--ds-color-aibel-bright-blue-text-subtle);
+  --ds-color-text-default: var(--ds-color-aibel-bright-blue-text-default);
+  --ds-color-base-default: var(--ds-color-aibel-bright-blue-base-default);
+  --ds-color-base-hover: var(--ds-color-aibel-bright-blue-base-hover);
+  --ds-color-base-active: var(--ds-color-aibel-bright-blue-base-active);
+  --ds-color-base-contrast-subtle: var(--ds-color-aibel-bright-blue-base-contrast-subtle);
+  --ds-color-base-contrast-default: var(--ds-color-aibel-bright-blue-base-contrast-default);
+}
+
+}
+
+@layer ds.theme.color {
+[data-color="aibel-green"], [data-color-scheme][data-color="aibel-green"] {
+  --ds-color-background-default: var(--ds-color-aibel-green-background-default);
+  --ds-color-background-tinted: var(--ds-color-aibel-green-background-tinted);
+  --ds-color-surface-default: var(--ds-color-aibel-green-surface-default);
+  --ds-color-surface-tinted: var(--ds-color-aibel-green-surface-tinted);
+  --ds-color-surface-hover: var(--ds-color-aibel-green-surface-hover);
+  --ds-color-surface-active: var(--ds-color-aibel-green-surface-active);
+  --ds-color-border-subtle: var(--ds-color-aibel-green-border-subtle);
+  --ds-color-border-default: var(--ds-color-aibel-green-border-default);
+  --ds-color-border-strong: var(--ds-color-aibel-green-border-strong);
+  --ds-color-text-subtle: var(--ds-color-aibel-green-text-subtle);
+  --ds-color-text-default: var(--ds-color-aibel-green-text-default);
+  --ds-color-base-default: var(--ds-color-aibel-green-base-default);
+  --ds-color-base-hover: var(--ds-color-aibel-green-base-hover);
+  --ds-color-base-active: var(--ds-color-aibel-green-base-active);
+  --ds-color-base-contrast-subtle: var(--ds-color-aibel-green-base-contrast-subtle);
+  --ds-color-base-contrast-default: var(--ds-color-aibel-green-base-contrast-default);
+}
+
+}
+
+@layer ds.theme.color {
+[data-color="aibel-neutral"], [data-color-scheme][data-color="aibel-neutral"] {
+  --ds-color-background-default: var(--ds-color-aibel-neutral-background-default);
+  --ds-color-background-tinted: var(--ds-color-aibel-neutral-background-tinted);
+  --ds-color-surface-default: var(--ds-color-aibel-neutral-surface-default);
+  --ds-color-surface-tinted: var(--ds-color-aibel-neutral-surface-tinted);
+  --ds-color-surface-hover: var(--ds-color-aibel-neutral-surface-hover);
+  --ds-color-surface-active: var(--ds-color-aibel-neutral-surface-active);
+  --ds-color-border-subtle: var(--ds-color-aibel-neutral-border-subtle);
+  --ds-color-border-default: var(--ds-color-aibel-neutral-border-default);
+  --ds-color-border-strong: var(--ds-color-aibel-neutral-border-strong);
+  --ds-color-text-subtle: var(--ds-color-aibel-neutral-text-subtle);
+  --ds-color-text-default: var(--ds-color-aibel-neutral-text-default);
+  --ds-color-base-default: var(--ds-color-aibel-neutral-base-default);
+  --ds-color-base-hover: var(--ds-color-aibel-neutral-base-hover);
+  --ds-color-base-active: var(--ds-color-aibel-neutral-base-active);
+  --ds-color-base-contrast-subtle: var(--ds-color-aibel-neutral-base-contrast-subtle);
+  --ds-color-base-contrast-default: var(--ds-color-aibel-neutral-base-contrast-default);
 }
 
 }
@@ -1279,72 +1067,6 @@ design-tokens: v1.11.1
 }
 
 @layer ds.theme.color {
-[data-color="dark-pink"], [data-color-scheme][data-color="dark-pink"] {
-  --ds-color-background-default: var(--ds-color-dark-pink-background-default);
-  --ds-color-background-tinted: var(--ds-color-dark-pink-background-tinted);
-  --ds-color-surface-default: var(--ds-color-dark-pink-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-dark-pink-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-dark-pink-surface-hover);
-  --ds-color-surface-active: var(--ds-color-dark-pink-surface-active);
-  --ds-color-border-subtle: var(--ds-color-dark-pink-border-subtle);
-  --ds-color-border-default: var(--ds-color-dark-pink-border-default);
-  --ds-color-border-strong: var(--ds-color-dark-pink-border-strong);
-  --ds-color-text-subtle: var(--ds-color-dark-pink-text-subtle);
-  --ds-color-text-default: var(--ds-color-dark-pink-text-default);
-  --ds-color-base-default: var(--ds-color-dark-pink-base-default);
-  --ds-color-base-hover: var(--ds-color-dark-pink-base-hover);
-  --ds-color-base-active: var(--ds-color-dark-pink-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-dark-pink-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-dark-pink-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
-[data-color="dark-red"], [data-color-scheme][data-color="dark-red"] {
-  --ds-color-background-default: var(--ds-color-dark-red-background-default);
-  --ds-color-background-tinted: var(--ds-color-dark-red-background-tinted);
-  --ds-color-surface-default: var(--ds-color-dark-red-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-dark-red-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-dark-red-surface-hover);
-  --ds-color-surface-active: var(--ds-color-dark-red-surface-active);
-  --ds-color-border-subtle: var(--ds-color-dark-red-border-subtle);
-  --ds-color-border-default: var(--ds-color-dark-red-border-default);
-  --ds-color-border-strong: var(--ds-color-dark-red-border-strong);
-  --ds-color-text-subtle: var(--ds-color-dark-red-text-subtle);
-  --ds-color-text-default: var(--ds-color-dark-red-text-default);
-  --ds-color-base-default: var(--ds-color-dark-red-base-default);
-  --ds-color-base-hover: var(--ds-color-dark-red-base-hover);
-  --ds-color-base-active: var(--ds-color-dark-red-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-dark-red-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-dark-red-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
-[data-color="green"], [data-color-scheme][data-color="green"] {
-  --ds-color-background-default: var(--ds-color-green-background-default);
-  --ds-color-background-tinted: var(--ds-color-green-background-tinted);
-  --ds-color-surface-default: var(--ds-color-green-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-green-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-green-surface-hover);
-  --ds-color-surface-active: var(--ds-color-green-surface-active);
-  --ds-color-border-subtle: var(--ds-color-green-border-subtle);
-  --ds-color-border-default: var(--ds-color-green-border-default);
-  --ds-color-border-strong: var(--ds-color-green-border-strong);
-  --ds-color-text-subtle: var(--ds-color-green-text-subtle);
-  --ds-color-text-default: var(--ds-color-green-text-default);
-  --ds-color-base-default: var(--ds-color-green-base-default);
-  --ds-color-base-hover: var(--ds-color-green-base-hover);
-  --ds-color-base-active: var(--ds-color-green-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-green-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-green-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
 [data-color="info"], [data-color-scheme][data-color="info"] {
   --ds-color-background-default: var(--ds-color-info-background-default);
   --ds-color-background-tinted: var(--ds-color-info-background-tinted);
@@ -1362,72 +1084,6 @@ design-tokens: v1.11.1
   --ds-color-base-active: var(--ds-color-info-base-active);
   --ds-color-base-contrast-subtle: var(--ds-color-info-base-contrast-subtle);
   --ds-color-base-contrast-default: var(--ds-color-info-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
-[data-color="light-blue"], [data-color-scheme][data-color="light-blue"] {
-  --ds-color-background-default: var(--ds-color-light-blue-background-default);
-  --ds-color-background-tinted: var(--ds-color-light-blue-background-tinted);
-  --ds-color-surface-default: var(--ds-color-light-blue-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-light-blue-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-light-blue-surface-hover);
-  --ds-color-surface-active: var(--ds-color-light-blue-surface-active);
-  --ds-color-border-subtle: var(--ds-color-light-blue-border-subtle);
-  --ds-color-border-default: var(--ds-color-light-blue-border-default);
-  --ds-color-border-strong: var(--ds-color-light-blue-border-strong);
-  --ds-color-text-subtle: var(--ds-color-light-blue-text-subtle);
-  --ds-color-text-default: var(--ds-color-light-blue-text-default);
-  --ds-color-base-default: var(--ds-color-light-blue-base-default);
-  --ds-color-base-hover: var(--ds-color-light-blue-base-hover);
-  --ds-color-base-active: var(--ds-color-light-blue-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-light-blue-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-light-blue-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
-[data-color="light-green"], [data-color-scheme][data-color="light-green"] {
-  --ds-color-background-default: var(--ds-color-light-green-background-default);
-  --ds-color-background-tinted: var(--ds-color-light-green-background-tinted);
-  --ds-color-surface-default: var(--ds-color-light-green-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-light-green-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-light-green-surface-hover);
-  --ds-color-surface-active: var(--ds-color-light-green-surface-active);
-  --ds-color-border-subtle: var(--ds-color-light-green-border-subtle);
-  --ds-color-border-default: var(--ds-color-light-green-border-default);
-  --ds-color-border-strong: var(--ds-color-light-green-border-strong);
-  --ds-color-text-subtle: var(--ds-color-light-green-text-subtle);
-  --ds-color-text-default: var(--ds-color-light-green-text-default);
-  --ds-color-base-default: var(--ds-color-light-green-base-default);
-  --ds-color-base-hover: var(--ds-color-light-green-base-hover);
-  --ds-color-base-active: var(--ds-color-light-green-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-light-green-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-light-green-base-contrast-default);
-}
-
-}
-
-@layer ds.theme.color {
-[data-color="light-pink"], [data-color-scheme][data-color="light-pink"] {
-  --ds-color-background-default: var(--ds-color-light-pink-background-default);
-  --ds-color-background-tinted: var(--ds-color-light-pink-background-tinted);
-  --ds-color-surface-default: var(--ds-color-light-pink-surface-default);
-  --ds-color-surface-tinted: var(--ds-color-light-pink-surface-tinted);
-  --ds-color-surface-hover: var(--ds-color-light-pink-surface-hover);
-  --ds-color-surface-active: var(--ds-color-light-pink-surface-active);
-  --ds-color-border-subtle: var(--ds-color-light-pink-border-subtle);
-  --ds-color-border-default: var(--ds-color-light-pink-border-default);
-  --ds-color-border-strong: var(--ds-color-light-pink-border-strong);
-  --ds-color-text-subtle: var(--ds-color-light-pink-text-subtle);
-  --ds-color-text-default: var(--ds-color-light-pink-text-default);
-  --ds-color-base-default: var(--ds-color-light-pink-base-default);
-  --ds-color-base-hover: var(--ds-color-light-pink-base-hover);
-  --ds-color-base-active: var(--ds-color-light-pink-base-active);
-  --ds-color-base-contrast-subtle: var(--ds-color-light-pink-base-contrast-subtle);
-  --ds-color-base-contrast-default: var(--ds-color-light-pink-base-contrast-default);
 }
 
 }

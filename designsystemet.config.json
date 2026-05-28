@@ -2,7 +2,7 @@
     "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
     "outDir": "./design-tokens",
     "themes": {
-        "theme": {
+        "aibel-theme": {
             "colors": {
                 "main": {
                     "aibel-bright-blue": "#0030B0",
