@@ -16,7 +16,7 @@ const meta: Meta<typeof Card> = {
         asChild: true
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         variant: { control: { type: "radio" }, options: ["default", "tinted"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] }
     }
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
     args: {
         children: "Card text",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         variant: "default",
         "data-size": "md",
         asChild: false

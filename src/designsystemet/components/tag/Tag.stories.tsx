@@ -9,13 +9,13 @@ const meta: Meta<typeof Tag> = {
     args: {
         variant: "default",
         "data-size": "md",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         children: "Tag Text"
     },
     argTypes: {
         variant: { control: { type: "radio" }, options: ["default", "outline"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: { type: "text" } }
     }
 };

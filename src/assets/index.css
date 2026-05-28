@@ -14,6 +14,7 @@
     --ads-default-font-family: var(--ads-font-sans);
     --ads-default-mono-font-family: var(--ads-font-mono);
     --ads-color-aibel-blue-base-default: var(--ds-color-aibel-blue-base-default);
+    --ads-color-aibel-bright-blue-background-tinted: var(--ds-color-aibel-bright-blue-background-tinted);
     --ads-color-danger-base-default: var(--ds-color-danger-base-default);
     --ads-color-info-base-default: var(--ds-color-info-base-default);
     --ads-color-success-base-default: var(--ds-color-success-base-default);
@@ -356,6 +357,9 @@
   }
   .ads\:bg-aibel-blue-base-default {
     background-color: var(--ads-color-aibel-blue-base-default);
+  }
+  .ads\:bg-aibel-bright-blue-background-tinted {
+    background-color: var(--ads-color-aibel-bright-blue-background-tinted);
   }
   .ads\:bg-transparent {
     background-color: transparent;

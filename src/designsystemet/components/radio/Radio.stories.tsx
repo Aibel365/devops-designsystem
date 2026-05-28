@@ -17,7 +17,7 @@ const meta: Meta<typeof Radio> = {
         readOnly: { control: { type: "boolean" }, options: [true, false] },
         disabled: { control: { type: "boolean" }, options: [true, false] },
         value: { control: { type: "radio" }, options: ["string", "number", "readonly string[]"] },
-        "data-color": { control: { type: "radio" }, options: ["bright-blue", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-neutral", "aibel-green"] },
         "data-indeterminate": { control: { type: "boolean" }, description: "Indeterminate state for checkbox inputs Only works when used inside Field component", options: [true, false] },
         error: { control: { type: "text" } },
         description: { control: { type: "text" } },

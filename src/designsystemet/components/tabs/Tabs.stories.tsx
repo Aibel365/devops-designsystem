@@ -10,7 +10,7 @@ const meta: Meta<typeof Tabs> = {
     args: {
         defaultValue: "value1",
         "data-size": "md",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         children: (
             <>
                 <Tabs.List>
@@ -27,7 +27,7 @@ const meta: Meta<typeof Tabs> = {
     argTypes: {
         defaultValue: { control: { type: "text" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: false, table: { disable: true } },
         value: { control: false },
         onChange: { control: false }

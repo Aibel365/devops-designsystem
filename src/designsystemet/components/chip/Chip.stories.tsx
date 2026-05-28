@@ -10,7 +10,7 @@ const meta: Meta<typeof Chip.Radio> = {
     },
     argTypes: {
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] }
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] }
     }
 };
 
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Chip.Button>;
 export const ChipRadio: Story = {
     args: {
         "data-size": "md",
-        "data-color": "bright-blue"
+        "data-color": "aibel-bright-blue"
     }
 };
 
