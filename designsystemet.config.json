@@ -2,19 +2,15 @@
     "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
     "outDir": "./design-tokens",
     "themes": {
-        "theme": {
+        "aibel-theme": {
             "colors": {
                 "main": {
-                    "bright-blue": "#0030B0",
-                    "light-blue": "#C4F0FF",
+                    "aibel-bright-blue": "#0030B0",
                     "aibel-blue": "#002857"
                 },
                 "support": {
-                    "light-green": "#B9FFE2",
-                    "green": "#2E6B3D",
-                    "light-pink": "#FFDEDB",
-                    "dark-pink": "#BB0059",
-                    "dark-red": "#5B002E"
+                    "aibel-green": "#2E6B3D",
+                    "aibel-neutral": "#24272B"
                 },
                 "neutral": "#24272B"
             },
@@ -24,76 +20,6 @@
                     "success": "#2E6B3D",
                     "warning": "#EE9000",
                     "danger": "#B32A00"
-                },
-                "colors": {
-                    "bright-blue": {
-                        "base-hover": {
-                            "light": "#002894"
-                        },
-                        "base-active": {
-                            "light": "#00217A"
-                        },
-                        "base-default": {
-                            "light": "#0030B0"
-                        }
-                    },
-                    "light-blue": {
-                        "base-default": {
-                            "light": "#C4F0FF"
-                        },
-                        "base-hover": {
-                            "light": "#A5E8FF"
-                        },
-                        "base-active": {
-                            "light": "#86E0FF"
-                        },
-                        "background-tinted": {
-                            "light": "#F0FBFF"
-                        },
-                        "surface-tinted": {
-                            "light": "#F0FBFF"
-                        },
-                        "surface-hover": {
-                            "light": "#E1F7FF"
-                        },
-                        "surface-active": {
-                            "light": "#C4F0FF"
-                        }
-                    },
-                    "light-green": {
-                        "base-default": {
-                            "light": "#B9FFE2"
-                        },
-                        "base-hover": {
-                            "light": "#9FFFD9"
-                        },
-                        "base-active": {
-                            "light": "#80FFCF"
-                        },
-                        "background-tinted": {
-                            "light": "#F5FFFB"
-                        },
-                        "surface-tinted": {
-                            "light": "#F5FFFB"
-                        },
-                        "surface-hover": {
-                            "light": "#E8FFF5"
-                        },
-                        "surface-active": {
-                            "light": "#B9FFE2"
-                        }
-                    },
-                    "light-pink": {
-                        "base-default": {
-                            "light": "#FFDEDB"
-                        },
-                        "base-hover": {
-                            "light": "#FFD6D2"
-                        },
-                        "base-active": {
-                            "light": "#FF9D96"
-                        }
-                    }
                 }
             },
             "borderRadius": 9999

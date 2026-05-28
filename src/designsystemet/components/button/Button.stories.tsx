@@ -36,7 +36,7 @@ export const WithIcon: Story = {
     args: {
         children: (
             <>
-                <AddIcon /> Button text
+                <AddIcon className="ads:size-6" /> Button text
             </>
         ),
         variant: "primary"
@@ -45,7 +45,7 @@ export const WithIcon: Story = {
 
 export const OnlyIcon: Story = {
     args: {
-        children: <AddIcon />,
+        children: <AddIcon className="ads:size-6" />,
         variant: "secondary",
         icon: true
     }
