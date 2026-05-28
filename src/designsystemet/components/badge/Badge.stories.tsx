@@ -10,7 +10,7 @@ const meta: Meta<typeof Badge> = {
     argTypes: {
         count: { control: "number" },
         maxCount: { control: "number" },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         variant: { control: { type: "radio" }, options: ["base", "tinted"] }
     }
@@ -45,7 +45,7 @@ export const Color: Story = {
     args: {
         count: 9,
         maxCount: 15,
-        "data-color": "neutral"
+        "data-color": "aibel-neutral"
     }
 };
 

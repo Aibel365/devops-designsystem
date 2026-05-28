@@ -12,7 +12,7 @@ const meta: Meta<typeof ToggleGroup> = {
         "data-toggle-group": "filter",
         defaultValue: "inbox",
         "data-size": "md",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         children: (
             <>
                 <ToggleGroup.Item value="inbox">Inbox</ToggleGroup.Item>
@@ -27,7 +27,7 @@ const meta: Meta<typeof ToggleGroup> = {
         "data-toggle-group": { control: { type: "text" } },
         defaultValue: { control: { type: "text" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: false, table: { disable: true } },
         value: { control: { type: "text" } },
         onChange: { control: { type: "text" } }

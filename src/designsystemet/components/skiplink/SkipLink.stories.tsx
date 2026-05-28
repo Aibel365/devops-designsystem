@@ -11,13 +11,13 @@ const meta: Meta<typeof SkipLink> = {
     component: SkipLink,
     args: {
         "data-size": "md",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         children: "Press this link",
         href: "#main-content"
     },
     argTypes: {
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: false },
         href: { control: false }
     }

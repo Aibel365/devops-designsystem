@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
         children: "Button text"
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         variant: { control: { type: "radio" }, options: ["primary", "secondary", "tertiary"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         icon: { control: { type: "boolean" }, options: [true, false] },
@@ -25,7 +25,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
     args: {
         variant: "primary",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         icon: false,
         loading: false,
         "data-size": "md"

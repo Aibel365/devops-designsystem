@@ -24,10 +24,10 @@ const meta: Meta<typeof Field> = {
         ),
         position: "start",
         "data-size": "md",
-        "data-color": "bright-blue"
+        "data-color": "aibel-bright-blue"
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         position: { control: { type: "radio" }, description: `Position of toggle inputs (radio, checkbox, switch) in field "start" "end"`, options: ["start", "end"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         children: {

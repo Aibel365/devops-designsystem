@@ -12,7 +12,7 @@ const meta: Meta<typeof Switch> = {
         readOnly: false,
         position: "start",
         "data-size": "md",
-        "data-color": "bright-blue"
+        "data-color": "aibel-bright-blue"
     },
     argTypes: {
         label: { control: { type: "text" } },
@@ -22,7 +22,7 @@ const meta: Meta<typeof Switch> = {
         checked: { control: { type: "radio" }, options: [true, false] },
         position: { control: { type: "radio" }, options: ["start", "end"] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         variant: { control: { type: "select" }, options: ["outline"] }
     }
 };

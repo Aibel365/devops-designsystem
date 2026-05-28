@@ -14,7 +14,7 @@ const meta: Meta<typeof Link> = {
     argTypes: {
         href: { control: { type: "text" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] }
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] }
     }
 };
 

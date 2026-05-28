@@ -13,7 +13,7 @@ const meta: Meta<typeof Table> = {
         border: false,
         hover: false,
         "data-size": "md",
-        "data-color": "bright-blue",
+        "data-color": "aibel-bright-blue",
         children: (
             <>
                 <caption>Table caption</caption>
@@ -62,7 +62,7 @@ const meta: Meta<typeof Table> = {
         stickyHeader: { control: { type: "radio" }, options: [true, false] },
         hover: { control: { type: "radio" }, options: [true, false] },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: false, table: { disable: true } }
     }
 };

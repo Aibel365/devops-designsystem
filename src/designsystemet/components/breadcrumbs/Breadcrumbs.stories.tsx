@@ -10,7 +10,7 @@ const meta: Meta<typeof Breadcrumbs> = {
     args: { "data-size": "md" },
     argTypes: {
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "bright-blue", "green", "neutral"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: {
             control: false,
             table: { disable: true }
