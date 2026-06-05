@@ -7,7 +7,7 @@
   "type": "module",
   "source": "src/index.ts",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "homepage": "https://github.com/Aibel365/devops-designsystem",
   "keywords": [
     "React",
@@ -19,7 +19,7 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/src/index.d.ts",
         "default": "./dist/index.js"
       }
     },
@@ -95,5 +95,8 @@
   },
   "dependencies": {
     "@digdir/designsystemet-react": "^1.15.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

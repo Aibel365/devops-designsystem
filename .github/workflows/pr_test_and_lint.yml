@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [20.x]
+                node-version: [22.x]
         steps:
             - name: Init - Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
@@ -37,6 +37,9 @@ jobs:
 
             - name: Source - build check --if-present
               run: npm run build --if-present
+
+            - name: Source - lint package
+              run: npx -y publint
 
             - name: Source - build storybook check --if-present
               run: npm run build-storybook --if-present
