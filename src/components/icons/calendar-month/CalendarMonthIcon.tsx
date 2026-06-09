@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import CalendarMonth from "./calendarMonth.jsx.svg?react";
 
 export const CalendarMonthIcon = (props: SVGProps<SVGSVGElement>) => {

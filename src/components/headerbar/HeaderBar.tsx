@@ -1,7 +1,7 @@
-import { ReactElement } from "react";
-import { SubHeaderBar, SubHeaderBarProps } from "./SubHeaderBar";
-import { UserMenu, UserMenuContentHeaderBarProps } from "./components/UserMenu";
+import type { ReactElement } from "react";
 import { AibelLogo } from "../logo/AibelLogo";
+import { SubHeaderBar, type SubHeaderBarProps } from "./SubHeaderBar";
+import { UserMenu, type UserMenuContentHeaderBarProps } from "./components/UserMenu";
 
 export type HeaderBarProps = UserMenuContentProps & {
     title?: string;

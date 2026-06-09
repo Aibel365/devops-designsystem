@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import ViewWeek from "./viewWeek.jsx.svg?react";
 
 export const ViewWeekIcon = (props: SVGProps<SVGSVGElement>) => {

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DangerStatusIcon } from "./DangerStatusIcon";
 
 const meta: Meta<typeof DangerStatusIcon> = {

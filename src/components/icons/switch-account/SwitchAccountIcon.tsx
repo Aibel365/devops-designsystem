@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import SwitchAccount from "./switchAccount.jsx.svg?react";
 
 export const SwitchAccountIcon = (props: SVGProps<SVGSVGElement>) => {

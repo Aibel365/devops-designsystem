@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Anchor from "./anchor.jsx.svg?react";
 
 export const AnchorIcon = (props: SVGProps<SVGSVGElement>) => {

@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import PdfSvg from "./pdfSvg.jsx.svg?react";
 
 export const PdfIcon = (props: SVGProps<SVGSVGElement>) => {

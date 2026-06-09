@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ArrowForwardIcon } from "./ArrowForwardIcon";
 
 const meta: Meta<typeof ArrowForwardIcon> = {

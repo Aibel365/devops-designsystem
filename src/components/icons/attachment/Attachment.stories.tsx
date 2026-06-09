@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { AttachmentIcon } from "./AttachmentIcon";
 
 const meta: Meta<typeof AttachmentIcon> = {

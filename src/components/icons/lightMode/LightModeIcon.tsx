@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import LightMode from "./lightMode.jsx.svg?react";
 
 export const LightModeIcon = (props: SVGProps<SVGSVGElement>) => {

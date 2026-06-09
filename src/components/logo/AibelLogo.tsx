@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Logo from "./aibel-logo.svg?react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement>;

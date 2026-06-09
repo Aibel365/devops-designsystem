@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import MoreVert from "./moreVert.jsx.svg?react";
 
 export const MoreVertIcon = (props: SVGProps<SVGSVGElement>) => {

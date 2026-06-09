@@ -1,4 +1,4 @@
-import { ImgHTMLAttributes } from "react";
+import type { ImgHTMLAttributes } from "react";
 
 export type Base64ImageDisplayProps = ImgHTMLAttributes<HTMLImageElement> & {
     base64String: string;

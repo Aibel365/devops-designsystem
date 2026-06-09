@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import VisibilityOff from "./visibilityOff.jsx.svg?react";
 
 export const VisibilityOffIcon = (props: SVGProps<SVGSVGElement>) => {

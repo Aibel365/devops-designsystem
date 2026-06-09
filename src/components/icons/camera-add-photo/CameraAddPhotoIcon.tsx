@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import CameraAddPhoto from "./cameraAddPhoto.jsx.svg?react";
 
 export const CameraAddPhotoIcon = (props: SVGProps<SVGSVGElement>) => {
