@@ -1,27 +1,11 @@
 {
-    "compilerOptions": {
-        "baseUrl": "src",
-        "ignoreDeprecations": "6.0",
-        "target": "ES6",
-        "lib": ["ES5", "ES2015", "ES2016", "DOM", "ESNext"],
-        "module": "ESNext",
-
-        "moduleResolution": "bundler",
-        "isolatedModules": true,
-        "jsx": "react-jsx",
-
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "declaration": true,
-        "sourceMap": true,
-        "noEmit": true,
-
-        "allowJs": false,
-        "strict": true,
-        "skipLibCheck": true,
-        "noUnusedLocals": true,
-        "noFallthroughCasesInSwitch": true
-    },
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
-    "exclude": ["dist", "node_modules", "__test__", "src/**/*.test.tsx", "src/**/*.test.ts", "src/**/*.stories.ts"]
+    "files": [],
+    "references": [
+        {
+            "path": "./tsconfig.app.json"
+        },
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
 }
