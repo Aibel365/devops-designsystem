@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Contrast from "./contrast.jsx.svg?react";
 
 export const ContrastIcon = (props: SVGProps<SVGSVGElement>) => {

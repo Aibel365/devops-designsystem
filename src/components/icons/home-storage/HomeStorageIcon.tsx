@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import HomeStorage from "./homeStorage.jsx.svg?react";
 
 export const HomeStorageIcon = (props: SVGProps<SVGSVGElement>) => {

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PushPinIcon } from "./PushPinIcon";
 
 const meta: Meta<typeof PushPinIcon> = {

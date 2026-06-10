@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Language from "./language.jsx.svg?react";
 
 export const LanguageIcon = (props: SVGProps<SVGSVGElement>) => {

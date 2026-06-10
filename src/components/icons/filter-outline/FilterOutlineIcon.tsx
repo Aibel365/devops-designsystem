@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import FilterOutline from "./filterOutline.jsx.svg?react";
 
 export const FilterOutlineIcon = (props: SVGProps<SVGSVGElement>) => {

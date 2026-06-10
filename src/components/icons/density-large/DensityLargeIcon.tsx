@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import DensityLarge from "./densityLarge.jsx.svg?react";
 
 export const DensityLargeIcon = (props: SVGProps<SVGSVGElement>) => {

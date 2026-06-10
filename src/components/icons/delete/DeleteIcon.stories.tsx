@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DeleteIcon } from "./DeleteIcon";
 
 const meta: Meta<typeof DeleteIcon> = {

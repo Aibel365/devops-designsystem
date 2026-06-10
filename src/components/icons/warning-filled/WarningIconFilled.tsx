@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import WarningFilled from "./warningFilled.jsx.svg?react";
 
 export const WarningIconFilled = (props: SVGProps<SVGSVGElement>) => {

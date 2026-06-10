@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import RadioOutline from "./radioOutline.jsx.svg?react";
 
 export const RadioOutlineIcon = (props: SVGProps<SVGSVGElement>) => {

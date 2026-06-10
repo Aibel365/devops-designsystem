@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import ArrowUpward from "./arrowUpward.jsx.svg?react";
 
 export const ArrowUpwardIcon = (props: SVGProps<SVGSVGElement>) => {

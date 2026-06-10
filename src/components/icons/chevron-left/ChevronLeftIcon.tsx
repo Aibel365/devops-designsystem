@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import ChevronLeft from "./chevronLeft.jsx.svg?react";
 
 export const ChevronLeftIcon = (props: SVGProps<SVGSVGElement>) => {

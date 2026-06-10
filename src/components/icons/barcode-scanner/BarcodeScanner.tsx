@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import AttachFile from "./barcodeScanner.jsx.svg?react";
 
 export const BarcodeScannerIcon = (props: SVGProps<SVGSVGElement>) => {

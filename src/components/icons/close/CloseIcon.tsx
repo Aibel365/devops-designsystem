@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Close from "./close.jsx.svg?react";
 
 export const CloseIcon = (props: SVGProps<SVGSVGElement>) => {

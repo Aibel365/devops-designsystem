@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Edit from "./edit.jsx.svg?react";
 
 export const EditIcon = (props: SVGProps<SVGSVGElement>) => {

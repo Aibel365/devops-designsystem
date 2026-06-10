@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Remove from "./remove.jsx.svg?react";
 
 export const RemoveIcon = (props: SVGProps<SVGSVGElement>) => {

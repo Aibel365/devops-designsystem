@@ -7,7 +7,8 @@
   "type": "module",
   "source": "src/index.ts",
   "module": "./dist/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.umd.cjs",
+  "types": "./dist/index.d.ts",
   "homepage": "https://github.com/Aibel365/devops-designsystem",
   "keywords": [
     "React",
@@ -18,19 +19,11 @@
   ],
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/src/index.d.ts",
-        "default": "./dist/index.js"
-      }
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
     },
-    "./styles.css": {
-      "require": "./dist/styles.css",
-      "default": "./dist/styles.css"
-    },
-    "./aibel-theme.tailwind.css": {
-      "style": "./dist/aibel-theme.tailwind.css",
-      "default": "./dist/aibel-theme.tailwind.css"
-    }
+    "./styles.css": "./dist/styles.css",
+    "./aibel-theme.tailwind.css": "./dist/aibel-theme.tailwind.css"
   },
   "files": [
     "dist"
@@ -63,6 +56,7 @@
     "@digdir/designsystemet-css": "^1.15.0",
     "@digdir/designsystemet-types": "^1.15.0",
     "@eslint/js": "^10.0.1",
+    "@microsoft/api-extractor": "^7.58.7",
     "@storybook/addon-a11y": "^10.4.2",
     "@storybook/addon-docs": "^10.4.2",
     "@storybook/addon-vitest": "^10.4.2",
@@ -88,8 +82,8 @@
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.1",
+    "unplugin-dts": "^1.0.1",
     "vite": "^8.0.16",
-    "vite-plugin-dts": "^5.0.2",
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"
   },

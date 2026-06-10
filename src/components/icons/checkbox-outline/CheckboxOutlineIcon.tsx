@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import CheckboxOutline from "./checkboxOutline.jsx.svg?react";
 
 export const CheckboxOutlineIcon = (props: SVGProps<SVGSVGElement>) => {

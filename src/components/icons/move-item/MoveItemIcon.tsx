@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import MoveItem from "./moveItem.jsx.svg?react";
 
 export const MoveItemIcon = (props: SVGProps<SVGSVGElement>) => {

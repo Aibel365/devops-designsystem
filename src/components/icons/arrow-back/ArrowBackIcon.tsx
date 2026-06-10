@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import ArrowBack from "./arrowBack.jsx.svg?react";
 
 export const ArrowBackIcon = (props: SVGProps<SVGSVGElement>) => {

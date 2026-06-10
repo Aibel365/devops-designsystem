@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import UnfoldLess from "./unfoldLess.jsx.svg?react";
 
 export const UnfoldLessIcon = (props: SVGProps<SVGSVGElement>) => {

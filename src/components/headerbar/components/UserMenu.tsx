@@ -1,10 +1,10 @@
-import { ReactElement } from "react";
-import { Button, Popover, Divider } from "../../../designsystemet/components";
-import { getInitials } from "../getInitials";
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
-import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
+import type { ReactElement } from "react";
 import { MoveItemIcon, SwitchAccountIcon } from "../../../components/icons";
+import { Button, Divider, Popover } from "../../../designsystemet/components";
 import { ConditionalPopover } from "../../conditionalPopover/ConditionalPopover";
+import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
+import { getInitials } from "../getInitials";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;

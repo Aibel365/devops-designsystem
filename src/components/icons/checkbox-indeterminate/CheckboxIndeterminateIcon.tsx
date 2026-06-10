@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import CheckboxIndeterminate from "./checkboxIndeterminate.jsx.svg?react";
 
 export const CheckboxIndeterminateIcon = (props: SVGProps<SVGSVGElement>) => {

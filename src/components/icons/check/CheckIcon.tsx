@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import Check from "./check.svg?react";
 
 export const CheckIcon = (props: SVGProps<SVGSVGElement>) => {

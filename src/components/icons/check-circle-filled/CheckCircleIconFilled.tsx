@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 import CheckCircleFilled from "./checkCircleFilled.jsx.svg?react";
 
 export const CheckCircleIconFilled = (props: SVGProps<SVGSVGElement>) => {
