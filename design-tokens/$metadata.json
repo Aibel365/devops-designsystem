@@ -1,23 +1,23 @@
 {
-    "tokenSetOrder": [
-        "primitives/globals",
-        "primitives/modes/size/small",
-        "primitives/modes/size/medium",
-        "primitives/modes/size/large",
-        "primitives/modes/size/global",
-        "primitives/modes/typography/size/small",
-        "primitives/modes/typography/size/medium",
-        "primitives/modes/typography/size/large",
-        "primitives/modes/typography/primary/aibel-theme",
-        "primitives/modes/typography/secondary/aibel-theme",
-        "primitives/modes/color-scheme/dark/aibel-theme",
-        "primitives/modes/color-scheme/light/aibel-theme",
-        "themes/aibel-theme",
-        "semantic/color",
-        "semantic/modes/main-color/aibel-bright-blue",
-        "semantic/modes/main-color/aibel-blue",
-        "semantic/modes/support-color/aibel-green",
-        "semantic/modes/support-color/aibel-neutral",
-        "semantic/style"
-    ]
+  "tokenSetOrder": [
+    "primitives/globals",
+    "primitives/modes/size/small",
+    "primitives/modes/size/medium",
+    "primitives/modes/size/large",
+    "primitives/modes/size/global",
+    "primitives/modes/typography/size/small",
+    "primitives/modes/typography/size/medium",
+    "primitives/modes/typography/size/large",
+    "primitives/modes/typography/primary/aibel-theme",
+    "primitives/modes/typography/secondary/aibel-theme",
+    "primitives/modes/color-scheme/dark/aibel-theme",
+    "primitives/modes/color-scheme/light/aibel-theme",
+    "themes/aibel-theme",
+    "semantic/color",
+    "semantic/modes/main-color/aibel-bright-blue",
+    "semantic/modes/main-color/aibel-blue",
+    "semantic/modes/support-color/aibel-green",
+    "semantic/modes/support-color/aibel-neutral",
+    "semantic/style"
+  ]
 }
