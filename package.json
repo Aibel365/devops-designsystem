@@ -22,7 +22,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs"
     },
-    "./styles.css": "./dist/styles.css",
+    "./styles.css": "./dist/index.css",
     "./aibel-theme.tailwind.css": "./dist/aibel-theme.tailwind.css"
   },
   "files": [
@@ -30,18 +30,14 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "start": "npm run storybook",
-    "storybook": "concurrently \"npm run tailwind:watch\" \"storybook dev -p 6006\"",
-    "tailwind:watch": "npx -y @tailwindcss/cli@latest -w -i ./src/tailwind-entry.css -o ./src/assets/index.css",
-    "tailwind:build": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./dist/styles.css",
-    "tailwind:storybook": "npx -y @tailwindcss/cli@latest -m -i ./src/tailwind-entry.css -o ./src/assets/index.css",
+    "start": "storybook dev -p 6006",
     "clean": "rimraf dist storybook-static",
-    "build": "npm run clean && tsc -b && vite build && npm run tailwind:build && npm run export-design-tokens",
-    "build-storybook": "npm run tailwind:storybook && storybook build",
+    "build": "tsc -b && vite build && npm run build:themes",
+    "build:themes": "npm run build-design-tokens -- --out-dir dist",
+    "build-storybook": "storybook build",
     "prepublishOnly": "npm run build",
     "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
     "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
-    "export-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind --out-dir dist",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ./src/components",
@@ -54,7 +50,6 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
     "@digdir/designsystemet-css": "^1.15.0",
-    "@digdir/designsystemet-types": "^1.15.0",
     "@eslint/js": "^10.0.1",
     "@microsoft/api-extractor": "^7.58.8",
     "@storybook/addon-a11y": "^10.4.2",
@@ -69,7 +64,6 @@
     "@vitejs/plugin-react": "^6.0.2",
     "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.4",
-    "concurrently": "^10.0.3",
     "eslint": "^10.4.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
