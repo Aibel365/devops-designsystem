@@ -1,24 +1,16 @@
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
-import type { ReactElement } from "react";
 import { MoveItemIcon, SwitchAccountIcon } from "../../../components/icons";
 import { Button, Divider, Popover } from "../../../designsystemet/components";
 import { ConditionalPopover } from "../../conditionalPopover/ConditionalPopover";
 import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 import { getInitials } from "../getInitials";
+import type { CustomMenuContentConfig } from "../HeaderBar";
 
 export interface UserMenuContentHeaderBarProps {
     userName?: string;
     userEmail?: string;
     userImage?: string;
 }
-
-export type CustomMenuContentConfig = {
-    label?: string;
-    icon?: string | ReactElement;
-    handleClick?: () => void;
-    popoverContent?: React.ReactNode;
-    disabled?: boolean;
-};
 
 export type UserMenuContentProps = UserMenuContentHeaderBarProps & {
     handleSwitchAccount?: () => void;
