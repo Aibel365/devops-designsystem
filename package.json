@@ -1,92 +1,92 @@
 {
-    "name": "@aibel365/devops-designsystem",
-    "version": "1.15.4",
-    "author": "Aibel AS",
-    "license": "MIT",
-    "description": "React designsystem for Aibel",
-    "type": "module",
-    "source": "src/index.ts",
-    "module": "./dist/index.js",
-    "main": "./dist/index.umd.cjs",
-    "types": "./dist/index.d.ts",
-    "homepage": "https://github.com/Aibel365/devops-designsystem",
-    "keywords": [
-        "React",
-        "Aibel",
-        "Component library",
-        "Styleguide",
-        "Designsystem"
-    ],
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "require": "./dist/index.umd.cjs"
-        },
-        "./styles.css": "./dist/index.css",
-        "./aibel-theme.tailwind.css": "./dist/aibel-theme.tailwind.css"
+  "name": "@aibel365/devops-designsystem",
+  "version": "1.15.5",
+  "author": "Aibel AS",
+  "license": "MIT",
+  "description": "React designsystem for Aibel",
+  "type": "module",
+  "source": "src/index.ts",
+  "module": "./dist/index.js",
+  "main": "./dist/index.umd.cjs",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/Aibel365/devops-designsystem",
+  "keywords": [
+    "React",
+    "Aibel",
+    "Component library",
+    "Styleguide",
+    "Designsystem"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
     },
-    "files": [
-        "dist"
-    ],
-    "sideEffects": false,
-    "scripts": {
-        "start": "storybook dev -p 6006",
-        "clean": "rimraf dist storybook-static",
-        "build": "tsc -b && vite build && npm run build:themes",
-        "build:themes": "npm run build-design-tokens -- --out-dir dist",
-        "build-storybook": "storybook build",
-        "prepublishOnly": "npm run build",
-        "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
-        "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
-        "lint": "eslint .",
-        "format": "prettier --write .",
-        "format:check": "prettier --check ./src/components",
-        "knip": "knip"
-    },
-    "peerDependencies": {
-        "react": "^19.2.7",
-        "react-dom": "^19.2.7"
-    },
-    "devDependencies": {
-        "@chromatic-com/storybook": "^5.2.1",
-        "@digdir/designsystemet-css": "^1.15.0",
-        "@digdir/designsystemet-types": "^1.15.0",
-        "@eslint/js": "^10.0.1",
-        "@microsoft/api-extractor": "^7.58.9",
-        "@storybook/addon-a11y": "^10.4.4",
-        "@storybook/addon-docs": "^10.4.4",
-        "@storybook/addon-vitest": "^10.4.4",
-        "@storybook/builder-vite": "^10.4.2",
-        "@storybook/react-vite": "^10.4.4",
-        "@tailwindcss/vite": "^4.3.1",
-        "@types/node": "^24.13.2",
-        "@types/react": "^19.2.17",
-        "@types/react-dom": "^19.2.3",
-        "@vitejs/plugin-react": "^6.0.2",
-        "@vitest/browser-playwright": "^4.1.8",
-        "@vitest/coverage-v8": "^4.1.4",
-        "eslint": "^10.5.0",
-        "eslint-plugin-react-hooks": "^7.1.1",
-        "eslint-plugin-react-refresh": "^0.5.2",
-        "eslint-plugin-storybook": "^10.4.4",
-        "globals": "^17.6.0",
-        "knip": "^6.16.1",
-        "playwright": "^1.60.0",
-        "prettier": "^3.8.4",
-        "rimraf": "^6.1.3",
-        "storybook": "^10.4.4",
-        "tailwindcss": "^4.2.2",
-        "typescript": "^6.0.3",
-        "typescript-eslint": "^8.61.0",
-        "unplugin-dts": "^1.0.1",
-        "vite": "^8.0.16",
-        "vite-plugin-svgr": "^5.2.0",
-        "vitest": "^4.1.4"
-    },
-    "dependencies": {
-        "@digdir/designsystemet-react": "^1.15.0"
-    },
-    "engines": {
-        "node": "^20.19.0 || >=22.12.0"
-    }
+    "./styles.css": "./dist/index.css",
+    "./aibel-theme.tailwind.css": "./dist/aibel-theme.tailwind.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "clean": "rimraf dist storybook-static",
+    "build": "tsc -b && vite build && npm run build:themes",
+    "build:themes": "npm run build-design-tokens -- --out-dir dist",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build",
+    "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
+    "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ./src/components",
+    "knip": "knip"
+  },
+  "peerDependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.2.1",
+    "@digdir/designsystemet-css": "^1.15.0",
+    "@digdir/designsystemet-types": "^1.15.0",
+    "@eslint/js": "^10.0.1",
+    "@microsoft/api-extractor": "^7.58.9",
+    "@storybook/addon-a11y": "^10.4.4",
+    "@storybook/addon-docs": "^10.4.4",
+    "@storybook/addon-vitest": "^10.4.4",
+    "@storybook/builder-vite": "^10.4.2",
+    "@storybook/react-vite": "^10.4.4",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/browser-playwright": "^4.1.8",
+    "@vitest/coverage-v8": "^4.1.4",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-storybook": "^10.4.4",
+    "globals": "^17.6.0",
+    "knip": "^6.16.1",
+    "playwright": "^1.60.0",
+    "prettier": "^3.8.4",
+    "rimraf": "^6.1.3",
+    "storybook": "^10.4.4",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0",
+    "unplugin-dts": "^1.0.1",
+    "vite": "^8.0.16",
+    "vite-plugin-svgr": "^5.2.0",
+    "vitest": "^4.1.4"
+  },
+  "dependencies": {
+    "@digdir/designsystemet-react": "^1.15.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
 }
