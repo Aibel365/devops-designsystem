@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Link } from "./Link";
-import { Paragraph } from "../typography";
 import { AddIcon } from "../../../components/icons";
+import { Paragraph } from "../typography";
+import { Link } from "./Link";
 
 const meta: Meta<typeof Link> = {
     title: "Designsystemet/Link",
@@ -33,7 +33,7 @@ export const WithIcon: Story = {
     args: {
         children: (
             <>
-                <AddIcon className="ads:size-4" /> <span>It's a link</span>
+                <AddIcon /> <span>It's a link</span>
             </>
         )
     }
@@ -43,7 +43,7 @@ export const MultipleIcons: Story = {
     args: {
         children: (
             <>
-                <AddIcon className="ads:size-4" /> <span>It's a link</span> <AddIcon className="ads:size-4" /> <span>with several icons</span> <AddIcon className="ads:size-4" />
+                <AddIcon /> <span>It's a link</span> <AddIcon /> <span>with several icons</span> <AddIcon />
             </>
         )
     }
