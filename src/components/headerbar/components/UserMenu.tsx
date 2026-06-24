@@ -50,12 +50,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                         onClick={handleSwitchAccount}
                         aria-hidden
                     >
-                        {
-                            <SwitchAccountIcon
-                                aria-hidden
-                                className="ads:size-6"
-                            />
-                        }
+                        {<SwitchAccountIcon aria-hidden />}
                         {switchAccountLabel?.length ? switchAccountLabel : "Switch account"}
                     </Button>
                 )}
@@ -84,12 +79,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                     onClick={handleLogout}
                     aria-hidden
                 >
-                    {
-                        <MoveItemIcon
-                            aria-hidden
-                            className="ads:size-6"
-                        />
-                    }
+                    {<MoveItemIcon aria-hidden />}
                     {logoutLabel?.length ? logoutLabel : "Logout"}
                 </Button>
             </div>

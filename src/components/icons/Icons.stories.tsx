@@ -107,12 +107,12 @@ export const Common: StoryObj = {
 export const Status: StoryObj = {
     render: () => (
         <div className="ads:flex ads:flex-wrap ads:gap-2">
-            <CompletedStatusIcon className="ads:size-6 ads:text-success-base-default" />
-            <NotStartedStatusIcon className="ads:size-6" />
-            <InProgressStatusIcon className="ads:size-6" />
-            <WarningStatusIcon className="ads:size-6 ads:text-warning-base-default" />
-            <InfoStatusIcon className="ads:size-6 ads:text-info-base-default" />
-            <DangerStatusIcon className="ads:size-6 ads:text-danger-base-default" />
+            <CompletedStatusIcon className="ads:text-success-base-default" />
+            <NotStartedStatusIcon />
+            <InProgressStatusIcon />
+            <WarningStatusIcon className=" ads:text-warning-base-default" />
+            <InfoStatusIcon className=" ads:text-info-base-default" />
+            <DangerStatusIcon className=" ads:text-danger-base-default" />
         </div>
     )
 };

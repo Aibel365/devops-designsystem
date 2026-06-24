@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "./Button";
 import { AddIcon } from "../../../components/icons";
+import { Button } from "./Button";
 
 Button.displayName = "Button";
 
@@ -36,7 +36,7 @@ export const WithIcon: Story = {
     args: {
         children: (
             <>
-                <AddIcon className="ads:size-6" /> Button text
+                <AddIcon /> Button text
             </>
         ),
         variant: "primary"
@@ -45,7 +45,7 @@ export const WithIcon: Story = {
 
 export const OnlyIcon: Story = {
     args: {
-        children: <AddIcon className="ads:size-6" />,
+        children: <AddIcon />,
         variant: "secondary",
         icon: true
     }

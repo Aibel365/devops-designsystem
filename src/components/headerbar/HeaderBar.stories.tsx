@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { HeaderBar } from "./HeaderBar";
 import { LanguageIcon, SearchIcon } from "../../components/icons";
 import { Button } from "../../designsystemet/components";
+import { HeaderBar } from "./HeaderBar";
 
 const handleSwitchAccount = () => {
     alert("The switch account triggered");
@@ -58,22 +58,12 @@ export const WithCustomMenuContent: Story = {
         customMenuContent: [
             {
                 label: "Custom clickable",
-                icon: (
-                    <LanguageIcon
-                        className="ads:size-6"
-                        aria-hidden
-                    />
-                ),
+                icon: <LanguageIcon aria-hidden />,
                 handleClick: () => alert("Click click!")
             },
             {
                 label: "Custom popable",
-                icon: (
-                    <SearchIcon
-                        className="ads:size-6"
-                        aria-hidden
-                    />
-                ),
+                icon: <SearchIcon aria-hidden />,
                 popoverContent: (
                     <div className="ads:flex ads:flex-col ads:items-center">
                         <Button variant="tertiary">Pop</Button>
