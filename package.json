@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
-    "@digdir/designsystemet-css": "^1.16.1",
+    "@digdir/designsystemet-css": "^1.18.0",
     "@digdir/designsystemet-types": "^1.15.0",
     "@eslint/js": "^10.0.1",
     "@microsoft/api-extractor": "^7.58.9",
@@ -84,7 +84,7 @@
     "vitest": "^4.1.4"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.16.1"
+    "@digdir/designsystemet-react": "^1.18.0"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

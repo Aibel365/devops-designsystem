@@ -1,28 +1,24 @@
 {
-    "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
-    "outDir": "./design-tokens",
-    "themes": {
-        "aibel-theme": {
-            "colors": {
-                "main": {
-                    "aibel-bright-blue": "#0030B0",
-                    "aibel-blue": "#002857"
-                },
-                "support": {
-                    "aibel-green": "#2E6B3D",
-                    "aibel-neutral": "#24272B"
-                },
-                "neutral": "#24272B"
-            },
-            "overrides": {
-                "severity": {
-                    "info": "#5E8CFF",
-                    "success": "#2E6B3D",
-                    "warning": "#EE9000",
-                    "danger": "#B32A00"
-                }
-            },
-            "borderRadius": 9999
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "outDir": "./design-tokens",
+  "themes": {
+    "aibel-theme": {
+      "colors": {
+        "aibel-bright-blue": "#0030B0",
+        "aibel-blue": "#002857",
+        "aibel-green": "#2E6B3D",
+        "aibel-neutral": "#24272B",
+        "neutral": "#24272B"
+      },
+      "overrides": {
+        "severity": {
+          "info": "#5E8CFF",
+          "success": "#2E6B3D",
+          "warning": "#EE9000",
+          "danger": "#B32A00"
         }
+      },
+      "borderRadius": 9999
     }
+  }
 }
