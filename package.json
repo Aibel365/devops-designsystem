@@ -78,7 +78,7 @@
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.62.0",
-    "unplugin-dts": "^1.0.1",
+    "unplugin-dts": "^1.0.3",
     "vite": "^8.1.0",
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^4.1.4"
@@ -87,6 +87,6 @@
     "@digdir/designsystemet-react": "^1.18.0"
   },
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=24.16.0"
   }
 }
