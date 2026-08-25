@@ -52,7 +52,7 @@
     "@digdir/designsystemet-css": "^1.19.1",
     "@digdir/designsystemet-types": "^1.15.0",
     "@eslint/js": "^10.0.1",
-    "@microsoft/api-extractor": "^7.58.12",
+    "@microsoft/api-extractor": "^7.59.0",
     "@storybook/addon-a11y": "^10.5.10",
     "@storybook/addon-docs": "^10.5.10",
     "@storybook/addon-vitest": "^10.5.10",
