@@ -41,6 +41,25 @@ export function Example() {
 }
 ```
 
+### Language for built-in component text
+
+Mount `AibelTranslationProvider` once at the consuming application's root to set the language for every localized Aibel component below it. It is not needed around each component. Without a provider, components default to Norwegian Bokmål.
+
+The provider currently supports English (`en`) and Norwegian Bokmål (`nb` or `no`). Application-owned text, such as labels and descriptions, should still come from the application's translation system.
+
+For `Textfield`, a numeric `counter` uses the provider's `under` and `over` translations. Component-specific text can still override the provider:
+
+```tsx
+<Textfield
+    label="Message"
+    counter={{
+        limit: 100,
+        under: "%d characters remaining",
+        over: "%d characters too many"
+    }}
+/>
+```
+
 ## Development
 
 ### Prerequisites

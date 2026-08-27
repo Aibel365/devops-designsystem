@@ -1,0 +1,8 @@
+{
+    "textfield": {
+        "counter": {
+            "under": "%d tegn igjen",
+            "over": "%d tegn for mye"
+        }
+    }
+}
