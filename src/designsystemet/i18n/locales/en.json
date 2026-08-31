@@ -1,8 +1,0 @@
-{
-    "textfield": {
-        "counter": {
-            "under": "%d characters remaining",
-            "over": "%d characters too many"
-        }
-    }
-}
