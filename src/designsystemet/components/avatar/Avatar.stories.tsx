@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Avatar } from "./Avatar";
 import { Base64ImageDisplay } from "../../../components/image/Base64ImageDisplay";
+import { Avatar } from "./Avatar";
 
 Avatar.displayName = "Avatar";
 
@@ -9,8 +9,8 @@ const meta: Meta<typeof Avatar> = {
     title: "Designsystemet/Avatar",
     component: Avatar,
     args: {
-        initials: "PN",
-        "aria-label": "Pål Normann",
+        initials: "FL",
+        "aria-label": "First Last",
         variant: "circle",
         "data-tooltip": "tooltip",
         "data-size": "md",

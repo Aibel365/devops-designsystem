@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Alert } from "./Alert";
 import { Heading } from "../typography/heading/Heading";
 import { Paragraph } from "../typography/paragraph/Paragraph";
+import { Alert } from "./Alert";
 
 Alert.displayName = "Alert";
 
@@ -61,9 +61,9 @@ export const WithHeading: Story = {
                     marginBottom: "var(--ds-size-2)"
                 }}
             >
-                Har du husket å bestille passtime?
+                Have you remembered to book a passport appointment?
             </Heading>
-            <Paragraph>Det er lange køer for å bestille pass om dagen, det kan være lurt å bestille i god tid før du skal reise.</Paragraph>
+            <Paragraph>There are long queues for passport appointments at the moment, so it is a good idea to book well before you travel.</Paragraph>
         </Alert>
     )
 };
