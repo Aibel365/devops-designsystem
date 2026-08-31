@@ -12,9 +12,9 @@ type Story = StoryObj<typeof ListItem>;
 export const Default: Story = {
     render: () => (
         <List.Unordered>
-            <List.Item>Bøyabreen</List.Item>
-            <List.Item>Briksdalsbreen</List.Item>
-            <List.Item>Nigardsbreen</List.Item>
+            <List.Item>First item</List.Item>
+            <List.Item>Second item</List.Item>
+            <List.Item>Third item</List.Item>
         </List.Unordered>
     )
 };
@@ -22,9 +22,9 @@ export const Default: Story = {
 export const Unordered: Story = {
     render: () => (
         <List.Unordered>
-            <List.Item>Bøyabreen</List.Item>
-            <List.Item>Briksdalsbreen</List.Item>
-            <List.Item>Nigardsbreen</List.Item>
+            <List.Item>First item</List.Item>
+            <List.Item>Second item</List.Item>
+            <List.Item>Third item</List.Item>
         </List.Unordered>
     )
 };
@@ -32,9 +32,9 @@ export const Unordered: Story = {
 export const Ordered: Story = {
     render: () => (
         <List.Ordered>
-            <List.Item>Bøyabreen</List.Item>
-            <List.Item>Briksdalsbreen</List.Item>
-            <List.Item>Nigardsbreen</List.Item>
+            <List.Item>First item</List.Item>
+            <List.Item>Second item</List.Item>
+            <List.Item>Third item</List.Item>
         </List.Ordered>
     )
 };
@@ -42,10 +42,10 @@ export const Ordered: Story = {
 export const Nested: Story = {
     render: () => (
         <List.Ordered>
-            <List.Item>Bøyabreen</List.Item>
+            <List.Item>First item</List.Item>
             <List.Unordered>
-                <List.Item>Briksdalsbreen</List.Item>
-                <List.Item>Nigardsbreen</List.Item>
+                <List.Item>Second item</List.Item>
+                <List.Item>Third item</List.Item>
             </List.Unordered>
         </List.Ordered>
     )

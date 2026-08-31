@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { EXPERIMENTAL_Suggestion } from "./Suggestion";
 import { Field } from "../field/Field";
 import { Label } from "../typography/label/Label";
+import { EXPERIMENTAL_Suggestion } from "./Suggestion";
 
 EXPERIMENTAL_Suggestion.displayName = "Suggestion";
 Field.displayName = "Field";
@@ -19,7 +19,7 @@ const meta: Meta<typeof EXPERIMENTAL_Suggestion> = {
                 <EXPERIMENTAL_Suggestion.Clear />
                 <EXPERIMENTAL_Suggestion.List>
                     <EXPERIMENTAL_Suggestion.Empty>No results found</EXPERIMENTAL_Suggestion.Empty>
-                    {["Sogndal", "Oslo", "Brønnøysund", "Stavanger", "Trondheim", "Bergen", "Lillestrøm"].map((place) => (
+                    {["London", "Manchester", "Bristol", "Leeds", "Liverpool", "Sheffield", "Newcastle"].map((place) => (
                         <EXPERIMENTAL_Suggestion.Option
                             key={place}
                             label={place}

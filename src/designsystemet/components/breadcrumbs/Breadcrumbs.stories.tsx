@@ -26,22 +26,22 @@ export const Default: Story = {
             <>
                 <Breadcrumbs.Link
                     href="#"
-                    aria-label="Tilbake til Nivå 3"
+                    aria-label="Back to Level 3"
                 >
-                    Nivå 3
+                    Level 3
                 </Breadcrumbs.Link>
                 <Breadcrumbs.List>
                     <Breadcrumbs.Item>
-                        <Breadcrumbs.Link href="#">Nivå 1</Breadcrumbs.Link>
+                        <Breadcrumbs.Link href="#">Level 1</Breadcrumbs.Link>
                     </Breadcrumbs.Item>
                     <Breadcrumbs.Item>
-                        <Breadcrumbs.Link href="#">Nivå 2</Breadcrumbs.Link>
+                        <Breadcrumbs.Link href="#">Level 2</Breadcrumbs.Link>
                     </Breadcrumbs.Item>
                     <Breadcrumbs.Item>
-                        <Breadcrumbs.Link href="#">Nivå 3</Breadcrumbs.Link>
+                        <Breadcrumbs.Link href="#">Level 3</Breadcrumbs.Link>
                     </Breadcrumbs.Item>
                     <Breadcrumbs.Item>
-                        <Breadcrumbs.Link href="#">Nivå 4</Breadcrumbs.Link>
+                        <Breadcrumbs.Link href="#">Level 4</Breadcrumbs.Link>
                     </Breadcrumbs.Item>
                 </Breadcrumbs.List>
             </>

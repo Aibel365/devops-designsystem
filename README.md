@@ -41,6 +41,23 @@ export function Example() {
 }
 ```
 
+### Built-in component text
+
+Components ship with English default texts. Application-owned text, such as labels and descriptions, should come from the application's translation system.
+
+For `Textfield`, a numeric `counter` uses the English default `under` and `over` texts. Consumers can override them per component:
+
+```tsx
+<Textfield
+    label="Message"
+    counter={{
+        limit: 100,
+        under: "%d characters remaining",
+        over: "%d characters too many"
+    }}
+/>
+```
+
 ## Development
 
 ### Prerequisites
