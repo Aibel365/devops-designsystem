@@ -1,5 +1,5 @@
 {
-  "aibel-theme": {
+  "theme": {
     "font-family": {
       "$type": "fontFamilies",
       "$value": "Inter"
