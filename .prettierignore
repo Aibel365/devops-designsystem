@@ -1,2 +1,2 @@
 # Ignore generated files
-package-lock.json
+*.json
