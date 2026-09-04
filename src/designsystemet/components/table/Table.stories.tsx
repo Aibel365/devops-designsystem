@@ -77,7 +77,7 @@ export const Zebra: Story = {
     }
 };
 
-export const border: Story = {
+export const Border: Story = {
     args: {
         border: true
     }
