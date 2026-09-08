@@ -16,7 +16,7 @@ const meta: Meta<typeof Details> = {
         ),
         variant: "default",
         "data-size": "md",
-        "data-color": "aibel-bright-blue"
+        "data-color": "aibel-blue"
     },
     argTypes: {
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },

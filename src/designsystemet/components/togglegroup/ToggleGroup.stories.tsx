@@ -12,7 +12,7 @@ const meta: Meta<typeof ToggleGroup> = {
         "data-toggle-group": "filter",
         defaultValue: "inbox",
         "data-size": "md",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         children: (
             <>
                 <ToggleGroup.Item value="inbox">Inbox</ToggleGroup.Item>

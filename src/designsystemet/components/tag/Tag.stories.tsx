@@ -9,7 +9,7 @@ const meta: Meta<typeof Tag> = {
     args: {
         variant: "default",
         "data-size": "md",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         children: "Tag Text"
     },
     argTypes: {

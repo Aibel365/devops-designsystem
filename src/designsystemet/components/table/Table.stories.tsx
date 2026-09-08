@@ -13,7 +13,7 @@ const meta: Meta<typeof Table> = {
         border: false,
         hover: false,
         "data-size": "md",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         children: (
             <>
                 <caption>Table caption</caption>

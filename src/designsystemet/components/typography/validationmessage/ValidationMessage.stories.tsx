@@ -7,7 +7,7 @@ const meta: Meta<typeof ValidationMessage> = {
     component: ValidationMessage,
     args: {
         children: "This is a message",
-        "data-color": "info",
+        "data-color": "danger",
         "data-size": "md"
     },
     argTypes: {

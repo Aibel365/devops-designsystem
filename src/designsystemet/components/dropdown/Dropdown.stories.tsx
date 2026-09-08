@@ -8,7 +8,7 @@ const meta: Meta<typeof Dropdown> = {
     title: "Designsystemet/Dropdown",
     component: Dropdown,
     args: {
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         placement: "bottom-end",
         autoPlacement: false,
         "data-size": "md"

@@ -27,7 +27,7 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
     args: {
         children: "Card text",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         variant: "default",
         "data-size": "md",
         asChild: false
