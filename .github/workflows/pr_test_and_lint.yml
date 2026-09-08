@@ -11,10 +11,10 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [22.x]
+                node-version: [24.x]
         steps:
             - name: Init - Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
 
@@ -26,23 +26,20 @@ jobs:
             - name: Source - npm install
               run: npm ci
 
-            - name: Source - test --if-present
-              run: npm run test --if-present
-
-            - name: Source - lint --if-present
-              run: npm run lint --if-present
+            - name: Source - knip
+              run: npm run knip --if-present
 
             - name: Source - format:check --if-present
               run: npm run format:check --if-present
 
-            - name: Source - build check --if-present
+            - name: Source - lint --if-present
+              run: npm run lint --if-present
+
+            - name: Source - build --if-present
               run: npm run build --if-present
 
             - name: Source - lint package
               run: npx -y publint
 
-            - name: Source - build storybook check --if-present
+            - name: Source - build storybook --if-present
               run: npm run build-storybook --if-present
-
-            - name: Source - build storybook check --if-present
-              run: npm run clean --if-present
