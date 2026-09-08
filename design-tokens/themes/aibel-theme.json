@@ -1,71 +1,5 @@
 {
   "color": {
-    "aibel-bright-blue": {
-      "1": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.1}"
-      },
-      "2": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.2}"
-      },
-      "3": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.3}"
-      },
-      "4": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.4}"
-      },
-      "5": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.5}"
-      },
-      "6": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.6}"
-      },
-      "7": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.7}"
-      },
-      "8": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.8}"
-      },
-      "9": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.9}"
-      },
-      "10": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.10}"
-      },
-      "11": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.11}"
-      },
-      "12": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.12}"
-      },
-      "13": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.13}"
-      },
-      "14": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.14}"
-      },
-      "15": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.15}"
-      },
-      "16": {
-        "$type": "color",
-        "$value": "{aibel-theme.aibel-bright-blue.16}"
-      }
-    },
     "aibel-blue": {
       "1": {
         "$type": "color",
@@ -130,6 +64,72 @@
       "16": {
         "$type": "color",
         "$value": "{aibel-theme.aibel-blue.16}"
+      }
+    },
+    "aibel-bright-blue": {
+      "1": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{aibel-theme.aibel-bright-blue.16}"
       }
     },
     "aibel-green": {

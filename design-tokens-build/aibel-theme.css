@@ -91,22 +91,6 @@ design-tokens: v1.21.0
 }
 @layer ds.theme.color-scheme.light {
 :root, [data-color-scheme="light"] {
-  --ds-color-aibel-bright-blue-background-default: #ffffff;
-  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
-  --ds-color-aibel-bright-blue-surface-default: #ffffff;
-  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
-  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
-  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
-  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
-  --ds-color-aibel-bright-blue-border-default: #5575ca;
-  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
-  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
-  --ds-color-aibel-bright-blue-text-default: #002179;
-  --ds-color-aibel-bright-blue-base-default: #0030B0;
-  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
-  --ds-color-aibel-bright-blue-base-active: #3d61c3;
-  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
-  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-blue-background-default: #ffffff;
   --ds-color-aibel-blue-background-tinted: #f2f4f6;
   --ds-color-aibel-blue-surface-default: #ffffff;
@@ -123,6 +107,22 @@ design-tokens: v1.21.0
   --ds-color-aibel-blue-base-active: #2d4e74;
   --ds-color-aibel-blue-base-contrast-subtle: #b2becd;
   --ds-color-aibel-blue-base-contrast-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
+  --ds-color-aibel-bright-blue-surface-default: #ffffff;
+  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
+  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
+  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
+  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
+  --ds-color-aibel-bright-blue-border-default: #5575ca;
+  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
+  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
+  --ds-color-aibel-bright-blue-text-default: #002179;
+  --ds-color-aibel-bright-blue-base-default: #0030B0;
+  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
+  --ds-color-aibel-bright-blue-base-active: #3d61c3;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
+  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-green-background-default: #ffffff;
   --ds-color-aibel-green-background-tinted: #f0f5f1;
   --ds-color-aibel-green-surface-default: #ffffff;
@@ -244,22 +244,6 @@ design-tokens: v1.21.0
  
 @media (prefers-color-scheme: light) {
   [data-color-scheme="auto"] {
-  --ds-color-aibel-bright-blue-background-default: #ffffff;
-  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
-  --ds-color-aibel-bright-blue-surface-default: #ffffff;
-  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
-  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
-  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
-  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
-  --ds-color-aibel-bright-blue-border-default: #5575ca;
-  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
-  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
-  --ds-color-aibel-bright-blue-text-default: #002179;
-  --ds-color-aibel-bright-blue-base-default: #0030B0;
-  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
-  --ds-color-aibel-bright-blue-base-active: #3d61c3;
-  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
-  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-blue-background-default: #ffffff;
   --ds-color-aibel-blue-background-tinted: #f2f4f6;
   --ds-color-aibel-blue-surface-default: #ffffff;
@@ -276,6 +260,22 @@ design-tokens: v1.21.0
   --ds-color-aibel-blue-base-active: #2d4e74;
   --ds-color-aibel-blue-base-contrast-subtle: #b2becd;
   --ds-color-aibel-blue-base-contrast-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-default: #ffffff;
+  --ds-color-aibel-bright-blue-background-tinted: #f1f3fb;
+  --ds-color-aibel-bright-blue-surface-default: #ffffff;
+  --ds-color-aibel-bright-blue-surface-tinted: #e3e8f6;
+  --ds-color-aibel-bright-blue-surface-hover: #d1daf1;
+  --ds-color-aibel-bright-blue-surface-active: #bdcaeb;
+  --ds-color-aibel-bright-blue-border-subtle: #abbbe5;
+  --ds-color-aibel-bright-blue-border-default: #5575ca;
+  --ds-color-aibel-bright-blue-border-strong: #2f56bf;
+  --ds-color-aibel-bright-blue-text-subtle: #2f56bf;
+  --ds-color-aibel-bright-blue-text-default: #002179;
+  --ds-color-aibel-bright-blue-base-default: #0030B0;
+  --ds-color-aibel-bright-blue-base-hover: #1f49ba;
+  --ds-color-aibel-bright-blue-base-active: #3d61c3;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #d3dbf1;
+  --ds-color-aibel-bright-blue-base-contrast-default: #ffffff;
   --ds-color-aibel-green-background-default: #ffffff;
   --ds-color-aibel-green-background-tinted: #f0f5f1;
   --ds-color-aibel-green-surface-default: #ffffff;
@@ -562,22 +562,6 @@ design-tokens: v1.21.0
 
 @layer ds.theme.color-scheme.dark {
 [data-color-scheme="dark"] {
-  --ds-color-aibel-bright-blue-background-default: #091635;
-  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
-  --ds-color-aibel-bright-blue-surface-default: #0f2557;
-  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
-  --ds-color-aibel-bright-blue-surface-hover: #143174;
-  --ds-color-aibel-bright-blue-surface-active: #193d90;
-  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
-  --ds-color-aibel-bright-blue-border-default: #6981b7;
-  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
-  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
-  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
-  --ds-color-aibel-bright-blue-base-default: #97aadf;
-  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
-  --ds-color-aibel-bright-blue-base-active: #607ece;
-  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
-  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-blue-background-default: #0a182b;
   --ds-color-aibel-blue-background-tinted: #0d2038;
   --ds-color-aibel-blue-surface-default: #102847;
@@ -594,6 +578,22 @@ design-tokens: v1.21.0
   --ds-color-aibel-blue-base-active: #6c839e;
   --ds-color-aibel-blue-base-contrast-subtle: #1a1c1f;
   --ds-color-aibel-blue-base-contrast-default: #000000;
+  --ds-color-aibel-bright-blue-background-default: #091635;
+  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
+  --ds-color-aibel-bright-blue-surface-default: #0f2557;
+  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
+  --ds-color-aibel-bright-blue-surface-hover: #143174;
+  --ds-color-aibel-bright-blue-surface-active: #193d90;
+  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
+  --ds-color-aibel-bright-blue-border-default: #6981b7;
+  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
+  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
+  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
+  --ds-color-aibel-bright-blue-base-default: #97aadf;
+  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
+  --ds-color-aibel-bright-blue-base-active: #607ece;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
+  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-green-background-default: #101a12;
   --ds-color-aibel-green-background-tinted: #152318;
   --ds-color-aibel-green-surface-default: #1b2c1e;
@@ -715,22 +715,6 @@ design-tokens: v1.21.0
  
 @media (prefers-color-scheme: dark) {
   [data-color-scheme="auto"] {
-  --ds-color-aibel-bright-blue-background-default: #091635;
-  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
-  --ds-color-aibel-bright-blue-surface-default: #0f2557;
-  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
-  --ds-color-aibel-bright-blue-surface-hover: #143174;
-  --ds-color-aibel-bright-blue-surface-active: #193d90;
-  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
-  --ds-color-aibel-bright-blue-border-default: #6981b7;
-  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
-  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
-  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
-  --ds-color-aibel-bright-blue-base-default: #97aadf;
-  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
-  --ds-color-aibel-bright-blue-base-active: #607ece;
-  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
-  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-blue-background-default: #0a182b;
   --ds-color-aibel-blue-background-tinted: #0d2038;
   --ds-color-aibel-blue-surface-default: #102847;
@@ -747,6 +731,22 @@ design-tokens: v1.21.0
   --ds-color-aibel-blue-base-active: #6c839e;
   --ds-color-aibel-blue-base-contrast-subtle: #1a1c1f;
   --ds-color-aibel-blue-base-contrast-default: #000000;
+  --ds-color-aibel-bright-blue-background-default: #091635;
+  --ds-color-aibel-bright-blue-background-tinted: #0c1d45;
+  --ds-color-aibel-bright-blue-surface-default: #0f2557;
+  --ds-color-aibel-bright-blue-surface-tinted: #112a64;
+  --ds-color-aibel-bright-blue-surface-hover: #143174;
+  --ds-color-aibel-bright-blue-surface-active: #193d90;
+  --ds-color-aibel-bright-blue-border-subtle: #2b4c99;
+  --ds-color-aibel-bright-blue-border-default: #6981b7;
+  --ds-color-aibel-bright-blue-border-strong: #98a8cd;
+  --ds-color-aibel-bright-blue-text-subtle: #98a8cd;
+  --ds-color-aibel-bright-blue-text-default: #e9ecf4;
+  --ds-color-aibel-bright-blue-base-default: #97aadf;
+  --ds-color-aibel-bright-blue-base-hover: #7c95d6;
+  --ds-color-aibel-bright-blue-base-active: #607ece;
+  --ds-color-aibel-bright-blue-base-contrast-subtle: #181b23;
+  --ds-color-aibel-bright-blue-base-contrast-default: #000000;
   --ds-color-aibel-green-background-default: #101a12;
   --ds-color-aibel-green-background-tinted: #152318;
   --ds-color-aibel-green-surface-default: #1b2c1e;
@@ -957,7 +957,7 @@ design-tokens: v1.21.0
 }
 }
 @layer ds.theme.color {
-[data-color="aibel-blue"], [data-color-scheme][data-color="aibel-blue"] {
+:root, [data-color-scheme], [data-color="aibel-blue"] {
   --ds-color-background-default: var(--ds-color-aibel-blue-background-default);
   --ds-color-background-tinted: var(--ds-color-aibel-blue-background-tinted);
   --ds-color-surface-default: var(--ds-color-aibel-blue-surface-default);
@@ -979,7 +979,7 @@ design-tokens: v1.21.0
 }
 
 @layer ds.theme.color {
-:root, [data-color-scheme], [data-color="aibel-bright-blue"] {
+[data-color="aibel-bright-blue"], [data-color-scheme][data-color="aibel-bright-blue"] {
   --ds-color-background-default: var(--ds-color-aibel-bright-blue-background-default);
   --ds-color-background-tinted: var(--ds-color-aibel-bright-blue-background-tinted);
   --ds-color-surface-default: var(--ds-color-aibel-bright-blue-surface-default);

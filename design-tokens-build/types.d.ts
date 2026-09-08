@@ -4,8 +4,8 @@ import type {} from '@digdir/designsystemet-types';
 // Augment types based on theme
 declare module '@digdir/designsystemet-types' {
   export interface ColorDefinitions {
-    'aibel-bright-blue': never;
     'aibel-blue': never;
+    'aibel-bright-blue': never;
     'aibel-green': never;
     'aibel-neutral': never;
     neutral: never;
