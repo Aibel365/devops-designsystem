@@ -24,7 +24,7 @@ const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
     args: { children: avatars, expandable: undefined },
     argTypes: {
         children: { control: false, table: { disable: true } },
-        expandable: { control: { type: "radio" }, default: undefined, options: [undefined, "fixed", false, true] }
+        expandable: { control: { type: "radio" }, options: [undefined, "fixed", false, true] }
     }
 };
 
