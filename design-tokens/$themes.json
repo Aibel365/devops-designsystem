@@ -100,18 +100,18 @@
     "group": "Semantic"
   },
   {
-    "id": "bb097485f48db338dcaf644b490e9c59519c34a5",
-    "name": "aibel-bright-blue",
-    "selectedTokenSets": {
-      "semantic/color/aibel-bright-blue": "enabled"
-    },
-    "group": "Color"
-  },
-  {
     "id": "40fb929ec1fc69ba5783f65474fb137770325de9",
     "name": "aibel-blue",
     "selectedTokenSets": {
       "semantic/color/aibel-blue": "enabled"
+    },
+    "group": "Color"
+  },
+  {
+    "id": "bb097485f48db338dcaf644b490e9c59519c34a5",
+    "name": "aibel-bright-blue",
+    "selectedTokenSets": {
+      "semantic/color/aibel-bright-blue": "enabled"
     },
     "group": "Color"
   },

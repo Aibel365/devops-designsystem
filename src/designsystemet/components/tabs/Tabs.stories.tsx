@@ -10,7 +10,7 @@ const meta: Meta<typeof Tabs> = {
     args: {
         defaultValue: "value1",
         "data-size": "md",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         children: (
             <>
                 <Tabs.List>

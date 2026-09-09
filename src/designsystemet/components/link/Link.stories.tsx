@@ -9,7 +9,9 @@ const meta: Meta<typeof Link> = {
     component: Link,
     args: {
         children: "This is a link",
-        href: "https://www.aibel.com"
+        href: "https://www.aibel.com",
+        "data-size": "md",
+        "data-color": "aibel-blue"
     },
     argTypes: {
         href: { control: { type: "text" } },

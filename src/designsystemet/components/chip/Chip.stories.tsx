@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Chip.Button>;
 export const ChipRadio: Story = {
     args: {
         "data-size": "md",
-        "data-color": "aibel-bright-blue"
+        "data-color": "aibel-blue"
     }
 };
 

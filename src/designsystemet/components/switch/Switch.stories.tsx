@@ -12,7 +12,7 @@ const meta: Meta<typeof Switch> = {
         readOnly: false,
         position: "start",
         "data-size": "md",
-        "data-color": "aibel-bright-blue"
+        "data-color": "aibel-blue"
     },
     argTypes: {
         label: { control: { type: "text" } },

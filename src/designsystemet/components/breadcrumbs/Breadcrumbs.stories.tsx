@@ -7,7 +7,7 @@ Breadcrumbs.displayName = "Breadcrumbs";
 const meta: Meta<typeof Breadcrumbs> = {
     title: "Designsystemet/Breadcrumbs",
     component: Breadcrumbs,
-    args: { "data-size": "md" },
+    args: { "data-size": "md", "data-color": "aibel-blue" },
     argTypes: {
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },

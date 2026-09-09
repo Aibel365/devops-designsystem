@@ -24,7 +24,7 @@ const meta: Meta<typeof Field> = {
         ),
         position: "start",
         "data-size": "md",
-        "data-color": "aibel-bright-blue"
+        "data-color": "aibel-blue"
     },
     argTypes: {
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },

@@ -7,6 +7,11 @@ Badge.displayName = "Badge";
 const meta: Meta<typeof Badge> = {
     title: "Designsystemet/Badge",
     component: Badge,
+    args: {
+        "data-color": "aibel-blue",
+        "data-size": "md",
+        variant: "base"
+    },
     argTypes: {
         count: { control: "number" },
         maxCount: { control: "number" },

@@ -11,7 +11,7 @@ const meta: Meta<typeof SkipLink> = {
     component: SkipLink,
     args: {
         "data-size": "md",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         children: "Press this link",
         href: "#main-content"
     },

@@ -25,7 +25,7 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
     args: {
         variant: "primary",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         icon: false,
         loading: false,
         "data-size": "md"

@@ -3,12 +3,11 @@ import { AibelLogo } from "./AibelLogo";
 
 const meta: Meta<typeof AibelLogo> = {
     title: "Components/Logo",
-    component: AibelLogo,
-    argTypes: {},
-    args: {}
+    component: AibelLogo
 };
 
 type Story = StoryObj<typeof AibelLogo>;
 
 export const Default: Story = {};
+
 export default meta;

@@ -14,7 +14,7 @@ const meta: Meta<typeof Avatar> = {
         variant: "circle",
         "data-tooltip": "tooltip",
         "data-size": "md",
-        "data-color": "aibel-bright-blue"
+        "data-color": "aibel-blue"
     },
     argTypes: {
         variant: { control: { type: "radio" }, options: ["circle", "square"] },

@@ -10,6 +10,8 @@ const meta: Meta<typeof Radio> = {
         readOnly: false,
         disabled: false,
         description: "Description",
+        "data-color": "aibel-blue",
+        "data-indeterminate": false,
         "data-size": "md"
     },
     argTypes: {

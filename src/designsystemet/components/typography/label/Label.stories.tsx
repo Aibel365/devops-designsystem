@@ -8,7 +8,8 @@ const meta: Meta<typeof Label> = {
     args: {
         children: "This is a label",
         weight: "regular",
-        asChild: false
+        asChild: false,
+        "data-size": "md"
     },
     argTypes: {
         weight: { control: { type: "select" }, options: ["regular", "medium", "semibold"] },

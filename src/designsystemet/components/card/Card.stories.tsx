@@ -13,7 +13,7 @@ const meta: Meta<typeof Card> = {
     title: "Designsystemet/Card",
     component: Card,
     args: {
-        asChild: true
+        asChild: false
     },
     argTypes: {
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
@@ -27,10 +27,9 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
     args: {
         children: "Card text",
-        "data-color": "aibel-bright-blue",
+        "data-color": "aibel-blue",
         variant: "default",
-        "data-size": "md",
-        asChild: false
+        "data-size": "md"
     }
 };
 
@@ -45,7 +44,8 @@ export const CardAsButtonWithBlocks: Story = {
                     <Paragraph>Most provide as with carried business are much better more the perfected designer. Writing slightly explain desk unable at supposedly about this.</Paragraph>
                 </Card.Block>
             </button>
-        )
+        ),
+        asChild: true
     }
 };
 
@@ -66,8 +66,7 @@ export const CardWithImage: Story = {
                     <Paragraph>Most provide as with carried business are much better more the perfected designer. Writing slightly explain desk unable at supposedly about this.</Paragraph>
                 </Card.Block>
             </>
-        ),
-        asChild: false
+        )
     }
 };
 
