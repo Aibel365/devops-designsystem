@@ -7,6 +7,10 @@ Pagination.displayName = "Pagination";
 const meta: Meta<typeof Pagination> = {
     title: "Designsystemet/Pagination",
     component: Pagination,
+    args: {
+        "data-color": "aibel-blue",
+        "data-size": "md"
+    },
     argTypes: {
         "data-current": { control: { type: "text" } },
         "data-total": { control: { type: "text" } },
