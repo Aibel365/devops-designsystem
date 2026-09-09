@@ -8,8 +8,6 @@ const meta: Meta<typeof Skeleton> = {
     title: "Designsystemet/Skeleton",
     component: Skeleton,
     args: {
-        width: 200,
-        height: 100,
         variant: "rectangle"
     },
     argTypes: {
@@ -24,10 +22,10 @@ type Story = StoryObj<typeof Skeleton>;
 export const Default: Story = {};
 
 export const CircleVariant: Story = {
-    args: { variant: "circle" }
+    args: { width: 200, height: 100, variant: "circle" }
 };
 export const TextVariant: Story = {
-    args: { variant: "text", width: 50 }
+    args: { width: 50, height: 100, variant: "text" }
 };
 
 export default meta;

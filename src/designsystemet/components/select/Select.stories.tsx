@@ -34,8 +34,7 @@ const meta: Meta<typeof Select> = {
         ),
         disabled: false,
         readOnly: false,
-        "data-size": "lg",
-        defaultValue: "",
+        "data-size": "md",
         width: "full"
     },
     argTypes: {
@@ -50,6 +49,21 @@ const meta: Meta<typeof Select> = {
 type Story = StoryObj<typeof Select>;
 
 export const Default: Story = {
+    render: (args) => {
+        const { children, ...restArgs } = args;
+        return (
+            <Field>
+                <Label>Select a mountain</Label>
+                <Select {...restArgs}>{children}</Select>
+            </Field>
+        );
+    }
+};
+
+export const WithEmptyDefaultValue: Story = {
+    args: {
+        defaultValue: ""
+    },
     render: (args) => {
         const { children, ...restArgs } = args;
         return (

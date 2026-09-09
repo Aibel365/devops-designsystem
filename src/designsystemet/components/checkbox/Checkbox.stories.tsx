@@ -8,7 +8,15 @@ const meta: Meta<typeof Checkbox> = {
     title: "Designsystemet/Checkbox",
     component: Checkbox,
     args: {
-        description: "Description"
+        disabled: false,
+        readOnly: false,
+        "data-indeterminate": false,
+        required: false,
+        error: "",
+        variant: undefined,
+        position: "start",
+        "data-size": "md",
+        description: ""
     },
     argTypes: {
         readOnly: { control: { type: "boolean" }, options: [true, false] },
@@ -21,32 +29,24 @@ const meta: Meta<typeof Checkbox> = {
         variant: {
             control: { type: "select" },
             options: ["outline"]
+        },
+        position: {
+            control: { type: "select" },
+            options: ["start", "end"]
         }
     }
 };
 
 type Story = StoryObj<typeof Checkbox>;
 
-export const Default: Story = {
-    args: {
-        readOnly: false,
-        disabled: false,
-        required: false,
-        checked: false,
-        error: "",
-        "data-indeterminate": false,
-        "data-size": "md"
-    }
-};
+export const Default: Story = {};
 
-export const ReadOnly: Story = { args: { readOnly: true, checked: true } };
+export const ReadOnly: Story = { args: { readOnly: true, checked: true, description: "Description" } };
 
-export const Disabled: Story = { args: { disabled: true } };
+export const Disabled: Story = { args: { disabled: true, description: "Description" } };
 
-export const Error: Story = { args: { error: "This field is required" } };
+export const Error: Story = { args: { error: "This field is required", description: "Description" } };
 
-export const Indeterminate: Story = { args: { checked: true, "data-indeterminate": true } };
-
-export const Outline: Story = { args: { variant: "outline" } };
+export const Indeterminate: Story = { args: { checked: true, "data-indeterminate": true, description: "Description" } };
 
 export default meta;

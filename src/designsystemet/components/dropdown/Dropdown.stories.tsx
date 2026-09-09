@@ -10,7 +10,7 @@ const meta: Meta<typeof Dropdown> = {
     args: {
         "data-color": "aibel-blue",
         placement: "bottom-end",
-        autoPlacement: false,
+        autoPlacement: true,
         "data-size": "md"
     },
     argTypes: {

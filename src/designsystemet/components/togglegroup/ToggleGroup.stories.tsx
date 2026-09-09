@@ -9,7 +9,6 @@ const meta: Meta<typeof ToggleGroup> = {
     component: ToggleGroup,
     args: {
         variant: "primary",
-        "data-toggle-group": "filter",
         defaultValue: "inbox",
         "data-size": "md",
         "data-color": "aibel-blue",
@@ -24,7 +23,6 @@ const meta: Meta<typeof ToggleGroup> = {
     },
     argTypes: {
         variant: { control: { type: "radio" }, options: ["primary", "secondary"] },
-        "data-toggle-group": { control: { type: "text" } },
         defaultValue: { control: { type: "text" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
