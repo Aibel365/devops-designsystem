@@ -1,76 +1,51 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-
-import { EXPERIMENTAL_AvatarStack } from "./AvatarStack";
+import type { CSSProperties } from "react";
 import { Avatar } from "../avatar/Avatar";
+import { EXPERIMENTAL_AvatarStack } from "./AvatarStack";
 
+EXPERIMENTAL_AvatarStack.displayName = "AvatarStack";
+
+const avatars = (
+    <>
+        <li>
+            <Avatar aria-label="Person 1"></Avatar>
+        </li>
+        <li>
+            <Avatar aria-label="Person 2"></Avatar>
+        </li>
+        <li>
+            <Avatar aria-label="Person 3"></Avatar>
+        </li>
+    </>
+);
 const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
     title: "Designsystemet/AvatarStack",
     component: EXPERIMENTAL_AvatarStack,
-    argTypes: { avatarSize: { control: "text" }, gap: { control: "text" }, overlap: { control: "number" }, suffix: { control: "text" }, expandable: { control: { type: "boolean" } } }
+    args: { children: avatars, expandable: undefined },
+    argTypes: {
+        children: { control: false, table: { disable: true } },
+        expandable: { control: { type: "radio" }, default: undefined, options: [undefined, "fixed", false, true] }
+    }
 };
 
-type Story = StoryObj<typeof EXPERIMENTAL_AvatarStack>;
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-    render: () => (
-        <EXPERIMENTAL_AvatarStack aria-label="contributors">
-            <Avatar aria-label="Person 1">AB</Avatar>
-            <Avatar aria-label="Person 2">CD</Avatar>
-            <Avatar aria-label="Person 3">EF</Avatar>
-        </EXPERIMENTAL_AvatarStack>
-    )
-};
+export const Default: Story = {};
 
 export const SmallSize: Story = {
-    render: () => (
-        <EXPERIMENTAL_AvatarStack
-            aria-label="contributors"
-            avatarSize="2rem"
-        >
-            <Avatar aria-label="Person 1">AB</Avatar>
-            <Avatar aria-label="Person 2">CD</Avatar>
-            <Avatar aria-label="Person 3">EF</Avatar>
-        </EXPERIMENTAL_AvatarStack>
-    )
+    args: { style: { "--dsc-avatar-stack-size": "2rem" } as CSSProperties }
 };
 
 export const WithGap: Story = {
-    render: () => (
-        <EXPERIMENTAL_AvatarStack
-            aria-label="contributors"
-            gap="0.5rem"
-        >
-            <Avatar aria-label="Person 1">AB</Avatar>
-            <Avatar aria-label="Person 2">CD</Avatar>
-            <Avatar aria-label="Person 3">EF</Avatar>
-        </EXPERIMENTAL_AvatarStack>
-    )
+    args: { style: { "--dsc-avatar-stack-gap": "0.5rem" } as CSSProperties }
 };
 
 export const HighOverlap: Story = {
-    render: () => (
-        <EXPERIMENTAL_AvatarStack
-            aria-label="contributors"
-            overlap={70}
-        >
-            <Avatar aria-label="Person 1">AB</Avatar>
-            <Avatar aria-label="Person 2">CD</Avatar>
-            <Avatar aria-label="Person 3">EF</Avatar>
-        </EXPERIMENTAL_AvatarStack>
-    )
+    args: { style: { "--dsc-avatar-stack-overlap": "32px" } as CSSProperties }
 };
 
 export const Expandable: Story = {
-    render: () => (
-        <EXPERIMENTAL_AvatarStack
-            aria-label="contributors"
-            expandable={true}
-        >
-            <Avatar aria-label="Person 1">AB</Avatar>
-            <Avatar aria-label="Person 2">CD</Avatar>
-            <Avatar aria-label="Person 3">EF</Avatar>
-        </EXPERIMENTAL_AvatarStack>
-    )
+    args: { expandable: true }
 };
 
 export default meta;

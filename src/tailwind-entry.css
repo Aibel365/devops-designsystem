@@ -43,6 +43,10 @@ ol {
     list-style: none;
 }
 
+.ds-avatar-stack {
+    list-style: none;
+}
+
 .ds-search input {
     border-top-left-radius: var(--ds-border-radius-default);
     border-bottom-left-radius: var(--ds-border-radius-default);
