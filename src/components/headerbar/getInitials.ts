@@ -15,5 +15,5 @@ export const getInitials = (name?: string) => {
         return allNames[0].charAt(0).toUpperCase();
     }
 
-    return `${allNames[0].charAt(0)}${allNames.at(-1).charAt(0)}`.toUpperCase();
+    return `${allNames[0].charAt(0)}${allNames.at(-1)?.charAt(0)}`.toUpperCase();
 };
