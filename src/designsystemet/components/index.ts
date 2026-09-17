@@ -14,6 +14,7 @@ export * from "./dropdown/Dropdown";
 export * from "./errorsummary/ErrorSummary";
 export * from "./field/Field";
 export * from "./fieldset/Fieldset";
+export * from "./file-upload/FileUpload";
 export * from "./input/Input";
 export * from "./link/Link";
 export * from "./list/List";

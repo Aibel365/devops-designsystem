@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "../button/Button";
 import { Field } from "../field/Field";
 import { Label } from "../typography/label/Label";
-import { EXPERIMENTAL_FileUpload } from "./file-upload";
+import { EXPERIMENTAL_FileUpload } from "./FileUpload";
 
 EXPERIMENTAL_FileUpload.displayName = "FileUpload";
 Field.displayName = "Field";

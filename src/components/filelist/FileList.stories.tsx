@@ -2,7 +2,7 @@ import { Alert, Button, Divider, Field, Heading, Label, Paragraph } from "@digdi
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
 import { Dialog } from "../../designsystemet/components/dialog/Dialog";
-import { EXPERIMENTAL_FileUpload } from "../../designsystemet/components/file-upload/file-upload";
+import { EXPERIMENTAL_FileUpload } from "../../designsystemet/components/file-upload/FileUpload";
 import { Textarea } from "../../designsystemet/components/textarea/Textarea";
 import { UploadFileIcon } from "../icons/upload-file/UploadFileIcon";
 import { FileList } from "./FileList";
