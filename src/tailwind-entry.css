@@ -6,7 +6,8 @@
 
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
-@theme {
+@theme static {
+    /* When the new font is fully integrated into designsystem, remove the static flag from theme */
     /* Your theme variables go here */
     --font-jetbrains-mono: "JetBrains Mono", ui-monospace, monospace;
 }
