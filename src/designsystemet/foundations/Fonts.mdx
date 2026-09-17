@@ -8,7 +8,8 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 Here you will find an overview of the different fonts that are available.
 
-Use the theme token to access the sans-serif font by using: (`--ds-font-family`). The monospace font is exposed as a Tailwind utility, `font-jetbrains-mono`, backed by the `--ads-font-jetbrains-mono` CSS variable.
+Use the theme token to access the sans-serif font by using: (`--ds-font-family`). The monospace font is available as a plain `font-jetbrains-mono` CSS class (no `ads:` prefix needed, just like the library's other `ds-*` styles), and also as the Tailwind
+utility `ads:font-jetbrains-mono` backed by the `--ads-font-jetbrains-mono` CSS variable.
 
 export const fontTokens = [
     {
@@ -21,7 +22,7 @@ export const fontTokens = [
         name: "JetBrains Mono",
         description: "Monospace font used for code, technical and tabular content.",
         cssVar: "var(--ads-font-jetbrains-mono)",
-        sample: "ads:font-jetbrains-mono"
+        sample: "font-jetbrains-mono"
     }
 ];
 

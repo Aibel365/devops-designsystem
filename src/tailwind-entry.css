@@ -19,6 +19,17 @@ body {
 }
 
 /* eslint-enable */
+
+/*
+ * Plain (unprefixed) utility class for JetBrains Mono, mirroring how other
+ * library styles (e.g. .ds-*) don't require the "ads:" prefix. The
+ * `ads:font-jetbrains-mono` Tailwind utility above is still available for
+ * consumers who use this library's Tailwind setup directly.
+ */
+.font-jetbrains-mono {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
 ol,
 ul,
 menu {
