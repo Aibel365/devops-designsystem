@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss" prefix(ads);
 @import "@digdir/designsystemet-css";
 @import "../design-tokens-build/aibel-theme.css";
 @import "../design-tokens-build/aibel-theme.tailwind.css" layer(theme);
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme static {
+    /* When the new font is fully integrated into designsystem, remove the static flag from theme */
     /* Your theme variables go here */
     --font-jetbrains-mono: "JetBrains Mono", ui-monospace, monospace;
 }
