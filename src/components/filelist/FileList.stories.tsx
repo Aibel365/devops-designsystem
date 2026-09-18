@@ -108,12 +108,6 @@ export const MixedData: Story = {
     }
 };
 
-export const Empty: Story = {
-    args: {
-        files: []
-    }
-};
-
 export const WithFileUpload: Story = {
     args: {
         files: richMockFiles,
