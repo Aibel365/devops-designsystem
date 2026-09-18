@@ -48,7 +48,6 @@ export const FileListItem: React.FC<FileListItemProps> = ({ file, onDeleteClick,
                 variant="tertiary"
                 type="button"
                 title="Delete"
-                className="ads:self-end"
                 onClick={(event) => {
                     onDeleteClick?.({ file, event });
                 }}
