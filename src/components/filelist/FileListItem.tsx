@@ -35,25 +35,30 @@ export const FileListItem: React.FC<FileListItemProps> = ({ file, onDeleteClick,
                 <FileTypeIcon type={file.contentType} />
                 {file.name ?? "Unnamed file"}
             </Link>
-            <span
-                onClick={(event) => {
-                    onDescriptionClick?.({ file, event });
-                }}
-                className="ads:text-ellipsis ads:truncate"
-            >
-                {file.description}
-            </span>
-            <Button
-                icon
-                variant="tertiary"
-                type="button"
-                title="Delete"
-                onClick={(event) => {
-                    onDeleteClick?.({ file, event });
-                }}
-            >
-                <DeleteIcon />
-            </Button>
+            {file.description && (
+                <Button
+                    variant="tertiary"
+                    onClick={(event) => {
+                        onDescriptionClick?.({ file, event });
+                    }}
+                    className="ads:text-ellipsis ads:truncate"
+                >
+                    {file.description}
+                </Button>
+            )}
+            {onDeleteClick && (
+                <Button
+                    icon
+                    variant="tertiary"
+                    type="button"
+                    title="Delete"
+                    onClick={(event) => {
+                        onDeleteClick?.({ file, event });
+                    }}
+                >
+                    <DeleteIcon />
+                </Button>
+            )}
         </List.Item>
     );
 };
