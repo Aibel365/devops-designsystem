@@ -123,12 +123,7 @@ export const WithFileUpload: Story = {
                 <EXPERIMENTAL_FileUpload>
                     <Field.Description>Drop file here</Field.Description>
                     <Field.Description>File must be in CSV format and less than 2 MB</Field.Description>
-                    <Button
-                        asChild
-                        data-variant="secondary"
-                    >
-                        <span>Upload file</span>
-                    </Button>
+                    <Button data-variant="secondary">Upload file</Button>
                     <input type="file" />
                 </EXPERIMENTAL_FileUpload>
             </Field>
@@ -157,12 +152,7 @@ export const DescriptionDialogOnClick: Story = {
                 <EXPERIMENTAL_FileUpload>
                     <Field.Description>Drop file here</Field.Description>
                     <Field.Description>File must be in CSV format and less than 2 MB</Field.Description>
-                    <Button
-                        asChild
-                        data-variant="secondary"
-                    >
-                        <span>Upload file</span>
-                    </Button>
+                    <Button data-variant="secondary">Upload file</Button>
                     <input type="file" />
                 </EXPERIMENTAL_FileUpload>
             </Field>
@@ -220,12 +210,7 @@ export const WithAllEventHandlers: Story = {
                 <EXPERIMENTAL_FileUpload>
                     <Field.Description>Drop file here</Field.Description>
                     <Field.Description>File must be in CSV format and less than 2 MB</Field.Description>
-                    <Button
-                        asChild
-                        data-variant="secondary"
-                    >
-                        <span>Upload file</span>
-                    </Button>
+                    <Button data-variant="secondary">Upload file</Button>
                     <input type="file" />
                 </EXPERIMENTAL_FileUpload>
             </Field>
