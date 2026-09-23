@@ -16,6 +16,7 @@ const meta: Meta<typeof Checkbox> = {
         variant: undefined,
         position: "start",
         "data-size": "md",
+        "data-color": "aibel-blue",
         description: ""
     },
     argTypes: {
@@ -26,6 +27,7 @@ const meta: Meta<typeof Checkbox> = {
         "data-indeterminate": { control: { type: "boolean" }, options: [true, false] },
         error: { control: { type: "text" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         variant: {
             control: { type: "select" },
             options: ["outline"]

@@ -11,13 +11,15 @@ const meta: Meta<typeof Textarea> = {
         disabled: false,
         readOnly: false,
         cols: 20,
-        "data-size": "md"
+        "data-size": "md",
+        "data-color": "aibel-blue"
     },
     argTypes: {
         disabled: { control: { type: "radio" }, options: [true, false] },
         readOnly: { control: { type: "radio" }, options: [true, false] },
         cols: { control: { type: "number" } },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         className: { control: false, table: { disable: true } }
     }
 };

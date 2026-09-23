@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Select } from "./Select";
 import { Field } from "../field/Field";
 import { Label } from "../typography/label/Label";
 import { ValidationMessage } from "../typography/validationmessage/ValidationMessage";
+import { Select } from "./Select";
 
 Select.displayName = "Select";
 Field.displayName = "Field";
@@ -35,12 +35,14 @@ const meta: Meta<typeof Select> = {
         disabled: false,
         readOnly: false,
         "data-size": "md",
+        "data-color": "aibel-blue",
         width: "full"
     },
     argTypes: {
         children: { control: false, table: { disable: true } },
         disabled: { control: "boolean" },
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         width: { control: { type: "radio" }, options: ["auto", "full"] },
         readOnly: { control: "boolean" }
     }

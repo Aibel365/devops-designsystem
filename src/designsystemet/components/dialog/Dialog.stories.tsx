@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Dialog } from "./Dialog";
 import { Heading } from "../typography/heading/Heading";
 import { Paragraph } from "../typography/paragraph/Paragraph";
+import { Dialog } from "./Dialog";
 
 Dialog.displayName = "Dialog";
 Heading.displayName = "Heading";
@@ -12,6 +12,8 @@ const meta: Meta<typeof Dialog> = {
     title: "Designsystemet/Dialog",
     component: Dialog,
     args: {
+        "data-color": "aibel-blue",
+        "data-size": "md",
         children: (
             <>
                 <Dialog.TriggerContext>
@@ -23,6 +25,7 @@ const meta: Meta<typeof Dialog> = {
     },
     argTypes: {
         "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
+        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         open: { control: { type: "boolean" }, options: [true, false] },
         modal: { control: { type: "boolean" }, options: [true, false] },
         placement: { description: "When not center, displays dialog as a drawer from the specified side.", control: { type: "radio" }, options: ["center", "top", "right", "bottom", "left"] },
