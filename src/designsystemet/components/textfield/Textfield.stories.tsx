@@ -15,9 +15,7 @@ const meta: Meta<typeof Textfield> = {
         required: false,
         counter: 0,
         type: "text",
-        size: 18,
-        "data-size": "md",
-        "data-color": "aibel-blue"
+        size: 18
     },
     argTypes: {
         label: { control: { type: "text" } },
@@ -33,8 +31,6 @@ const meta: Meta<typeof Textfield> = {
         suffix: { control: { type: "text" } },
         type: { control: { type: "select" }, options: ["number", "hidden", "color", "date", "datetime-local", "email", "file", "month", "password", "search", "tel", "text", "time", "url", "week"] },
         size: { control: { type: "number" } },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         "data-indeterminate": { control: { type: "boolean" } }
     }
 };

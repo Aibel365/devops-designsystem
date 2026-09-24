@@ -10,8 +10,6 @@ const meta: Meta<typeof Input> = {
         disabled: false,
         type: "text",
         name: "Some text...",
-        "data-size": "md",
-        "data-color": "aibel-blue",
         size: 12
     },
     argTypes: {
@@ -21,8 +19,6 @@ const meta: Meta<typeof Input> = {
         type: { control: { type: "select" }, options: ["checkbox", "color", "date", "datetime-local", "email", "file", "hidden", "month", "number", "password", "radio", "search", "tel", "text", "time", "url", "week"] },
         "data-indeterminate": { control: { type: "boolean" }, options: [true, false] },
         name: { control: { type: "text" } },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         size: { control: { type: "number" }, description: "Adjusts the width of the component" }
     }
 };
