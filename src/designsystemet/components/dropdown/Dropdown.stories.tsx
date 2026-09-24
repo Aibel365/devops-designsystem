@@ -8,15 +8,11 @@ const meta: Meta<typeof Dropdown> = {
     title: "Designsystemet/Dropdown",
     component: Dropdown,
     args: {
-        "data-color": "aibel-blue",
         placement: "bottom-end",
-        autoPlacement: true,
-        "data-size": "md"
+        autoPlacement: true
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         placement: { control: { type: "select" }, options: ["none", "top", "right", "bottom", "left", "top-start", "top-end", "right-start", "right-end", "bottom-start", "bottom-end", "left-start", "left-end"] },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         open: { control: { type: "boolean" }, options: [true, false] },
         autoPlacement: { control: { type: "boolean" }, options: [true, false] },
         children: {

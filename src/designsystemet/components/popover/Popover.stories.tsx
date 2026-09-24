@@ -8,16 +8,12 @@ const meta: Meta<typeof Popover> = {
     component: Popover,
     args: {
         placement: "top",
-        variant: "default",
-        "data-color": "aibel-blue",
-        "data-size": "md"
+        variant: "default"
     },
     argTypes: {
         placement: { control: { type: "select" }, options: ["none", "top", "right", "bottom", "left", "top-start", "top-end", "right-start", "right-end", "bottom-start", "bottom-end", "left-start", "left-end"] },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         open: { control: { type: "boolean" }, options: [true, false] },
         variant: { control: { type: "radio" }, options: ["default", "tinted"] },
-        "data-color": { control: { type: "select" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral", "info", "success", "warning", "danger"] },
         autoPlacement: { control: { type: "boolean" }, options: [true, false] },
         onOpen: {},
         onClose: {}

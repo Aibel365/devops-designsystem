@@ -7,8 +7,6 @@ const meta: Meta<typeof Tooltip> = {
     component: Tooltip,
     args: {
         content: "This is the tooltip",
-        "data-size": "md",
-        "data-color": "aibel-blue",
         children: <Button>Hover or focus on me</Button>
     },
     argTypes: {
@@ -16,8 +14,6 @@ const meta: Meta<typeof Tooltip> = {
             control: "radio",
             options: ["top", "right", "bottom", "left"]
         },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         autoPlacement: { control: { type: "boolean" }, options: [true, false] }
     }
 };

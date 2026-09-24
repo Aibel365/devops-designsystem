@@ -9,13 +9,7 @@ Radio.displayName = "Radio";
 const meta: Meta<typeof Fieldset> = {
     title: "Designsystemet/Fieldset",
     component: Fieldset,
-    args: {
-        "data-size": "md",
-        "data-color": "aibel-blue"
-    },
     argTypes: {
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: {
             control: false,
             table: { disable: true }

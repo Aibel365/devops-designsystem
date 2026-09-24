@@ -14,14 +14,10 @@ const meta: Meta<typeof Details> = {
                 <Details.Content>Details content</Details.Content>
             </>
         ),
-        variant: "default",
-        "data-size": "md",
-        "data-color": "aibel-blue"
+        variant: "default"
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         variant: { control: { type: "radio" }, options: ["default", "tinted"] },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         open: { control: { type: "boolean" }, options: [true, false] },
         defaultOpen: { control: { type: "boolean" }, options: [true, false] },
         children: {

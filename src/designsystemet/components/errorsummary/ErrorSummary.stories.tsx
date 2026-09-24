@@ -23,13 +23,9 @@ const meta: Meta<typeof ErrorSummary> = {
                     </ErrorSummary.Item>
                 </ErrorSummary.List>
             </ErrorSummary>
-        ),
-        "data-size": "md",
-        "data-color": "aibel-blue"
+        )
     },
     argTypes: {
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: {
             control: false,
             table: { disable: true }

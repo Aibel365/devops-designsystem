@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Field } from "./Field";
-import { Label } from "../typography/label/Label";
 import { Input } from "../input/Input";
+import { Label } from "../typography/label/Label";
 import { ValidationMessage } from "../typography/validationmessage/ValidationMessage";
+import { Field } from "./Field";
 
 Field.displayName = "Field";
 Label.displayName = "Label";
@@ -22,14 +22,10 @@ const meta: Meta<typeof Field> = {
                 <ValidationMessage>You cannot have spaces in your last name</ValidationMessage>
             </Field>
         ),
-        position: "start",
-        "data-size": "md",
-        "data-color": "aibel-blue"
+        position: "start"
     },
     argTypes: {
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         position: { control: { type: "radio" }, description: `Position of toggle inputs (radio, checkbox, switch) in field "start" "end"`, options: ["start", "end"] },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
         children: {
             control: false,
             table: { disable: true }
