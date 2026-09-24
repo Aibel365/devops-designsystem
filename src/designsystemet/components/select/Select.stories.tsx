@@ -34,15 +34,11 @@ const meta: Meta<typeof Select> = {
         ),
         disabled: false,
         readOnly: false,
-        "data-size": "md",
-        "data-color": "aibel-blue",
         width: "full"
     },
     argTypes: {
         children: { control: false, table: { disable: true } },
         disabled: { control: "boolean" },
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         width: { control: { type: "radio" }, options: ["auto", "full"] },
         readOnly: { control: "boolean" }
     }

@@ -13,8 +13,6 @@ const meta: Meta<typeof EXPERIMENTAL_FileUpload> = {
     title: "Designsystemet/FileUpload",
     component: EXPERIMENTAL_FileUpload,
     args: {
-        "data-size": "md",
-        "data-color": "aibel-blue",
         children: (
             <Field>
                 <Label>Upload file</Label>
@@ -28,8 +26,6 @@ const meta: Meta<typeof EXPERIMENTAL_FileUpload> = {
         )
     },
     argTypes: {
-        "data-size": { control: { type: "radio" }, options: ["sm", "md", "lg"] },
-        "data-color": { control: { type: "radio" }, options: ["aibel-blue", "aibel-bright-blue", "aibel-green", "aibel-neutral"] },
         children: { control: false, table: { disable: true } }
     }
 };
