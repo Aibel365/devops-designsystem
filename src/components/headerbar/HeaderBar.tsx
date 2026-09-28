@@ -52,7 +52,7 @@ export const HeaderBar = ({ title, logoLink = "/", linkCallback, children, subHe
                             </>
                         )}
                     </div>
-                    {children && <div className="ads:flex ads:items-center ads:justify-center ads:h-19 ads:absolute ads:left-1/2 ads:translate-x-1/2">{children}</div>}
+                    {children && <div className="ads:flex ads:w-full ads:items-center ads:justify-center ads:h-19">{children}</div>}
                     {delegated.userName && (
                         <div className="ads:flex ads:ml-auto ads:items-center">
                             <UserMenu {...delegated} />
