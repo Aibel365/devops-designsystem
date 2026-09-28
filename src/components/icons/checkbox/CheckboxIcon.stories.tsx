@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CheckboxIcon } from "./CheckboxIcon";
 
 const meta: Meta<typeof CheckboxIcon> = {
-    title: "Icons/Icons/CheckboxIcon",
+    title: "Icons/CheckboxIcon",
     component: CheckboxIcon
 };
 

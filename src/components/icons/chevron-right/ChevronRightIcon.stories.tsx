@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ChevronRightIcon } from "./ChevronRightIcon";
 
 const meta: Meta<typeof ChevronRightIcon> = {
-    title: "Icons/Icons/ChevronRightIcon",
+    title: "Icons/ChevronRightIcon",
     component: ChevronRightIcon
 };
 

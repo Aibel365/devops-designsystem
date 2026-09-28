@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CameraAddPhotoIcon } from "./CameraAddPhotoIcon";
 
 const meta: Meta<typeof CameraAddPhotoIcon> = {
-    title: "Icons/Icons/CameraAddPhotoIcon",
+    title: "Icons/CameraAddPhotoIcon",
     component: CameraAddPhotoIcon
 };
 

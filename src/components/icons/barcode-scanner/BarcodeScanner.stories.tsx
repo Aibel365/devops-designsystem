@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { BarcodeScannerIcon } from "./BarcodeScanner";
 
 const meta: Meta<typeof BarcodeScannerIcon> = {
-    title: "Icons/Icons/BarcodeScannerIcon",
+    title: "Icons/BarcodeScannerIcon",
     component: BarcodeScannerIcon
 };
 

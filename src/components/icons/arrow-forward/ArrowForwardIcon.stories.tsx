@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ArrowForwardIcon } from "./ArrowForwardIcon";
 
 const meta: Meta<typeof ArrowForwardIcon> = {
-    title: "Icons/Icons/ArrowForwardIcon",
+    title: "Icons/ArrowForwardIcon",
     component: ArrowForwardIcon
 };
 

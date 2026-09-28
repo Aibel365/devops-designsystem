@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CalendarMonthIcon } from "./CalendarMonthIcon";
 
 const meta: Meta<typeof CalendarMonthIcon> = {
-    title: "Icons/Icons/CalendarMonthIcon",
+    title: "Icons/CalendarMonthIcon",
     component: CalendarMonthIcon
 };
 

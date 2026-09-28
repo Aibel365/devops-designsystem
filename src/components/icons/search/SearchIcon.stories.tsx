@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SearchIcon } from "./SearchIcon";
 
 const meta: Meta<typeof SearchIcon> = {
-    title: "Icons/Icons/SearchIcon",
+    title: "Icons/SearchIcon",
     component: SearchIcon
 };
 

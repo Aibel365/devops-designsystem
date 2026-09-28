@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { NotStartedStatusIcon } from "./NotStartedStatusIcon";
 
 const meta: Meta<typeof NotStartedStatusIcon> = {
-    title: "Icons/Icons/NotStartedStatusIcon",
+    title: "Icons/NotStartedStatusIcon",
     component: NotStartedStatusIcon
 };
 

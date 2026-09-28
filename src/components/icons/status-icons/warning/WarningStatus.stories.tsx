@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { WarningStatusIcon } from "./WarningStatusIcon";
 
 const meta: Meta<typeof WarningStatusIcon> = {
-    title: "Icons/Icons/WarningStatusIcon",
+    title: "Icons/WarningStatusIcon",
     component: WarningStatusIcon
 };
 

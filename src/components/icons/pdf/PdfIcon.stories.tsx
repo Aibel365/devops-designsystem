@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PdfIcon } from "./PdfIcon";
 
 const meta: Meta<typeof PdfIcon> = {
-    title: "Icons/Icons/PdfIcon",
+    title: "Icons/PdfIcon",
     component: PdfIcon
 };
 
