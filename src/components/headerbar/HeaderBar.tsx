@@ -34,23 +34,21 @@ export const HeaderBar = ({ title, logoLink = "/", linkCallback, children, subHe
     return (
         <div className={className}>
             <div className="ads:sticky ads:top-0 ads:z-100 ads:flex ads:flex-col">
-                <div className="ads:flex ads:content-between ads:w-full ads:h-19 ads:py-0 ads:px-8 ads:bg-aibel-blue-base-default ads:text-white ads:shadow-2xl ads:shadow-black/15 ads:z-1">
-                    <div className="ads:flex ads:items-center ads:justify-between ads:gap-2">
+                <div className="ads:flex ads:content-between ads:w-full ads:h-19 ads:py-0 ads:px-8 ads:bg-aibel-blue-base-default ads:text-white ads:z-1">
+                    <div className="ads:flex ads:items-center ads:shrink-0">
                         <a
-                            className="ads:p-0 ads:h-7 ads:md:h-5 ads:bg-transparent ads:border-0 ads:hover:cursor-pointer"
+                            className="ads:h-7 ads:bg-transparent ads:border-0 ads:hover:cursor-pointer ads:flex ads:items-center ads:justify-between ads:gap-2"
                             href={linkCallback ? undefined : logoLink}
                             onClick={linkCallback ? () => linkCallback(logoLink) : undefined}
                         >
-                            <AibelLogo className="ads:h-7 ads:md:h-5 ads:p-0" />
-                        </a>
-                        {!!title && (
-                            <>
-                                <div className="ads:shrink-0 ads:w-px ads:h-8 ads:bg-white/40 ads:xl:hidden"></div>
-                                <a className="ads:shrink-0 ads:no-underline ads:text-neutral-100">
+                            <AibelLogo className="ads:h-5" />
+                            {!!title && (
+                                <>
+                                    <div className="ads:w-px ads:h-8 ads:bg-white/40"></div>
                                     <span>{title}</span>
-                                </a>
-                            </>
-                        )}
+                                </>
+                            )}
+                        </a>
                     </div>
                     {children && <div className="ads:flex ads:w-full ads:items-center ads:justify-center ads:h-19">{children}</div>}
                     {delegated.userName && (
