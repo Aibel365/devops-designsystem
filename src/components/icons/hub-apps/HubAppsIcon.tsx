@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import type { SVGProps } from "react";
-import HubApps from "./hub-apps.jsx.svg?react";
+import HubApps from "./hubApps.jsx.svg?react";
 
 export const HubAppsIcon = (props: SVGProps<SVGSVGElement>) => {
     return (

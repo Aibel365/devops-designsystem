@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import type { SVGProps } from "react";
-import WorkPrep from "./work-prep.jsx.svg?react";
+import WorkPrep from "./workPrep.jsx.svg?react";
 
 export const WorkPrepIcon = (props: SVGProps<SVGSVGElement>) => {
     return (

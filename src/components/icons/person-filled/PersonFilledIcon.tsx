@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import type { SVGProps } from "react";
-import Person from "./person-fill.jsx.svg?react";
+import Person from "./personFilled.jsx.svg?react";
 
 export const PersonFilledIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
