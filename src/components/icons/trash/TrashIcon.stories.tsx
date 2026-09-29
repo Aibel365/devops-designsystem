@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TrashIcon } from "./TrashIcon";
 
 const meta: Meta<typeof TrashIcon> = {
-    title: "Icons/Icons/TrashIcon",
+    title: "Icons/TrashIcon",
     component: TrashIcon
 };
 
