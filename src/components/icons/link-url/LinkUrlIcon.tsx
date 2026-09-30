@@ -1,6 +1,6 @@
 /// <reference types="vite-plugin-svgr/client" />
 import type { SVGProps } from "react";
-import LinkUrl from "./link-url.jsx.svg?react";
+import LinkUrl from "./linkUrl.jsx.svg?react";
 
 export const LinkUrlIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
