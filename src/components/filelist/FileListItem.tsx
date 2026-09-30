@@ -1,5 +1,5 @@
 import { Button, Link, List } from "@digdir/designsystemet-react";
-import { TrashIcon } from "../icons";
+import { TrashIcon } from "../../icons";
 import { FileTypeIcon } from "./FileTypeIcon";
 import type { AibelFile } from "./types";
 

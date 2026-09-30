@@ -1,6 +1,6 @@
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
-import { LogoutIcon, PersonIcon } from "../../../components/icons";
 import { Button, Divider, Popover } from "../../../designsystemet/components";
+import { LogoutIcon, PersonIcon } from "../../../icons";
 import { ConditionalPopover } from "../../conditionalPopover/ConditionalPopover";
 import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 import { getInitials } from "../getInitials";

@@ -1,4 +1,4 @@
-import { FileIcon, ImageIcon, PdfIcon } from "../icons";
+import { FileIcon, ImageIcon, PdfIcon } from "../../icons";
 
 export const FileTypeIcon = ({ type }: { type: string | null }) => {
     if (type?.includes("image")) {
