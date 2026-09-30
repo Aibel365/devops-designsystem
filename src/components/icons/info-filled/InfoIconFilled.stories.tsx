@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { InfoIconFilled } from "./InfoIconFilled";
+import { InfoFilledIcon } from "./InfoIconFilled";
 
-const meta: Meta<typeof InfoIconFilled> = {
+const meta: Meta<typeof InfoFilledIcon> = {
     title: "Icons/InfoIconFilled",
-    component: InfoIconFilled
+    component: InfoFilledIcon
 };
 
-type Story = StoryObj<typeof InfoIconFilled>;
+type Story = StoryObj<typeof InfoFilledIcon>;
 
 export const Default: Story = {};
 

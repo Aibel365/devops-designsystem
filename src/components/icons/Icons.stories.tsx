@@ -21,7 +21,7 @@ import { HistoryIcon } from "./history/HistoryIcon";
 import { HomeIcon } from "./home/HomeIcon";
 import { HubAppsIcon } from "./hub-apps/HubAppsIcon";
 import { ImageIcon } from "./image/ImageIcon";
-import { InfoIconFilled } from "./info-filled/InfoIconFilled";
+import { InfoFilledIcon } from "./info-filled/InfoIconFilled";
 import { InfoIcon } from "./info/InfoIcon";
 import { LanguageIcon } from "./language/LanguageIcon";
 import { LinkUrlIcon } from "./link-url/LinkUrlIcon";
@@ -62,7 +62,7 @@ export const Common: StoryObj = {
             <BarcodeScannerIcon {...args} /> <CalendarMonthIcon {...args} /> <CameraAddPhotoIcon {...args} /> <CheckboxOutlineIcon {...args} /> <CheckboxIcon {...args} />
             <ChevronLeftIcon {...args} /> <ChevronRightIcon {...args} /> <CloseIcon {...args} /> <CollapseSidebarRightIcon {...args} /> <CommentIcon {...args} />
             <FileIcon {...args} /> <FilterIcon {...args} /> <GroupByIcon {...args} /> <HistoryIcon {...args} /> <HomeIcon {...args} />
-            <HubAppsIcon {...args} /> <ImageIcon {...args} /> <InfoIconFilled {...args} /> <InfoIcon {...args} /> <LanguageIcon {...args} />
+            <HubAppsIcon {...args} /> <ImageIcon {...args} /> <InfoFilledIcon {...args} /> <InfoIcon {...args} /> <LanguageIcon {...args} />
             <LinkUrlIcon {...args} /> <LogoutIcon {...args} /> <MoreIcon {...args} /> <OperationTypeIcon {...args} /> <PdfIcon {...args} />
             <PersonFilledIcon {...args} /> <PersonIcon {...args} /> <RedoIcon {...args} /> <SaveIcon {...args} /> <SearchIcon {...args} />
             <SettingsIcon {...args} /> <TemplateIcon {...args} /> <TrashIcon {...args} /> <UploadFileIcon {...args} /> <WorkPrepIcon {...args} /> <WorkTeamIcon {...args} />

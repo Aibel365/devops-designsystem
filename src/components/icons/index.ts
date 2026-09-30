@@ -46,7 +46,7 @@ export { HomeStorageIcon } from "./home-storage/HomeStorageIcon";
 export { HomeIcon } from "./home/HomeIcon";
 export { HubAppsIcon } from "./hub-apps/HubAppsIcon";
 export { ImageIcon } from "./image/ImageIcon";
-export { InfoIconFilled } from "./info-filled/InfoIconFilled";
+export { InfoFilledIcon as InfoIconFilled } from "./info-filled/InfoIconFilled";
 export { InfoIcon } from "./info/InfoIcon";
 export { LanguageIcon } from "./language/LanguageIcon";
 export { LightModeIcon } from "./lightMode/LightModeIcon";

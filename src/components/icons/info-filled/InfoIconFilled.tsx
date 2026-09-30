@@ -2,7 +2,7 @@
 import type { SVGProps } from "react";
 import InfoFilled from "./infoFilled.jsx.svg?react";
 
-export const InfoIconFilled = (props: SVGProps<SVGSVGElement>) => {
+export const InfoFilledIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
         <InfoFilled
             {...props}
