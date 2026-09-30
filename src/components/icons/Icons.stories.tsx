@@ -21,7 +21,7 @@ import { HistoryIcon } from "./history/HistoryIcon";
 import { HomeIcon } from "./home/HomeIcon";
 import { HubAppsIcon } from "./hub-apps/HubAppsIcon";
 import { ImageIcon } from "./image/ImageIcon";
-import { InfoFilledIcon } from "./info-filled/InfoIconFilled";
+import { InfoFilledIcon } from "./info-filled/InfoFilledIcon";
 import { InfoIcon } from "./info/InfoIcon";
 import { LanguageIcon } from "./language/LanguageIcon";
 import { LinkUrlIcon } from "./link-url/LinkUrlIcon";
