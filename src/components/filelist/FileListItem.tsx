@@ -1,5 +1,5 @@
 import { Button, Link, List } from "@digdir/designsystemet-react";
-import { DeleteIcon } from "../icons";
+import { TrashIcon } from "../icons";
 import { FileTypeIcon } from "./FileTypeIcon";
 import type { AibelFile } from "./types";
 
@@ -56,7 +56,7 @@ export const FileListItem: React.FC<FileListItemProps> = ({ file, onDeleteClick,
                         onDeleteClick?.({ file, event });
                     }}
                 >
-                    <DeleteIcon />
+                    <TrashIcon />
                 </Button>
             )}
         </List.Item>

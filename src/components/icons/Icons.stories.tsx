@@ -36,9 +36,6 @@ import { SaveIcon } from "./save/SaveIcon";
 import { SearchIcon } from "./search/SearchIcon";
 import { SettingsIcon } from "./settings/SettingsIcon";
 import { CompletedStatusIcon } from "./status-icons/completed/CompletedStatusIcon";
-import { DangerStatusIcon } from "./status-icons/danger/DangerStatusIcon";
-import { InProgressStatusIcon } from "./status-icons/in-progress/InProgressStatusIcon";
-import { InfoStatusIcon } from "./status-icons/info/InfoStatusIcon";
 import { NotStartedStatusIcon } from "./status-icons/not-started/NotStartedStatusIcon";
 import { WarningStatusIcon } from "./status-icons/warning/WarningStatusIcon";
 import { TemplateIcon } from "./template/TemplateIcon";
@@ -75,10 +72,7 @@ export const Status: StoryObj = {
         <div className="ads:flex ads:flex-wrap ads:gap-2">
             <CompletedStatusIcon className="ads:text-success-base-default" />
             <NotStartedStatusIcon />
-            <InProgressStatusIcon />
             <WarningStatusIcon className=" ads:text-warning-base-default" />
-            <InfoStatusIcon className=" ads:text-info-base-default" />
-            <DangerStatusIcon className=" ads:text-danger-base-default" />
         </div>
     )
 };
