@@ -40,6 +40,7 @@ import { NotStartedStatusIcon } from "./status-icons/not-started/NotStartedStatu
 import { WarningStatusIcon } from "./status-icons/warning/WarningStatusIcon";
 import { TemplateIcon } from "./template/TemplateIcon";
 import { TrashIcon } from "./trash/TrashIcon";
+import { UndoIcon } from "./undo/UndoIcon";
 import { UploadFileIcon } from "./upload-file/UploadFileIcon";
 import { WorkPrepIcon } from "./work-prep/WorkPrepIcon";
 import { WorkTeamIcon } from "./work-team/WorkTeamIcon";
@@ -62,7 +63,7 @@ export const Common: StoryObj = {
             <HubAppsIcon {...args} /> <ImageIcon {...args} /> <InfoFilledIcon {...args} /> <InfoIcon {...args} /> <LanguageIcon {...args} />
             <LinkUrlIcon {...args} /> <LogoutIcon {...args} /> <MoreIcon {...args} /> <OperationTypeIcon {...args} /> <PdfIcon {...args} />
             <PersonFilledIcon {...args} /> <PersonIcon {...args} /> <RedoIcon {...args} /> <SaveIcon {...args} /> <SearchIcon {...args} />
-            <SettingsIcon {...args} /> <TemplateIcon {...args} /> <TrashIcon {...args} /> <UploadFileIcon {...args} /> <WorkPrepIcon {...args} /> <WorkTeamIcon {...args} />
+            <SettingsIcon {...args} /> <TemplateIcon {...args} /> <TrashIcon {...args} /> <UndoIcon {...args} /> <UploadFileIcon {...args} /> <WorkPrepIcon {...args} /> <WorkTeamIcon {...args} />
         </div>
     )
 };
