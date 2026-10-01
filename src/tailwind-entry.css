@@ -76,8 +76,9 @@ ol {
     border: 1px solid var(--ds-color-text-default);
 }
 
-.ds-label {
-    font-weight: 500;
+/* Only the default; designsystemet's [data-weight] rules still apply */
+.ds-label:not([data-weight]) {
+    font-weight: var(--ds-font-weight-medium);
 }
 
 /* eslint-disable */
