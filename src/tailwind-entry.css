@@ -76,6 +76,10 @@ ol {
     border: 1px solid var(--ds-color-text-default);
 }
 
+.ds-label {
+    font-weight: 500;
+}
+
 /* eslint-disable */
 .dark {
     /* Dark mode overrides */
