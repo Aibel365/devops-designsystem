@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Dialog } from "../../designsystemet/components/dialog/Dialog";
 import { EXPERIMENTAL_FileUpload } from "../../designsystemet/components/file-upload/FileUpload";
 import { Textarea } from "../../designsystemet/components/textarea/Textarea";
-import { UploadFileIcon } from "../icons/upload-file/UploadFileIcon";
+import { UploadFileIcon } from "../../icons/upload-file/UploadFileIcon";
 import { FileList } from "./FileList";
 import type { AibelFile } from "./types";
 

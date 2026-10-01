@@ -1,6 +1,6 @@
 import { Avatar, Paragraph } from "@digdir/designsystemet-react";
-import { MoveItemIcon, SwitchAccountIcon } from "../../../components/icons";
 import { Button, Divider, Popover } from "../../../designsystemet/components";
+import { LogoutIcon, PersonIcon } from "../../../icons";
 import { ConditionalPopover } from "../../conditionalPopover/ConditionalPopover";
 import { Base64ImageDisplay } from "../../image/Base64ImageDisplay";
 import { getInitials } from "../getInitials";
@@ -50,7 +50,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                         onClick={handleSwitchAccount}
                         aria-hidden
                     >
-                        {<SwitchAccountIcon aria-hidden />}
+                        {<PersonIcon aria-hidden />}
                         {switchAccountLabel?.length ? switchAccountLabel : "Switch account"}
                     </Button>
                 )}
@@ -79,7 +79,7 @@ const UserMenuContentHeaderBar = ({ userName, userEmail, userImage, handleSwitch
                     onClick={handleLogout}
                     aria-hidden
                 >
-                    {<MoveItemIcon aria-hidden />}
+                    {<LogoutIcon aria-hidden />}
                     {logoutLabel?.length ? logoutLabel : "Logout"}
                 </Button>
             </div>

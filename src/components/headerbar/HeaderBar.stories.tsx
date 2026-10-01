@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { LanguageIcon, SearchIcon } from "../../components/icons";
 import { Button } from "../../designsystemet/components";
+import { LanguageIcon, SearchIcon } from "../../icons";
 import { HeaderBar } from "./HeaderBar";
 
 const handleSwitchAccount = () => {
