@@ -13,6 +13,7 @@ export { ChevronRightIcon } from "./chevron-right/ChevronRightIcon";
 export { CloseIcon } from "./close/CloseIcon";
 export { CollapseSidebarRightIcon } from "./collapse-sidebar-right/CollapseSidebarRightIcon";
 export { CommentIcon } from "./comment/CommentIcon";
+export { EditIcon } from "./edit/EditIcon";
 export { FileIcon } from "./file/FileIcon";
 export { FilterIcon } from "./filter/FilterIcon";
 export { GroupByIcon } from "./group-by/GroupByIcon";

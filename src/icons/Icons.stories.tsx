@@ -14,6 +14,7 @@ import { ChevronRightIcon } from "./chevron-right/ChevronRightIcon";
 import { CloseIcon } from "./close/CloseIcon";
 import { CollapseSidebarRightIcon } from "./collapse-sidebar-right/CollapseSidebarRightIcon";
 import { CommentIcon } from "./comment/CommentIcon";
+import { EditIcon } from "./edit/EditIcon";
 import { FileIcon } from "./file/FileIcon";
 import { FilterIcon } from "./filter/FilterIcon";
 import { GroupByIcon } from "./group-by/GroupByIcon";
@@ -58,7 +59,7 @@ export const Common: StoryObj = {
         <div className="ads:flex ads:flex-wrap ads:gap-2">
             <AddIcon {...args} /> <ArchiveIcon {...args} /> <ArrowBackIcon {...args} /> <ArrowForwardIcon {...args} /> <AttachmentIcon {...args} />
             <BarcodeScannerIcon {...args} /> <CalendarMonthIcon {...args} /> <CameraAddPhotoIcon {...args} /> <CheckboxOutlineIcon {...args} /> <CheckboxIcon {...args} />
-            <ChevronLeftIcon {...args} /> <ChevronRightIcon {...args} /> <CloseIcon {...args} /> <CollapseSidebarRightIcon {...args} /> <CommentIcon {...args} />
+            <ChevronLeftIcon {...args} /> <ChevronRightIcon {...args} /> <CloseIcon {...args} /> <CollapseSidebarRightIcon {...args} /> <CommentIcon {...args} /> <EditIcon {...args} />
             <FileIcon {...args} /> <FilterIcon {...args} /> <GroupByIcon {...args} /> <HistoryIcon {...args} /> <HomeIcon {...args} />
             <HubAppsIcon {...args} /> <ImageIcon {...args} /> <InfoFilledIcon {...args} /> <InfoIcon {...args} /> <LanguageIcon {...args} />
             <LinkUrlIcon {...args} /> <LogoutIcon {...args} /> <MoreIcon {...args} /> <OperationTypeIcon {...args} /> <PdfIcon {...args} />
