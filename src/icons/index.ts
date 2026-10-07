@@ -38,6 +38,7 @@ export { RedoIcon } from "./redo/RedoIcon";
 export { SaveIcon } from "./save/SaveIcon";
 export { SearchIcon } from "./search/SearchIcon";
 export { SettingsIcon } from "./settings/SettingsIcon";
+export { SortIcon } from "./sort/SortIcon";
 export { TemplateIcon } from "./template/TemplateIcon";
 export { TrashIcon } from "./trash/TrashIcon";
 export { UndoIcon } from "./undo/UndoIcon";
