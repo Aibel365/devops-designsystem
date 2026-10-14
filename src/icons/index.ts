@@ -15,6 +15,7 @@ export { ChevronUpIcon } from "./chevron-up/ChevronUpIcon";
 export { CloseIcon } from "./close/CloseIcon";
 export { CollapseSidebarRightIcon } from "./collapse-sidebar-right/CollapseSidebarRightIcon";
 export { CommentIcon } from "./comment/CommentIcon";
+export { CopyIcon } from "./copy/CopyIcon";
 export { EditIcon } from "./edit/EditIcon";
 export { EyeIcon } from "./eye/EyeIcon";
 export { FileIcon } from "./file/FileIcon";
