@@ -77,6 +77,8 @@ For `Textfield`, a numeric `counter` uses the English default `under` and `over`
 - `npm run format` – format all files with Prettier
 - `npm run clean` – remove build artifacts
 - `npm run knip` - check for dependency and code issues
+- `npm run figma:check` – validate Figma Code Connect mappings without publishing (dry run)
+- `npm run figma:publish` – publish Figma Code Connect mappings to Figma
 
 ## Running the project locally
 
@@ -134,6 +136,42 @@ Token source files are under `design-tokens/`.
 - `npm run build-design-tokens` – build tokens from `designsystemet.config.json`
 
 Generated token output is written to `design-tokens-build/`.
+
+## Figma Code Connect
+
+The components are connected to our Figma library with [Figma Code Connect](https://developers.figma.com/docs/code-connect/). When a designer or developer selects a component in Figma Dev Mode (or uses the Figma MCP server), Figma shows a ready-to-use code snippet for `@aibel365/devops-designsystem` instead of generic CSS.
+
+The Figma library is our copy of the [Designsystemet Core UI Kit](https://www.figma.com/community/file/1322138390374166141), the official Figma counterpart to `@digdir/designsystemet-react`.
+
+### How it works
+
+- `figma.config.json` – Code Connect configuration. The Figma file URL is defined once in `documentUrlSubstitutions` (`<FIGMA_UI_KIT>`), so the library file can be changed in one place.
+- `src/**/*.figma.ts` – one [template file](https://developers.figma.com/docs/code-connect/template-files/) per Figma component, placed next to the component it maps to. Each file starts with a `// url=<FIGMA_UI_KIT>?node-id=...` comment pointing to the component in Figma, and maps Figma properties (variant, state, texts, booleans) to React props.
+- `src/figma/` – shared helpers used by the templates. They are bundled into each template on publish.
+- `tsconfig.figma.json` – type checks templates with the Code Connect types. Templates are excluded from the library build.
+
+Size (`data-size`) and color (`data-color`) are Figma variable modes in the UI kit, not component properties, so snippets use the defaults. Icons in the UI kit come from the Aksel icon library and cannot be mapped to the Aibel icon set, so they are rendered as `{/* icon: Name */}` placeholders.
+
+Figma components without a code counterpart, or code components without a Figma counterpart (e.g. `Divider`, `Field`, `Table`, `Dropdown` and the Aibel-specific components), are not connected.
+
+### Setup
+
+1. Create a [Figma personal access token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) with the scopes **Code Connect: Write** and **File content: Read**. Requires a Dev or Full seat.
+2. Add it to a `.env.local` file in the repository root (ignored by git):
+
+```
+FIGMA_ACCESS_TOKEN=figd_...
+```
+
+The npm scripts load `.env.local` and use the operating system's certificate store, so they also work behind a TLS-inspecting corporate proxy.
+
+### Adding or updating a mapping
+
+1. In Figma, right-click the component (set) and select **Copy link to selection** to get its `node-id`.
+2. Create or update `<Component>.figma.ts` next to the component and use `figma.selectedInstance` to read the Figma properties. Use the exact Figma property names (without the `#123:4` suffix).
+3. Run `npm run figma:check` to validate the mappings, then `npm run figma:publish`.
+
+Mappings are published automatically when a release is published (`.github/workflows/figma_code_connect_publish.yml`). This requires the `FIGMA_ACCESS_TOKEN` repository secret. On a Figma Professional plan, Code Connect supports one library and one framework (React).
 
 ## Contribution guide
 

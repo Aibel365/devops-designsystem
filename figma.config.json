@@ -1,0 +1,11 @@
+{
+    "codeConnect": {
+        "include": ["src/**/*.figma.ts"],
+        "label": "React",
+        "language": "jsx",
+        "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/c2ch8myueLGTuGY38XEZHG/Designsystemet---Core-UI-Kit--Community-",
+        "documentUrlSubstitutions": {
+            "<FIGMA_UI_KIT>": "https://www.figma.com/design/c2ch8myueLGTuGY38XEZHG/Designsystemet---Core-UI-Kit--Community-"
+        }
+    }
+}
