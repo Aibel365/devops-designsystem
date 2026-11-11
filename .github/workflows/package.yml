@@ -3,8 +3,6 @@ name: Create and publish package
 on:
     release:
         types: [published]
-        branches:
-            - main
 
 jobs:
     update-version:
