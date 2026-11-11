@@ -71,8 +71,6 @@ For `Textfield`, a numeric `counter` uses the English default `under` and `over`
 - `npm run start` – start Storybook in development mode
 - `npm run build` – build library output and CSS
 - `npm run build-storybook` – build Storybook static site
-- `npm run create-design-tokens` – create JSON design tokens for with Aibel-theme
-- `npm run build-design-tokens` – build CSS tokens with Aibel-theme based on JSON tokens
 - `npm run lint` – run ESLint
 - `npm run format` – format all files with Prettier
 - `npm run clean` – remove build artifacts
@@ -88,9 +86,9 @@ When running `npm run start`:
 - Tailwind begins watching for class usage
 - `Tailwind-entry.css` is used as the input file
 - Tailwind generates or updates `assets/index.css` with:
-    - Digdir styles
-    - Tailwind utility classes used in the project (`ads:` prefix)
-    - Aibel custom theming tokens
+  - Digdir styles
+  - Tailwind utility classes used in the project (`ads:` prefix)
+  - Aibel custom theming tokens
 
 While Tailwind is running, new utility classes are automatically added to `assets/index.css`. Unused classes are removed on the next startup.
 
@@ -98,7 +96,7 @@ While Tailwind is running, new utility classes are automatically added to `asset
 
 When the @digdir dependency is updated, there may be styling changes that need to be applied. Therefore, the design tokens and theme files must be regenerated. Run the following commands:
 
-- `npm run build-design-tokens`
+- `npm run build`
 - `npm run start`
 
 If there are significant styling changes, verify that components render correctly in Storybook.
@@ -107,13 +105,13 @@ If there are significant styling changes, verify that components render correctl
 
 A full build runs the same Tailwind pipeline as development mode and outputs the final CSS to:
 
-```
+```bash
 dist/styles.css
 ```
 
 It also generates `dist/aibel-theme.tailwind.css` file which can be used to import theme layer in the project where this library is used. Just add these imports in your project's `index.css` file:
 
-```
+```css
 @import "@aibel365/devops-designsystem/styles.css";
 @import '@aibel365/devops-designsystem/aibel-theme.tailwind.css' layer(theme);
 ```
@@ -130,8 +128,7 @@ This ensures Tailwind includes them during processing when generating `assets/in
 
 Token source files are under `design-tokens/`.
 
-- `npm run create-design-tokens` – scaffold token structure from config
-- `npm run build-design-tokens` – build tokens from `designsystemet.config.json`
+- `npm run build:themes` – build tokens & css from `designsystemet.config.json`
 
 Generated token output is written to `design-tokens-build/`.
 
