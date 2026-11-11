@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type { CSSProperties } from "react";
 import { Avatar } from "../avatar/Avatar";
-import { EXPERIMENTAL_AvatarStack } from "./AvatarStack";
-
-EXPERIMENTAL_AvatarStack.displayName = "AvatarStack";
+import { AvatarStack } from "./AvatarStack";
 
 const avatars = (
     <>
@@ -18,9 +16,9 @@ const avatars = (
         </li>
     </>
 );
-const meta: Meta<typeof EXPERIMENTAL_AvatarStack> = {
+const meta: Meta<typeof AvatarStack> = {
     title: "Designsystemet/AvatarStack",
-    component: EXPERIMENTAL_AvatarStack,
+    component: AvatarStack,
     args: { children: avatars, expandable: undefined },
     argTypes: {
         children: { control: false, table: { disable: true } },
