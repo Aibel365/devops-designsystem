@@ -1,6 +1,6 @@
-import { cpSync } from "node:fs";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import { cpSync } from "node:fs";
 import dts from "unplugin-dts/vite";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
