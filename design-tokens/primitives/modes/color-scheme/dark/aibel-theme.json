@@ -135,63 +135,63 @@
     "aibel-green": {
       "1": {
         "$type": "color",
-        "$value": "#101a12"
+        "$value": "#131914"
       },
       "2": {
         "$type": "color",
-        "$value": "#152318"
+        "$value": "#19211b"
       },
       "3": {
         "$type": "color",
-        "$value": "#1b2c1e"
+        "$value": "#202a22"
       },
       "4": {
         "$type": "color",
-        "$value": "#1f3223"
+        "$value": "#243127"
       },
       "5": {
         "$type": "color",
-        "$value": "#243a28"
+        "$value": "#2a392e"
       },
       "6": {
         "$type": "color",
-        "$value": "#2d4933"
+        "$value": "#354739"
       },
       "7": {
         "$type": "color",
-        "$value": "#36583c"
+        "$value": "#3f5544"
       },
       "8": {
         "$type": "color",
-        "$value": "#6a8970"
+        "$value": "#728676"
       },
       "9": {
         "$type": "color",
-        "$value": "#98ad9c"
+        "$value": "#9daba0"
       },
       "10": {
         "$type": "color",
-        "$value": "#98ad9c"
+        "$value": "#9daba0"
       },
       "11": {
         "$type": "color",
-        "$value": "#e9edea"
+        "$value": "#eaedeb"
       },
       "12": {
         "$type": "color",
-        "$value": "#709a7a"
+        "$value": "#799580"
       },
       "13": {
         "$type": "color",
-        "$value": "#8bad94"
+        "$value": "#92a998"
       },
       "14": {
         "$type": "color",
-        "$value": "#a8c1ae"
+        "$value": "#acbdb1"
       },
       "15": {
         "$type": "color",
-        "$value": "#151d17"
+        "$value": "#161b17"
       },
       "16": {
         "$type": "color",
