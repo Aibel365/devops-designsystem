@@ -1,3 +1,4 @@
+import { cpSync } from "node:fs";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import dts from "unplugin-dts/vite";
@@ -13,7 +14,13 @@ export default defineConfig({
             exclude: ["**/*.stories.ts", "**/*.test.ts"],
             tsconfigPath: "./tsconfig.app.json"
         }),
-        svgr()
+        svgr(),
+        {
+            name: "copy-fonts",
+            closeBundle() {
+                cpSync("src/fonts", "dist/fonts", { recursive: true });
+            }
+        }
     ],
     build: {
         lib: {
