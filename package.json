@@ -49,7 +49,7 @@
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "@digdir/designsystemet-css": "^1.23.0",
+    "@digdir/designsystemet-css": "^1.24.0",
     "@e18e/eslint-plugin": "^0.8.1",
     "@eslint/js": "^10.0.1",
     "@microsoft/api-extractor": "^7.60.1",
@@ -79,7 +79,7 @@
     "vite-plugin-svgr": "^5.2.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.23.0"
+    "@digdir/designsystemet-react": "^1.24.0"
   },
   "engines": {
     "node": ">=24.19.0"
