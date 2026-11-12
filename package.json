@@ -24,32 +24,31 @@
     },
     "./styles.css": "./dist/index.css",
     "./fonts.css": "./dist/fonts/fonts.css",
-    "./aibel-theme.tailwind.css": "./dist/aibel-theme.tailwind.css"
+    "./aibel-theme.tailwind.css": "./design-tokens-build/aibel-theme.tailwind.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "design-tokens-build"
   ],
   "sideEffects": false,
   "scripts": {
     "start": "storybook dev -p 6006",
     "clean": "rimraf dist storybook-static",
     "build": "tsc -b && vite build && npm run build:themes",
-    "build:themes": "npm run build-design-tokens -- --out-dir dist",
+    "build:themes": "npx @digdir/designsystemet@latest",
     "build-storybook": "storybook build",
     "prepublishOnly": "npm run build",
-    "create-design-tokens": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.json",
-    "build-design-tokens": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.json --experimental-tailwind",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ./src/components",
     "knip": "knip"
   },
   "peerDependencies": {
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@digdir/designsystemet-css": "^1.23.0",
+    "@digdir/designsystemet-css": "^1.24.0",
     "@e18e/eslint-plugin": "^0.8.1",
     "@eslint/js": "^10.0.1",
     "@microsoft/api-extractor": "^7.60.1",
@@ -79,7 +78,7 @@
     "vite-plugin-svgr": "^5.2.0"
   },
   "dependencies": {
-    "@digdir/designsystemet-react": "^1.23.0"
+    "@digdir/designsystemet-react": "^1.24.0"
   },
   "engines": {
     "node": ">=24.19.0"

@@ -1,1 +1,1 @@
-export { EXPERIMENTAL_AvatarStack, type AvatarStackProps } from "@digdir/designsystemet-react";
+export { AvatarStack, type AvatarStackProps } from "@digdir/designsystemet-react";

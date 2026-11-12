@@ -1,6 +1,17 @@
 {
   "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
-  "outDir": "./design-tokens",
+  "output": [
+    {
+      "type": "design-tokens",
+      "dir": "./design-tokens"
+    },
+    {
+      "type": "css",
+      "tailwind": "v4",
+      "dir": "./design-tokens-build",
+      "tokensDir": "./design-tokens"
+    }
+  ],
   "themes": {
     "aibel-theme": {
       "colors": {
