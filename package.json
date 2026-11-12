@@ -1,6 +1,6 @@
 {
   "name": "@aibel365/devops-designsystem",
-  "version": "1.23.7",
+  "version": "1.23.8",
   "author": "Aibel AS",
   "license": "MIT",
   "description": "React designsystem for Aibel",
@@ -72,7 +72,7 @@
     "storybook": "^10.6.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1",
+    "typescript-eslint": "^8.72.2",
     "unplugin-dts": "^1.1.2",
     "vite": "^8.3.7",
     "vite-plugin-svgr": "^5.2.0"
