@@ -3,6 +3,60 @@
 @import "../design-tokens-build/aibel-theme.css";
 @import "../design-tokens-build/aibel-theme.tailwind.css" layer(theme);
 
+/*
+ * Aibel typography sizes. designsystemet.config.json can't configure font sizes,
+ * so we override the generated tokens here. The sublayer is ordered after
+ * ds.theme.type-scale, so it wins over the defaults while unlayered consumer CSS
+ * can still override it. [data-size] is included because the generated tokens
+ * are re-declared on every [data-size] element. Values are px at size "md"
+ * (factor 1) and scale with data-size sm/lg.
+ */
+@layer ds.theme.aibel-typography {
+    :root,
+    [data-size] {
+        --ds-body-xs-font-size: calc(0.75rem * var(--_ds-font-size-factor)); /* 12px */
+        --ds-body-sm-font-size: calc(0.875rem * var(--_ds-font-size-factor)); /* 14px */
+        --ds-body-md-font-size: calc(1rem * var(--_ds-font-size-factor)); /* 16px */
+        --ds-body-lg-font-size: calc(1.25rem * var(--_ds-font-size-factor)); /* 20px */
+        --ds-body-xl-font-size: calc(1.5rem * var(--_ds-font-size-factor)); /* 24px */
+
+        --ds-heading-2xs-font-size: calc(0.9375rem * var(--_ds-font-size-factor)); /* 15px */
+        --ds-heading-xs-font-size: calc(1.125rem * var(--_ds-font-size-factor)); /* 18px */
+        --ds-heading-sm-font-size: calc(1.25rem * var(--_ds-font-size-factor)); /* 20px */
+        --ds-heading-md-font-size: calc(1.625rem * var(--_ds-font-size-factor)); /* 26px */
+        --ds-heading-lg-font-size: calc(1.875rem * var(--_ds-font-size-factor)); /* 30px */
+        --ds-heading-xl-font-size: calc(2.5rem * var(--_ds-font-size-factor)); /* 40px */
+        --ds-heading-2xl-font-size: calc(3.375rem * var(--_ds-font-size-factor)); /* 54px */
+
+        @supports (width: round(down, 0.1em, 1px)) {
+            --ds-body-xs-font-size: round(calc(0.75rem * var(--_ds-font-size-factor)), 1px);
+            --ds-body-sm-font-size: round(calc(0.875rem * var(--_ds-font-size-factor)), 1px);
+            --ds-body-md-font-size: round(calc(1rem * var(--_ds-font-size-factor)), 1px);
+            --ds-body-lg-font-size: round(calc(1.25rem * var(--_ds-font-size-factor)), 1px);
+            --ds-body-xl-font-size: round(calc(1.5rem * var(--_ds-font-size-factor)), 1px);
+
+            --ds-heading-2xs-font-size: round(calc(0.9375rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-xs-font-size: round(calc(1.125rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-sm-font-size: round(calc(1.25rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-md-font-size: round(calc(1.625rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-lg-font-size: round(calc(1.875rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-xl-font-size: round(calc(2.5rem * var(--_ds-font-size-factor)), 1px);
+            --ds-heading-2xl-font-size: round(calc(3.375rem * var(--_ds-font-size-factor)), 1px);
+        }
+
+        --ds-body-short-xs-font-size: var(--ds-body-xs-font-size);
+        --ds-body-short-sm-font-size: var(--ds-body-sm-font-size);
+        --ds-body-short-md-font-size: var(--ds-body-md-font-size);
+        --ds-body-short-lg-font-size: var(--ds-body-lg-font-size);
+        --ds-body-short-xl-font-size: var(--ds-body-xl-font-size);
+        --ds-body-long-xs-font-size: var(--ds-body-xs-font-size);
+        --ds-body-long-sm-font-size: var(--ds-body-sm-font-size);
+        --ds-body-long-md-font-size: var(--ds-body-md-font-size);
+        --ds-body-long-lg-font-size: var(--ds-body-lg-font-size);
+        --ds-body-long-xl-font-size: var(--ds-body-xl-font-size);
+    }
+}
+
 /* Register design tokens or custom properties with Tailwind */
 /* eslint-disable */
 @theme static {
