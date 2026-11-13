@@ -66,15 +66,15 @@
     "eslint-plugin-react-refresh": "^0.5.7",
     "eslint-plugin-storybook": "^10.6.7",
     "globals": "^17.14.0",
-    "knip": "^6.45.0",
-    "prettier": "^3.9.10",
+    "knip": "^6.45.1",
+    "prettier": "^3.10.0",
     "rimraf": "^6.1.4",
     "storybook": "^10.6.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.2",
     "unplugin-dts": "^1.1.2",
-    "vite": "^8.3.7",
+    "vite": "^8.3.8",
     "vite-plugin-svgr": "^5.2.0"
   },
   "dependencies": {
